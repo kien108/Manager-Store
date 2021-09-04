@@ -1,0 +1,17 @@
+D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\bin\Debug\Manage Store.exe.config
+D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\bin\Debug\Manage Store.exe
+D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\bin\Debug\Manage Store.pdb
+D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage Store.csprojAssemblyReference.cache
+D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage_Store.frmLogin.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage_Store.Properties.Resources.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage Store.csproj.GenerateResource.cache
+D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage Store.csproj.CoreCompileInputs.cache
+D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage Store.exe
+D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage Store.pdb
+D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage_Store.frmMain.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage_Store.frmProduct.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage_Store.frmStaff.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage_Store.frmStaffDetails.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage_Store.frmAddStaff.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage_Store.frmAddProduct.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage_Store.frmBilling.resources
