@@ -47,10 +47,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -58,13 +58,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.elipseControl1 = new ElipseToolDemo.ElipseControl();
-            this.elipseControl2 = new ElipseToolDemo.ElipseControl();
-            this.elipseControl3 = new ElipseToolDemo.ElipseControl();
-            this.elipseControl4 = new ElipseToolDemo.ElipseControl();
-            this.elipseControl5 = new ElipseToolDemo.ElipseControl();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -72,7 +65,6 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -282,8 +274,6 @@
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label18);
-            this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.label15);
@@ -298,9 +288,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(166)))), ((int)(((byte)(137)))));
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(859, 280);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnLogin.Size = new System.Drawing.Size(200, 40);
+            this.btnLogin.TabIndex = 13;
+            this.btnLogin.Text = "Save Infomations";
+            this.btnLogin.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnLogin.UseVisualStyleBackColor = false;
+            // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(170, 169);
+            this.dateTimePicker1.Location = new System.Drawing.Point(9, 186);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(321, 22);
             this.dateTimePicker1.TabIndex = 12;
@@ -311,7 +318,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.comboBox1.Location = new System.Drawing.Point(173, 247);
+            this.comboBox1.Location = new System.Drawing.Point(12, 264);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 11;
@@ -320,25 +327,16 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(170, 216);
+            this.label18.Location = new System.Drawing.Point(9, 233);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(56, 17);
             this.label18.TabIndex = 10;
             this.label18.Text = "Gender";
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 111);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(46, 17);
-            this.label17.TabIndex = 9;
-            this.label17.Text = "Image";
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(167, 132);
+            this.label16.Location = new System.Drawing.Point(6, 149);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(66, 17);
             this.label16.TabIndex = 6;
@@ -392,56 +390,6 @@
             this.label13.TabIndex = 0;
             this.label13.Text = "Name";
             // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(166)))), ((int)(((byte)(137)))));
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(859, 280);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnLogin.Size = new System.Drawing.Size(200, 40);
-            this.btnLogin.TabIndex = 13;
-            this.btnLogin.Text = "Save Infomations";
-            this.btnLogin.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnLogin.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(6, 131);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(121, 152);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
-            // elipseControl1
-            // 
-            this.elipseControl1.CornerRadius = 20;
-            this.elipseControl1.TargetControl = this.panel2;
-            // 
-            // elipseControl2
-            // 
-            this.elipseControl2.CornerRadius = 20;
-            this.elipseControl2.TargetControl = this.panel3;
-            // 
-            // elipseControl3
-            // 
-            this.elipseControl3.CornerRadius = 20;
-            this.elipseControl3.TargetControl = this.panel4;
-            // 
-            // elipseControl4
-            // 
-            this.elipseControl4.CornerRadius = 20;
-            this.elipseControl4.TargetControl = this.panel6;
-            // 
-            // elipseControl5
-            // 
-            this.elipseControl5.CornerRadius = 20;
-            this.elipseControl5.TargetControl = this.panel5;
-            // 
             // frmAddStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -467,7 +415,6 @@
             this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -497,8 +444,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label15;
@@ -507,10 +452,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnLogin;
-        private ElipseToolDemo.ElipseControl elipseControl1;
-        private ElipseToolDemo.ElipseControl elipseControl2;
-        private ElipseToolDemo.ElipseControl elipseControl3;
-        private ElipseToolDemo.ElipseControl elipseControl4;
-        private ElipseToolDemo.ElipseControl elipseControl5;
+
     }
 }

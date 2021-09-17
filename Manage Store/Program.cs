@@ -16,7 +16,7 @@ namespace Manage_Store
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            Application.Run(new frmStaff());
         }
     }
 }
