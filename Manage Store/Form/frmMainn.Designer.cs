@@ -29,72 +29,79 @@
         private void InitializeComponent()
         {
             this.panel4 = new System.Windows.Forms.Panel();
+            this.iconRevenue = new FontAwesome.Sharp.IconPictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
+            this.btnChangeWeek = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.iconBill = new FontAwesome.Sharp.IconPictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pnNav = new System.Windows.Forms.Panel();
-            this.btnAccount = new FontAwesome.Sharp.IconButton();
+            this.btnContract = new FontAwesome.Sharp.IconButton();
             this.btnChart = new FontAwesome.Sharp.IconButton();
-            this.btnBilling = new FontAwesome.Sharp.IconButton();
+            this.btnEmployee = new FontAwesome.Sharp.IconButton();
             this.btnGoods = new FontAwesome.Sharp.IconButton();
-            this.btnStaff = new FontAwesome.Sharp.IconButton();
             this.btnHome1 = new FontAwesome.Sharp.IconButton();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnMenu = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnBilling = new FontAwesome.Sharp.IconButton();
+            this.lbHeader = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.iconProfit = new FontAwesome.Sharp.IconPictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.elipseControl1 = new ElipseToolDemo.ElipseControl();
+            this.elipseControl2 = new ElipseToolDemo.ElipseControl();
+            this.elipseControl3 = new ElipseToolDemo.ElipseControl();
+            this.elipseControl4 = new ElipseToolDemo.ElipseControl();
+            this.elipseControl5 = new ElipseToolDemo.ElipseControl();
+            this.elipseControl6 = new ElipseToolDemo.ElipseControl();
+            this.elipseControl7 = new ElipseToolDemo.ElipseControl();
+            this.elipseControl8 = new ElipseToolDemo.ElipseControl();
+            this.elipseControl10 = new ElipseToolDemo.ElipseControl();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconRevenue)).BeginInit();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconBill)).BeginInit();
             this.pnNav.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconProfit)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -102,45 +109,50 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel4.Controls.Add(this.iconRevenue);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.pictureBox4);
             this.panel4.Location = new System.Drawing.Point(269, 26);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(231, 133);
             this.panel4.TabIndex = 6;
             // 
+            // iconRevenue
+            // 
+            this.iconRevenue.BackColor = System.Drawing.Color.Transparent;
+            this.iconRevenue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.iconRevenue.IconChar = FontAwesome.Sharp.IconChar.HandHoldingUsd;
+            this.iconRevenue.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.iconRevenue.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconRevenue.IconSize = 40;
+            this.iconRevenue.Location = new System.Drawing.Point(27, 33);
+            this.iconRevenue.Name = "iconRevenue";
+            this.iconRevenue.Size = new System.Drawing.Size(32, 32);
+            this.iconRevenue.TabIndex = 3;
+            this.iconRevenue.TabStop = false;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(154)))), ((int)(((byte)(157)))));
-            this.label7.Location = new System.Drawing.Point(12, 74);
+            this.label7.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(22, 94);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(119, 26);
+            this.label7.Size = new System.Drawing.Size(153, 36);
             this.label7.TabIndex = 1;
             this.label7.Text = "Total Revenue";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(71, 13);
+            this.label8.Font = new System.Drawing.Font("Poppins Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.label8.Location = new System.Drawing.Point(81, 33);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 30);
+            this.label8.Size = new System.Drawing.Size(125, 42);
             this.label8.TabIndex = 1;
             this.label8.Text = "$123.456";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Manage_Store.Properties.Resources.user__1_1;
-            this.pictureBox4.Location = new System.Drawing.Point(15, 11);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(37, 32);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
             // 
             // panel10
             // 
@@ -155,10 +167,11 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Poppins Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.label18.Location = new System.Drawing.Point(272, 22);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(224, 36);
+            this.label18.Size = new System.Drawing.Size(368, 60);
             this.label18.TabIndex = 1;
             this.label18.Text = "Best Seller Of Week";
             // 
@@ -166,7 +179,7 @@
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.Black;
             this.pictureBox10.Image = global::Manage_Store.Properties.Resources.user__1_2;
-            this.pictureBox10.Location = new System.Drawing.Point(146, 75);
+            this.pictureBox10.Location = new System.Drawing.Point(10, 104);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(440, 338);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -175,181 +188,207 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.panel7);
+            this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.Controls.Add(this.panel11);
+            this.panel6.Controls.Add(this.panel7);
             this.panel6.Controls.Add(this.panel8);
             this.panel6.Location = new System.Drawing.Point(762, 3);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(347, 625);
             this.panel6.TabIndex = 4;
             // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Controls.Add(this.label12);
-            this.panel7.Controls.Add(this.label13);
-            this.panel7.Controls.Add(this.pictureBox7);
-            this.panel7.Location = new System.Drawing.Point(193, 318);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(142, 118);
-            this.panel7.TabIndex = 4;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(14, 83);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(38, 26);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "108";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Poppins", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(154)))), ((int)(((byte)(157)))));
-            this.label13.Location = new System.Drawing.Point(12, 58);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(127, 25);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "TOTAL PRODUCTS";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::Manage_Store.Properties.Resources.pruduct11;
-            this.pictureBox7.Location = new System.Drawing.Point(15, 11);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(37, 32);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 0;
-            this.pictureBox7.TabStop = false;
-            // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.White;
-            this.panel11.Controls.Add(this.label11);
-            this.panel11.Controls.Add(this.button1);
-            this.panel11.Controls.Add(this.pictureBox6);
-            this.panel11.Location = new System.Drawing.Point(3, 23);
+            this.panel11.Controls.Add(this.btnChangeWeek);
+            this.panel11.Controls.Add(this.pictureBox9);
+            this.panel11.Controls.Add(this.label15);
+            this.panel11.Location = new System.Drawing.Point(11, 23);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(341, 251);
-            this.panel11.TabIndex = 5;
+            this.panel11.Size = new System.Drawing.Size(324, 300);
+            this.panel11.TabIndex = 6;
             // 
-            // label11
+            // btnChangeWeek
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(3, 9);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(166, 30);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Sales Analystics";
+            this.btnChangeWeek.Animated = true;
+            this.btnChangeWeek.BorderRadius = 10;
+            this.btnChangeWeek.CheckedState.Parent = this.btnChangeWeek;
+            this.btnChangeWeek.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChangeWeek.CustomImages.Parent = this.btnChangeWeek;
+            this.btnChangeWeek.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnChangeWeek.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnChangeWeek.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnChangeWeek.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnChangeWeek.DisabledState.Parent = this.btnChangeWeek;
+            this.btnChangeWeek.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(166)))), ((int)(((byte)(137)))));
+            this.btnChangeWeek.Font = new System.Drawing.Font("Poppins", 10.2F);
+            this.btnChangeWeek.ForeColor = System.Drawing.Color.White;
+            this.btnChangeWeek.HoverState.Parent = this.btnChangeWeek;
+            this.btnChangeWeek.Location = new System.Drawing.Point(181, 16);
+            this.btnChangeWeek.Name = "btnChangeWeek";
+            this.btnChangeWeek.ShadowDecoration.Parent = this.btnChangeWeek;
+            this.btnChangeWeek.Size = new System.Drawing.Size(180, 36);
+            this.btnChangeWeek.TabIndex = 3;
+            this.btnChangeWeek.Text = "Switch to week";
             // 
-            // button1
+            // pictureBox9
             // 
-            this.button1.Font = new System.Drawing.Font("Poppins", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(154)))), ((int)(((byte)(157)))));
-            this.button1.Location = new System.Drawing.Point(189, 7);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(158, 32);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Switch to Weekly";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Manage_Store.Properties.Resources.user__1_2;
-            this.pictureBox6.Location = new System.Drawing.Point(23, 51);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(290, 172);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 2;
-            this.pictureBox6.TabStop = false;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Controls.Add(this.label14);
-            this.panel8.Controls.Add(this.label15);
-            this.panel8.Controls.Add(this.pictureBox8);
-            this.panel8.Location = new System.Drawing.Point(11, 318);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(137, 118);
-            this.panel8.TabIndex = 3;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(14, 82);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(38, 26);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "108";
+            this.pictureBox9.BackColor = System.Drawing.Color.Black;
+            this.pictureBox9.Image = global::Manage_Store.Properties.Resources.user__1_2;
+            this.pictureBox9.Location = new System.Drawing.Point(15, 100);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(290, 172);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 2;
+            this.pictureBox9.TabStop = false;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Poppins", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(154)))), ((int)(((byte)(157)))));
-            this.label15.Location = new System.Drawing.Point(12, 57);
+            this.label15.Font = new System.Drawing.Font("Poppins Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(13, 15);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(95, 25);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "TOTAL USERS";
+            this.label15.Size = new System.Drawing.Size(228, 42);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Sales Analystics";
             // 
-            // pictureBox8
+            // panel7
             // 
-            this.pictureBox8.Image = global::Manage_Store.Properties.Resources.user11;
-            this.pictureBox8.Location = new System.Drawing.Point(15, 11);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(37, 32);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 0;
-            this.pictureBox8.TabStop = false;
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.Controls.Add(this.iconPictureBox1);
+            this.panel7.Controls.Add(this.label12);
+            this.panel7.Controls.Add(this.label14);
+            this.panel7.Location = new System.Drawing.Point(11, 466);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(153, 115);
+            this.panel7.TabIndex = 8;
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 35;
+            this.iconPictureBox1.Location = new System.Drawing.Point(15, 18);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBox1.TabIndex = 3;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Poppins Medium", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(10, 80);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(48, 34);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "108";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(154)))), ((int)(((byte)(157)))));
+            this.label14.Location = new System.Drawing.Point(10, 58);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(127, 26);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Total Employee";
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Controls.Add(this.iconPictureBox2);
+            this.panel8.Controls.Add(this.label16);
+            this.panel8.Controls.Add(this.label13);
+            this.panel8.Location = new System.Drawing.Point(182, 466);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(153, 115);
+            this.panel8.TabIndex = 7;
+            // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.CookieBite;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox2.IconSize = 35;
+            this.iconPictureBox2.Location = new System.Drawing.Point(10, 18);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBox2.TabIndex = 3;
+            this.iconPictureBox2.TabStop = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Poppins Medium", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(10, 80);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(48, 34);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "108";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(154)))), ((int)(((byte)(157)))));
+            this.label13.Location = new System.Drawing.Point(10, 58);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(104, 26);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Total Goods";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(71, 13);
+            this.label5.Font = new System.Drawing.Font("Poppins Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.label5.Location = new System.Drawing.Point(82, 31);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 30);
+            this.label5.Size = new System.Drawing.Size(58, 42);
             this.label5.TabIndex = 1;
             this.label5.Text = "108";
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel3.Controls.Add(this.iconBill);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Location = new System.Drawing.Point(21, 26);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(231, 133);
             this.panel3.TabIndex = 0;
             // 
+            // iconBill
+            // 
+            this.iconBill.BackColor = System.Drawing.Color.Transparent;
+            this.iconBill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.iconBill.IconChar = FontAwesome.Sharp.IconChar.FileInvoiceDollar;
+            this.iconBill.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.iconBill.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconBill.Location = new System.Drawing.Point(27, 33);
+            this.iconBill.Name = "iconBill";
+            this.iconBill.Size = new System.Drawing.Size(32, 32);
+            this.iconBill.TabIndex = 2;
+            this.iconBill.TabStop = false;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(154)))), ((int)(((byte)(157)))));
-            this.label6.Location = new System.Drawing.Point(12, 74);
+            this.label6.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(21, 91);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 26);
+            this.label6.Size = new System.Drawing.Size(105, 36);
             this.label6.TabIndex = 1;
             this.label6.Text = "Total Bills";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Manage_Store.Properties.Resources.user__1_1;
-            this.pictureBox3.Location = new System.Drawing.Point(15, 11);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(37, 32);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
             // 
             // label1
             // 
@@ -357,68 +396,72 @@
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Poppins", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(61, 12);
+            this.label1.Location = new System.Drawing.Point(97, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(157, 42);
             this.label1.TabIndex = 6;
             this.label1.Tag = "WIBU MART";
             this.label1.Text = "WIBU MART";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pnNav
             // 
-            this.pnNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(253)))));
-            this.pnNav.Controls.Add(this.btnAccount);
+            this.pnNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.pnNav.Controls.Add(this.btnContract);
             this.pnNav.Controls.Add(this.btnChart);
-            this.pnNav.Controls.Add(this.btnBilling);
+            this.pnNav.Controls.Add(this.btnEmployee);
             this.pnNav.Controls.Add(this.btnGoods);
-            this.pnNav.Controls.Add(this.btnStaff);
             this.pnNav.Controls.Add(this.btnHome1);
             this.pnNav.Controls.Add(this.panel9);
+            this.pnNav.Controls.Add(this.btnBilling);
             this.pnNav.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnNav.Location = new System.Drawing.Point(0, 0);
             this.pnNav.Name = "pnNav";
             this.pnNav.Size = new System.Drawing.Size(218, 714);
             this.pnNav.TabIndex = 4;
             // 
-            // btnAccount
+            // btnContract
             // 
-            this.btnAccount.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAccount.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAccount.FlatAppearance.BorderSize = 0;
-            this.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccount.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(154)))), ((int)(((byte)(157)))));
-            this.btnAccount.IconChar = FontAwesome.Sharp.IconChar.UsersCog;
-            this.btnAccount.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(154)))), ((int)(((byte)(157)))));
-            this.btnAccount.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAccount.IconSize = 30;
-            this.btnAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAccount.Location = new System.Drawing.Point(0, 413);
-            this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnAccount.Size = new System.Drawing.Size(218, 60);
-            this.btnAccount.TabIndex = 14;
-            this.btnAccount.Tag = "Acount";
-            this.btnAccount.Text = "Account";
-            this.btnAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAccount.UseVisualStyleBackColor = true;
+            this.btnContract.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnContract.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnContract.FlatAppearance.BorderSize = 0;
+            this.btnContract.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContract.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContract.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.btnContract.IconChar = FontAwesome.Sharp.IconChar.FileSignature;
+            this.btnContract.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnContract.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnContract.IconSize = 30;
+            this.btnContract.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnContract.Location = new System.Drawing.Point(0, 353);
+            this.btnContract.Name = "btnContract";
+            this.btnContract.Padding = new System.Windows.Forms.Padding(21, 0, 20, 0);
+            this.btnContract.Size = new System.Drawing.Size(218, 60);
+            this.btnContract.TabIndex = 15;
+            this.btnContract.Tag = "Contract";
+            this.btnContract.Text = "Contract";
+            this.btnContract.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnContract.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnContract.UseVisualStyleBackColor = true;
+            this.btnContract.Click += new System.EventHandler(this.btnContract_Click);
             // 
             // btnChart
             // 
+            this.btnChart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnChart.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChart.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnChart.FlatAppearance.BorderSize = 0;
             this.btnChart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChart.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(154)))), ((int)(((byte)(157)))));
+            this.btnChart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.btnChart.IconChar = FontAwesome.Sharp.IconChar.ChartLine;
-            this.btnChart.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(154)))), ((int)(((byte)(157)))));
+            this.btnChart.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnChart.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnChart.IconSize = 30;
             this.btnChart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChart.Location = new System.Drawing.Point(0, 353);
+            this.btnChart.Location = new System.Drawing.Point(0, 413);
             this.btnChart.Name = "btnChart";
             this.btnChart.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.btnChart.Size = new System.Drawing.Size(218, 60);
@@ -428,30 +471,32 @@
             this.btnChart.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnChart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChart.UseVisualStyleBackColor = true;
+            this.btnChart.Click += new System.EventHandler(this.btnChart_Click);
             // 
-            // btnBilling
+            // btnEmployee
             // 
-            this.btnBilling.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBilling.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBilling.FlatAppearance.BorderSize = 0;
-            this.btnBilling.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBilling.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBilling.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(154)))), ((int)(((byte)(157)))));
-            this.btnBilling.IconChar = FontAwesome.Sharp.IconChar.FileInvoiceDollar;
-            this.btnBilling.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(154)))), ((int)(((byte)(157)))));
-            this.btnBilling.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBilling.IconSize = 30;
-            this.btnBilling.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBilling.Location = new System.Drawing.Point(0, 293);
-            this.btnBilling.Name = "btnBilling";
-            this.btnBilling.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnBilling.Size = new System.Drawing.Size(218, 60);
-            this.btnBilling.TabIndex = 12;
-            this.btnBilling.Tag = "Billing";
-            this.btnBilling.Text = "Billing";
-            this.btnBilling.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBilling.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBilling.UseVisualStyleBackColor = true;
+            this.btnEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEmployee.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEmployee.FlatAppearance.BorderSize = 0;
+            this.btnEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployee.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.btnEmployee.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.btnEmployee.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnEmployee.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEmployee.IconSize = 30;
+            this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmployee.Location = new System.Drawing.Point(0, 233);
+            this.btnEmployee.Name = "btnEmployee";
+            this.btnEmployee.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnEmployee.Size = new System.Drawing.Size(218, 60);
+            this.btnEmployee.TabIndex = 10;
+            this.btnEmployee.Tag = "Employee";
+            this.btnEmployee.Text = "Employee";
+            this.btnEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmployee.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEmployee.UseVisualStyleBackColor = true;
+            this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
             // btnGoods
             // 
@@ -460,13 +505,13 @@
             this.btnGoods.FlatAppearance.BorderSize = 0;
             this.btnGoods.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGoods.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGoods.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(154)))), ((int)(((byte)(157)))));
+            this.btnGoods.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.btnGoods.IconChar = FontAwesome.Sharp.IconChar.CookieBite;
-            this.btnGoods.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(154)))), ((int)(((byte)(157)))));
+            this.btnGoods.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnGoods.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGoods.IconSize = 30;
             this.btnGoods.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGoods.Location = new System.Drawing.Point(0, 233);
+            this.btnGoods.Location = new System.Drawing.Point(0, 173);
             this.btnGoods.Name = "btnGoods";
             this.btnGoods.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.btnGoods.Size = new System.Drawing.Size(218, 60);
@@ -476,30 +521,7 @@
             this.btnGoods.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGoods.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGoods.UseVisualStyleBackColor = true;
-            // 
-            // btnStaff
-            // 
-            this.btnStaff.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStaff.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStaff.FlatAppearance.BorderSize = 0;
-            this.btnStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStaff.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStaff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(154)))), ((int)(((byte)(157)))));
-            this.btnStaff.IconChar = FontAwesome.Sharp.IconChar.Users;
-            this.btnStaff.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(154)))), ((int)(((byte)(157)))));
-            this.btnStaff.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnStaff.IconSize = 30;
-            this.btnStaff.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStaff.Location = new System.Drawing.Point(0, 173);
-            this.btnStaff.Name = "btnStaff";
-            this.btnStaff.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnStaff.Size = new System.Drawing.Size(218, 60);
-            this.btnStaff.TabIndex = 10;
-            this.btnStaff.Tag = "Staff";
-            this.btnStaff.Text = "Staff";
-            this.btnStaff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStaff.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnStaff.UseVisualStyleBackColor = true;
+            this.btnGoods.Click += new System.EventHandler(this.btnGoods_Click);
             // 
             // btnHome1
             // 
@@ -508,9 +530,9 @@
             this.btnHome1.FlatAppearance.BorderSize = 0;
             this.btnHome1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome1.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(154)))), ((int)(((byte)(157)))));
+            this.btnHome1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.btnHome1.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.btnHome1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(154)))), ((int)(((byte)(157)))));
+            this.btnHome1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnHome1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnHome1.IconSize = 30;
             this.btnHome1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -524,6 +546,7 @@
             this.btnHome1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHome1.UseVisualStyleBackColor = true;
+            this.btnHome1.Click += new System.EventHandler(this.btnHome1_Click);
             // 
             // panel9
             // 
@@ -543,10 +566,10 @@
             this.btnMenu.FlatAppearance.BorderSize = 0;
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenu.IconChar = FontAwesome.Sharp.IconChar.Bars;
-            this.btnMenu.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(154)))), ((int)(((byte)(157)))));
+            this.btnMenu.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.btnMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMenu.IconSize = 30;
-            this.btnMenu.Location = new System.Drawing.Point(-3, 61);
+            this.btnMenu.Location = new System.Drawing.Point(-8, 61);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(90, 44);
             this.btnMenu.TabIndex = 7;
@@ -559,34 +582,54 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::Manage_Store.Properties.Resources.logo1;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(24, 7);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(52, 47);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // dateTimePicker1
+            // btnBilling
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(710, 29);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 33);
-            this.dateTimePicker1.TabIndex = 2;
+            this.btnBilling.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBilling.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBilling.FlatAppearance.BorderSize = 0;
+            this.btnBilling.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBilling.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBilling.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.btnBilling.IconChar = FontAwesome.Sharp.IconChar.FileInvoiceDollar;
+            this.btnBilling.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnBilling.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBilling.IconSize = 30;
+            this.btnBilling.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBilling.Location = new System.Drawing.Point(0, 293);
+            this.btnBilling.Name = "btnBilling";
+            this.btnBilling.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnBilling.Size = new System.Drawing.Size(218, 60);
+            this.btnBilling.TabIndex = 12;
+            this.btnBilling.Tag = "Billing";
+            this.btnBilling.Text = "Billing";
+            this.btnBilling.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBilling.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBilling.UseVisualStyleBackColor = true;
+            this.btnBilling.Click += new System.EventHandler(this.btnBilling_Click);
             // 
-            // label2
+            // lbHeader
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Poppins SemiBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 44);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Home";
+            this.lbHeader.AutoSize = true;
+            this.lbHeader.Font = new System.Drawing.Font("Poppins SemiBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.lbHeader.Location = new System.Drawing.Point(13, 28);
+            this.lbHeader.Name = "lbHeader";
+            this.lbHeader.Size = new System.Drawing.Size(96, 44);
+            this.lbHeader.TabIndex = 1;
+            this.lbHeader.Text = "Home";
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel10);
@@ -599,66 +642,60 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(201)))), ((int)(((byte)(189)))));
+            this.panel5.Controls.Add(this.iconProfit);
             this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.label10);
-            this.panel5.Controls.Add(this.pictureBox5);
             this.panel5.Location = new System.Drawing.Point(515, 26);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(231, 133);
             this.panel5.TabIndex = 2;
             // 
+            // iconProfit
+            // 
+            this.iconProfit.BackColor = System.Drawing.Color.Transparent;
+            this.iconProfit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.iconProfit.IconChar = FontAwesome.Sharp.IconChar.DollarSign;
+            this.iconProfit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.iconProfit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconProfit.IconSize = 35;
+            this.iconProfit.Location = new System.Drawing.Point(29, 35);
+            this.iconProfit.Name = "iconProfit";
+            this.iconProfit.Size = new System.Drawing.Size(32, 32);
+            this.iconProfit.TabIndex = 4;
+            this.iconProfit.TabStop = false;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(154)))), ((int)(((byte)(157)))));
-            this.label9.Location = new System.Drawing.Point(12, 74);
+            this.label9.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(32, 91);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 26);
+            this.label9.Size = new System.Drawing.Size(119, 36);
             this.label9.TabIndex = 1;
             this.label9.Text = "Total Profit";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(71, 13);
+            this.label10.Font = new System.Drawing.Font("Poppins Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.label10.Location = new System.Drawing.Point(82, 29);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 30);
+            this.label10.Size = new System.Drawing.Size(103, 42);
             this.label10.TabIndex = 1;
             this.label10.Text = "$99.98";
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Manage_Store.Properties.Resources.user__1_1;
-            this.pictureBox5.Location = new System.Drawing.Point(15, 11);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(37, 32);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
-            // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(166)))), ((int)(((byte)(137)))));
             this.panel1.Controls.Add(this.panel12);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lbHeader);
             this.panel1.Location = new System.Drawing.Point(224, -6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1154, 80);
             this.panel1.TabIndex = 5;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(286, 29);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // panel12
             // 
@@ -674,67 +711,115 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Poppins", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(154)))), ((int)(((byte)(157)))));
-            this.label4.Location = new System.Drawing.Point(103, 44);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(81, 55);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 25);
+            this.label4.Size = new System.Drawing.Size(61, 26);
             this.label4.TabIndex = 7;
             this.label4.Text = "admin";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(103, 12);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(81, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 26);
+            this.label3.Size = new System.Drawing.Size(88, 36);
             this.label3.TabIndex = 6;
             this.label3.Text = "Kien108";
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(253)))));
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::Manage_Store.Properties.Resources.avatar2;
-            this.pictureBox2.Location = new System.Drawing.Point(32, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(10, 27);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(67, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
+            // elipseControl1
+            // 
+            this.elipseControl1.CornerRadius = 10;
+            this.elipseControl1.TargetControl = this.panel3;
+            // 
+            // elipseControl2
+            // 
+            this.elipseControl2.CornerRadius = 10;
+            this.elipseControl2.TargetControl = this.panel5;
+            // 
+            // elipseControl3
+            // 
+            this.elipseControl3.CornerRadius = 10;
+            this.elipseControl3.TargetControl = this.panel4;
+            // 
+            // elipseControl4
+            // 
+            this.elipseControl4.CornerRadius = 10;
+            this.elipseControl4.TargetControl = this.panel10;
+            // 
+            // elipseControl5
+            // 
+            this.elipseControl5.CornerRadius = 10;
+            this.elipseControl5.TargetControl = this.panel11;
+            // 
+            // elipseControl6
+            // 
+            this.elipseControl6.CornerRadius = 10;
+            this.elipseControl6.TargetControl = this.panel7;
+            // 
+            // elipseControl7
+            // 
+            this.elipseControl7.CornerRadius = 10;
+            this.elipseControl7.TargetControl = this.panel8;
+            // 
+            // elipseControl8
+            // 
+            this.elipseControl8.CornerRadius = 10;
+            this.elipseControl8.TargetControl = this.pictureBox10;
+            // 
+            // elipseControl10
+            // 
+            this.elipseControl10.CornerRadius = 10;
+            this.elipseControl10.TargetControl = this.panel1;
+            // 
             // frmMainn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(253)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.ClientSize = new System.Drawing.Size(1378, 714);
             this.Controls.Add(this.pnNav);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "frmMainn";
             this.Text = "frmMainn";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMainn_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconRevenue)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.panel6.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconBill)).EndInit();
             this.pnNav.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
@@ -742,7 +827,7 @@
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconProfit)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel12.ResumeLayout(false);
@@ -757,50 +842,57 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnNav;
-        private FontAwesome.Sharp.IconButton btnAccount;
         private FontAwesome.Sharp.IconButton btnChart;
         private FontAwesome.Sharp.IconButton btnBilling;
         private FontAwesome.Sharp.IconButton btnGoods;
-        private FontAwesome.Sharp.IconButton btnStaff;
+        private FontAwesome.Sharp.IconButton btnEmployee;
         private FontAwesome.Sharp.IconButton btnHome1;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label lbHeader;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
         private FontAwesome.Sharp.IconButton btnMenu;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private ElipseToolDemo.ElipseControl elipseControl1;
+        private FontAwesome.Sharp.IconButton btnContract;
+        private ElipseToolDemo.ElipseControl elipseControl2;
+        private ElipseToolDemo.ElipseControl elipseControl3;
+        private ElipseToolDemo.ElipseControl elipseControl4;
+        private ElipseToolDemo.ElipseControl elipseControl5;
+        private ElipseToolDemo.ElipseControl elipseControl6;
+        private ElipseToolDemo.ElipseControl elipseControl7;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Label label15;
+        private FontAwesome.Sharp.IconPictureBox iconBill;
+        private FontAwesome.Sharp.IconPictureBox iconRevenue;
+        private FontAwesome.Sharp.IconPictureBox iconProfit;
+        private ElipseToolDemo.ElipseControl elipseControl8;
+        private ElipseToolDemo.ElipseControl elipseControl10;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
+        private Guna.UI2.WinForms.Guna2Button btnChangeWeek;
     }
 }

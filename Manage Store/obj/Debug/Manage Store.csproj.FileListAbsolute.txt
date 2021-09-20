@@ -8,12 +8,16 @@ D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Mana
 D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage Store.csproj.CoreCompileInputs.cache
 D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage Store.exe
 D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage Store.pdb
-D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage_Store.frmProduct.resources
-D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage_Store.frmStaff.resources
-D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage_Store.frmStaffDetails.resources
-D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage_Store.frmAddStaff.resources
-D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage_Store.frmAddProduct.resources
-D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage_Store.frmBilling.resources
 D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\bin\Debug\FontAwesome.Sharp.dll
 D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage Store.csproj.CopyComplete
 D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage_Store.frmMainn.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage_Store.frmGoods.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage_Store.frmEmployee.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\bin\Debug\Guna.UI2.dll
+D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage_Store.frmBilling.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage_Store.frmContract.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage_Store.frmChart.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage_Store.frmAddEmployee.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage_Store.frmAddGoods.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage_Store.frmEmployeeDetails.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manage Store\Manage Store\Manage Store\obj\Debug\Manage_Store.frmGoodsDetail.resources

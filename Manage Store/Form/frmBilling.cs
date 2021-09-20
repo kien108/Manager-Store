@@ -16,5 +16,19 @@ namespace Manage_Store
         {
             InitializeComponent();
         }
+        private void frmBilling_Load(object sender, EventArgs e)
+        {
+            LoadForm(this.Width - 50);
+        }
+
+        private void LoadForm(int childForm_width)
+        {
+            dgBill.Width = childForm_width;
+            dgBill.Height = this.Height + 160;
+            dgBill.Location = new Point(23, pnBillHeading.Height - 20);
+
+            pnBillHeading.Width = dgBill.Width;
+            pnBillHeading.Height = (int)(this.Height * 0.2);
+        }
     }
 }

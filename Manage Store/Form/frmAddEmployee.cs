@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Manage_Store
 {
-    public partial class frmAddStaff : Form
+    public partial class frmAddEmployee : Form
     {
-        public frmAddStaff()
+        public frmAddEmployee()
         {
             InitializeComponent();
+        }
+
+        private void frmAddStaff_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

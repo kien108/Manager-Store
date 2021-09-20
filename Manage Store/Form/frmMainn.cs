@@ -13,7 +13,27 @@ namespace Manage_Store
     public partial class frmMainn : Form
     {
         public static Color primary_color = Color.FromArgb(39, 166, 137);
-        public static Color default_color = Color.FromArgb(184, 184, 187);
+        public static Color default_color = Color.FromArgb(17, 17, 17);
+
+        private Form currentChildForm;
+        private void OpenChildForm(Form childForm) // function to open child_form
+        {
+            //open only form
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            currentChildForm = childForm;
+            //End
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panel2.Controls.Add(childForm);
+            panel2.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            lbHeader.Text = childForm.Text;
+        }
         public frmMainn()
         {
             InitializeComponent();
@@ -21,6 +41,59 @@ namespace Manage_Store
         private void frmMainn_Load(object sender, EventArgs e)
         {
             changeColor();
+            loadForm(this.Width - pnNav.Width - 165, (int)(0.156 * this.Width));
+        }
+
+        private void loadForm(int panel2_width, int pnNav_width)
+        {
+            pnNav.Width = pnNav_width;
+            panel1.Width = panel2_width - 50;
+            panel1.Height = (int)(this.Height * 0.1);
+            panel1.Location = new Point(pnNav.Width + 50, 0);
+
+            panel2.Width = panel2_width;
+            panel2.Height = this.Height - panel1.Height - 10;
+            panel2.Location = new Point(pnNav.Width + 28, panel1.Height);
+
+            panel10.Width = (int)(0.6 * panel2.Width);
+            panel10.Height = panel2.Height - panel3.Height - 158;
+            panel10.Location = new Point(21, panel3.Height + 100);
+
+            label18.Location = new Point(panel10.Width / 2 - 170, 22);
+
+            pictureBox10.Width = panel10.Width - 20;
+            pictureBox10.Height = panel10.Height - 120;
+
+            panel6.Width = panel2.Width - panel10.Width - 40;
+            panel6.Height = panel2.Height;
+            panel6.Location = new Point(panel10.Width + 40, 3);
+
+            panel3.Width = (int)(0.32 * panel10.Width);
+            panel3.Height = (int)(0.18 * panel2.Height);
+
+            panel4.Width = panel3.Width;
+            panel4.Height = panel3.Height;
+            panel4.Location = new Point(panel3.Width + 41, 26);
+
+            panel5.Width = panel3.Width;
+            panel5.Height = panel3.Height;
+            panel5.Location = new Point(panel4.Width * 2 + 62, 26);
+
+            panel11.Width = panel6.Width - 40;
+            panel11.Height = (int)(panel2.Height * 0.48);
+
+            pictureBox9.Width = panel11.Width - 32;
+            pictureBox9.Height = panel11.Height - 110;
+
+            btnChangeWeek.Location = new Point(panel11.Width - label15.Width + 30, 15);
+
+            panel7.Width = (int)(0.5 * panel6.Width - 30);
+            panel7.Height = 150;
+            panel7.Location = new Point(11, panel11.Height + 50);
+
+            panel8.Width = panel7.Width;
+            panel8.Height = panel7.Height;
+            panel8.Location = new Point(panel7.Width + 30, panel11.Height + 50);
         }
         private void AllItemNav_MouseEnter(object sender, EventArgs e)
         {
@@ -34,8 +107,8 @@ namespace Manage_Store
         {
             FontAwesome.Sharp.IconButton btn = (FontAwesome.Sharp.IconButton)sender;
             btn.ForeColor = default_color;
-            btn.IconColor = default_color;
-            btn.BackColor = Color.FromArgb(248, 249, 253);
+            btn.IconColor = Color.FromArgb(51, 51, 51);
+            btn.BackColor = Color.FromArgb(238, 238, 238);
         }
         private void changeColor()
         {
@@ -55,10 +128,8 @@ namespace Manage_Store
             {
                 label1.Text = "";
                 pnNav.Width = 80;
-                panel1.Location = new Point(90, -6);
-                panel2.Location = new Point(90, 80);
-                panel1.Width = 1300;
-                panel2.Width = 1300;
+                panel2.Width = this.Width - pnNav.Width - 30;
+                this.loadForm(panel2.Width, pnNav.Width);
                 foreach (FontAwesome.Sharp.IconButton btn in pnNav.Controls.OfType<FontAwesome.Sharp.IconButton>())
                 {
                     if(btn is FontAwesome.Sharp.IconButton)
@@ -71,11 +142,6 @@ namespace Manage_Store
             else
             {
                 label1.Text = label1.Tag.ToString();
-                pnNav.Width = 218;
-                panel1.Location = new Point(230, -6);
-                panel2.Location = new Point(230, 80);
-                panel1.Width = 1154;
-                panel2.Width = 1154;
                 foreach (FontAwesome.Sharp.IconButton btn in pnNav.Controls.OfType<FontAwesome.Sharp.IconButton>())
                 {
                     if (btn is FontAwesome.Sharp.IconButton)
@@ -84,6 +150,7 @@ namespace Manage_Store
                         btn.ImageAlign = ContentAlignment.MiddleLeft;
                     }
                 }
+                this.loadForm(this.Width - pnNav.Width - 250, (int)(0.156 * this.Width));
             }
         }
 
@@ -98,7 +165,59 @@ namespace Manage_Store
         {
             btnMenu.ForeColor = default_color;
             btnMenu.IconColor = default_color;
-            btnMenu.BackColor = Color.FromArgb(248, 249, 253);
+            btnMenu.BackColor = Color.FromArgb(238, 238, 238);
         }
+
+        private void btnGoods_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmGoods());
+        }
+
+        private void btnEmployee_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmEmployee());
+        }
+
+        private void btnBilling_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmBilling());
+        }
+        private void btnContract_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmContract());
+        }
+        private void btnChart_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmChart());
+        }
+  
+        private void btnHome1_Click(object sender, EventArgs e)
+        {
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+                lbHeader.Text = "Home";
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+                lbHeader.Text = "Home";
+            }
+        }
+        private void label1_Click(object sender, EventArgs e)
+        {
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+                lbHeader.Text = "Home";
+            }
+
+        }
+
+        
     }
 }

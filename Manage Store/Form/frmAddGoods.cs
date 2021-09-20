@@ -10,16 +10,21 @@ using System.Windows.Forms;
 
 namespace Manage_Store
 {
-    public partial class frmAddProduct : Form
+    public partial class frmAddGoods : Form
     {
-        public frmAddProduct()
+        public frmAddGoods()
         {
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void guna2Button2_Click_1(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

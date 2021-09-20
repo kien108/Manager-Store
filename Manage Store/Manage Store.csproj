@@ -36,6 +36,9 @@
     <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.2.1, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.2.1\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -58,35 +61,35 @@
     <Compile Include="Form\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\frmProduct.cs">
+    <Compile Include="Form\frmGoods.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\frmProduct.Designer.cs">
-      <DependentUpon>frmProduct.cs</DependentUpon>
+    <Compile Include="Form\frmGoods.Designer.cs">
+      <DependentUpon>frmGoods.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\frmStaff.cs">
+    <Compile Include="Form\frmEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\frmStaff.Designer.cs">
-      <DependentUpon>frmStaff.cs</DependentUpon>
+    <Compile Include="Form\frmEmployee.Designer.cs">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\frmStaffDetails.cs">
+    <Compile Include="Form\frmEmployeeDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\frmStaffDetails.Designer.cs">
-      <DependentUpon>frmStaffDetails.cs</DependentUpon>
+    <Compile Include="Form\frmEmployeeDetails.Designer.cs">
+      <DependentUpon>frmEmployeeDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\frmAddStaff.cs">
+    <Compile Include="Form\frmAddEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\frmAddStaff.Designer.cs">
-      <DependentUpon>frmAddStaff.cs</DependentUpon>
+    <Compile Include="Form\frmAddEmployee.Designer.cs">
+      <DependentUpon>frmAddEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\frmAddProduct.cs">
+    <Compile Include="Form\frmAddGoods.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\frmAddProduct.Designer.cs">
-      <DependentUpon>frmAddProduct.cs</DependentUpon>
+    <Compile Include="Form\frmAddGoods.Designer.cs">
+      <DependentUpon>frmAddGoods.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\frmBilling.cs">
       <SubType>Form</SubType>
@@ -100,31 +103,58 @@
     <Compile Include="Form\frmMainn.Designer.cs">
       <DependentUpon>frmMainn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\frmContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmContract.Designer.cs">
+      <DependentUpon>frmContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmChart.Designer.cs">
+      <DependentUpon>frmChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmGoodsDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmGoodsDetail.Designer.cs">
+      <DependentUpon>frmGoodsDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\frmProduct.resx">
-      <DependentUpon>frmProduct.cs</DependentUpon>
+    <EmbeddedResource Include="Form\frmGoods.resx">
+      <DependentUpon>frmGoods.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\frmStaff.resx">
-      <DependentUpon>frmStaff.cs</DependentUpon>
+    <EmbeddedResource Include="Form\frmEmployee.resx">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\frmStaffDetails.resx">
-      <DependentUpon>frmStaffDetails.cs</DependentUpon>
+    <EmbeddedResource Include="Form\frmEmployeeDetails.resx">
+      <DependentUpon>frmEmployeeDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\frmAddStaff.resx">
-      <DependentUpon>frmAddStaff.cs</DependentUpon>
+    <EmbeddedResource Include="Form\frmAddEmployee.resx">
+      <DependentUpon>frmAddEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\frmAddProduct.resx">
-      <DependentUpon>frmAddProduct.cs</DependentUpon>
+    <EmbeddedResource Include="Form\frmAddGoods.resx">
+      <DependentUpon>frmAddGoods.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\frmBilling.resx">
       <DependentUpon>frmBilling.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\frmMainn.resx">
       <DependentUpon>frmMainn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmContract.resx">
+      <DependentUpon>frmContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmChart.resx">
+      <DependentUpon>frmChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmGoodsDetail.resx">
+      <DependentUpon>frmGoodsDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -266,6 +296,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\avatar3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
