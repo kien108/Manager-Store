@@ -1,0 +1,144 @@
+_____________________Goods__________________________
+
+- Cột gquantity set default = 0
+- Cột gstate set default = 1
+- gname thêm ràng buộc unique
+- View:
+  + vw_GetAllGoods => select * 
+  + vw_GetAllGoodsWithProfit => select gid, gname, gprice, gprice - cprice, gquantity, gstate, gphoto from Goods join Contracts 
+  + vw_GetStockingGoods => select * where state = 1 and quantity > 0
+  + vw_GetSoldOutGoods => select * where state = 1 and quantity = 0
+  + vw_GetStopSellingGoods => select * where state = 0
+
+- Procedure: 
+  + sp_GetAllGoods => select * from vw_GetAllGoods
+  + sp_GetAllGoodsWithProfit => select * from vw_GetAllGoodsWithProfit 
+  + sp_GetStockingGoods => select * from vw_GetStockingGoods 
+  + sp_GetSoldOutGoods => select * from vw_GetSoldOutGoods 
+  + sp_GetStopSellingGoods => select * from vw_GetStopSellingGoods 
+  + sp_GetGoodsById(id) => select from vw_GetAllGoodsWithProfit where = id
+  + sp_GetGoodsByName(name) => select from vw_GetAllGoodsWithProfit where like '%name%'
+  + sp_InsertGoods(name, price, photo)
+  + sp_UpdateGoods(id, name, price, 
+  + sp_UpdateNameGoods(id, name) => Update name where =id
+  + sp_UpdatePriceGoods(id, price) 
+  + sp_UpdateQuantityGoods(id, quantity) 
+  + sp_UpdateStateGoods(id, state)
+  + sp_UpdatePhotoGoods(id, photo)
+  + sp_CheckGoods(id, result (OUTPUT)) => {
+	state, quantity = select Goods where =id
+    	if (state == 0)
+	    result = "Stop selling"	// Ngưng bán
+	else if (quantity == 0)
+	    result = "Sold out"		// Hết hàng
+	else	
+	    result = "Stocking"		// Còn hàng
+    }
+
+- Trigger:
+  + tg_SellingHaltGoods; instead of delete: chuyển gstate của row có id vừa bị delete thành 0 (update nhớ xài sp ở trên -.-)
+
+
+
+_______________________Employee_______________________
+
+- Cột workDays set default = 0
+- Cột estate set default = 1
+- View:
+  + vw_GetAllEmployees => select *
+  + vw_GetStaffs => select * where 'staff'
+  + vw_GetStockManagers
+  + vw_GetAccountants
+- Procedure:
+  + sp_GetAllEmployees => select * from vw_GetAllEmployees 
+  + sp_GetStaffs => select * from vw_GetStaffs 
+  + sp_GetStockManagers => select * from vw_GetStockManagers
+  + sp_GetAccountants => select * from vw_GetAccountants
+  + sp_GetEmployeeById(id) => select * where =id
+  + sp_GetEmployeeByName(name) => select * where like '%name%'
+  + sp_GetEmployeeByPhoneNumber(phoneNumber) => select * where like '%phoneNumber%'
+  + sp_GetEmployeeByAddress(address) => select * where like '%address%'
+  + sp_InsertEmployee(name, birthday, address, gender, phoneNumber, password, role, photo) => {
+      declare @salary;
+      @salary = 10000 | 20000         | 30000      | 40000
+	        STAFF | STOCK MANAGER | ACCOUNTANT | ADMIN
+      insert Goods(name, birthday, address, gender, phoneNumber, 
+                   @salary, password, role, photo)
+  }
+  + sp_UpdateEmployee(id, name, birthday, address, gender, phoneNumber, salary, password, role, state, photo)
+  + sp_UpdatePersonalInfoEmployee(id, name, birthday, address, gender, phoneNumber, password, photo)
+  + sp_UpdateMajorInfoEmployee(id, salary, role, state)
+  + sp_ResetWorkDaysEmployee(id) => update workDays = 0 where =id
+  + sp_UpdateStateEmployee(id)
+
+-Trigger:
+  + tg_QuitJobEmployee; instead of delete: chuyển gstate của row có id vừa bị delete thành 0 (update nhớ xài sp ở trên -.-)
+
+
+_______________________Bills_________________________
+
+- bdate: date => datetime
+- View:
+  + vw_GetAllBills => select bill_id, Employee.ename, Goods.gname, bquantity, bDate, bPrice
+
+- Procedure:
+  + sp_GetAllBills => select * from vw_GetAllBills
+  + sp_GetBillsOfEmployee(eid) => select * from vw_GetAllBills where eid = eid
+  + sp_GetBillsOfDay(date) => select * from vw_GetAllBills where (date)bdate = date order by bdate
+  + sp_GetBillsOfEmployeeAndDate(eid, date) => select * from vw_GetAllBills where eid = eid && (date)bdate = date
+  + sp_InsertBill(em_id, g_id, quantity) => {
+      @date = today()
+      @gprice = select gprice from goods where =g_id
+      @price = gprice * quantity
+      insert into Bills(em_id, g_id, quantity, @date, @price)
+  }
+
+- Trigger:
+  + tg_ReduceQuantityGoods; for insert, update: update gquantity trong goods bị trừ với số quantity mới mua
+  + tg_AddWorkDay; for insert, update; condition: thực hiện nếu đơn được insert này là đơn đầu tiên trong ngày của nhân viên; update workday++ cho nhân viên insert bill đó
+
+
+____________________Contracts_________________________
+
+- Thêm goods_id làm khóa chính
+- View: 
+  + vw_GetAllContracts => select contract_id, Employee.ename, Providers.pname, cdate, Goods.goods_id, cquantity, cprice
+
+- Procedure:
+  + sp_GetAllContracts => select * from vw_GetAllContracts
+  + sp_GetContractByGoods(gname) => select * from vw_GetAllContracts where = gname
+  + sp_GetContractByProvider(pname) => select * from vw_GetAllContracts where = pname
+  + sp_GetContractByEmployee(ename) => select * from vw_GetAllContracts where = ename
+  + sp_InsertContract(em_id, g_id, p_id, cdate, cquantity, cprice)
+
+- Trigger:
+  + tg_UpdateQuantity; for insert, update; gquantity của goodid tương ứng được tăng lên (gquantity += cquantity), gstate của sản phẩm vừa được nhập cũng được gán = 1 (cho trường hợp gstate = 0 - đã ngừng bán)
+
+
+_____________________Providers___________________________
+
+- thêm 1 cột pstate (bit) (tương tự gstate, estate) default = 1
+- View:
+  + vw_GetProviders => select *
+
+- Procedure:
+  + sp_GetProviders => select * from vw_GetProviders 
+  + sp_InsertProvider(name, address, phoneNumber)
+  + sp_UpdateProvider(id, name, address, phoneNumber, state)
+  + sp_UpdateState(id, state)
+
+- Trigger:
+  + tg_StopProviding; instead of delete; chuyển gstate của p_id sẽ bị xóa (deleted) = 0
+
+
+______________________Cash_flow____________________________
+
+- Thêm cột source nvarchar(...)
+
+- Procedure:
+  + sp_InsertFlow(date, source, spend, revenue) => {
+      insert into Cash_flow values(date, source, spend, revenue, revenue-spend)
+  }
+
+- Trigger từ các bảng:
+  + tg_RevenueFromBill: 
