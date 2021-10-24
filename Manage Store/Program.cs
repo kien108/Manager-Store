@@ -1,10 +1,12 @@
-﻿using System;
+﻿using DTO;
+using GUI.DefinedFramework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Manage_Store
+namespace GUI
 {
     static class Program
     {
@@ -16,7 +18,8 @@ namespace Manage_Store
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMainn());
+            Employee emp = null;
+            Application.Run(new Form1());
         }
     }
 }
