@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
 using DAL;
 
@@ -13,14 +8,13 @@ namespace BLL
     {
         DataAccess dal = new DataAccess();
 
-        public DataTable GetGoodTable(ref string error)
+        public DataTable GetGoodsTable(ref string error)
         {
             DataTable temp = dal.ExecuteQueryData("sp_GetAllGoodsWithProfit", CommandType.StoredProcedure, ref error);
             if (temp == null)
                 return null;
             DataTable dt = temp.Clone();
-            dt.Columns["Price"].DataType = typeof(string);
-            dt.Columns["Profit"].DataType = typeof(string);
+            dt.Columns["Image"].DataType = typeof(bool);
             foreach (DataRow row in temp.Rows)
                 dt.ImportRow(row);
             return dt;
@@ -32,8 +26,7 @@ namespace BLL
             if (temp == null)
                 return null;
             DataTable dt = temp.Clone();
-            dt.Columns["Price"].DataType = typeof(string);
-            dt.Columns["Profit"].DataType = typeof(string);
+            dt.Columns["Image"].DataType = typeof(bool);
             foreach (DataRow row in temp.Rows)
                 dt.ImportRow(row);
             return dt;
@@ -45,8 +38,7 @@ namespace BLL
             if (temp == null)
                 return null;
             DataTable dt = temp.Clone();
-            dt.Columns["Price"].DataType = typeof(string);
-            dt.Columns["Profit"].DataType = typeof(string);
+            dt.Columns["Image"].DataType = typeof(bool);
             foreach (DataRow row in temp.Rows)
                 dt.ImportRow(row);
             return dt;
@@ -58,8 +50,7 @@ namespace BLL
             if (temp == null)
                 return null;
             DataTable dt = temp.Clone();
-            dt.Columns["Price"].DataType = typeof(string);
-            dt.Columns["Profit"].DataType = typeof(string);
+            dt.Columns["Image"].DataType = typeof(bool);
             foreach (DataRow row in temp.Rows)
                 dt.ImportRow(row);
             return dt;
@@ -72,8 +63,7 @@ namespace BLL
             if (temp == null)
                 return null;
             DataTable dt = temp.Clone();
-            dt.Columns["Price"].DataType = typeof(string);
-            dt.Columns["Profit"].DataType = typeof(string);
+            dt.Columns["Image"].DataType = typeof(bool);
             foreach (DataRow row in temp.Rows)
                 dt.ImportRow(row);
             return dt;
@@ -86,11 +76,61 @@ namespace BLL
             if (temp == null)
                 return null;
             DataTable dt = temp.Clone();
-            dt.Columns["Price"].DataType = typeof(string);
-            dt.Columns["Profit"].DataType = typeof(string);
+            dt.Columns["Image"].DataType = typeof(bool);
             foreach (DataRow row in temp.Rows)
                 dt.ImportRow(row);
             return dt;
+        }
+
+        public string UpdateInformationGoods(int id, string name, string unit, double price, bool state, string url)
+        {
+            string error = null, message = null;
+            bool updated = dal.ExecuteNonQuery("sp_UpdateGoods", CommandType.StoredProcedure, ref error, ref message,
+                new SqlParameter("id", id),
+                new SqlParameter("name", name),
+                new SqlParameter("unit", unit),
+                new SqlParameter("price", price),
+                new SqlParameter("state", state),
+                new SqlParameter("photo", url),
+                new SqlParameter("forceUpdatePhoto", true));
+            if (error != null)
+                return "Update failed!\n" + error;
+            if (!updated)
+                return "No data is updated!";
+            return "Update successful!";
+        } 
+
+        public string DeleteGoods(int id)
+        {
+            string error = null, message = null;
+            bool deleted = dal.ExecuteNonQuery("sp_UpdateGoods", CommandType.StoredProcedure, ref error, ref message,
+                new SqlParameter("id", id),
+                new SqlParameter("state", false));
+            if (error != null)
+                return "Delete failed!\n" + error;
+            if (!deleted)
+                return "No data is deleted";
+            return "Delete successful!";
+        }
+
+        public string InsertGoods(string name, string unit, double price, string url)
+        {
+            string error = null, message = null;
+            bool inserted = dal.ExecuteNonQuery("sp_InsertGoods", CommandType.StoredProcedure, ref error, ref message,
+                new SqlParameter("name", name),
+                new SqlParameter("unit", unit),
+                new SqlParameter("price", price),
+                new SqlParameter("photo", url));
+            if (error != null)
+                return "Insert failed!\n" + error;
+            if (!inserted)
+                return "Data is not inserted!";
+            return "Insert successful!\nPlease insert the contract of it to be showed!";
+        }
+
+        public DataTable GetGoodsStillSelling(ref string error)
+        {
+            return dal.ExecuteQueryData("sp_GetAllGoodsStillSelling", CommandType.StoredProcedure, ref error);
         }
     }
 }

@@ -11,13 +11,15 @@ namespace DAL
         private SqlDataAdapter da;
         private string computerName = Environment.MachineName.ToString();
         private string databaseName = "GroceryStore";
-        private string security = "True";
+        private string userId = "GS_admin";
+        private string password = "123";
         private string connectionString;
         private string message = "";
         
         public DataAccess()
         {
-            connectionString = String.Format("Data Source={0};Initial Catalog={1};Integrated Security={2}", computerName, databaseName, security);
+            connectionString = String.Format("Server={0};Database={1};User Id={2};Password={3};", 
+                computerName, databaseName, userId, password);
             conn = new SqlConnection(connectionString);
             cmd = conn.CreateCommand();
             conn.InfoMessage += new SqlInfoMessageEventHandler((object obj, SqlInfoMessageEventArgs e) => { message = e.Message; });
@@ -39,9 +41,9 @@ namespace DAL
             da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             try { da.Fill(dt); }
-            catch (Exception)
+            catch (Exception e)
             {
-                error = "Can't fill data into data table!";
+                error = e.Message;
                 dt = null;
             }
             finally
