@@ -170,10 +170,10 @@ namespace GUI.DefinedFramework
             this.txtQuantity.DisabledState.Parent = this.txtQuantity;
             this.txtQuantity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.txtQuantity.FocusedState.Parent = this.txtQuantity;
             this.txtQuantity.Font = new System.Drawing.Font("Poppins", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.txtQuantity.HoverState.Parent = this.txtQuantity;
             this.txtQuantity.Location = new System.Drawing.Point(18, 0);
             this.txtQuantity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

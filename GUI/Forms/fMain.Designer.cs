@@ -29,6 +29,7 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain));
             this.pnLogo = new System.Windows.Forms.Panel();
             this.lbLogo = new System.Windows.Forms.Label();
             this.pbLogo = new System.Windows.Forms.PictureBox();
@@ -99,7 +100,7 @@ namespace GUI
             this.pnAccount.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnAccount.Location = new System.Drawing.Point(0, 519);
             this.pnAccount.Name = "pnAccount";
-            this.pnAccount.Padding = new System.Windows.Forms.Padding(10);
+            this.pnAccount.Padding = new System.Windows.Forms.Padding(15, 10, 10, 10);
             this.pnAccount.ShadowDecoration.Parent = this.pnAccount;
             this.pnAccount.Size = new System.Drawing.Size(200, 79);
             this.pnAccount.TabIndex = 1;
@@ -111,7 +112,7 @@ namespace GUI
             this.lbRole.BackColor = System.Drawing.Color.Transparent;
             this.lbRole.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRole.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.lbRole.Location = new System.Drawing.Point(87, 45);
+            this.lbRole.Location = new System.Drawing.Point(92, 45);
             this.lbRole.Name = "lbRole";
             this.lbRole.Size = new System.Drawing.Size(63, 20);
             this.lbRole.TabIndex = 2;
@@ -123,7 +124,7 @@ namespace GUI
             this.lbName.BackColor = System.Drawing.Color.Transparent;
             this.lbName.Font = new System.Drawing.Font("Roboto Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.lbName.Location = new System.Drawing.Point(86, 17);
+            this.lbName.Location = new System.Drawing.Point(91, 17);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(215, 24);
             this.lbName.TabIndex = 1;
@@ -131,11 +132,13 @@ namespace GUI
             // 
             // pbAvatar
             // 
-            this.pbAvatar.BackColor = System.Drawing.Color.Transparent;
+            this.pbAvatar.AutoRoundedCorners = true;
+            this.pbAvatar.BorderRadius = 28;
             this.pbAvatar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pbAvatar.Image = global::Manage_Store.Properties.Resources.avatar;
+            this.pbAvatar.FillColor = System.Drawing.Color.Transparent;
+            this.pbAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pbAvatar.Image")));
             this.pbAvatar.ImageRotate = 0F;
-            this.pbAvatar.Location = new System.Drawing.Point(10, 10);
+            this.pbAvatar.Location = new System.Drawing.Point(15, 10);
             this.pbAvatar.Name = "pbAvatar";
             this.pbAvatar.ShadowDecoration.Parent = this.pbAvatar;
             this.pbAvatar.Size = new System.Drawing.Size(60, 59);

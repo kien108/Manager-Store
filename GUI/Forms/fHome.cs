@@ -32,6 +32,7 @@ namespace GUI
             btnCart.FillColor = root.homePrimaryColor;
             pnCartBody.FillColor = root.screenColor;
             pnCartFooter.FillColor = Color.Transparent;
+            horizontalLine.FillColor = root.navBarColor;
 
             LoadGoods();
             CreateGoodsGrid();
@@ -73,7 +74,6 @@ namespace GUI
             {
                 row.SizeType = SizeType.Percent;
                 row.Height = 100 / rowCount;
-
             }
 
             // Data

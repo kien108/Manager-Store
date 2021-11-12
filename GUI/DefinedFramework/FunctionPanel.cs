@@ -85,12 +85,16 @@ namespace Manage_Store.DefinedFramework
         private void MouseEnterPanel(object sender, EventArgs e)
         {
             BackColor = backColor;
+            borderLeft.BackColor = borderColor;
         }
 
         private void MouseLeavePanel(object sender, EventArgs e)
         {
             if (!check)
+            {
                 BackColor = Color.Transparent;
+                borderLeft.BackColor = Color.Transparent;
+            }
         }
 
         public void Chose(bool chose = false)

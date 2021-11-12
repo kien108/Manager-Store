@@ -157,8 +157,8 @@ namespace GUI
 
         private void pnScreen_Paint(object sender, PaintEventArgs e)
         {
-            HighlightOption(0);
-            OpenChildForm(new fHome());
+            HighlightOption(1);
+            OpenChildForm(new fBill());
         }
 
         private void OpenHomePage(object sender, EventArgs e)

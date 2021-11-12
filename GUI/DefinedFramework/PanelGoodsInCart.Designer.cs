@@ -31,20 +31,20 @@ namespace GUI.DefinedFramework
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PanelGoodsInCart));
             this.pnWrapper = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.lbName = new System.Windows.Forms.Label();
             this.pnQuantityWrapper = new System.Windows.Forms.Panel();
             this.pnQuantity = new Guna.UI2.WinForms.Guna2Panel();
             this.txtQuantity = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lbPrice = new System.Windows.Forms.Label();
             this.btnPlus = new Guna.UI2.WinForms.Guna2Button();
             this.btnMinus = new Guna.UI2.WinForms.Guna2Button();
+            this.lbPrice = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.pnImage = new Guna.UI2.WinForms.Guna2Panel();
             this.pnWrapper.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
             this.pnQuantityWrapper.SuspendLayout();
             this.pnQuantity.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnWrapper
@@ -64,17 +64,6 @@ namespace GUI.DefinedFramework
             this.pnWrapper.ShadowDecoration.Parent = this.pnWrapper;
             this.pnWrapper.Size = new System.Drawing.Size(800, 94);
             this.pnWrapper.TabIndex = 0;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.Controls.Add(this.btnDelete);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2Panel1.Location = new System.Drawing.Point(722, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Padding = new System.Windows.Forms.Padding(15);
-            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(78, 94);
-            this.guna2Panel1.TabIndex = 9;
             // 
             // lbName
             // 
@@ -120,7 +109,7 @@ namespace GUI.DefinedFramework
             // txtQuantity
             // 
             this.txtQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtQuantity.DefaultText = "0";
+            this.txtQuantity.DefaultText = "5";
             this.txtQuantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtQuantity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtQuantity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -139,24 +128,10 @@ namespace GUI.DefinedFramework
             this.txtQuantity.PasswordChar = '\0';
             this.txtQuantity.PlaceholderText = "";
             this.txtQuantity.SelectedText = "";
-            this.txtQuantity.SelectionStart = 1;
             this.txtQuantity.ShadowDecoration.Parent = this.txtQuantity;
             this.txtQuantity.Size = new System.Drawing.Size(32, 22);
             this.txtQuantity.TabIndex = 2;
             this.txtQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lbPrice
-            // 
-            this.lbPrice.BackColor = System.Drawing.Color.White;
-            this.lbPrice.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbPrice.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Bold);
-            this.lbPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.lbPrice.Location = new System.Drawing.Point(553, 0);
-            this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(169, 94);
-            this.lbPrice.TabIndex = 17;
-            this.lbPrice.Text = "30.000 đ";
-            this.lbPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnPlus
             // 
@@ -219,11 +194,36 @@ namespace GUI.DefinedFramework
             this.btnMinus.Size = new System.Drawing.Size(25, 22);
             this.btnMinus.TabIndex = 0;
             // 
+            // lbPrice
+            // 
+            this.lbPrice.BackColor = System.Drawing.Color.White;
+            this.lbPrice.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbPrice.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Bold);
+            this.lbPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.lbPrice.Location = new System.Drawing.Point(553, 0);
+            this.lbPrice.Name = "lbPrice";
+            this.lbPrice.Size = new System.Drawing.Size(169, 94);
+            this.lbPrice.TabIndex = 17;
+            this.lbPrice.Text = "30.000 đ";
+            this.lbPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.btnDelete);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2Panel1.Location = new System.Drawing.Point(722, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Padding = new System.Windows.Forms.Padding(15);
+            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
+            this.guna2Panel1.Size = new System.Drawing.Size(78, 94);
+            this.guna2Panel1.TabIndex = 9;
+            // 
             // btnDelete
             // 
             this.btnDelete.Animated = true;
             this.btnDelete.BorderRadius = 10;
             this.btnDelete.CheckedState.Parent = this.btnDelete;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.CustomImages.Parent = this.btnDelete;
             this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -267,9 +267,9 @@ namespace GUI.DefinedFramework
             this.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.Size = new System.Drawing.Size(800, 104);
             this.pnWrapper.ResumeLayout(false);
-            this.guna2Panel1.ResumeLayout(false);
             this.pnQuantityWrapper.ResumeLayout(false);
             this.pnQuantity.ResumeLayout(false);
+            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

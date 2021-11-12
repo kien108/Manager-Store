@@ -117,28 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnSearch.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABGdBTUEAALGPC/xhBQAAA5tJREFUaEPt
-        mu9rTmEYx9d+GM0Lv7Y1mz9AxKtt4m/wZlu8GdImKUUhRSlFeMVCUl6JYuWdmL+CSfKjJLYwvyNGMp/r
-        3Ndzn+N2Fttzn/s5tvOpbz3Pc13n+t5XPeec+9z3qSooKCgomC1MTExUow60B11Bd9E7R8NIYpLTjqr1
-        8P8HBt2GjqMRNFWeIzm2VcvlFwa5CJ1G46hcpMYAWqDl8wUD24DGkG9eom61qTwMpg6dl5FNwnt0EW1G
-        co42o4Uq+Sy/bUGSI7mTcRbVqW1lYAANaEhGk8I91IvmavpfkVwkzd9HadxEDZoeFoxr0Q0ZhcMntBPV
-        aOqU4VipvQt9Ri7XUa2mhgNT+Yu5PETLNaVsqLUCPZLCDgOaEgYM5QLlchs1aoo3qCnnudyrXbo0JVsw
-        akRvIsuYx6hJU7xD7Rb0RIwSyB1hsaZkByYXIrsYOc9Wajgz8FiNvohhgnMazgYMlqHvkVXMbg1nDl77
-        jKVFJidLNewfih+LbGIeoGBXTLzkni+nT5IjGvYLheVWMRpZxGzVcDDw7DfWlmfI/wMHRddF5WM+onka
-        DgaeMtmRe32STg37g6IHTG3LZQ0FB+9BMwTLfg35g6LXTG1Ln4aCg/d2MwTLoIb8QVGZGydp11Bw8F5j
-        hmAZ1pA/KPrW1LZ4n1X9K3g3mSFYxjTkD4p+M7UtczQUHLzrzRAs4xryB0Xdhiv2bIp3kIbd+fMSDQUH
-        7yB/6Vl30XJvS/0aCg7eQW5LB01tyyUNBQfvq2YIlkwmHmtNbcsHlJepZYeG/UHRGpSHh4dtxtqSzcOD
-        QOE8Ph4e1bB/KN6K3F2FSi4AfEUtGs4GDM5EVjGVXOI5qeHswET2j15HdjHyN2vWFO9QWxbxnopRAtmC
-        CbPvhFHaMu0d5H3lkppyGqXtWYVZpi2BYdpCvFzEVmlK2VCrE6VtuQ5pSjgwlSum7PW4yEXtEKrX1CnD
-        sbLHdBi5DywlfqBNmh4OTOejWzKCFGThXDbGprqZ1ofc8zUNabpXDw0HptPZLpVJjEg+yysRpe1Smb1N
-        hmzcuWviP9EOHUpYMN6IstgQf4V61KML5app3688nEK/3Xr4nq+mBczLfanlBGrTcn9ALH9NCwyg9NrS
-        XpR8banEtF9bIq8b5a/pLKG5ommlaHrGQXOzsml5TUpmYEnke9gHjZDQXFrTIxqemdCg2/SohmYuNNmD
-        XqjW688FBQUFBf8RVVW/APmm+LyjWRl4AAAAAElFTkSuQmCC
-</value>
-  </data>
   <metadata name="ecTlpPictureSide.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>321, 17</value>
   </metadata>

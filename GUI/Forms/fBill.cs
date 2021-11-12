@@ -20,6 +20,7 @@ namespace GUI
         {
             InitializeComponent();
             tlpWrapper.ColumnStyles[1].Width = 0;
+            btnDeleteSearch.Hide();
 
             BackColor = root.screenColor;
             tlpWrapper.BackColor = root.screenColor;
@@ -51,15 +52,6 @@ namespace GUI
                 MessageBox.Show(error);
             else
                 CustomDgvBill();
-            label6.BackColor = Color.FromArgb(100, Color.Black);
-            label7.BackColor = Color.FromArgb(100, Color.Black);
-            label8.BackColor = Color.FromArgb(100, Color.Black);
-            label10.BackColor = Color.FromArgb(100, Color.Black);
-            label11.BackColor = Color.FromArgb(100, Color.Black);
-            ContextMenu cm = new ContextMenu();
-            cm.MenuItems.Add("Add Item");
-            cm.MenuItems.Add("Delete Item");
-            guna2Panel10.ContextMenu = cm;
         }
 
         private void CustomDgvBill()
@@ -131,7 +123,33 @@ namespace GUI
 
         private void btnDetail_Click(object sender, EventArgs e)
         {
+
+
             tlpWrapper.ColumnStyles[1].Width = 600;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearch.Text.Trim().Length == 0)
+            {
+
+                btnDeleteSearch.Visible = false;
+            }
+            else
+            {
+                btnDeleteSearch.Visible = true;
+            }
+        }
+
+        private void btnDeleteSearch_Click(object sender, EventArgs e)
+        {
+            txtSearch.Clear();
+            txtSearch.Focus();
         }
     }
 }

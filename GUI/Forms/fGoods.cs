@@ -2,14 +2,9 @@
 using GUI.DefinedFramework;
 using Guna.UI2.WinForms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI
@@ -68,7 +63,10 @@ namespace GUI
             else
                 btnSearch_Click(btnSearch, new EventArgs());
             if (dgvGoods.Rows.Count > 0)
+            {
                 dgvGoods.CurrentCell = dgvGoods[col, row];
+                btnDetail.PerformClick();
+            }
         }
 
         private void CustomDataGridViewGoods()
@@ -257,7 +255,7 @@ namespace GUI
             txtName.Text = dr["Name"].ToString();
             txtID.Text = dr["ID"].ToString();
             txtQuantity.Text = dr["Quantity"].ToString();
-            string temp = root.ProjectPath() + root.imageGoods + txtID.Text + ".png";
+            string temp = root.ProjectPath() + root.imageGoods + txtName.Text.Replace(' ', '_') + ".png";
             if (File.Exists(temp))
             {
                 pbPiture.Image = Image.FromFile(temp);
@@ -332,8 +330,8 @@ namespace GUI
             double price = (double)nudPrice.Value;
             bool state = rbSelling.Checked;
             string relativeUrl = txtUrlImage.FocusedState.BorderColor == Color.Red || string.IsNullOrEmpty(txtUrlImage.Text) ?
-                null : root.imageGoods + id.ToString() + ".png";
-            string newPath = root.ProjectPath() + root.imageGoods + id.ToString() + ".png";
+                null : root.imageGoods + name.Replace(' ', '_') + ".png";
+            string newPath = root.ProjectPath() + root.imageGoods + name.Replace(' ', '_') + ".png";
             string message = null;
             if (lbSideBarTitle.Text.ToLower().Contains("edit"))
             {
@@ -368,11 +366,6 @@ namespace GUI
 
             int thisRow = dgvGoods.CurrentCell.RowIndex;
             ReloadData();
-            if (dgvGoods.Rows.Count > 0)
-            {
-                dgvGoods.Rows[thisRow].Selected = true;
-                btnDetail.PerformClick();
-            }
         }
 
         private void btnChangePicture_Click(object sender, EventArgs e)
@@ -419,7 +412,7 @@ namespace GUI
                 return;
             }
             DialogResult choose = MessageBox.Show("Are you sure to delete the goods with:\nID: "
-                + id.ToString() + " \nName: \"" + name +"\"", "WARNING", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                + name.Replace(' ', '_') + " \nName: \"" + name +"\"", "WARNING", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (choose == DialogResult.No)
                 return;
             string message = bll.DeleteGoods(id);
@@ -476,6 +469,15 @@ namespace GUI
         private void cbbUnit_SelectedIndexChanged(object sender, EventArgs e)
         {
             lbTypeInput.Hide();
+        }
+
+        private void fGoods_KeyDown(object sender, KeyEventArgs e)
+        {   
+            //if (e.Control && e.KeyCode == Keys.E)
+            //{
+            //    btnDetail.PerformClick();
+            //    btnTick.PerformClick();
+            //}
         }
     }
 }

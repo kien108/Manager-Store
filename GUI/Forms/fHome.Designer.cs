@@ -41,14 +41,8 @@ namespace GUI
             this.tlpGoods = new System.Windows.Forms.TableLayoutPanel();
             this.pnCartWrapper = new Guna.UI2.WinForms.Guna2Panel();
             this.pnCartBody = new Guna.UI2.WinForms.Guna2Panel();
-            this.panelGoodsInCart10 = new GUI.DefinedFramework.PanelGoodsInCart();
-            this.panelGoodsInCart9 = new GUI.DefinedFramework.PanelGoodsInCart();
-            this.panelGoodsInCart8 = new GUI.DefinedFramework.PanelGoodsInCart();
-            this.panelGoodsInCart5 = new GUI.DefinedFramework.PanelGoodsInCart();
-            this.panelGoodsInCart1 = new GUI.DefinedFramework.PanelGoodsInCart();
-            this.panelGoodsInCart7 = new GUI.DefinedFramework.PanelGoodsInCart();
             this.panelGoodsInCart6 = new GUI.DefinedFramework.PanelGoodsInCart();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.horizontalLine = new Guna.UI2.WinForms.Guna2Panel();
             this.pnCartFooter = new Guna.UI2.WinForms.Guna2Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -251,7 +245,7 @@ namespace GUI
             // pnCartWrapper
             // 
             this.pnCartWrapper.Controls.Add(this.pnCartBody);
-            this.pnCartWrapper.Controls.Add(this.guna2Panel2);
+            this.pnCartWrapper.Controls.Add(this.horizontalLine);
             this.pnCartWrapper.Controls.Add(this.pnCartFooter);
             this.pnCartWrapper.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnCartWrapper.Location = new System.Drawing.Point(758, 3);
@@ -264,12 +258,6 @@ namespace GUI
             // 
             this.pnCartBody.AutoScroll = true;
             this.pnCartBody.BackColor = System.Drawing.Color.Transparent;
-            this.pnCartBody.Controls.Add(this.panelGoodsInCart10);
-            this.pnCartBody.Controls.Add(this.panelGoodsInCart9);
-            this.pnCartBody.Controls.Add(this.panelGoodsInCart8);
-            this.pnCartBody.Controls.Add(this.panelGoodsInCart5);
-            this.pnCartBody.Controls.Add(this.panelGoodsInCart1);
-            this.pnCartBody.Controls.Add(this.panelGoodsInCart7);
             this.pnCartBody.Controls.Add(this.panelGoodsInCart6);
             this.pnCartBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnCartBody.Location = new System.Drawing.Point(0, 0);
@@ -278,66 +266,6 @@ namespace GUI
             this.pnCartBody.ShadowDecoration.Parent = this.pnCartBody;
             this.pnCartBody.Size = new System.Drawing.Size(389, 594);
             this.pnCartBody.TabIndex = 4;
-            // 
-            // panelGoodsInCart10
-            // 
-            this.panelGoodsInCart10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(58)))));
-            this.panelGoodsInCart10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelGoodsInCart10.Location = new System.Drawing.Point(5, 450);
-            this.panelGoodsInCart10.Name = "panelGoodsInCart10";
-            this.panelGoodsInCart10.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.panelGoodsInCart10.Size = new System.Drawing.Size(379, 75);
-            this.panelGoodsInCart10.TabIndex = 14;
-            // 
-            // panelGoodsInCart9
-            // 
-            this.panelGoodsInCart9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(58)))));
-            this.panelGoodsInCart9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelGoodsInCart9.Location = new System.Drawing.Point(5, 375);
-            this.panelGoodsInCart9.Name = "panelGoodsInCart9";
-            this.panelGoodsInCart9.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.panelGoodsInCart9.Size = new System.Drawing.Size(379, 75);
-            this.panelGoodsInCart9.TabIndex = 13;
-            // 
-            // panelGoodsInCart8
-            // 
-            this.panelGoodsInCart8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(58)))));
-            this.panelGoodsInCart8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelGoodsInCart8.Location = new System.Drawing.Point(5, 300);
-            this.panelGoodsInCart8.Name = "panelGoodsInCart8";
-            this.panelGoodsInCart8.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.panelGoodsInCart8.Size = new System.Drawing.Size(379, 75);
-            this.panelGoodsInCart8.TabIndex = 12;
-            // 
-            // panelGoodsInCart5
-            // 
-            this.panelGoodsInCart5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(58)))));
-            this.panelGoodsInCart5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelGoodsInCart5.Location = new System.Drawing.Point(5, 225);
-            this.panelGoodsInCart5.Name = "panelGoodsInCart5";
-            this.panelGoodsInCart5.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.panelGoodsInCart5.Size = new System.Drawing.Size(379, 75);
-            this.panelGoodsInCart5.TabIndex = 11;
-            // 
-            // panelGoodsInCart1
-            // 
-            this.panelGoodsInCart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(58)))));
-            this.panelGoodsInCart1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelGoodsInCart1.Location = new System.Drawing.Point(5, 150);
-            this.panelGoodsInCart1.Name = "panelGoodsInCart1";
-            this.panelGoodsInCart1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.panelGoodsInCart1.Size = new System.Drawing.Size(379, 75);
-            this.panelGoodsInCart1.TabIndex = 7;
-            // 
-            // panelGoodsInCart7
-            // 
-            this.panelGoodsInCart7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(58)))));
-            this.panelGoodsInCart7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelGoodsInCart7.Location = new System.Drawing.Point(5, 75);
-            this.panelGoodsInCart7.Name = "panelGoodsInCart7";
-            this.panelGoodsInCart7.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.panelGoodsInCart7.Size = new System.Drawing.Size(379, 75);
-            this.panelGoodsInCart7.TabIndex = 6;
             // 
             // panelGoodsInCart6
             // 
@@ -349,17 +277,17 @@ namespace GUI
             this.panelGoodsInCart6.Size = new System.Drawing.Size(379, 75);
             this.panelGoodsInCart6.TabIndex = 5;
             // 
-            // guna2Panel2
+            // horizontalLine
             // 
-            this.guna2Panel2.AutoRoundedCorners = true;
-            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel2.FillColor = System.Drawing.Color.Red;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 594);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(389, 1);
-            this.guna2Panel2.TabIndex = 3;
+            this.horizontalLine.AutoRoundedCorners = true;
+            this.horizontalLine.BackColor = System.Drawing.Color.Transparent;
+            this.horizontalLine.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.horizontalLine.FillColor = System.Drawing.Color.Red;
+            this.horizontalLine.Location = new System.Drawing.Point(0, 594);
+            this.horizontalLine.Name = "horizontalLine";
+            this.horizontalLine.ShadowDecoration.Parent = this.horizontalLine;
+            this.horizontalLine.Size = new System.Drawing.Size(389, 1);
+            this.horizontalLine.TabIndex = 3;
             // 
             // pnCartFooter
             // 
@@ -402,7 +330,7 @@ namespace GUI
             this.label2.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
             this.label2.Size = new System.Drawing.Size(102, 36);
             this.label2.TabIndex = 2;
-            this.label2.Text = "65.000 đ";
+            this.label2.Text = "30.000 đ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // guna2GradientButton1
@@ -411,6 +339,7 @@ namespace GUI
             this.guna2GradientButton1.AutoRoundedCorners = true;
             this.guna2GradientButton1.BorderRadius = 17;
             this.guna2GradientButton1.CheckedState.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2GradientButton1.CustomImages.Parent = this.guna2GradientButton1;
             this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -471,13 +400,7 @@ namespace GUI
         private Guna.UI2.WinForms.Guna2Panel pnCart;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Panel pnCartBody;
-        private DefinedFramework.PanelGoodsInCart panelGoodsInCart10;
-        private DefinedFramework.PanelGoodsInCart panelGoodsInCart9;
-        private DefinedFramework.PanelGoodsInCart panelGoodsInCart8;
-        private DefinedFramework.PanelGoodsInCart panelGoodsInCart5;
-        private DefinedFramework.PanelGoodsInCart panelGoodsInCart1;
-        private DefinedFramework.PanelGoodsInCart panelGoodsInCart7;
         private DefinedFramework.PanelGoodsInCart panelGoodsInCart6;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2Panel horizontalLine;
     }
 }

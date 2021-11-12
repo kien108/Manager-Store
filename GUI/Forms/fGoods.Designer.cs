@@ -436,7 +436,6 @@ namespace GUI
             this.nudPrice.Size = new System.Drawing.Size(145, 21);
             this.nudPrice.TabIndex = 29;
             this.nudPrice.UpDownButtonFillColor = System.Drawing.Color.Orange;
-            this.nudPrice.UpDownButtonForeColor = System.Drawing.Color.Black;
             this.nudPrice.Value = new decimal(new int[] {
             1000,
             0,
@@ -502,7 +501,7 @@ namespace GUI
             this.cbbUnit.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbbUnit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbbUnit.FocusedState.Parent = this.cbbUnit;
-            this.cbbUnit.Font = new System.Drawing.Font("Roboto Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbUnit.Font = new System.Drawing.Font("Roboto Medium", 10.8F, System.Drawing.FontStyle.Bold);
             this.cbbUnit.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.cbbUnit.HoverState.Parent = this.cbbUnit;
             this.cbbUnit.ItemHeight = 30;
@@ -1481,6 +1480,7 @@ namespace GUI
             this.Name = "fGoods";
             this.Text = "GOODS";
             this.Load += new System.EventHandler(this.fGoods_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.fGoods_KeyDown);
             this.tlpWrapper.ResumeLayout(false);
             this.tlpWrapper.PerformLayout();
             this.pnSideBar.ResumeLayout(false);

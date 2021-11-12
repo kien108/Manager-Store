@@ -14,6 +14,16 @@ namespace BLL
     {
         DataAccess dal = new DataAccess();
 
+        public void ChangeRole(string role)
+        {
+            if (role == "ADMIN")
+                dal.Authorization("GS_admin", "123");
+            else if (role == "STAFF")
+                dal.Authorization("GS_staff", "123");
+            else if (role == "STOCK MANAGER")
+                dal.Authorization("GS_stockManager", "123");
+        }
+
         public string CheckAccountInfo(string phoneNumber, string password, ref string error)
         {
             string sql = "select dbo.ft_CheckLogin(@phoneNumber, @password)";

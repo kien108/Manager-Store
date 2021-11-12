@@ -53,10 +53,10 @@ D:\Document\~project\Manager-Store\GUI\bin\Debug\DAL.dll
 D:\Document\~project\Manager-Store\GUI\bin\Debug\BLL.pdb
 D:\Document\~project\Manager-Store\GUI\bin\Debug\DTO.pdb
 D:\Document\~project\Manager-Store\GUI\bin\Debug\DAL.pdb
-D:\Document\~project\Manager-Store\GUI\obj\Debug\GUI.csproj.CopyComplete
 D:\Document\~project\Manager-Store\GUI\obj\Debug\GUI.fEmployee.resources
 D:\Document\~project\Manager-Store\GUI\obj\Debug\GUI.fBill.resources
 D:\Document\~project\Manager-Store\GUI\obj\Debug\GUI.fContract.resources
 D:\Document\~project\Manager-Store\GUI\bin\Debug\MstGrid.dll
 D:\Document\~project\Manager-Store\GUI\obj\Debug\GUI.DefinedFramework.GoodsCell.resources
 D:\Document\~project\Manager-Store\GUI\obj\Debug\GUI.DefinedFramework.PanelGoodsInCart.resources
+D:\Document\~project\Manager-Store\GUI\obj\Debug\GUI.DefinedFramework.GoodsView.resources

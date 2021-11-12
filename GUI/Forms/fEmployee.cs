@@ -17,7 +17,6 @@ namespace GUI
             InitializeComponent();
             tlpWrapper.ColumnStyles[1].Width = 0;
             btnDeleteSearch.Hide();
-
             BackColor = root.screenColor;
             tlpWrapper.BackColor = root.screenColor;
             dgvEmployees.ThemeStyle.BackColor = root.screenColor;
@@ -30,6 +29,7 @@ namespace GUI
             btnAllRoles.FillColor = root.employeePrimaryColor;
             btnStaff.FillColor = root.employeePrimaryColor;
             btnStockManager.FillColor = root.employeePrimaryColor;
+            btnRetiredEmployee.FillColor = root.employeePrimaryColor;
             btnDetail.FillColor = root.employeePrimaryColor;
             btnAdd.FillColor = root.employeePrimaryColor;
             pnSearch.BorderColor = root.employeePrimaryColor;
@@ -39,6 +39,7 @@ namespace GUI
             pnSearch.BorderColor = root.employeePrimaryColor;
             pnSideBarHeader.FillColor = root.sideBarHeaderFooterEmployee;
             pnSideBarFooter.FillColor = root.sideBarHeaderFooterEmployee;
+            btnTick.DisabledState.FillColor = root.sideBarHeaderFooterEmployee;
             tlpPictureSide.BackColor = root.darkerBackGroundSideBarEmployee;
             pnStateOptionWrapper.FillColor = root.darkerBackGroundSideBarEmployee;
             gbPersonalInformation.CustomBorderColor = root.darkerBackGroundSideBarEmployee;
@@ -54,11 +55,8 @@ namespace GUI
 
         private void CustomDataGridViewEmployee()
         {
-            if (dgvEmployees.Rows.Count == 0)
-            {
-                txtSearch.SelectAll();
-                pnSearch.BorderColor = Color.FromArgb(240, 67, 80);
-            }
+            if (dgvEmployees.Rows.Count == 0 && txtSearch.Text.Length > 0)
+                pnSearch.BorderColor = Color.Red;
             else
                 pnSearch.BorderColor = root.employeePrimaryColor;
             dgvEmployees.CellBorderStyle = DataGridViewCellBorderStyle.Single;
@@ -129,6 +127,8 @@ namespace GUI
             dgvEmployees.DataSource = dt;
             ChangeEmployeeType(btnAllRoles);
             CustomDataGridViewEmployee();
+            if (!string.IsNullOrEmpty(txtSearch.Text))
+                SearchEmployee();
         }
 
         private void ChangeEmployeeType(object sender)
@@ -153,6 +153,8 @@ namespace GUI
             dgvEmployees.DataSource = dt;
             ChangeEmployeeType(btnStockManager);
             CustomDataGridViewEmployee();
+            if (!string.IsNullOrEmpty(txtSearch.Text))
+                SearchEmployee();
         }
 
         private void btnStaff_Click(object sender, EventArgs e)
@@ -170,6 +172,27 @@ namespace GUI
             dgvEmployees.DataSource = dt;
             ChangeEmployeeType(btnStaff);
             CustomDataGridViewEmployee();
+            if (!string.IsNullOrEmpty(txtSearch.Text))
+                SearchEmployee();
+        }
+
+        private void btnRetiredEmployee_Click(object sender, EventArgs e)
+        {
+            string error = null;
+            DataTable dt = bll.GetRetiredEmployee(ref error);
+            if (error != null)
+            {
+                MessageBox.Show(error);
+                dgvEmployees.DataSource = null;
+                ChangeEmployeeType(btnRetiredEmployee);
+                CustomDataGridViewEmployee();
+                return;
+            }
+            dgvEmployees.DataSource = dt;
+            ChangeEmployeeType(btnRetiredEmployee);
+            CustomDataGridViewEmployee();
+            if (!string.IsNullOrEmpty(txtSearch.Text))
+                SearchEmployee();
         }
 
         private void txtSearch_Paint(object sender, PaintEventArgs e)
@@ -185,9 +208,18 @@ namespace GUI
         {
             pnSearch.BorderColor = root.employeePrimaryColor;
             if (txtSearch.Text.Length > 0)
+            {
                 btnDeleteSearch.Show();
+                SearchEmployee();
+            }
             else
+            {
                 btnDeleteSearch.Hide();
+                foreach (Guna2Button c in tlpEmployeeType.Controls)
+                    if (c.FillColor == root.darkerBackGroundSideBarEmployee)
+                        c.PerformClick();
+                txtSearch.Focus();
+            }
         }
 
         private void btnDeleteSearch_Click(object sender, EventArgs e)
@@ -196,15 +228,11 @@ namespace GUI
             txtSearch.Focus();
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void SearchEmployee()
         {
             string searchBy = cbbFilter.Text, text = txtSearch.Text;
-            if (string.IsNullOrEmpty(text))
-            {
-                txtSearch.Focus();
-                pnSearch.BorderColor = Color.Red;
-                return;
-            }
+            //if (btnRetiredEmployee.FillColor == root.darkerBackGroundSideBarEmployee)
+            //    return;
             string role = null;
             foreach (Guna2Button c in tlpEmployeeType.Controls)
                 if (c.FillColor == root.darkerBackGroundSideBarEmployee)
@@ -220,7 +248,6 @@ namespace GUI
             {
                 MessageBox.Show(error);
                 dgvEmployees.DataSource = null;
-                txtSearch.SelectAll();
                 txtSearch.Focus();
                 pnSearch.BorderColor = root.employeePrimaryColor;
                 return;
@@ -237,15 +264,26 @@ namespace GUI
 
         private void btnDetail_Click(object sender, EventArgs e)
         {
+            lbSideBarTitle.Text = "Detail Information";
+            tlpPictureSide.Enabled = false;
+            gbPersonalInformation.Enabled = false;
+            gbWorkInformation.Enabled = false;
+            btnTick.Image = global::Manage_Store.Properties.Resources.edit2;
+
             int row = dgvEmployees.CurrentCell.RowIndex;
             DataRow dr = ((DataTable)dgvEmployees.DataSource).Rows[row];
             txtName.Text = dr["Name"].ToString();
             txtPhoneNumber.Text = dr["Phone Number"].ToString();
             txtID.Text = dr["ID"].ToString();
+            dtpBirthday.Text = dr["Birthday"].ToString();
+            if (dr["Gender"].ToString().ToLower().Contains("nam"))
+                rbMale.Checked = true;
+            else
+                rbFemale.Checked = true;
             txtAddress.Text = dr["Address"].ToString();
             txtPassword.Text = dr["Password"].ToString();
-            string url = root.ProjectPath() + root.imageEmployees + txtID.Text + ".png";
-            if (File.Exists(url))
+            string url = root.ProjectPath() + root.imageEmployees + txtPhoneNumber.Text + ".png";
+            if (dr["Image"] != null && File.Exists(url))
             {
                 pbPiture.Image = Image.FromFile(url);
                 txtUrl.Text = url;
@@ -259,13 +297,35 @@ namespace GUI
                 rbWorking.Checked = true;
             else
                 rbQuitWork.Checked = true;
-            if (dr["Role"].ToString().ToLower() == "staff")
+            if (dr["Role"].ToString().ToLower() == "admin")
+            {
+                cbbRole.SelectedIndex = 2;
+                btnTick.Enabled = false;
+            }
+            else if (dr["Role"].ToString().ToLower() == "staff")
+            {
                 cbbRole.SelectedIndex = 0;
+                btnTick.Enabled = true;
+            }
             else
+            {
                 cbbRole.SelectedIndex = 1;
-            nudWorkingDays.Value = decimal.Parse(dr["Working Days"].ToString());
-            nudDayWage.Value = decimal.Parse(dr["Day's Wage"].ToString());
-            nudMonthSalary.Value = decimal.Parse(dr["Month Salary"].ToString());
+                btnTick.Enabled = true;
+            }
+            if (cbbRole.SelectedIndex == 2)
+            {
+                nudWorkingDays.Value = 0;
+                nudDayWage.Value = 0;
+                txtMonthSalary.Text = root.MoneyFormat("0");
+            }
+            else
+            {
+                nudWorkingDays.Value = decimal.Parse(dr["Working Days"].ToString());
+                nudDayWage.Value = decimal.Parse(dr["Day's Wage"].ToString());
+                txtMonthSalary.Text = root.MoneyFormat(dr["Month Salary"].ToString());
+            }
+            
+            btnSideBarConfirm.Text = "Save";
 
             tlpWrapper.ColumnStyles[1].Width = 600;
         }
@@ -285,9 +345,24 @@ namespace GUI
             if (lbSideBarTitle.Text.ToLower().Contains("detail"))
             {
                 lbSideBarTitle.Text = "Edit Information";
-                pnStateOptionWrapper.Enabled = true;
-                cbbRole.Enabled = true;
+                btnTick.Image = global::Manage_Store.Properties.Resources.tick;
+                tlpPictureSide.Enabled = true;
+                gbPersonalInformation.Enabled = true;
+                gbWorkInformation.Enabled = true;
+                btnSideBarConfirm.Enabled = true;
+                pnStateOption.Enabled = true;
                 nudDayWage.Enabled = true;
+                nudWorkingDays.Enabled = true;
+            }
+            else if (lbSideBarTitle.Text.ToLower().Contains("edit"))
+            {
+                lbSideBarTitle.Text = "Detail Information";
+                btnTick.Image = global::Manage_Store.Properties.Resources.edit2;
+                tlpPictureSide.Enabled = false;
+                gbPersonalInformation.Enabled = false;
+                gbWorkInformation.Enabled = false;
+                btnSideBarConfirm.Enabled = false;
+                btnSideBarConfirm.PerformClick();
             }
         }
 
@@ -298,6 +373,172 @@ namespace GUI
                 c.Enabled = true;
                 EnableAllControls(c);
             }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            lbSideBarTitle.Text = "Add employee";
+            tlpPictureSide.Enabled = true;
+            gbPersonalInformation.Enabled = true;
+            gbWorkInformation.Enabled = true;
+            pnStateOption.Enabled = false;
+            nudDayWage.Enabled = false;
+            nudWorkingDays.Enabled = false;
+            btnTick.Enabled = true;
+            btnTick.Image = global::Manage_Store.Properties.Resources.tick;
+            btnSideBarConfirm.Enabled = true;
+            btnSideBarConfirm.Text = "Add";
+            txtName.Clear();
+            txtPhoneNumber.Clear();
+            txtID.Clear();
+            txtAddress.Clear();
+            txtPassword.Clear();
+            txtUrl.Clear();
+            dtpBirthday.Text = "01/01/2001";
+            rbMale.Checked = true;
+            rbWorking.Checked = true;
+            cbbRole.SelectedIndex = 0;
+            nudWorkingDays.Value = 0;
+            nudDayWage.Value = 160000;
+            txtMonthSalary.Text = "0 vnđ";
+
+            tlpWrapper.ColumnStyles[1].Width = 600;
+        }
+
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                e.SuppressKeyPress = true;
+                btnDeleteSearch_Click(btnDeleteSearch, new EventArgs());
+            }
+        }
+
+        private void btnChangePicture_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.Filter = "Image Files|*.jpg;*.jpeg;*.png;";
+            openFile.ShowDialog();
+            if (string.IsNullOrEmpty(openFile.FileName))
+                return;
+            txtUrl.Text = openFile.FileName;
+            pbPiture.Image = Image.FromFile(openFile.FileName);
+        }
+
+        private void txtUrl_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtUrl.Text))
+            {
+                pbPiture.Image = Image.FromFile(root.ProjectPath() + root.imageEmployees + "tempAvatar.png");
+                txtUrl.FocusedState.BorderColor = Color.Red;
+            }
+            else if (!File.Exists(txtUrl.Text))
+            {
+                pbPiture.Image = Image.FromFile(root.ProjectPath() + root.imageEmployees + "notFound.png");
+                txtUrl.FocusedState.BorderColor = Color.Red;
+            }
+            else if (txtUrl.FocusedState.BorderColor == Color.Red)
+            {
+                txtUrl.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+                pbPiture.Image = Image.FromFile(txtUrl.Text);
+            }
+        }
+
+        private void btnDeletePicture_Click(object sender, EventArgs e)
+        {
+            txtUrl.Text = "";
+        }
+
+        private void btnSideBarConfirm_Click(object sender, EventArgs e)
+        {
+            int id;
+            string name = txtName.Text;
+            string phoneNumber = txtPhoneNumber.Text;
+            string birthday = dtpBirthday.Value.ToString("yyyy-MM-dd");
+            bool male = rbMale.Checked;
+            string address = txtAddress.Text;
+            string password = txtPassword.Text;
+            bool working = rbWorking.Checked;
+            string role = cbbRole.Text.ToUpper();
+            int workingDay = (int)nudWorkingDays.Value;
+            double dayWage = (double)nudDayWage.Value;
+            string relativeUrl = null, absoluteUrl = null;
+            if (int.TryParse(txtID.Text, out id))
+            {
+                if (!(string.IsNullOrEmpty(txtUrl.Text) || txtUrl.FocusedState.BorderColor == Color.Red))
+                    relativeUrl = root.imageEmployees + phoneNumber + ".png";
+                absoluteUrl = root.ProjectPath() + root.imageEmployees + phoneNumber + ".png";
+            }
+            string message = string.Empty;
+            if (btnSideBarConfirm.Text.ToLower().Contains("add"))
+            {
+                string url = txtUrl.FocusedState.BorderColor == Color.Red || string.IsNullOrEmpty(txtUrl.Text) ? 
+                    null : root.imageEmployees;
+                message = bll.AddEmployee(name, birthday, address, male, phoneNumber, role, url);
+                if (!message.ToLower().Contains("successful"))
+                    MessageBox.Show(message, "RESPONSE");
+                btnSideBarConfirm.Enabled = false;
+                if (!message.ToLower().Contains("failed"))
+                {
+                    string ex = root.UpdateImageLocation(txtUrl.Text, url, root.ProjectPath() + root.imageEmployees + phoneNumber + ".png");
+                    if (ex != null)
+                        MessageBox.Show(ex);
+                }
+            }
+            else if (btnSideBarConfirm.Text.ToLower().Contains("save"))
+            {
+                message = bll.UpdateInformationEmployee(id, name, phoneNumber, birthday, male, address, password, relativeUrl, working, role, workingDay, dayWage);
+                if (!message.ToLower().Contains("successful"))
+                    MessageBox.Show(message, "RESPONSE");
+                btnSideBarConfirm.Enabled = false;
+                if (!message.ToLower().Contains("failed"))
+                {
+                    string ex = root.UpdateImageLocation(txtUrl.Text, relativeUrl, absoluteUrl);
+                    if (ex != null)
+                        MessageBox.Show(ex);
+                }
+            }
+            ReloadData(true);
+        }
+
+        private void ReloadData(bool select)
+        {
+            int row = dgvEmployees.CurrentCell.RowIndex, col = dgvEmployees.CurrentCell.ColumnIndex;
+            if (string.IsNullOrEmpty(txtSearch.Text))
+            {
+                if (btnAllRoles.FillColor == root.darkerBackGroundSideBarEmployee)
+                    btnAllRoles.PerformClick();
+                else if (btnStaff.FillColor == root.darkerBackGroundSideBarEmployee)
+                    btnStaff.PerformClick();
+                else if (btnStockManager.FillColor == root.darkerBackGroundSideBarEmployee)
+                    btnStockManager.PerformClick();
+                else
+                    btnRetiredEmployee.PerformClick();
+            }
+            else
+                SearchEmployee();
+            if (select && dgvEmployees.Rows.Count > 0)
+            {
+                dgvEmployees.CurrentCell = dgvEmployees[col, row];
+                btnDetail.PerformClick();
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult chose = root.MyMessageBox("Do you want to delete or only disable account to keep infomation?",
+                "DELETE OPTION", "Delete", "Only disable", "Cancel");
+            string message = string.Empty;
+            int id = (int)dgvEmployees.Rows[dgvEmployees.CurrentRow.Index].Cells["ID"].Value;
+            if (chose == DialogResult.Yes)
+                message = bll.DeleteEmployee(id);
+            else if (chose == DialogResult.No)
+                message = bll.DisableEmployeeAccount(id);
+            else
+                return;
+            if (!message.ToLower().Contains("successful"))
+                MessageBox.Show(message, "OOPS");
+            ReloadData(false);
         }
     }
 }

@@ -24,9 +24,9 @@ namespace GUI.DefinedFramework
         public static Color navBillOptionColor = Color.FromArgb(121, 61, 0);
         public static Color billPrimaryColor = Color.FromArgb(255, 128, 0);
         public static Color backColorComponentBill = Color.FromArgb(61, 64, 88);
-        public static Color backGroundSideBarBill = Color.FromArgb(100, 50, 0);
-        public static Color sideBarHeaderFooterBill = Color.FromArgb(90, 45, 0);
-        public static Color darkerBackGroundSideBarBill = Color.FromArgb(55, 28, 0);
+        public static Color backGroundSideBarBill = Color.FromArgb(105, 37, 0);
+        public static Color sideBarHeaderFooterBill = Color.FromArgb(77, 27, 0);
+        public static Color darkerBackGroundSideBarBill = Color.FromArgb(38, 15, 0);
 
         // fGoods
         public static Color navGoodsOptionColor = Color.FromArgb(109, 29, 69);
@@ -102,34 +102,58 @@ namespace GUI.DefinedFramework
             return p;
         }
 
-        public static string UpdateImageLocation(string currentPath, string newRelativePath, string absoluteNewPath)
+        public static string UpdateImageLocation(string currentPath, string newRelativePath, string newAbsolutePath)
         {
             try
             {
-                if (File.Exists(absoluteNewPath))
+                if (File.Exists(newAbsolutePath))
                 {
-                    if (newRelativePath == null)
+                    if (newRelativePath == null || currentPath != newAbsolutePath)
                     {
                         GC.Collect();
                         GC.WaitForPendingFinalizers();
-                        File.Delete(absoluteNewPath);
-                    }
-                    if (currentPath != absoluteNewPath)
-                    {
-                        GC.Collect();
-                        GC.WaitForPendingFinalizers();
-                        File.Delete(absoluteNewPath);
+                        File.Delete(newAbsolutePath);
                     }
                 }
-                if (newRelativePath != null && currentPath != absoluteNewPath)
+                if (newRelativePath != null && currentPath != newAbsolutePath)
                 {
                     GC.Collect();
                     GC.WaitForPendingFinalizers();
-                    File.Copy(currentPath, absoluteNewPath);
+                    File.Copy(currentPath, newAbsolutePath);
                 }
             }
             catch (Exception e) { return e.Message; }
             return null;
+        }
+
+        public static string MoneyFormat(string s)
+        {
+            if (string.IsNullOrEmpty(s.Trim()))
+                s = "0";
+            for (int i = s.Length - 3; i > 0; i -= 3)
+                s = s.Insert(i, ".");
+            return s + " vnđ";
+        }
+
+        public static string TurnOffMoneyFormat(string s)
+        {
+            if (s.ToLower().Contains("vn"))
+            {
+                int len = s.Length;
+                return s.Remove(len - 4).Replace(".", "");
+            }
+            return s;
+        }
+
+        public static DialogResult MyMessageBox(string text, string caption, string btn1, string btn2, string btn3)
+        {
+            MessageBoxManager.Yes = btn1;
+            MessageBoxManager.No = btn2;
+            MessageBoxManager.Cancel = btn3;
+            MessageBoxManager.Register();
+            DialogResult option = MessageBox.Show(text, caption, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            MessageBoxManager.Unregister();
+            return option;
         }
     }
 }

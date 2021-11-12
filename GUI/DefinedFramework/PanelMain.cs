@@ -25,7 +25,7 @@ namespace GUI.DefinedFramework
             Location = new Point(1, 1);
             Width = parent.Width - 2;
             Height = parent.Height - 2;
-            BackColor = root.screenColor;
+            BackColor = Color.FromArgb(255, 249, 238);
             parent.BackColor = root.screenColor;
             Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left;
             foreach (Control c in parent.Controls)
@@ -36,6 +36,7 @@ namespace GUI.DefinedFramework
             }
             parent.Controls.Add(this);
         }
+
         public void FixUI()
         {
             Location = new Point(1, 1);

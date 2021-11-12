@@ -29,7 +29,6 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fEmployee));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -42,6 +41,7 @@ namespace GUI
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.tlpEmployeeType = new System.Windows.Forms.TableLayoutPanel();
             this.btnStaff = new Guna.UI2.WinForms.Guna2Button();
+            this.btnRetiredEmployee = new Guna.UI2.WinForms.Guna2Button();
             this.btnStockManager = new Guna.UI2.WinForms.Guna2Button();
             this.btnAllRoles = new Guna.UI2.WinForms.Guna2Button();
             this.tlpSearch = new System.Windows.Forms.TableLayoutPanel();
@@ -50,7 +50,6 @@ namespace GUI
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbbFilter = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnDeleteSearch = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnSearch = new Guna.UI2.WinForms.Guna2Panel();
             this.pnFunctions = new Guna.UI2.WinForms.Guna2Panel();
             this.tlpFunction = new System.Windows.Forms.TableLayoutPanel();
             this.pnBtnEdit = new System.Windows.Forms.Panel();
@@ -71,7 +70,7 @@ namespace GUI
             this.nudDayWage = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.lbDayWage = new System.Windows.Forms.Label();
             this.pnMonthDay = new Guna.UI2.WinForms.Guna2Panel();
-            this.nudMonthSalary = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.txtMonthSalary = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbMonthSalary = new System.Windows.Forms.Label();
             this.pnRoleAndWorkingDay = new Guna.UI2.WinForms.Guna2Panel();
             this.pnRole = new Guna.UI2.WinForms.Guna2Panel();
@@ -116,19 +115,19 @@ namespace GUI
             this.pnName = new Guna.UI2.WinForms.Guna2Panel();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbName = new System.Windows.Forms.Label();
+            this.tlpPictureSide = new System.Windows.Forms.TableLayoutPanel();
+            this.pbPiture = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pnPictureButton = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnDeletePicture = new System.Windows.Forms.Panel();
+            this.btnDeletePicture = new Guna.UI2.WinForms.Guna2Button();
+            this.pnChangePicture = new System.Windows.Forms.Panel();
+            this.btnChangePicture = new Guna.UI2.WinForms.Guna2Button();
             this.pnSideBarFooter = new Guna.UI2.WinForms.Guna2Panel();
             this.tlpSideBarFooter = new System.Windows.Forms.TableLayoutPanel();
             this.btnSideBarCancel = new Guna.UI2.WinForms.Guna2Button();
             this.btnSideBarConfirm = new Guna.UI2.WinForms.Guna2Button();
             this.ecTlpPictureSide = new ElipseToolDemo.ElipseControl();
             this.ecDgvEmployees = new ElipseToolDemo.ElipseControl();
-            this.pnPictureButton = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnChangePicture = new System.Windows.Forms.Panel();
-            this.btnChangePicture = new Guna.UI2.WinForms.Guna2Button();
-            this.pnDeletePicture = new System.Windows.Forms.Panel();
-            this.btnDeletePicture = new Guna.UI2.WinForms.Guna2Button();
-            this.pbPiture = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.tlpPictureSide = new System.Windows.Forms.TableLayoutPanel();
             this.pnSideBarHeader.SuspendLayout();
             this.tlpMain.SuspendLayout();
             this.tlpEmployeeType.SuspendLayout();
@@ -151,7 +150,6 @@ namespace GUI
             this.pnDayWage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDayWage)).BeginInit();
             this.pnMonthDay.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudMonthSalary)).BeginInit();
             this.pnRoleAndWorkingDay.SuspendLayout();
             this.pnRole.SuspendLayout();
             this.pnWorkingDays.SuspendLayout();
@@ -172,13 +170,13 @@ namespace GUI
             this.pnPhoneNumber.SuspendLayout();
             this.pnID.SuspendLayout();
             this.pnName.SuspendLayout();
+            this.tlpPictureSide.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPiture)).BeginInit();
+            this.pnPictureButton.SuspendLayout();
+            this.pnDeletePicture.SuspendLayout();
+            this.pnChangePicture.SuspendLayout();
             this.pnSideBarFooter.SuspendLayout();
             this.tlpSideBarFooter.SuspendLayout();
-            this.pnPictureButton.SuspendLayout();
-            this.pnChangePicture.SuspendLayout();
-            this.pnDeletePicture.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPiture)).BeginInit();
-            this.tlpPictureSide.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnSideBarHeader
@@ -224,7 +222,6 @@ namespace GUI
             this.btnTick.CustomImages.Parent = this.btnTick;
             this.btnTick.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTick.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTick.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnTick.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnTick.DisabledState.Parent = this.btnTick;
             this.btnTick.Dock = System.Windows.Forms.DockStyle.Right;
@@ -289,11 +286,13 @@ namespace GUI
             // 
             // tlpEmployeeType
             // 
-            this.tlpEmployeeType.ColumnCount = 3;
+            this.tlpEmployeeType.ColumnCount = 4;
             this.tlpEmployeeType.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpEmployeeType.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpEmployeeType.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpEmployeeType.Controls.Add(this.btnStaff, 2, 0);
+            this.tlpEmployeeType.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpEmployeeType.Controls.Add(this.btnStaff, 0, 0);
+            this.tlpEmployeeType.Controls.Add(this.btnRetiredEmployee, 2, 0);
             this.tlpEmployeeType.Controls.Add(this.btnStockManager, 1, 0);
             this.tlpEmployeeType.Controls.Add(this.btnAllRoles, 0, 0);
             this.tlpEmployeeType.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -322,15 +321,43 @@ namespace GUI
             this.btnStaff.Font = new System.Drawing.Font("Poppins SemiBold", 14F, System.Drawing.FontStyle.Bold);
             this.btnStaff.ForeColor = System.Drawing.Color.BlanchedAlmond;
             this.btnStaff.HoverState.Parent = this.btnStaff;
-            this.btnStaff.Location = new System.Drawing.Point(818, 10);
+            this.btnStaff.Location = new System.Drawing.Point(313, 10);
             this.btnStaff.Margin = new System.Windows.Forms.Padding(10, 10, 10, 8);
             this.btnStaff.Name = "btnStaff";
             this.btnStaff.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.btnStaff.ShadowDecoration.Parent = this.btnStaff;
-            this.btnStaff.Size = new System.Drawing.Size(386, 58);
-            this.btnStaff.TabIndex = 2;
+            this.btnStaff.Size = new System.Drawing.Size(283, 58);
+            this.btnStaff.TabIndex = 3;
             this.btnStaff.Text = "Staff";
             this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
+            // 
+            // btnRetiredEmployee
+            // 
+            this.btnRetiredEmployee.Animated = true;
+            this.btnRetiredEmployee.BackColor = System.Drawing.Color.Transparent;
+            this.btnRetiredEmployee.BorderRadius = 10;
+            this.btnRetiredEmployee.CheckedState.Parent = this.btnRetiredEmployee;
+            this.btnRetiredEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRetiredEmployee.CustomImages.Parent = this.btnRetiredEmployee;
+            this.btnRetiredEmployee.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRetiredEmployee.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRetiredEmployee.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRetiredEmployee.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRetiredEmployee.DisabledState.Parent = this.btnRetiredEmployee;
+            this.btnRetiredEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnRetiredEmployee.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(166)))), ((int)(((byte)(137)))));
+            this.btnRetiredEmployee.Font = new System.Drawing.Font("Poppins SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.btnRetiredEmployee.ForeColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnRetiredEmployee.HoverState.Parent = this.btnRetiredEmployee;
+            this.btnRetiredEmployee.Location = new System.Drawing.Point(919, 10);
+            this.btnRetiredEmployee.Margin = new System.Windows.Forms.Padding(10, 10, 10, 8);
+            this.btnRetiredEmployee.Name = "btnRetiredEmployee";
+            this.btnRetiredEmployee.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.btnRetiredEmployee.ShadowDecoration.Parent = this.btnRetiredEmployee;
+            this.btnRetiredEmployee.Size = new System.Drawing.Size(285, 58);
+            this.btnRetiredEmployee.TabIndex = 2;
+            this.btnRetiredEmployee.Text = "Retired employee";
+            this.btnRetiredEmployee.Click += new System.EventHandler(this.btnRetiredEmployee_Click);
             // 
             // btnStockManager
             // 
@@ -350,12 +377,12 @@ namespace GUI
             this.btnStockManager.Font = new System.Drawing.Font("Poppins SemiBold", 14F, System.Drawing.FontStyle.Bold);
             this.btnStockManager.ForeColor = System.Drawing.Color.BlanchedAlmond;
             this.btnStockManager.HoverState.Parent = this.btnStockManager;
-            this.btnStockManager.Location = new System.Drawing.Point(414, 10);
+            this.btnStockManager.Location = new System.Drawing.Point(616, 10);
             this.btnStockManager.Margin = new System.Windows.Forms.Padding(10, 10, 10, 8);
             this.btnStockManager.Name = "btnStockManager";
             this.btnStockManager.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.btnStockManager.ShadowDecoration.Parent = this.btnStockManager;
-            this.btnStockManager.Size = new System.Drawing.Size(384, 58);
+            this.btnStockManager.Size = new System.Drawing.Size(283, 58);
             this.btnStockManager.TabIndex = 1;
             this.btnStockManager.Text = "Stock manager";
             this.btnStockManager.Click += new System.EventHandler(this.btnStockManager_Click);
@@ -383,7 +410,7 @@ namespace GUI
             this.btnAllRoles.Name = "btnAllRoles";
             this.btnAllRoles.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.btnAllRoles.ShadowDecoration.Parent = this.btnAllRoles;
-            this.btnAllRoles.Size = new System.Drawing.Size(384, 58);
+            this.btnAllRoles.Size = new System.Drawing.Size(283, 58);
             this.btnAllRoles.TabIndex = 0;
             this.btnAllRoles.Text = "All roles";
             this.btnAllRoles.Click += new System.EventHandler(this.btnAllRoles_Click);
@@ -428,13 +455,12 @@ namespace GUI
             this.pnSearch.Controls.Add(this.txtSearch);
             this.pnSearch.Controls.Add(this.cbbFilter);
             this.pnSearch.Controls.Add(this.btnDeleteSearch);
-            this.pnSearch.Controls.Add(this.btnSearch);
             this.pnSearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnSearch.FillColor = System.Drawing.Color.Transparent;
             this.pnSearch.Location = new System.Drawing.Point(10, 10);
             this.pnSearch.Margin = new System.Windows.Forms.Padding(0);
             this.pnSearch.Name = "pnSearch";
-            this.pnSearch.Padding = new System.Windows.Forms.Padding(8, 5, 5, 5);
+            this.pnSearch.Padding = new System.Windows.Forms.Padding(8, 5, 10, 5);
             this.pnSearch.ShadowDecoration.Parent = this.pnSearch;
             this.pnSearch.Size = new System.Drawing.Size(577, 30);
             this.pnSearch.TabIndex = 2;
@@ -455,7 +481,7 @@ namespace GUI
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.FocusedState.Parent = this.txtSearch;
             this.txtSearch.Font = new System.Drawing.Font("Roboto", 12F);
-            this.txtSearch.ForeColor = System.Drawing.Color.Gray;
+            this.txtSearch.ForeColor = System.Drawing.Color.Gainsboro;
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
             this.txtSearch.Location = new System.Drawing.Point(84, 5);
@@ -466,9 +492,10 @@ namespace GUI
             this.txtSearch.PlaceholderText = "Search...";
             this.txtSearch.SelectedText = "";
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
-            this.txtSearch.Size = new System.Drawing.Size(441, 20);
+            this.txtSearch.Size = new System.Drawing.Size(466, 20);
             this.txtSearch.TabIndex = 9;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
             // cbbFilter
             // 
@@ -509,27 +536,12 @@ namespace GUI
             this.btnDeleteSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnDeleteSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteSearch.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnDeleteSearch.Location = new System.Drawing.Point(525, 5);
+            this.btnDeleteSearch.Location = new System.Drawing.Point(550, 5);
             this.btnDeleteSearch.Name = "btnDeleteSearch";
             this.btnDeleteSearch.ShadowDecoration.Parent = this.btnDeleteSearch;
             this.btnDeleteSearch.Size = new System.Drawing.Size(17, 20);
             this.btnDeleteSearch.TabIndex = 3;
             this.btnDeleteSearch.Click += new System.EventHandler(this.btnDeleteSearch_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.AutoRoundedCorners = true;
-            this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
-            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSearch.BorderRadius = 9;
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSearch.Location = new System.Drawing.Point(542, 5);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.ShadowDecoration.Parent = this.btnSearch;
-            this.btnSearch.Size = new System.Drawing.Size(30, 20);
-            this.btnSearch.TabIndex = 0;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // pnFunctions
             // 
@@ -645,6 +657,7 @@ namespace GUI
             this.btnDelete.Size = new System.Drawing.Size(179, 30);
             this.btnDelete.TabIndex = 0;
             this.btnDelete.Text = "Delete";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // pnBtnAdd
             // 
@@ -686,6 +699,7 @@ namespace GUI
             this.btnAdd.Size = new System.Drawing.Size(186, 30);
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Add";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // pnDgvWrapper
             // 
@@ -836,7 +850,7 @@ namespace GUI
             this.pnWorkInformation.BackColor = System.Drawing.Color.Transparent;
             this.pnWorkInformation.Controls.Add(this.gbWorkInformation);
             this.pnWorkInformation.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnWorkInformation.Location = new System.Drawing.Point(10, 461);
+            this.pnWorkInformation.Location = new System.Drawing.Point(10, 479);
             this.pnWorkInformation.Name = "pnWorkInformation";
             this.pnWorkInformation.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.pnWorkInformation.ShadowDecoration.Parent = this.pnWorkInformation;
@@ -853,6 +867,7 @@ namespace GUI
             this.gbWorkInformation.Controls.Add(this.pnStateOption);
             this.gbWorkInformation.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.gbWorkInformation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbWorkInformation.Enabled = false;
             this.gbWorkInformation.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.gbWorkInformation.Font = new System.Drawing.Font("Poppins Medium", 10.8F, System.Drawing.FontStyle.Bold);
             this.gbWorkInformation.ForeColor = System.Drawing.Color.Orange;
@@ -900,7 +915,6 @@ namespace GUI
             this.nudDayWage.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nudDayWage.DisabledState.Parent = this.nudDayWage;
             this.nudDayWage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nudDayWage.Enabled = false;
             this.nudDayWage.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.nudDayWage.FocusedState.Parent = this.nudDayWage;
             this.nudDayWage.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold);
@@ -942,7 +956,7 @@ namespace GUI
             // pnMonthDay
             // 
             this.pnMonthDay.BackColor = System.Drawing.Color.Transparent;
-            this.pnMonthDay.Controls.Add(this.nudMonthSalary);
+            this.pnMonthDay.Controls.Add(this.txtMonthSalary);
             this.pnMonthDay.Controls.Add(this.lbMonthSalary);
             this.pnMonthDay.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnMonthDay.Location = new System.Drawing.Point(168, 5);
@@ -951,39 +965,40 @@ namespace GUI
             this.pnMonthDay.Size = new System.Drawing.Size(138, 40);
             this.pnMonthDay.TabIndex = 0;
             // 
-            // nudMonthSalary
+            // txtMonthSalary
             // 
-            this.nudMonthSalary.AutoRoundedCorners = true;
-            this.nudMonthSalary.BackColor = System.Drawing.Color.Transparent;
-            this.nudMonthSalary.BorderColor = System.Drawing.Color.Orange;
-            this.nudMonthSalary.BorderRadius = 10;
-            this.nudMonthSalary.BorderThickness = 2;
-            this.nudMonthSalary.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nudMonthSalary.DisabledState.Parent = this.nudMonthSalary;
-            this.nudMonthSalary.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nudMonthSalary.Enabled = false;
-            this.nudMonthSalary.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
-            this.nudMonthSalary.FocusedState.Parent = this.nudMonthSalary;
-            this.nudMonthSalary.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold);
-            this.nudMonthSalary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.nudMonthSalary.Increment = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudMonthSalary.Location = new System.Drawing.Point(0, 17);
-            this.nudMonthSalary.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.nudMonthSalary.Maximum = new decimal(new int[] {
-            1316134912,
-            2328,
-            0,
-            0});
-            this.nudMonthSalary.Name = "nudMonthSalary";
-            this.nudMonthSalary.ShadowDecoration.Parent = this.nudMonthSalary;
-            this.nudMonthSalary.Size = new System.Drawing.Size(138, 23);
-            this.nudMonthSalary.TabIndex = 39;
-            this.nudMonthSalary.TextOffset = new System.Drawing.Point(10, 2);
-            this.nudMonthSalary.UpDownButtonFillColor = System.Drawing.Color.Orange;
+            this.txtMonthSalary.AutoRoundedCorners = true;
+            this.txtMonthSalary.BorderColor = System.Drawing.Color.Goldenrod;
+            this.txtMonthSalary.BorderRadius = 10;
+            this.txtMonthSalary.BorderThickness = 2;
+            this.txtMonthSalary.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMonthSalary.DefaultText = "";
+            this.txtMonthSalary.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMonthSalary.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMonthSalary.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMonthSalary.DisabledState.Parent = this.txtMonthSalary;
+            this.txtMonthSalary.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMonthSalary.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtMonthSalary.Enabled = false;
+            this.txtMonthSalary.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
+            this.txtMonthSalary.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMonthSalary.FocusedState.Parent = this.txtMonthSalary;
+            this.txtMonthSalary.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMonthSalary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtMonthSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMonthSalary.HoverState.Parent = this.txtMonthSalary;
+            this.txtMonthSalary.Location = new System.Drawing.Point(0, 17);
+            this.txtMonthSalary.Margin = new System.Windows.Forms.Padding(9, 3, 9, 5);
+            this.txtMonthSalary.MaximumSize = new System.Drawing.Size(455, 45);
+            this.txtMonthSalary.Name = "txtMonthSalary";
+            this.txtMonthSalary.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.txtMonthSalary.PasswordChar = '\0';
+            this.txtMonthSalary.PlaceholderText = "";
+            this.txtMonthSalary.SelectedText = "";
+            this.txtMonthSalary.ShadowDecoration.Parent = this.txtMonthSalary;
+            this.txtMonthSalary.Size = new System.Drawing.Size(138, 23);
+            this.txtMonthSalary.TabIndex = 34;
+            this.txtMonthSalary.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // lbMonthSalary
             // 
@@ -1036,7 +1051,6 @@ namespace GUI
             this.cbbRole.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbbRole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbRole.Enabled = false;
             this.cbbRole.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.cbbRole.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbbRole.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -1047,7 +1061,8 @@ namespace GUI
             this.cbbRole.ItemHeight = 30;
             this.cbbRole.Items.AddRange(new object[] {
             "Staff",
-            "Stock manager"});
+            "Stock manager",
+            "Admin"});
             this.cbbRole.ItemsAppearance.Parent = this.cbbRole;
             this.cbbRole.Location = new System.Drawing.Point(0, 17);
             this.cbbRole.Name = "cbbRole";
@@ -1094,7 +1109,6 @@ namespace GUI
             this.nudWorkingDays.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nudWorkingDays.DisabledState.Parent = this.nudWorkingDays;
             this.nudWorkingDays.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nudWorkingDays.Enabled = false;
             this.nudWorkingDays.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.nudWorkingDays.FocusedState.Parent = this.nudWorkingDays;
             this.nudWorkingDays.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold);
@@ -1161,7 +1175,6 @@ namespace GUI
             this.pnStateOptionWrapper.Controls.Add(this.rbQuitWork);
             this.pnStateOptionWrapper.Controls.Add(this.rbWorking);
             this.pnStateOptionWrapper.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnStateOptionWrapper.Enabled = false;
             this.pnStateOptionWrapper.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.pnStateOptionWrapper.Location = new System.Drawing.Point(0, 17);
             this.pnStateOptionWrapper.Name = "pnStateOptionWrapper";
@@ -1220,7 +1233,7 @@ namespace GUI
             this.pnPersonalInformation.Name = "pnPersonalInformation";
             this.pnPersonalInformation.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.pnPersonalInformation.ShadowDecoration.Parent = this.pnPersonalInformation;
-            this.pnPersonalInformation.Size = new System.Drawing.Size(316, 339);
+            this.pnPersonalInformation.Size = new System.Drawing.Size(316, 357);
             this.pnPersonalInformation.TabIndex = 10;
             // 
             // gbPersonalInformation
@@ -1236,6 +1249,7 @@ namespace GUI
             this.gbPersonalInformation.Controls.Add(this.pnName);
             this.gbPersonalInformation.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.gbPersonalInformation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbPersonalInformation.Enabled = false;
             this.gbPersonalInformation.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.gbPersonalInformation.Font = new System.Drawing.Font("Poppins Medium", 10.8F, System.Drawing.FontStyle.Bold);
             this.gbPersonalInformation.ForeColor = System.Drawing.Color.Orange;
@@ -1243,7 +1257,7 @@ namespace GUI
             this.gbPersonalInformation.Name = "gbPersonalInformation";
             this.gbPersonalInformation.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
             this.gbPersonalInformation.ShadowDecoration.Parent = this.gbPersonalInformation;
-            this.gbPersonalInformation.Size = new System.Drawing.Size(316, 329);
+            this.gbPersonalInformation.Size = new System.Drawing.Size(316, 347);
             this.gbPersonalInformation.TabIndex = 9;
             this.gbPersonalInformation.Text = "Personal Information";
             // 
@@ -1257,7 +1271,7 @@ namespace GUI
             this.pnUrl.Name = "pnUrl";
             this.pnUrl.Padding = new System.Windows.Forms.Padding(10, 5, 10, 0);
             this.pnUrl.ShadowDecoration.Parent = this.pnUrl;
-            this.pnUrl.Size = new System.Drawing.Size(316, 79);
+            this.pnUrl.Size = new System.Drawing.Size(316, 92);
             this.pnUrl.TabIndex = 18;
             // 
             // txtUrl
@@ -1273,7 +1287,6 @@ namespace GUI
             this.txtUrl.DisabledState.Parent = this.txtUrl;
             this.txtUrl.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtUrl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtUrl.Enabled = false;
             this.txtUrl.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.txtUrl.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUrl.FocusedState.Parent = this.txtUrl;
@@ -1283,7 +1296,7 @@ namespace GUI
             this.txtUrl.HoverState.Parent = this.txtUrl;
             this.txtUrl.Location = new System.Drawing.Point(10, 22);
             this.txtUrl.Margin = new System.Windows.Forms.Padding(9, 3, 9, 5);
-            this.txtUrl.MaximumSize = new System.Drawing.Size(455, 50);
+            this.txtUrl.MaximumSize = new System.Drawing.Size(455, 100);
             this.txtUrl.Multiline = true;
             this.txtUrl.Name = "txtUrl";
             this.txtUrl.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
@@ -1291,9 +1304,10 @@ namespace GUI
             this.txtUrl.PlaceholderText = "";
             this.txtUrl.SelectedText = "";
             this.txtUrl.ShadowDecoration.Parent = this.txtUrl;
-            this.txtUrl.Size = new System.Drawing.Size(296, 50);
+            this.txtUrl.Size = new System.Drawing.Size(296, 70);
             this.txtUrl.TabIndex = 32;
             this.txtUrl.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtUrl.TextChanged += new System.EventHandler(this.txtUrl_TextChanged);
             // 
             // lbUrl
             // 
@@ -1337,7 +1351,6 @@ namespace GUI
             this.txtPassword.DisabledState.Parent = this.txtPassword;
             this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPassword.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtPassword.Enabled = false;
             this.txtPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.FocusedState.Parent = this.txtPassword;
@@ -1400,7 +1413,6 @@ namespace GUI
             this.txtAddress.DisabledState.Parent = this.txtAddress;
             this.txtAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtAddress.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtAddress.Enabled = false;
             this.txtAddress.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAddress.FocusedState.Parent = this.txtAddress;
@@ -1470,7 +1482,6 @@ namespace GUI
             this.pnGenderOption.Controls.Add(this.rbFemale);
             this.pnGenderOption.Controls.Add(this.rbMale);
             this.pnGenderOption.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnGenderOption.Enabled = false;
             this.pnGenderOption.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.pnGenderOption.Location = new System.Drawing.Point(0, 17);
             this.pnGenderOption.Name = "pnGenderOption";
@@ -1542,12 +1553,12 @@ namespace GUI
             this.dtpBirthday.BorderThickness = 2;
             this.dtpBirthday.CheckedState.Parent = this.dtpBirthday;
             this.dtpBirthday.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpBirthday.CustomFormat = "dd-MM-yyyy";
             this.dtpBirthday.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtpBirthday.Enabled = false;
             this.dtpBirthday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.dtpBirthday.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpBirthday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpBirthday.HoverState.Parent = this.dtpBirthday;
             this.dtpBirthday.Location = new System.Drawing.Point(0, 17);
             this.dtpBirthday.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
@@ -1614,7 +1625,6 @@ namespace GUI
             this.txtPhoneNumber.DisabledState.Parent = this.txtPhoneNumber;
             this.txtPhoneNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPhoneNumber.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtPhoneNumber.Enabled = false;
             this.txtPhoneNumber.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.txtPhoneNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPhoneNumber.FocusedState.Parent = this.txtPhoneNumber;
@@ -1739,7 +1749,6 @@ namespace GUI
             this.txtName.DisabledState.Parent = this.txtName;
             this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtName.Enabled = false;
             this.txtName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.FocusedState.Parent = this.txtName;
@@ -1774,6 +1783,138 @@ namespace GUI
             this.lbName.TabIndex = 31;
             this.lbName.Text = "Name";
             this.lbName.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // tlpPictureSide
+            // 
+            this.tlpPictureSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.tlpPictureSide.ColumnCount = 2;
+            this.tlpPictureSide.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.85106F));
+            this.tlpPictureSide.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.14894F));
+            this.tlpPictureSide.Controls.Add(this.pbPiture, 0, 0);
+            this.tlpPictureSide.Controls.Add(this.pnPictureButton, 1, 0);
+            this.tlpPictureSide.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tlpPictureSide.Enabled = false;
+            this.tlpPictureSide.Location = new System.Drawing.Point(10, 5);
+            this.tlpPictureSide.Margin = new System.Windows.Forms.Padding(5);
+            this.tlpPictureSide.Name = "tlpPictureSide";
+            this.tlpPictureSide.RowCount = 1;
+            this.tlpPictureSide.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpPictureSide.Size = new System.Drawing.Size(316, 117);
+            this.tlpPictureSide.TabIndex = 9;
+            // 
+            // pbPiture
+            // 
+            this.pbPiture.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbPiture.FillColor = System.Drawing.Color.Silver;
+            this.pbPiture.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.pbPiture.Image = global::Manage_Store.Properties.Resources.avatar;
+            this.pbPiture.ImageRotate = 0F;
+            this.pbPiture.Location = new System.Drawing.Point(10, 10);
+            this.pbPiture.Margin = new System.Windows.Forms.Padding(10, 10, 0, 10);
+            this.pbPiture.Name = "pbPiture";
+            this.pbPiture.ShadowDecoration.Parent = this.pbPiture;
+            this.pbPiture.Size = new System.Drawing.Size(150, 97);
+            this.pbPiture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPiture.TabIndex = 5;
+            this.pbPiture.TabStop = false;
+            // 
+            // pnPictureButton
+            // 
+            this.pnPictureButton.BackColor = System.Drawing.Color.Transparent;
+            this.pnPictureButton.Controls.Add(this.pnDeletePicture);
+            this.pnPictureButton.Controls.Add(this.pnChangePicture);
+            this.pnPictureButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnPictureButton.Location = new System.Drawing.Point(165, 5);
+            this.pnPictureButton.Margin = new System.Windows.Forms.Padding(5);
+            this.pnPictureButton.Name = "pnPictureButton";
+            this.pnPictureButton.Padding = new System.Windows.Forms.Padding(10);
+            this.pnPictureButton.ShadowDecoration.Parent = this.pnPictureButton;
+            this.pnPictureButton.Size = new System.Drawing.Size(146, 107);
+            this.pnPictureButton.TabIndex = 6;
+            // 
+            // pnDeletePicture
+            // 
+            this.pnDeletePicture.BackColor = System.Drawing.Color.Transparent;
+            this.pnDeletePicture.Controls.Add(this.btnDeletePicture);
+            this.pnDeletePicture.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnDeletePicture.Location = new System.Drawing.Point(10, 49);
+            this.pnDeletePicture.Name = "pnDeletePicture";
+            this.pnDeletePicture.Padding = new System.Windows.Forms.Padding(5, 5, 5, 10);
+            this.pnDeletePicture.Size = new System.Drawing.Size(126, 39);
+            this.pnDeletePicture.TabIndex = 1;
+            // 
+            // btnDeletePicture
+            // 
+            this.btnDeletePicture.Animated = true;
+            this.btnDeletePicture.AutoRoundedCorners = true;
+            this.btnDeletePicture.BackColor = System.Drawing.Color.Transparent;
+            this.btnDeletePicture.BorderRadius = 11;
+            this.btnDeletePicture.CheckedState.Parent = this.btnDeletePicture;
+            this.btnDeletePicture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeletePicture.CustomImages.Parent = this.btnDeletePicture;
+            this.btnDeletePicture.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeletePicture.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeletePicture.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDeletePicture.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDeletePicture.DisabledState.Parent = this.btnDeletePicture;
+            this.btnDeletePicture.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDeletePicture.FillColor = System.Drawing.Color.Orange;
+            this.btnDeletePicture.Font = new System.Drawing.Font("Poppins Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletePicture.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.btnDeletePicture.HoverState.Parent = this.btnDeletePicture;
+            this.btnDeletePicture.Image = global::Manage_Store.Properties.Resources.bin;
+            this.btnDeletePicture.ImageOffset = new System.Drawing.Point(-2, 0);
+            this.btnDeletePicture.ImageSize = new System.Drawing.Size(22, 22);
+            this.btnDeletePicture.Location = new System.Drawing.Point(5, 5);
+            this.btnDeletePicture.Name = "btnDeletePicture";
+            this.btnDeletePicture.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.btnDeletePicture.ShadowDecoration.Parent = this.btnDeletePicture;
+            this.btnDeletePicture.Size = new System.Drawing.Size(116, 24);
+            this.btnDeletePicture.TabIndex = 1;
+            this.btnDeletePicture.Text = "Delete";
+            this.btnDeletePicture.Click += new System.EventHandler(this.btnDeletePicture_Click);
+            // 
+            // pnChangePicture
+            // 
+            this.pnChangePicture.BackColor = System.Drawing.Color.Transparent;
+            this.pnChangePicture.Controls.Add(this.btnChangePicture);
+            this.pnChangePicture.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnChangePicture.Location = new System.Drawing.Point(10, 10);
+            this.pnChangePicture.Name = "pnChangePicture";
+            this.pnChangePicture.Padding = new System.Windows.Forms.Padding(5, 5, 5, 10);
+            this.pnChangePicture.Size = new System.Drawing.Size(126, 39);
+            this.pnChangePicture.TabIndex = 0;
+            // 
+            // btnChangePicture
+            // 
+            this.btnChangePicture.Animated = true;
+            this.btnChangePicture.AutoRoundedCorners = true;
+            this.btnChangePicture.BackColor = System.Drawing.Color.Transparent;
+            this.btnChangePicture.BorderRadius = 11;
+            this.btnChangePicture.CheckedState.Parent = this.btnChangePicture;
+            this.btnChangePicture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChangePicture.CustomImages.Parent = this.btnChangePicture;
+            this.btnChangePicture.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnChangePicture.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnChangePicture.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnChangePicture.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnChangePicture.DisabledState.Parent = this.btnChangePicture;
+            this.btnChangePicture.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnChangePicture.FillColor = System.Drawing.Color.Orange;
+            this.btnChangePicture.Font = new System.Drawing.Font("Poppins Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangePicture.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.btnChangePicture.HoverState.Parent = this.btnChangePicture;
+            this.btnChangePicture.Image = global::Manage_Store.Properties.Resources.replace;
+            this.btnChangePicture.ImageOffset = new System.Drawing.Point(-2, 0);
+            this.btnChangePicture.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnChangePicture.Location = new System.Drawing.Point(5, 5);
+            this.btnChangePicture.Name = "btnChangePicture";
+            this.btnChangePicture.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.btnChangePicture.ShadowDecoration.Parent = this.btnChangePicture;
+            this.btnChangePicture.Size = new System.Drawing.Size(116, 24);
+            this.btnChangePicture.TabIndex = 1;
+            this.btnChangePicture.Text = "Change";
+            this.btnChangePicture.Click += new System.EventHandler(this.btnChangePicture_Click);
             // 
             // pnSideBarFooter
             // 
@@ -1867,6 +2008,7 @@ namespace GUI
             this.btnSideBarConfirm.Size = new System.Drawing.Size(153, 29);
             this.btnSideBarConfirm.TabIndex = 2;
             this.btnSideBarConfirm.Text = "Confirm";
+            this.btnSideBarConfirm.Click += new System.EventHandler(this.btnSideBarConfirm_Click);
             // 
             // ecTlpPictureSide
             // 
@@ -1877,138 +2019,6 @@ namespace GUI
             // 
             this.ecDgvEmployees.CornerRadius = 11;
             this.ecDgvEmployees.TargetControl = this.dgvEmployees;
-            // 
-            // pnPictureButton
-            // 
-            this.pnPictureButton.BackColor = System.Drawing.Color.Transparent;
-            this.pnPictureButton.Controls.Add(this.pnDeletePicture);
-            this.pnPictureButton.Controls.Add(this.pnChangePicture);
-            this.pnPictureButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnPictureButton.Location = new System.Drawing.Point(165, 5);
-            this.pnPictureButton.Margin = new System.Windows.Forms.Padding(5);
-            this.pnPictureButton.Name = "pnPictureButton";
-            this.pnPictureButton.Padding = new System.Windows.Forms.Padding(10);
-            this.pnPictureButton.ShadowDecoration.Parent = this.pnPictureButton;
-            this.pnPictureButton.Size = new System.Drawing.Size(146, 107);
-            this.pnPictureButton.TabIndex = 6;
-            // 
-            // pnChangePicture
-            // 
-            this.pnChangePicture.BackColor = System.Drawing.Color.Transparent;
-            this.pnChangePicture.Controls.Add(this.btnChangePicture);
-            this.pnChangePicture.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnChangePicture.Location = new System.Drawing.Point(10, 10);
-            this.pnChangePicture.Name = "pnChangePicture";
-            this.pnChangePicture.Padding = new System.Windows.Forms.Padding(5, 5, 5, 10);
-            this.pnChangePicture.Size = new System.Drawing.Size(126, 39);
-            this.pnChangePicture.TabIndex = 0;
-            // 
-            // btnChangePicture
-            // 
-            this.btnChangePicture.Animated = true;
-            this.btnChangePicture.AutoRoundedCorners = true;
-            this.btnChangePicture.BackColor = System.Drawing.Color.Transparent;
-            this.btnChangePicture.BorderRadius = 11;
-            this.btnChangePicture.CheckedState.Parent = this.btnChangePicture;
-            this.btnChangePicture.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChangePicture.CustomImages.Parent = this.btnChangePicture;
-            this.btnChangePicture.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnChangePicture.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnChangePicture.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnChangePicture.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnChangePicture.DisabledState.Parent = this.btnChangePicture;
-            this.btnChangePicture.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnChangePicture.Enabled = false;
-            this.btnChangePicture.FillColor = System.Drawing.Color.Orange;
-            this.btnChangePicture.Font = new System.Drawing.Font("Poppins Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChangePicture.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.btnChangePicture.HoverState.Parent = this.btnChangePicture;
-            this.btnChangePicture.Image = global::Manage_Store.Properties.Resources.replace;
-            this.btnChangePicture.ImageOffset = new System.Drawing.Point(-2, 0);
-            this.btnChangePicture.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnChangePicture.Location = new System.Drawing.Point(5, 5);
-            this.btnChangePicture.Name = "btnChangePicture";
-            this.btnChangePicture.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.btnChangePicture.ShadowDecoration.Parent = this.btnChangePicture;
-            this.btnChangePicture.Size = new System.Drawing.Size(116, 24);
-            this.btnChangePicture.TabIndex = 1;
-            this.btnChangePicture.Text = "Change";
-            // 
-            // pnDeletePicture
-            // 
-            this.pnDeletePicture.BackColor = System.Drawing.Color.Transparent;
-            this.pnDeletePicture.Controls.Add(this.btnDeletePicture);
-            this.pnDeletePicture.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnDeletePicture.Location = new System.Drawing.Point(10, 49);
-            this.pnDeletePicture.Name = "pnDeletePicture";
-            this.pnDeletePicture.Padding = new System.Windows.Forms.Padding(5, 5, 5, 10);
-            this.pnDeletePicture.Size = new System.Drawing.Size(126, 39);
-            this.pnDeletePicture.TabIndex = 1;
-            // 
-            // btnDeletePicture
-            // 
-            this.btnDeletePicture.Animated = true;
-            this.btnDeletePicture.AutoRoundedCorners = true;
-            this.btnDeletePicture.BackColor = System.Drawing.Color.Transparent;
-            this.btnDeletePicture.BorderRadius = 11;
-            this.btnDeletePicture.CheckedState.Parent = this.btnDeletePicture;
-            this.btnDeletePicture.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeletePicture.CustomImages.Parent = this.btnDeletePicture;
-            this.btnDeletePicture.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDeletePicture.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDeletePicture.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDeletePicture.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDeletePicture.DisabledState.Parent = this.btnDeletePicture;
-            this.btnDeletePicture.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDeletePicture.Enabled = false;
-            this.btnDeletePicture.FillColor = System.Drawing.Color.Orange;
-            this.btnDeletePicture.Font = new System.Drawing.Font("Poppins Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePicture.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.btnDeletePicture.HoverState.Parent = this.btnDeletePicture;
-            this.btnDeletePicture.Image = global::Manage_Store.Properties.Resources.bin;
-            this.btnDeletePicture.ImageOffset = new System.Drawing.Point(-2, 0);
-            this.btnDeletePicture.ImageSize = new System.Drawing.Size(22, 22);
-            this.btnDeletePicture.Location = new System.Drawing.Point(5, 5);
-            this.btnDeletePicture.Name = "btnDeletePicture";
-            this.btnDeletePicture.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.btnDeletePicture.ShadowDecoration.Parent = this.btnDeletePicture;
-            this.btnDeletePicture.Size = new System.Drawing.Size(116, 24);
-            this.btnDeletePicture.TabIndex = 1;
-            this.btnDeletePicture.Text = "Delete";
-            // 
-            // pbPiture
-            // 
-            this.pbPiture.BorderRadius = 10;
-            this.pbPiture.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbPiture.FillColor = System.Drawing.Color.Silver;
-            this.pbPiture.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.pbPiture.Image = global::Manage_Store.Properties.Resources.avatar;
-            this.pbPiture.ImageRotate = 0F;
-            this.pbPiture.Location = new System.Drawing.Point(10, 10);
-            this.pbPiture.Margin = new System.Windows.Forms.Padding(10, 10, 0, 10);
-            this.pbPiture.Name = "pbPiture";
-            this.pbPiture.ShadowDecoration.Parent = this.pbPiture;
-            this.pbPiture.Size = new System.Drawing.Size(150, 97);
-            this.pbPiture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPiture.TabIndex = 5;
-            this.pbPiture.TabStop = false;
-            // 
-            // tlpPictureSide
-            // 
-            this.tlpPictureSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.tlpPictureSide.ColumnCount = 2;
-            this.tlpPictureSide.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.85106F));
-            this.tlpPictureSide.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.14894F));
-            this.tlpPictureSide.Controls.Add(this.pbPiture, 0, 0);
-            this.tlpPictureSide.Controls.Add(this.pnPictureButton, 1, 0);
-            this.tlpPictureSide.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tlpPictureSide.Location = new System.Drawing.Point(10, 5);
-            this.tlpPictureSide.Margin = new System.Windows.Forms.Padding(5);
-            this.tlpPictureSide.Name = "tlpPictureSide";
-            this.tlpPictureSide.RowCount = 1;
-            this.tlpPictureSide.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpPictureSide.Size = new System.Drawing.Size(316, 117);
-            this.tlpPictureSide.TabIndex = 9;
             // 
             // fEmployee
             // 
@@ -2042,7 +2052,6 @@ namespace GUI
             this.pnDayWage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nudDayWage)).EndInit();
             this.pnMonthDay.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nudMonthSalary)).EndInit();
             this.pnRoleAndWorkingDay.ResumeLayout(false);
             this.pnRole.ResumeLayout(false);
             this.pnWorkingDays.ResumeLayout(false);
@@ -2065,13 +2074,13 @@ namespace GUI
             this.pnPhoneNumber.ResumeLayout(false);
             this.pnID.ResumeLayout(false);
             this.pnName.ResumeLayout(false);
+            this.tlpPictureSide.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbPiture)).EndInit();
+            this.pnPictureButton.ResumeLayout(false);
+            this.pnDeletePicture.ResumeLayout(false);
+            this.pnChangePicture.ResumeLayout(false);
             this.pnSideBarFooter.ResumeLayout(false);
             this.tlpSideBarFooter.ResumeLayout(false);
-            this.pnPictureButton.ResumeLayout(false);
-            this.pnChangePicture.ResumeLayout(false);
-            this.pnDeletePicture.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbPiture)).EndInit();
-            this.tlpPictureSide.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2085,13 +2094,12 @@ namespace GUI
         private Guna.UI2.WinForms.Guna2Button btnCollapse;
         private System.Windows.Forms.TableLayoutPanel tlpMain;
         private System.Windows.Forms.TableLayoutPanel tlpEmployeeType;
-        private Guna.UI2.WinForms.Guna2Button btnStaff;
+        private Guna.UI2.WinForms.Guna2Button btnRetiredEmployee;
         private Guna.UI2.WinForms.Guna2Button btnStockManager;
         private Guna.UI2.WinForms.Guna2Button btnAllRoles;
         private System.Windows.Forms.TableLayoutPanel tlpSearch;
         private Guna.UI2.WinForms.Guna2Panel pnSearchAndFunction;
         private Guna.UI2.WinForms.Guna2Panel pnSearch;
-        private Guna.UI2.WinForms.Guna2Panel btnSearch;
         private Guna.UI2.WinForms.Guna2Panel pnFunctions;
         private System.Windows.Forms.TableLayoutPanel tlpFunction;
         private System.Windows.Forms.Panel pnBtnEdit;
@@ -2134,7 +2142,6 @@ namespace GUI
         private Guna.UI2.WinForms.Guna2TextBox txtAddress;
         private System.Windows.Forms.Label lbAddress;
         private Guna.UI2.WinForms.Guna2Panel pnUrl;
-        private Guna.UI2.WinForms.Guna2TextBox txtUrl;
         private System.Windows.Forms.Label lbUrl;
         private Guna.UI2.WinForms.Guna2Panel pnWorkInformation;
         private Guna.UI2.WinForms.Guna2GroupBox gbWorkInformation;
@@ -2156,7 +2163,6 @@ namespace GUI
         private Guna.UI2.WinForms.Guna2Panel pnMonthDay;
         private System.Windows.Forms.Label lbMonthSalary;
         private Guna.UI2.WinForms.Guna2NumericUpDown nudDayWage;
-        private Guna.UI2.WinForms.Guna2NumericUpDown nudMonthSalary;
         private Guna.UI2.WinForms.Guna2NumericUpDown nudWorkingDays;
         private Guna.UI2.WinForms.Guna2Panel pnGender;
         private Guna.UI2.WinForms.Guna2Panel pnGenderOption;
@@ -2172,5 +2178,8 @@ namespace GUI
         private Guna.UI2.WinForms.Guna2Button btnDeletePicture;
         private System.Windows.Forms.Panel pnChangePicture;
         private Guna.UI2.WinForms.Guna2Button btnChangePicture;
+        private Guna.UI2.WinForms.Guna2TextBox txtUrl;
+        private Guna.UI2.WinForms.Guna2TextBox txtMonthSalary;
+        private Guna.UI2.WinForms.Guna2Button btnStaff;
     }
 }

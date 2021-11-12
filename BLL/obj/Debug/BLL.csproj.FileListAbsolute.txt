@@ -4,7 +4,6 @@ D:\Document\~project\Manager-Store\BLL\bin\Debug\DAL.dll
 D:\Document\~project\Manager-Store\BLL\bin\Debug\DAL.pdb
 D:\Document\~project\Manager-Store\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
 D:\Document\~project\Manager-Store\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
-D:\Document\~project\Manager-Store\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\Document\~project\Manager-Store\BLL\obj\Debug\BLL.dll
 D:\Document\~project\Manager-Store\BLL\obj\Debug\BLL.pdb
 D:\Document\~project\Manager-Store\BLL\bin\Debug\DTO.dll
