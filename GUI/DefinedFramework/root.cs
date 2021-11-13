@@ -132,15 +132,15 @@ namespace GUI.DefinedFramework
                 s = "0";
             for (int i = s.Length - 3; i > 0; i -= 3)
                 s = s.Insert(i, ".");
-            return s + " vnđ";
+            return s + " đ";
         }
 
         public static string TurnOffMoneyFormat(string s)
         {
-            if (s.ToLower().Contains("vn"))
+            if (s.ToLower().Contains(" "))
             {
                 int len = s.Length;
-                return s.Remove(len - 4).Replace(".", "");
+                return s.Remove(len - 2).Replace(".", "");
             }
             return s;
         }

@@ -21,13 +21,12 @@ namespace GUI.DefinedFramework
         {
             InitializeComponent();
             this.g = g;
-            Quantity = quantity;
+            UpdateQuantity(quantity);
             Price = price;
             IsNew = isNew;
             Dock = DockStyle.Fill;
             lbQuantity.BackColor = Color.FromArgb(100, Color.Black);
             lbQuantity.ForeColor = Color.White;
-            UpdateQuantity();
             BackColor = Color.White;
             BackgroundImage = Image.FromFile(root.ProjectPath() + root.imageGoods + g.Name.Replace(' ', '_') + ".png");
             BackgroundImageLayout = ImageLayout.Zoom;
@@ -36,10 +35,15 @@ namespace GUI.DefinedFramework
             cm.MenuItems.Add("Add Item");
             cm.MenuItems.Add("Delete Item");
             ContextMenu = cm;
+            lbQuantity.MouseEnter += new EventHandler(pnHover_MouseEnter);
+            lbQuantity.MouseLeave += new EventHandler(pnHover_MouseLeave);
+            lbQuantity.Click += new EventHandler(pnHover_Click);
+            pnHover.BackColor = Color.FromArgb(80, Color.Black);
         }
 
-        public void UpdateQuantity()
+        public void UpdateQuantity(int quantity)
         {
+            Quantity = quantity;
             lbQuantity.Text = "x" + Quantity.ToString();
         }
 
@@ -50,18 +54,21 @@ namespace GUI.DefinedFramework
 
         private void pnHover_MouseEnter(object sender, EventArgs e)
         {
-            pnHover.BackColor = Color.FromArgb(50, Color.Black);
+            pnHover.BackColor = Color.Transparent;
         }
 
         private void pnHover_MouseLeave(object sender, EventArgs e)
         {
-            pnHover.BackColor = Color.Transparent;
+            pnHover.BackColor = Color.FromArgb(80, Color.Black);
         }
 
         private void pnHover_Click(object sender, EventArgs e)
         {
             Parent.Tag = this;
-            Parent.Parent.Parent.Controls["pnItemNameList"].Controls["cbbItemsName"].Text = g.Name;
+            if (Parent.Name == "tlpGoodsInContract")
+                Parent.Parent.Parent.Controls["pnItemNameList"].Controls["cbbItemsName"].Text = g.Name;
+            else if (Parent.Name == "tlpGoodsInBill")
+                Parent.Parent.Parent.Controls["pnItemNameAndID"].Controls["pnItemName"].Controls["cbbItemName"].Text = g.Name;
         }
     }
 }

@@ -110,7 +110,7 @@ namespace GUI
             this.nudQuantity = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.label20 = new System.Windows.Forms.Label();
             this.pnGoodsView = new Guna.UI2.WinForms.Guna2Panel();
-            this.tlpGoodsView = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpGoodsInContract = new System.Windows.Forms.TableLayoutPanel();
             this.pnGeneralInformation = new Guna.UI2.WinForms.Guna2Panel();
             this.gbGeneralInformation = new Guna.UI2.WinForms.Guna2GroupBox();
             this.pnName = new Guna.UI2.WinForms.Guna2Panel();
@@ -1834,7 +1834,7 @@ namespace GUI
             this.pnGoodsView.AutoScroll = true;
             this.pnGoodsView.AutoSize = true;
             this.pnGoodsView.BorderRadius = 10;
-            this.pnGoodsView.Controls.Add(this.tlpGoodsView);
+            this.pnGoodsView.Controls.Add(this.tlpGoodsInContract);
             this.pnGoodsView.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnGoodsView.Location = new System.Drawing.Point(5, 25);
             this.pnGoodsView.Name = "pnGoodsView";
@@ -1843,17 +1843,17 @@ namespace GUI
             this.pnGoodsView.Size = new System.Drawing.Size(449, 59);
             this.pnGoodsView.TabIndex = 3;
             // 
-            // tlpGoodsView
+            // tlpGoodsInContract
             // 
-            this.tlpGoodsView.ColumnCount = 1;
-            this.tlpGoodsView.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpGoodsView.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tlpGoodsView.Location = new System.Drawing.Point(0, 0);
-            this.tlpGoodsView.Name = "tlpGoodsView";
-            this.tlpGoodsView.RowCount = 1;
-            this.tlpGoodsView.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpGoodsView.Size = new System.Drawing.Size(449, 54);
-            this.tlpGoodsView.TabIndex = 1;
+            this.tlpGoodsInContract.ColumnCount = 1;
+            this.tlpGoodsInContract.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tlpGoodsInContract.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tlpGoodsInContract.Location = new System.Drawing.Point(0, 0);
+            this.tlpGoodsInContract.Name = "tlpGoodsInContract";
+            this.tlpGoodsInContract.RowCount = 1;
+            this.tlpGoodsInContract.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpGoodsInContract.Size = new System.Drawing.Size(449, 54);
+            this.tlpGoodsInContract.TabIndex = 1;
             // 
             // pnGeneralInformation
             // 
@@ -4826,7 +4826,6 @@ namespace GUI
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
         private System.Windows.Forms.Label label16;
         private Guna.UI2.WinForms.Guna2Panel pnGoodsView;
-        private System.Windows.Forms.TableLayoutPanel tlpGoodsView;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel10;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel11;
         private Guna.UI2.WinForms.Guna2Panel pnState;
@@ -4987,5 +4986,6 @@ namespace GUI
         private Guna.UI2.WinForms.Guna2Button btnAddContract;
         private Guna.UI2.WinForms.Guna2NumericUpDown nudQuantity3;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpTime3;
+        private System.Windows.Forms.TableLayoutPanel tlpGoodsInContract;
     }
 }

@@ -14,7 +14,8 @@ namespace GUI
 {
     public partial class fHome : Form
     {
-        private BLL_Goods bll = new BLL_Goods();
+        private BLL_Goods bll_goods = new BLL_Goods();
+        private BLL_Bill bll_bill = new BLL_Bill();
         private DataTable dt = null;
         private GoodsCell[] cells;
         public fHome()
@@ -26,13 +27,15 @@ namespace GUI
 
             BackColor = root.screenColor;
             tlpWrapper.BackColor = root.screenColor;
-            btnRenew.FillColor = root.homePrimaryColor;
+            btnClean.FillColor = root.homePrimaryColor;
             btnBack.FillColor = root.homePrimaryColor;
             btnBack.FillColor = root.homePrimaryColor;
             btnCart.FillColor = root.homePrimaryColor;
             pnCartBody.FillColor = root.screenColor;
             pnCartFooter.FillColor = Color.Transparent;
             horizontalLine.FillColor = root.navBarColor;
+            btnClean.FillColor = root.backColorComponentBill;
+            btnCleanCart.FillColor = root.backColorComponentBill;
 
             LoadGoods();
             CreateGoodsGrid();
@@ -46,7 +49,7 @@ namespace GUI
         private void LoadGoods()
         {
             string error = null;
-            dt = bll.GetGoodsStillSelling(ref error);
+            dt = bll_goods.GetGoodsStillSelling(ref error);
             if (error != null)
             {
                 MessageBox.Show(error, "Can not load goods");
@@ -85,7 +88,55 @@ namespace GUI
                     (string)dt.Rows[i]["gname"],
                     (double)dt.Rows[i]["gprice"],
                     (int)dt.Rows[i]["gquantity"]);
+                cells[i].btnAddToCart.Click += new EventHandler(btnAddToCart_Click);
                 tlpGoods.Controls.Add(cells[i]);
+            }
+        }
+
+        private void btnAddToCart_Click(object sender, EventArgs e)
+        {
+            GoodsCell gc = (GoodsCell)(sender as Control).Parent.Parent;
+            if (pnCartBody.Controls.Find(gc.GoodsName, true).Length > 0)
+            {
+                PanelGoodsInCart pntemp = pnCartBody.Controls[gc.GoodsName] as PanelGoodsInCart;
+                pntemp.nudQuantity.Value += gc.nudQuantity.Value;
+            }
+            else
+            {
+                PanelGoodsInCart pntemp = new PanelGoodsInCart(gc.Url, gc.GoodsName, gc.Price, (int)gc.nudQuantity.Value, gc.QuantityRemain);
+                pnCartBody.Controls.Add(pntemp);
+                lbTotalPrice.Text = root.MoneyFormat((int.Parse(root.TurnOffMoneyFormat(lbTotalPrice.Text))
+                    + int.Parse(root.TurnOffMoneyFormat(pntemp.lbPrice.Text))).ToString());
+                btnCheckout.Enabled = true;
+                btnCleanCart.Enabled = true;
+                pntemp.nudQuantity.ValueChanged += new EventHandler(nudQuantity_ValueChanged);
+                pntemp.btnDelete.Click += new EventHandler(btnDelete_Click);
+            }
+            gc.nudQuantity.Value = 0;
+        }
+
+        private void nudQuantity_ValueChanged(object sender, EventArgs e)
+        {
+            PanelGoodsInCart pntemp = (PanelGoodsInCart)(sender as Control).Parent.Parent.Parent.Parent;
+            int totalPrice = int.Parse(root.TurnOffMoneyFormat(lbTotalPrice.Text));
+            totalPrice -= int.Parse(root.TurnOffMoneyFormat(pntemp.lbPrice.Text));
+            int itemPrice = (int)pntemp.nudQuantity.Value * (int)pntemp.Price;
+            totalPrice += itemPrice;
+            lbTotalPrice.Text = root.MoneyFormat(totalPrice.ToString());
+            pntemp.lbPrice.Text = root.MoneyFormat(itemPrice.ToString());
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            PanelGoodsInCart pntemp = (PanelGoodsInCart)(sender as Control).Parent.Parent.Parent;
+            int totalPrice = int.Parse(root.TurnOffMoneyFormat(lbTotalPrice.Text));
+            int itemPrice = int.Parse(root.TurnOffMoneyFormat(pntemp.lbPrice.Text));
+            lbTotalPrice.Text = root.MoneyFormat((totalPrice - itemPrice).ToString());
+            pnCartBody.Controls.Remove(pntemp);
+            if (pnCartBody.Controls.Count == 0)
+            {
+                btnCheckout.Enabled = false;
+                btnCleanCart.Enabled = false;
             }
         }
 
@@ -93,24 +144,10 @@ namespace GUI
         {
             tlpMain.ColumnStyles[0].Width = 0;
             tlpMain.ColumnStyles[1].Width = 100;
-            btnRenew.Hide();
+            btnClean.Hide();
             btnCart.Hide();
             btnBack.Show();
             pnCart.Show();
-        }
-
-        private void tlpGoods_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pnCartFooter_Paint(object sender, PaintEventArgs e)
-        {
-            //ControlPaint.DrawBorder(e.Graphics, pnCartFooter.DisplayRectangle,
-            //    Color.Red, 0, ButtonBorderStyle.Solid,
-            //    Color.Red, 5, ButtonBorderStyle.Solid,
-            //    Color.Red, 0, ButtonBorderStyle.Solid,
-            //    Color.Red, 0, ButtonBorderStyle.Solid);
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -120,8 +157,42 @@ namespace GUI
             tlpMain.ColumnStyles[0].Width = 100;
             btnBack.Hide();
             pnCart.Hide();
-            btnRenew.Show();
+            btnClean.Show();
             btnCart.Show();
+        }
+
+        private void btnClean_Click(object sender, EventArgs e)
+        {
+            foreach (GoodsCell gc in cells)
+                gc.Reset();
+
+        }
+
+        private void btnCleanCart_Click(object sender, EventArgs e)
+        {
+            pnCartBody.Controls.Clear();
+            lbTotalPrice.Text = root.MoneyFormat("0");
+            btnCleanCart.Enabled = false;
+            btnCheckout.Enabled = false;
+        }
+
+        private void btnCheckout_Click(object sender, EventArgs e)
+        {
+            int bid = bll_bill.GetNewBillID();
+            //int eid = ((fMain)Parent.Parent.Parent).Profile.Id;
+            int eid = 7;
+            string message = null;
+            foreach (PanelGoodsInCart pn in pnCartBody.Controls)
+            {
+                string gname = pn.lbName.Text;
+                int quantity = (int)pn.nudQuantity.Value;
+                message = bll_bill.InsertBill(bid, gname, eid, quantity);
+                if (!message.ToLower().Contains("successful"))
+                {
+                    MessageBox.Show(message);
+                    return;
+                }
+            }
         }
     }
 }

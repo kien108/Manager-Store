@@ -34,26 +34,25 @@ namespace GUI
             this.pnCart = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBack = new Guna.UI2.WinForms.Guna2Button();
-            this.btnRenew = new Guna.UI2.WinForms.Guna2Button();
+            this.btnClean = new Guna.UI2.WinForms.Guna2Button();
             this.btnCart = new Guna.UI2.WinForms.Guna2Button();
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.tlpGoods = new System.Windows.Forms.TableLayoutPanel();
             this.pnCartWrapper = new Guna.UI2.WinForms.Guna2Panel();
             this.pnCartBody = new Guna.UI2.WinForms.Guna2Panel();
-            this.panelGoodsInCart6 = new GUI.DefinedFramework.PanelGoodsInCart();
             this.horizontalLine = new Guna.UI2.WinForms.Guna2Panel();
             this.pnCartFooter = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnCleanCart = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.lbTotalPrice = new System.Windows.Forms.Label();
+            this.btnCheckout = new Guna.UI2.WinForms.Guna2GradientButton();
             this.tlpWrapper.SuspendLayout();
             this.pnButtons.SuspendLayout();
             this.pnCart.SuspendLayout();
             this.tlpMain.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.pnCartWrapper.SuspendLayout();
-            this.pnCartBody.SuspendLayout();
             this.pnCartFooter.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,7 +75,7 @@ namespace GUI
             // 
             this.pnButtons.Controls.Add(this.pnCart);
             this.pnButtons.Controls.Add(this.btnBack);
-            this.pnButtons.Controls.Add(this.btnRenew);
+            this.pnButtons.Controls.Add(this.btnClean);
             this.pnButtons.Controls.Add(this.btnCart);
             this.pnButtons.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnButtons.Location = new System.Drawing.Point(3, 3);
@@ -103,12 +102,12 @@ namespace GUI
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Right;
             this.label1.Font = new System.Drawing.Font("Poppins SemiBold", 14F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.label1.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
             this.label1.Size = new System.Drawing.Size(111, 51);
             this.label1.TabIndex = 8;
             this.label1.Text = "Cart";
@@ -117,8 +116,9 @@ namespace GUI
             // btnBack
             // 
             this.btnBack.Animated = true;
+            this.btnBack.AutoRoundedCorners = true;
             this.btnBack.BackColor = System.Drawing.Color.Transparent;
-            this.btnBack.BorderRadius = 10;
+            this.btnBack.BorderRadius = 24;
             this.btnBack.CheckedState.Parent = this.btnBack;
             this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.CustomImages.Parent = this.btnBack;
@@ -132,7 +132,7 @@ namespace GUI
             this.btnBack.Font = new System.Drawing.Font("Poppins SemiBold", 14F, System.Drawing.FontStyle.Bold);
             this.btnBack.ForeColor = System.Drawing.Color.BlanchedAlmond;
             this.btnBack.HoverState.Parent = this.btnBack;
-            this.btnBack.Location = new System.Drawing.Point(165, 5);
+            this.btnBack.Location = new System.Drawing.Point(132, 5);
             this.btnBack.Margin = new System.Windows.Forms.Padding(10, 10, 10, 8);
             this.btnBack.Name = "btnBack";
             this.btnBack.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
@@ -143,39 +143,42 @@ namespace GUI
             this.btnBack.TextOffset = new System.Drawing.Point(0, -2);
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // btnRenew
+            // btnClean
             // 
-            this.btnRenew.Animated = true;
-            this.btnRenew.BackColor = System.Drawing.Color.Transparent;
-            this.btnRenew.BorderRadius = 10;
-            this.btnRenew.CheckedState.Parent = this.btnRenew;
-            this.btnRenew.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRenew.CustomImages.Parent = this.btnRenew;
-            this.btnRenew.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRenew.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRenew.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRenew.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRenew.DisabledState.Parent = this.btnRenew;
-            this.btnRenew.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnRenew.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(166)))), ((int)(((byte)(137)))));
-            this.btnRenew.Font = new System.Drawing.Font("Poppins SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.btnRenew.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.btnRenew.HoverState.Parent = this.btnRenew;
-            this.btnRenew.Location = new System.Drawing.Point(5, 5);
-            this.btnRenew.Margin = new System.Windows.Forms.Padding(10, 10, 10, 8);
-            this.btnRenew.Name = "btnRenew";
-            this.btnRenew.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.btnRenew.ShadowDecoration.Parent = this.btnRenew;
-            this.btnRenew.Size = new System.Drawing.Size(160, 51);
-            this.btnRenew.TabIndex = 5;
-            this.btnRenew.Text = "Renew cart";
-            this.btnRenew.TextOffset = new System.Drawing.Point(0, -2);
+            this.btnClean.Animated = true;
+            this.btnClean.AutoRoundedCorners = true;
+            this.btnClean.BackColor = System.Drawing.Color.Transparent;
+            this.btnClean.BorderRadius = 24;
+            this.btnClean.CheckedState.Parent = this.btnClean;
+            this.btnClean.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClean.CustomImages.Parent = this.btnClean;
+            this.btnClean.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClean.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClean.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClean.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClean.DisabledState.Parent = this.btnClean;
+            this.btnClean.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnClean.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(166)))), ((int)(((byte)(137)))));
+            this.btnClean.Font = new System.Drawing.Font("Poppins SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.btnClean.ForeColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnClean.HoverState.Parent = this.btnClean;
+            this.btnClean.Location = new System.Drawing.Point(5, 5);
+            this.btnClean.Margin = new System.Windows.Forms.Padding(10, 10, 10, 8);
+            this.btnClean.Name = "btnClean";
+            this.btnClean.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.btnClean.ShadowDecoration.Parent = this.btnClean;
+            this.btnClean.Size = new System.Drawing.Size(127, 51);
+            this.btnClean.TabIndex = 5;
+            this.btnClean.Text = "Clean";
+            this.btnClean.TextOffset = new System.Drawing.Point(0, -2);
+            this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
             // 
             // btnCart
             // 
             this.btnCart.Animated = true;
+            this.btnCart.AutoRoundedCorners = true;
             this.btnCart.BackColor = System.Drawing.Color.Transparent;
-            this.btnCart.BorderRadius = 10;
+            this.btnCart.BorderRadius = 24;
             this.btnCart.CheckedState.Parent = this.btnCart;
             this.btnCart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCart.CustomImages.Parent = this.btnCart;
@@ -203,8 +206,8 @@ namespace GUI
             // tlpMain
             // 
             this.tlpMain.ColumnCount = 2;
-            this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.73913F));
-            this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.26087F));
+            this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.34783F));
+            this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.65217F));
             this.tlpMain.Controls.Add(this.guna2Panel1, 0, 0);
             this.tlpMain.Controls.Add(this.pnCartWrapper, 1, 0);
             this.tlpMain.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -212,7 +215,7 @@ namespace GUI
             this.tlpMain.Name = "tlpMain";
             this.tlpMain.RowCount = 1;
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 643F));
+            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 651F));
             this.tlpMain.Size = new System.Drawing.Size(1150, 651);
             this.tlpMain.TabIndex = 1;
             // 
@@ -225,7 +228,7 @@ namespace GUI
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(755, 651);
+            this.guna2Panel1.Size = new System.Drawing.Size(487, 651);
             this.guna2Panel1.TabIndex = 0;
             // 
             // tlpGoods
@@ -238,9 +241,8 @@ namespace GUI
             this.tlpGoods.Name = "tlpGoods";
             this.tlpGoods.RowCount = 1;
             this.tlpGoods.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpGoods.Size = new System.Drawing.Size(755, 463);
+            this.tlpGoods.Size = new System.Drawing.Size(487, 463);
             this.tlpGoods.TabIndex = 1;
-            this.tlpGoods.Paint += new System.Windows.Forms.PaintEventHandler(this.tlpGoods_Paint);
             // 
             // pnCartWrapper
             // 
@@ -248,34 +250,23 @@ namespace GUI
             this.pnCartWrapper.Controls.Add(this.horizontalLine);
             this.pnCartWrapper.Controls.Add(this.pnCartFooter);
             this.pnCartWrapper.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnCartWrapper.Location = new System.Drawing.Point(758, 3);
+            this.pnCartWrapper.Location = new System.Drawing.Point(490, 3);
             this.pnCartWrapper.Name = "pnCartWrapper";
             this.pnCartWrapper.ShadowDecoration.Parent = this.pnCartWrapper;
-            this.pnCartWrapper.Size = new System.Drawing.Size(389, 645);
+            this.pnCartWrapper.Size = new System.Drawing.Size(657, 645);
             this.pnCartWrapper.TabIndex = 1;
             // 
             // pnCartBody
             // 
             this.pnCartBody.AutoScroll = true;
             this.pnCartBody.BackColor = System.Drawing.Color.Transparent;
-            this.pnCartBody.Controls.Add(this.panelGoodsInCart6);
             this.pnCartBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnCartBody.Location = new System.Drawing.Point(0, 0);
             this.pnCartBody.Name = "pnCartBody";
             this.pnCartBody.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.pnCartBody.ShadowDecoration.Parent = this.pnCartBody;
-            this.pnCartBody.Size = new System.Drawing.Size(389, 594);
+            this.pnCartBody.Size = new System.Drawing.Size(657, 594);
             this.pnCartBody.TabIndex = 4;
-            // 
-            // panelGoodsInCart6
-            // 
-            this.panelGoodsInCart6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(58)))));
-            this.panelGoodsInCart6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelGoodsInCart6.Location = new System.Drawing.Point(5, 0);
-            this.panelGoodsInCart6.Name = "panelGoodsInCart6";
-            this.panelGoodsInCart6.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.panelGoodsInCart6.Size = new System.Drawing.Size(379, 75);
-            this.panelGoodsInCart6.TabIndex = 5;
             // 
             // horizontalLine
             // 
@@ -286,15 +277,16 @@ namespace GUI
             this.horizontalLine.Location = new System.Drawing.Point(0, 594);
             this.horizontalLine.Name = "horizontalLine";
             this.horizontalLine.ShadowDecoration.Parent = this.horizontalLine;
-            this.horizontalLine.Size = new System.Drawing.Size(389, 1);
+            this.horizontalLine.Size = new System.Drawing.Size(657, 1);
             this.horizontalLine.TabIndex = 3;
             // 
             // pnCartFooter
             // 
             this.pnCartFooter.BackColor = System.Drawing.Color.Transparent;
+            this.pnCartFooter.Controls.Add(this.btnCleanCart);
             this.pnCartFooter.Controls.Add(this.label3);
-            this.pnCartFooter.Controls.Add(this.label2);
-            this.pnCartFooter.Controls.Add(this.guna2GradientButton1);
+            this.pnCartFooter.Controls.Add(this.lbTotalPrice);
+            this.pnCartFooter.Controls.Add(this.btnCheckout);
             this.pnCartFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnCartFooter.FillColor = System.Drawing.Color.Black;
             this.pnCartFooter.Font = new System.Drawing.Font("Poppins ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -303,16 +295,49 @@ namespace GUI
             this.pnCartFooter.Name = "pnCartFooter";
             this.pnCartFooter.Padding = new System.Windows.Forms.Padding(10, 10, 10, 4);
             this.pnCartFooter.ShadowDecoration.Parent = this.pnCartFooter;
-            this.pnCartFooter.Size = new System.Drawing.Size(389, 50);
+            this.pnCartFooter.Size = new System.Drawing.Size(657, 50);
             this.pnCartFooter.TabIndex = 2;
-            this.pnCartFooter.Paint += new System.Windows.Forms.PaintEventHandler(this.pnCartFooter_Paint);
+            // 
+            // btnCleanCart
+            // 
+            this.btnCleanCart.Animated = true;
+            this.btnCleanCart.AutoRoundedCorners = true;
+            this.btnCleanCart.BackColor = System.Drawing.Color.Transparent;
+            this.btnCleanCart.BorderRadius = 17;
+            this.btnCleanCart.CheckedState.Parent = this.btnCleanCart;
+            this.btnCleanCart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCleanCart.CustomImages.Parent = this.btnCleanCart;
+            this.btnCleanCart.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCleanCart.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCleanCart.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCleanCart.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCleanCart.DisabledState.Parent = this.btnCleanCart;
+            this.btnCleanCart.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCleanCart.Enabled = false;
+            this.btnCleanCart.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(166)))), ((int)(((byte)(137)))));
+            this.btnCleanCart.Font = new System.Drawing.Font("Poppins ExtraBold", 14F, System.Drawing.FontStyle.Bold);
+            this.btnCleanCart.ForeColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnCleanCart.HoverState.Parent = this.btnCleanCart;
+            this.btnCleanCart.Image = global::Manage_Store.Properties.Resources.clean;
+            this.btnCleanCart.ImageOffset = new System.Drawing.Point(-5, -2);
+            this.btnCleanCart.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnCleanCart.Location = new System.Drawing.Point(10, 10);
+            this.btnCleanCart.Margin = new System.Windows.Forms.Padding(10, 10, 10, 8);
+            this.btnCleanCart.Name = "btnCleanCart";
+            this.btnCleanCart.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.btnCleanCart.ShadowDecoration.Parent = this.btnCleanCart;
+            this.btnCleanCart.Size = new System.Drawing.Size(160, 36);
+            this.btnCleanCart.TabIndex = 6;
+            this.btnCleanCart.Text = "Clean Cart";
+            this.btnCleanCart.TextOffset = new System.Drawing.Point(-2, -2);
+            this.btnCleanCart.Click += new System.EventHandler(this.btnCleanCart_Click);
             // 
             // label3
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Right;
             this.label3.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(-75, 10);
+            this.label3.Location = new System.Drawing.Point(193, 10);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.label3.Size = new System.Drawing.Size(150, 36);
@@ -320,46 +345,51 @@ namespace GUI
             this.label3.Text = "Total:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label2
+            // lbTotalPrice
             // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label2.Font = new System.Drawing.Font("Roboto Black", 16F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.Salmon;
-            this.label2.Location = new System.Drawing.Point(75, 10);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            this.label2.Size = new System.Drawing.Size(102, 36);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "30.000 đ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbTotalPrice.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbTotalPrice.Font = new System.Drawing.Font("Roboto Black", 16F, System.Drawing.FontStyle.Bold);
+            this.lbTotalPrice.ForeColor = System.Drawing.Color.Salmon;
+            this.lbTotalPrice.Location = new System.Drawing.Point(343, 10);
+            this.lbTotalPrice.Name = "lbTotalPrice";
+            this.lbTotalPrice.Padding = new System.Windows.Forms.Padding(0, 2, 5, 0);
+            this.lbTotalPrice.Size = new System.Drawing.Size(102, 36);
+            this.lbTotalPrice.TabIndex = 2;
+            this.lbTotalPrice.Text = "0 đ";
+            this.lbTotalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // guna2GradientButton1
+            // btnCheckout
             // 
-            this.guna2GradientButton1.Animated = true;
-            this.guna2GradientButton1.AutoRoundedCorners = true;
-            this.guna2GradientButton1.BorderRadius = 17;
-            this.guna2GradientButton1.CheckedState.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2GradientButton1.CustomImages.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton1.DisabledState.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2GradientButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Poppins ExtraBold", 14F, System.Drawing.FontStyle.Bold);
-            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.HoverState.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(177, 10);
-            this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.ShadowDecoration.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.Size = new System.Drawing.Size(202, 36);
-            this.guna2GradientButton1.TabIndex = 1;
-            this.guna2GradientButton1.Text = "Checkout";
-            this.guna2GradientButton1.TextOffset = new System.Drawing.Point(0, 2);
+            this.btnCheckout.Animated = true;
+            this.btnCheckout.AutoRoundedCorners = true;
+            this.btnCheckout.BorderRadius = 17;
+            this.btnCheckout.CheckedState.Parent = this.btnCheckout;
+            this.btnCheckout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCheckout.CustomImages.Parent = this.btnCheckout;
+            this.btnCheckout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCheckout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCheckout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCheckout.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCheckout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCheckout.DisabledState.Parent = this.btnCheckout;
+            this.btnCheckout.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCheckout.Enabled = false;
+            this.btnCheckout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCheckout.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.btnCheckout.Font = new System.Drawing.Font("Poppins ExtraBold", 14F, System.Drawing.FontStyle.Bold);
+            this.btnCheckout.ForeColor = System.Drawing.Color.White;
+            this.btnCheckout.HoverState.Parent = this.btnCheckout;
+            this.btnCheckout.Image = global::Manage_Store.Properties.Resources.checkout;
+            this.btnCheckout.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.btnCheckout.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnCheckout.Location = new System.Drawing.Point(445, 10);
+            this.btnCheckout.Name = "btnCheckout";
+            this.btnCheckout.ShadowDecoration.Parent = this.btnCheckout;
+            this.btnCheckout.Size = new System.Drawing.Size(202, 36);
+            this.btnCheckout.TabIndex = 1;
+            this.btnCheckout.Text = "Checkout";
+            this.btnCheckout.TextOffset = new System.Drawing.Point(-2, 2);
+            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
             // 
             // fHome
             // 
@@ -376,7 +406,6 @@ namespace GUI
             this.tlpMain.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.pnCartWrapper.ResumeLayout(false);
-            this.pnCartBody.ResumeLayout(false);
             this.pnCartFooter.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -390,17 +419,17 @@ namespace GUI
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.TableLayoutPanel tlpGoods;
         private Guna.UI2.WinForms.Guna2Button btnBack;
-        private Guna.UI2.WinForms.Guna2Button btnRenew;
+        private Guna.UI2.WinForms.Guna2Button btnClean;
         private Guna.UI2.WinForms.Guna2Button btnCart;
         private Guna.UI2.WinForms.Guna2Panel pnCartWrapper;
         private Guna.UI2.WinForms.Guna2Panel pnCartFooter;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private System.Windows.Forms.Label lbTotalPrice;
+        private Guna.UI2.WinForms.Guna2GradientButton btnCheckout;
         private Guna.UI2.WinForms.Guna2Panel pnCart;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Panel pnCartBody;
-        private DefinedFramework.PanelGoodsInCart panelGoodsInCart6;
         private Guna.UI2.WinForms.Guna2Panel horizontalLine;
+        private Guna.UI2.WinForms.Guna2Button btnCleanCart;
     }
 }

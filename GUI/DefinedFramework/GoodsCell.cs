@@ -12,15 +12,24 @@ namespace GUI.DefinedFramework
 {
     public partial class GoodsCell : UserControl
     {
-        private int quantityRemain;
+        public string Url { get; set; }
+        public string GoodsName { get; set; }
+        public double Price { get; set; }
+        public int QuantityRemain { get; set; }
         public GoodsCell(string url, string name, double price, int quantity)
         {
             InitializeComponent();
             Dock = DockStyle.Fill;
+            Url = url;
             SetImage(url);
+            GoodsName = name;
             SetName(name);
+            Price = price;
             SetPrice(price);
-            quantityRemain = quantity;
+            QuantityRemain = quantity;
+            nudQuantity.Controls[0].Visible = false;
+            nudQuantity.Maximum = QuantityRemain;
+            Name = name;
 
             BackColor = Color.White;
             lbName.ForeColor = Color.Black;
@@ -62,59 +71,40 @@ namespace GUI.DefinedFramework
                 Color.FromArgb(200, 200, 200), 2, ButtonBorderStyle.Solid);
         }
 
-        private void txtQuantity_TextChanged(object sender, EventArgs e)
-        {
-            string quantity = txtQuantity.Text;
-            if (string.IsNullOrEmpty(quantity))
-            {
-                quantity = "0";
-                txtQuantity.Text = "0";
-            }
-            int temp;
-            if (!int.TryParse(quantity, out temp))
-            {
-                txtQuantity.Text = quantity.Remove(quantity.Length - 1);
-                txtQuantity.Focus();
-                txtQuantity.SelectionLength = 0;
-                txtQuantity.SelectionStart = txtQuantity.Text.Length;
-                return;
-            }
-            if (temp > quantityRemain)
-            {
-                temp = quantityRemain;
-                txtQuantity.Text = temp.ToString();
-            }
-            if (temp == quantityRemain)
-                btnPlus.Enabled = false;
-            else
-                btnPlus.Enabled = true;
-            if (temp < 0)
-            {
-                temp = 0;
-                txtQuantity.Text = "0";
-            }
-            if (temp == 0)
-            {
-                btnMinus.Enabled = false;
-                BackColor = Color.White;
-            }
-            else
-            {
-                btnMinus.Enabled = true;
-                BackColor = Color.FromArgb(255, 200, 200);
-            }
-        }
-
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            int quantity = int.Parse(txtQuantity.Text);
-            txtQuantity.Text = (quantity + 1).ToString();
+            int quantity = int.Parse(nudQuantity.Text);
+            nudQuantity.Text = (quantity + 1).ToString();
         }
 
         private void btnMinus_Click(object sender, EventArgs e)
         {
-            int quantity = int.Parse(txtQuantity.Text);
-            txtQuantity.Text = (quantity - 1).ToString();
+            int quantity = int.Parse(nudQuantity.Text);
+            nudQuantity.Text = (quantity - 1).ToString();
+        }
+
+        public void Reset()
+        {
+            nudQuantity.Text = "0";
+        }
+
+        private void nudQuantity_ValueChanged(object sender, EventArgs e)
+        {
+            if (nudQuantity.Value > 0)
+            {
+                btnAddToCart.Enabled = true;
+                btnMinus.Enabled = true;
+                if (nudQuantity.Value == nudQuantity.Maximum)
+                    btnPlus.Enabled = false;
+                else
+                    btnPlus.Enabled = true;
+            }
+            else
+            {
+                btnAddToCart.Enabled = false;
+                btnMinus.Enabled = false;
+                btnPlus.Enabled = true;
+            }
         }
     }
 }

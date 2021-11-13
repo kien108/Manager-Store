@@ -38,21 +38,21 @@ namespace GUI
             this.lbName = new System.Windows.Forms.Label();
             this.pbAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnNav = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnHeader = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbHeader = new System.Windows.Forms.Label();
+            this.pnWindowButton = new System.Windows.Forms.Panel();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMinimize = new Guna.UI2.WinForms.Guna2Button();
             this.pnContainer = new System.Windows.Forms.Panel();
             this.pnScreen = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnHeader = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnWindowButton = new System.Windows.Forms.Panel();
-            this.btnMinimize = new Guna.UI2.WinForms.Guna2Button();
-            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.lbHeader = new System.Windows.Forms.Label();
             this.pnLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.pnAccount.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.pnNav.SuspendLayout();
-            this.pnContainer.SuspendLayout();
             this.pnHeader.SuspendLayout();
             this.pnWindowButton.SuspendLayout();
+            this.pnContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnLogo
@@ -161,29 +161,6 @@ namespace GUI
             this.pnNav.TabIndex = 2;
             this.pnNav.UseTransparentBackground = true;
             // 
-            // pnContainer
-            // 
-            this.pnContainer.BackColor = System.Drawing.Color.White;
-            this.pnContainer.Controls.Add(this.pnScreen);
-            this.pnContainer.Controls.Add(this.pnHeader);
-            this.pnContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnContainer.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnContainer.Location = new System.Drawing.Point(200, 0);
-            this.pnContainer.Name = "pnContainer";
-            this.pnContainer.Size = new System.Drawing.Size(777, 603);
-            this.pnContainer.TabIndex = 3;
-            // 
-            // pnScreen
-            // 
-            this.pnScreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
-            this.pnScreen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnScreen.Location = new System.Drawing.Point(0, 78);
-            this.pnScreen.Name = "pnScreen";
-            this.pnScreen.ShadowDecoration.Parent = this.pnScreen;
-            this.pnScreen.Size = new System.Drawing.Size(777, 525);
-            this.pnScreen.TabIndex = 2;
-            this.pnScreen.Paint += new System.Windows.Forms.PaintEventHandler(this.pnScreen_Paint);
-            // 
             // pnHeader
             // 
             this.pnHeader.BackColor = System.Drawing.SystemColors.Window;
@@ -197,6 +174,20 @@ namespace GUI
             this.pnHeader.Size = new System.Drawing.Size(777, 78);
             this.pnHeader.TabIndex = 1;
             // 
+            // lbHeader
+            // 
+            this.lbHeader.BackColor = System.Drawing.Color.Transparent;
+            this.lbHeader.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lbHeader.Font = new System.Drawing.Font("Poppins Black", 22F, System.Drawing.FontStyle.Bold);
+            this.lbHeader.ForeColor = System.Drawing.Color.BlanchedAlmond;
+            this.lbHeader.Location = new System.Drawing.Point(0, 0);
+            this.lbHeader.Name = "lbHeader";
+            this.lbHeader.Padding = new System.Windows.Forms.Padding(20, 3, 0, 0);
+            this.lbHeader.Size = new System.Drawing.Size(286, 78);
+            this.lbHeader.TabIndex = 0;
+            this.lbHeader.Text = "HOME";
+            this.lbHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // pnWindowButton
             // 
             this.pnWindowButton.BackColor = System.Drawing.Color.Transparent;
@@ -207,30 +198,6 @@ namespace GUI
             this.pnWindowButton.Name = "pnWindowButton";
             this.pnWindowButton.Size = new System.Drawing.Size(94, 78);
             this.pnWindowButton.TabIndex = 1;
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimize.Animated = true;
-            this.btnMinimize.BorderRadius = 5;
-            this.btnMinimize.CheckedState.Parent = this.btnMinimize;
-            this.btnMinimize.CustomImages.Parent = this.btnMinimize;
-            this.btnMinimize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMinimize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnMinimize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMinimize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMinimize.DisabledState.Parent = this.btnMinimize;
-            this.btnMinimize.FillColor = System.Drawing.Color.Transparent;
-            this.btnMinimize.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnMinimize.ForeColor = System.Drawing.Color.White;
-            this.btnMinimize.HoverState.Parent = this.btnMinimize;
-            this.btnMinimize.Image = global::Manage_Store.Properties.Resources.minimize;
-            this.btnMinimize.Location = new System.Drawing.Point(12, 0);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
-            this.btnMinimize.Size = new System.Drawing.Size(40, 40);
-            this.btnMinimize.TabIndex = 1;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
             // btnClose
             // 
@@ -257,19 +224,52 @@ namespace GUI
             this.btnClose.TabIndex = 0;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // lbHeader
+            // btnMinimize
             // 
-            this.lbHeader.BackColor = System.Drawing.Color.Transparent;
-            this.lbHeader.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbHeader.Font = new System.Drawing.Font("Poppins Black", 22F, System.Drawing.FontStyle.Bold);
-            this.lbHeader.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.lbHeader.Location = new System.Drawing.Point(0, 0);
-            this.lbHeader.Name = "lbHeader";
-            this.lbHeader.Padding = new System.Windows.Forms.Padding(20, 3, 0, 0);
-            this.lbHeader.Size = new System.Drawing.Size(286, 78);
-            this.lbHeader.TabIndex = 0;
-            this.lbHeader.Text = "HOME";
-            this.lbHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimize.Animated = true;
+            this.btnMinimize.BorderRadius = 5;
+            this.btnMinimize.CheckedState.Parent = this.btnMinimize;
+            this.btnMinimize.CustomImages.Parent = this.btnMinimize;
+            this.btnMinimize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMinimize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMinimize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMinimize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMinimize.DisabledState.Parent = this.btnMinimize;
+            this.btnMinimize.FillColor = System.Drawing.Color.Transparent;
+            this.btnMinimize.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnMinimize.ForeColor = System.Drawing.Color.White;
+            this.btnMinimize.HoverState.Parent = this.btnMinimize;
+            this.btnMinimize.Image = global::Manage_Store.Properties.Resources.minimize;
+            this.btnMinimize.Location = new System.Drawing.Point(12, 0);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
+            this.btnMinimize.Size = new System.Drawing.Size(40, 40);
+            this.btnMinimize.TabIndex = 1;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // pnContainer
+            // 
+            this.pnContainer.BackColor = System.Drawing.Color.White;
+            this.pnContainer.Controls.Add(this.pnScreen);
+            this.pnContainer.Controls.Add(this.pnHeader);
+            this.pnContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnContainer.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnContainer.Location = new System.Drawing.Point(200, 0);
+            this.pnContainer.Name = "pnContainer";
+            this.pnContainer.Size = new System.Drawing.Size(777, 603);
+            this.pnContainer.TabIndex = 3;
+            // 
+            // pnScreen
+            // 
+            this.pnScreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
+            this.pnScreen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnScreen.Location = new System.Drawing.Point(0, 78);
+            this.pnScreen.Name = "pnScreen";
+            this.pnScreen.ShadowDecoration.Parent = this.pnScreen;
+            this.pnScreen.Size = new System.Drawing.Size(777, 525);
+            this.pnScreen.TabIndex = 2;
+            this.pnScreen.Paint += new System.Windows.Forms.PaintEventHandler(this.pnScreen_Paint);
             // 
             // fMain
             // 
@@ -293,9 +293,9 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.pnNav.ResumeLayout(false);
             this.pnNav.PerformLayout();
-            this.pnContainer.ResumeLayout(false);
             this.pnHeader.ResumeLayout(false);
             this.pnWindowButton.ResumeLayout(false);
+            this.pnContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -309,12 +309,12 @@ namespace GUI
         private System.Windows.Forms.Label lbName;
         private Guna.UI2.WinForms.Guna2PictureBox pbAvatar;
         private Guna.UI2.WinForms.Guna2Panel pnNav;
-        private System.Windows.Forms.Panel pnContainer;
-        private Guna.UI2.WinForms.Guna2Panel pnScreen;
         private Guna.UI2.WinForms.Guna2Panel pnHeader;
         private System.Windows.Forms.Panel pnWindowButton;
         private Guna.UI2.WinForms.Guna2Button btnMinimize;
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private System.Windows.Forms.Label lbHeader;
+        private System.Windows.Forms.Panel pnContainer;
+        private Guna.UI2.WinForms.Guna2Panel pnScreen;
     }
 }

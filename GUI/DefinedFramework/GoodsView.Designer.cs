@@ -52,10 +52,10 @@ namespace GUI.DefinedFramework
             // lbQuantity
             // 
             this.lbQuantity.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbQuantity.Font = new System.Drawing.Font("Roboto Black", 10F, System.Drawing.FontStyle.Bold);
-            this.lbQuantity.Location = new System.Drawing.Point(0, 200);
+            this.lbQuantity.Font = new System.Drawing.Font("Roboto Black", 12F, System.Drawing.FontStyle.Bold);
+            this.lbQuantity.Location = new System.Drawing.Point(0, 193);
             this.lbQuantity.Name = "lbQuantity";
-            this.lbQuantity.Size = new System.Drawing.Size(236, 23);
+            this.lbQuantity.Size = new System.Drawing.Size(236, 30);
             this.lbQuantity.TabIndex = 1;
             this.lbQuantity.Text = "lbQuantity";
             this.lbQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -65,7 +65,7 @@ namespace GUI.DefinedFramework
             this.ecCell.CornerRadius = 11;
             this.ecCell.TargetControl = this;
             // 
-            // GoodsPreview
+            // GoodsView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -73,7 +73,7 @@ namespace GUI.DefinedFramework
             this.Controls.Add(this.pnHover);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Margin = new System.Windows.Forms.Padding(1);
-            this.Name = "GoodsPreview";
+            this.Name = "GoodsView";
             this.Size = new System.Drawing.Size(236, 223);
             this.SizeChanged += new System.EventHandler(this.GoodsPreview_SizeChanged);
             this.pnHover.ResumeLayout(false);
@@ -83,7 +83,7 @@ namespace GUI.DefinedFramework
 
         #endregion
         private ElipseToolDemo.ElipseControl ecCell;
-        private Guna.UI2.WinForms.Guna2Panel pnHover;
         private System.Windows.Forms.Label lbQuantity;
+        public Guna.UI2.WinForms.Guna2Panel pnHover;
     }
 }

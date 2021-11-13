@@ -317,14 +317,14 @@ namespace GUI
                     return;
                 }
                 tlpWrapper.ColumnStyles[1].Width = 550;
-                SetupPreviewTable(tlpGoodsView, 5, dtGoods.Rows.Count);
+                SetupPreviewTable(tlpGoodsInContract, 5, dtGoods.Rows.Count);
                 cbbItemsName.Items.Clear();
                 foreach (DataRow dr in dtGoods.Rows)
                 {
                     Goods g = new Goods((int)dr["goods_id"], (string)dr["gname"], (string)dr["unit"],
                         (double)dr["gprice"], (int)dr["gquantity"], (bool)dr["gstate"], dr["gphoto"] != null);
                     GoodsView temp = new GoodsView(g, (int)dr["cquantity"], (double)dr["cprice"], false);
-                    tlpGoodsView.Controls.Add(temp);
+                    tlpGoodsInContract.Controls.Add(temp);
                     cbbItemsName.Items.Add((string)dr["gname"]);
                     contractDetail.Add(g, (double)dr["cprice"]);
                 }
@@ -340,7 +340,7 @@ namespace GUI
                     pbPictureSideBar.Image = Image.FromFile(root.ProjectPath() + root.imageGoods + "default.png");
                     txtUrl.Text = string.Empty;
                 }
-                tlpGoodsView.Tag = tlpGoodsView.Controls[(string)dt.Rows[row]["Goods name"]];
+                tlpGoodsInContract.Tag = tlpGoodsInContract.Controls[(string)dt.Rows[row]["Goods name"]];
                 txtGid.Text = dt.Rows[row]["GID"].ToString();
                 cbbItemsName.Text = (string)dt.Rows[row]["Goods name"];
                 cbbUnit.Text = contractDetail.Goods[cbbItemsName.Text].Unit;
@@ -549,7 +549,7 @@ namespace GUI
             cbbUnit.Text = temp.Unit;
             txtItemPrice.Text = root.MoneyFormat(temp.Price.ToString());
             //GoodsPreview temp2 = (GoodsPreview)tlpPreview.Tag;
-            GoodsView temp2 = (GoodsView)tlpGoodsView.Controls[cbbItemsName.Text];
+            GoodsView temp2 = (GoodsView)tlpGoodsInContract.Controls[cbbItemsName.Text];
             nudQuantity.Value = temp2.Quantity;
             txtImportPrice.Text = root.MoneyFormat(temp2.Price.ToString());
 
@@ -610,7 +610,7 @@ namespace GUI
             string pphonenumber = txtPphoneNumber.Text;
             int eid = int.Parse(txtEid.Text);
             string cdate = dtpTime.Value.ToString("yyyy-MM-dd hh:mm:ss");
-            foreach (GoodsView gp in tlpGoodsView.Controls)
+            foreach (GoodsView gp in tlpGoodsInContract.Controls)
             {
                 int cquantity = gp.Quantity;
                 double cprice = gp.Price;
@@ -631,13 +631,12 @@ namespace GUI
 
         private void nudQuantity_ValueChanged(object sender, EventArgs e)
         {
-            ((GoodsView)tlpGoodsView.Tag).Quantity = (int)nudQuantity.Value;
-            ((GoodsView)tlpGoodsView.Tag).UpdateQuantity();
+            ((GoodsView)tlpGoodsInContract.Tag).UpdateQuantity((int)nudQuantity.Value);
         }
 
         private void txtImportPrice_TextChanged(object sender, EventArgs e)
         {
-            ((GoodsView)tlpGoodsView.Tag).Price = double.Parse(root.TurnOffMoneyFormat(txtImportPrice.Text));
+            ((GoodsView)tlpGoodsInContract.Tag).Price = double.Parse(root.TurnOffMoneyFormat(txtImportPrice.Text));
         }
 
         private void txtImportPrice_Enter(object sender, EventArgs e)

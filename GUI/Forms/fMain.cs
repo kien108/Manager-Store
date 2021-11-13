@@ -17,27 +17,27 @@ namespace GUI
 {
     public partial class fMain : Form
     {
-        private FunctionPanel[] pnFunctions;
+        public FunctionPanel[] PnFunctions { get; set; }
         private int expandSize = 360, collapseSize = 90;
-        private Form childForm;
-        private Employee profile;
+        public Form ChildForm { get; set; }
+        public Employee Profile { get; set; }
         private int formIndex;
 
         public fMain(Employee emp)
         {
             InitializeComponent();
-            pnFunctions = new FunctionPanel[6];
-            pnFunctions[0] = new FunctionPanel(IconChar.Home, "Home", root.navHomeOptionColor, root.homePrimaryColor);
-            pnFunctions[1] = new FunctionPanel(IconChar.FileInvoiceDollar, "Bills", root.navBillOptionColor, root.billPrimaryColor);
-            pnFunctions[2] = new FunctionPanel(IconChar.CookieBite, "Goods", root.navGoodsOptionColor, root.goodsPrimaryColor);
-            pnFunctions[3] = new FunctionPanel(IconChar.FileSignature, "Contracts", root.navContractOptionColor, root.contractPrimaryColor);
-            pnFunctions[4] = new FunctionPanel(IconChar.Users, "Employees", root.navEmployeeOptionColor, root.employeePrimaryColor);
-            pnFunctions[5] = new FunctionPanel(IconChar.ChartLine, "Charts", root.navChartOptionColor, root.chartPrimaryColor);
-            profile = emp;
+            PnFunctions = new FunctionPanel[6];
+            PnFunctions[0] = new FunctionPanel(IconChar.Home, "Home", root.navHomeOptionColor, root.homePrimaryColor);
+            PnFunctions[1] = new FunctionPanel(IconChar.FileInvoiceDollar, "Bills", root.navBillOptionColor, root.billPrimaryColor);
+            PnFunctions[2] = new FunctionPanel(IconChar.CookieBite, "Goods", root.navGoodsOptionColor, root.goodsPrimaryColor);
+            PnFunctions[3] = new FunctionPanel(IconChar.FileSignature, "Contracts", root.navContractOptionColor, root.contractPrimaryColor);
+            PnFunctions[4] = new FunctionPanel(IconChar.Users, "Employees", root.navEmployeeOptionColor, root.employeePrimaryColor);
+            PnFunctions[5] = new FunctionPanel(IconChar.ChartLine, "Charts", root.navChartOptionColor, root.chartPrimaryColor);
+            Profile = emp;
             if (emp != null)
             {
-                lbName.Text = root.RemoveSignOfVietnameseString(profile.Name).ToUpper();
-                lbRole.Text = profile.Role;
+                lbName.Text = root.RemoveSignOfVietnameseString(Profile.Name).ToUpper();
+                lbRole.Text = Profile.Role;
             }
             pnHeader.FillColor = root.titleBarColor;
             pnNav.FillColor = root.navBarColor;
@@ -47,46 +47,46 @@ namespace GUI
         private void fMain_Load(object sender, EventArgs e)
         {
             pnAccount.BackColor = root.navBarColor;
-            for (int i = pnFunctions.Length - 1; i >= 0; --i)
+            for (int i = PnFunctions.Length - 1; i >= 0; --i)
             {
-                pnNav.Controls.Add(pnFunctions[i]);
+                pnNav.Controls.Add(PnFunctions[i]);
             }
             Controls.Add(pnLogo);
             pnNav.Controls.Add(pnLogo);
 
             // Collapse and expand navigation bar
             pnNav.DoubleClick += new EventHandler(CollapseAndExpand);
-            for (int i = 0; i < pnFunctions.Length; ++i)
+            for (int i = 0; i < PnFunctions.Length; ++i)
             {
-                pnFunctions[i].DoubleClick += new EventHandler(CollapseAndExpand);
-                foreach (Control c in pnFunctions[i].Controls)
+                PnFunctions[i].DoubleClick += new EventHandler(CollapseAndExpand);
+                foreach (Control c in PnFunctions[i].Controls)
                     c.DoubleClick += new EventHandler(CollapseAndExpand);
             }
             CollapseAndExpand(pnNav, new EventArgs());
 
             // Open home form
-            pnFunctions[0].Click += new EventHandler(OpenHomePage);
-            foreach (Control c in pnFunctions[0].Controls)
+            PnFunctions[0].Click += new EventHandler(OpenHomePage);
+            foreach (Control c in PnFunctions[0].Controls)
                 c.Click += new EventHandler(OpenHomePage);
 
             // Open bill form
-            pnFunctions[1].Click += new EventHandler(OpenBillForm);
-            foreach (Control c in pnFunctions[1].Controls)
+            PnFunctions[1].Click += new EventHandler(OpenBillForm);
+            foreach (Control c in PnFunctions[1].Controls)
                 c.Click += new EventHandler(OpenBillForm);
 
             // Open goods form
-            pnFunctions[2].Click += new EventHandler(OpenGoodsForm);
-            foreach (Control c in pnFunctions[2].Controls)
+            PnFunctions[2].Click += new EventHandler(OpenGoodsForm);
+            foreach (Control c in PnFunctions[2].Controls)
                 c.Click += new EventHandler(OpenGoodsForm);
 
             // Open contract form
-            pnFunctions[3].Click += new EventHandler(OpenContractForm);
-            foreach (Control c in pnFunctions[3].Controls)
+            PnFunctions[3].Click += new EventHandler(OpenContractForm);
+            foreach (Control c in PnFunctions[3].Controls)
                 c.Click += new EventHandler(OpenContractForm);
 
             // Open employees form
-            pnFunctions[5].Click += new EventHandler(OpenEmployeeForm);
-            foreach (Control c in pnFunctions[4].Controls)
+            PnFunctions[5].Click += new EventHandler(OpenEmployeeForm);
+            foreach (Control c in PnFunctions[4].Controls)
                 c.Click += new EventHandler(OpenEmployeeForm);
         }
 
@@ -103,16 +103,16 @@ namespace GUI
         private void OpenChildForm(Form childForm) // function to open child_form
         {
 
-            if (this.childForm != null && childForm.GetType().ToString() == this.childForm.GetType().ToString())
+            if (this.ChildForm != null && childForm.GetType().ToString() == this.ChildForm.GetType().ToString())
                 return;
-            this.childForm = childForm;
-            this.childForm.TopLevel = false;
-            this.childForm.FormBorderStyle = FormBorderStyle.None;
-            this.childForm.Dock = DockStyle.Fill;
+            this.ChildForm = childForm;
+            this.ChildForm.TopLevel = false;
+            this.ChildForm.FormBorderStyle = FormBorderStyle.None;
+            this.ChildForm.Dock = DockStyle.Fill;
             pnScreen.Controls.Add(childForm);
-            this.childForm.BringToFront();
-            this.childForm.Show();
-            lbHeader.Text = this.childForm.Text.ToUpper();
+            this.ChildForm.BringToFront();
+            this.ChildForm.Show();
+            lbHeader.Text = this.ChildForm.Text.ToUpper();
         }
 
         private void fMain_SizeChanged(object sender, EventArgs e)
@@ -127,7 +127,7 @@ namespace GUI
             if (pnNav.Width == expandSize)
             {
                 pnNav.Width = collapseSize;
-                foreach (FunctionPanel pn in pnFunctions)
+                foreach (FunctionPanel pn in PnFunctions)
                 {
                     pn.name.Hide(); 
                     pn.Width = pnNav.Width - pn.Margin.Left * 2;
@@ -137,7 +137,7 @@ namespace GUI
             else
             {
                 pnNav.Width = expandSize;
-                foreach (FunctionPanel pn in pnFunctions)
+                foreach (FunctionPanel pn in PnFunctions)
                 {
                     pn.AutoSize = false;
                     pn.name.Show();
@@ -150,15 +150,15 @@ namespace GUI
 
         private void HighlightOption(int p)
         {
-            for (int i = 0; i < pnFunctions.Length; i++)
-                pnFunctions[i].Chose();
-            pnFunctions[p].Chose(true);
+            for (int i = 0; i < PnFunctions.Length; i++)
+                PnFunctions[i].Chose();
+            PnFunctions[p].Chose(true);
         }
 
         private void pnScreen_Paint(object sender, PaintEventArgs e)
         {
-            HighlightOption(1);
-            OpenChildForm(new fBill());
+            HighlightOption(0);
+            OpenChildForm(new fHome());
         }
 
         private void OpenHomePage(object sender, EventArgs e)
