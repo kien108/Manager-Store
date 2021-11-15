@@ -36,7 +36,6 @@ D:\Document\~project\Manager-Store\GUI\obj\Debug\GUI.fGoods.resources
 D:\Document\~project\Manager-Store\GUI\obj\Debug\GUI.fHome.resources
 D:\Document\~project\Manager-Store\GUI\obj\Debug\GUI.fMain.resources
 D:\Document\~project\Manager-Store\GUI\obj\Debug\GUI.fLogin.resources
-D:\Document\~project\Manager-Store\GUI\obj\Debug\GUI.frmChart.resources
 D:\Document\~project\Manager-Store\GUI\obj\Debug\Manage_Store.Properties.Resources.resources
 D:\Document\~project\Manager-Store\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
 D:\Document\~project\Manager-Store\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
@@ -60,3 +59,4 @@ D:\Document\~project\Manager-Store\GUI\bin\Debug\MstGrid.dll
 D:\Document\~project\Manager-Store\GUI\obj\Debug\GUI.DefinedFramework.GoodsCell.resources
 D:\Document\~project\Manager-Store\GUI\obj\Debug\GUI.DefinedFramework.PanelGoodsInCart.resources
 D:\Document\~project\Manager-Store\GUI\obj\Debug\GUI.DefinedFramework.GoodsView.resources
+D:\Document\~project\Manager-Store\GUI\obj\Debug\Manage_Store.Forms.temp.resources

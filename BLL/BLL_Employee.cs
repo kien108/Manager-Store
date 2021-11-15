@@ -11,8 +11,6 @@ namespace BLL
 {
     public class BLL_Employee
     {
-        DataAccess dal = new DataAccess();
-        
         private DataTable CustomTable(DataTable dt)
         {
             foreach (DataRow row in dt.Rows)
@@ -27,7 +25,7 @@ namespace BLL
 
         public DataTable GetAllEmployee(ref string error)
         {
-            DataTable dt = dal.ExecuteQueryData("sp_GetAllemployees", CommandType.StoredProcedure, ref error);
+            DataTable dt = BLL.dal.ExecuteQueryData("sp_GetAllemployees", CommandType.StoredProcedure, ref error);
             if (dt == null)
                 return null;
             return CustomTable(dt);
@@ -35,7 +33,7 @@ namespace BLL
 
         public DataTable GetStockManagers(ref string error)
         {
-            DataTable dt = dal.ExecuteQueryData("sp_GetStockManagers", CommandType.StoredProcedure, ref error);
+            DataTable dt = BLL.dal.ExecuteQueryData("sp_GetStockManagers", CommandType.StoredProcedure, ref error);
             if (dt == null)
                 return null;
             return CustomTable(dt);
@@ -43,7 +41,7 @@ namespace BLL
 
         public DataTable GetStaffs(ref string error)
         {
-            DataTable dt = dal.ExecuteQueryData("sp_GetStaffs", CommandType.StoredProcedure, ref error);
+            DataTable dt = BLL.dal.ExecuteQueryData("sp_GetStaffs", CommandType.StoredProcedure, ref error);
             if (dt == null)
                 return null;
             return CustomTable(dt);
@@ -51,7 +49,7 @@ namespace BLL
 
         public DataTable GetRetiredEmployee(ref string error)
         {
-            DataTable dt = dal.ExecuteQueryData("sp_GetAllRetiredEmployee", CommandType.StoredProcedure, ref error);
+            DataTable dt = BLL.dal.ExecuteQueryData("sp_GetAllRetiredEmployee", CommandType.StoredProcedure, ref error);
             if (dt == null)
                 return null;
             return CustomTable(dt);
@@ -64,7 +62,7 @@ namespace BLL
                 role = role.ToUpper();
             if (searchBy.Contains("phone"))
                 searchBy = "phoneNumber";
-            DataTable dt = dal.ExecuteQueryData("sp_SearchEmployee", CommandType.StoredProcedure, ref error,
+            DataTable dt = BLL.dal.ExecuteQueryData("sp_SearchEmployee", CommandType.StoredProcedure, ref error,
                 new SqlParameter("role", role),
                 new SqlParameter(searchBy, text));
             if (dt == null)
@@ -76,7 +74,7 @@ namespace BLL
             string address, string password, string url, bool working, string role, int workingDays, double dayWage)
         {
             string error = null, message = null;
-            bool updated = dal.ExecuteNonQuery("sp_UpdateEmployee", CommandType.StoredProcedure, ref error, ref message,
+            bool updated = BLL.dal.ExecuteNonQuery("sp_UpdateEmployee", CommandType.StoredProcedure, ref error, ref message,
                 new SqlParameter("id", id),
                 new SqlParameter("name", name),
                 new SqlParameter("birthday", birthday),
@@ -99,7 +97,7 @@ namespace BLL
         public string DeleteEmployee(int id)
         {
             string error = null, message = null;
-            bool delete = dal.ExecuteNonQuery("sp_DeleteEmployee", CommandType.StoredProcedure, ref error, ref message,
+            bool delete = BLL.dal.ExecuteNonQuery("sp_DeleteEmployee", CommandType.StoredProcedure, ref error, ref message,
                 new SqlParameter("id", id));
             if (error != null)
                 return "Delete failed!\n" + error;
@@ -111,7 +109,7 @@ namespace BLL
         public string DisableEmployeeAccount(int id)
         {
             string error = null, message = null;
-            bool disable = dal.ExecuteNonQuery("sp_UpdateEmployee", CommandType.StoredProcedure, ref error, ref message,
+            bool disable = BLL.dal.ExecuteNonQuery("sp_UpdateEmployee", CommandType.StoredProcedure, ref error, ref message,
                 new SqlParameter("id", id),
                 new SqlParameter("state", false));
             if (error != null)
@@ -124,7 +122,7 @@ namespace BLL
         public string AddEmployee(string name, string birthday, string address, bool male, string phoneNumber, string role, string url)
         {
             string error = null, message = null;
-            bool insert = dal.ExecuteNonQuery("sp_InsertEmployee", CommandType.StoredProcedure, ref error, ref message,
+            bool insert = BLL.dal.ExecuteNonQuery("sp_InsertEmployee", CommandType.StoredProcedure, ref error, ref message,
                 new SqlParameter("name", name),
                 new SqlParameter("birthday", birthday),
                 new SqlParameter("address", address),

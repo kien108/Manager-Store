@@ -51,6 +51,11 @@ namespace GUI
         private void fEmployee_Load(object sender, EventArgs e)
         {
             btnAllRoles.PerformClick();
+            if (dgvEmployees.DataSource == null)
+            {
+                Enabled = false;
+                return;
+            }
         }
 
         private void CustomDataGridViewEmployee()
@@ -86,10 +91,10 @@ namespace GUI
             dgvEmployees.Columns["Working Days"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvEmployees.Columns["Day's Wage"].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             dgvEmployees.Columns["Day's Wage"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dgvEmployees.Columns["Day's Wage"].DefaultCellStyle.Format = "#,##0 VND";
+            dgvEmployees.Columns["Day's Wage"].DefaultCellStyle.Format = "#,##0 đ";
             dgvEmployees.Columns["Month Salary"].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             dgvEmployees.Columns["Month Salary"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dgvEmployees.Columns["Month Salary"].DefaultCellStyle.Format = "#,##0 VND";
+            dgvEmployees.Columns["Month Salary"].DefaultCellStyle.Format = "#,##0 đ";
             dgvEmployees.Columns["Password"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dgvEmployees.Columns["Password"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dgvEmployees.Columns["Role"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
@@ -116,6 +121,8 @@ namespace GUI
         {
             string error = null;
             DataTable dt = bll.GetAllEmployee(ref error);
+            if (dt == null)
+                return;
             if (error != null)
             {
                 MessageBox.Show(error);
@@ -529,9 +536,19 @@ namespace GUI
             DialogResult chose = root.MyMessageBox("Do you want to delete or only disable account to keep infomation?",
                 "DELETE OPTION", "Delete", "Only disable", "Cancel");
             string message = string.Empty;
-            int id = (int)dgvEmployees.Rows[dgvEmployees.CurrentRow.Index].Cells["ID"].Value;
+            int row = dgvEmployees.CurrentRow.Index;
+            int id = (int)dgvEmployees.Rows[row].Cells["ID"].Value;
             if (chose == DialogResult.Yes)
+            {
                 message = bll.DeleteEmployee(id);
+                string url = root.ProjectPath() + root.imageEmployees + (string)dgvEmployees.Rows[row].Cells["Phone Number"].Value;
+                if (File.Exists(url))
+                {
+                    GC.Collect();
+                    GC.WaitForPendingFinalizers();
+                    File.Delete(url);
+                }
+            }
             else if (chose == DialogResult.No)
                 message = bll.DisableEmployeeAccount(id);
             else

@@ -28,6 +28,9 @@ namespace GUI
             tlpWrapper.ColumnStyles[1].Width = 0;
             tlpWrapper.ColumnStyles[2].Width = 0;
             tlpMain.RowStyles[0].Height = 12;
+            tlpMain.RowStyles[1].Height = 11.5F;
+            tlpMain.RowStyles[2].Height = 76.5F;
+            tlpMain.RowStyles[3].Height = 0;
 
             BackColor = root.screenColor;
             tlpWrapper.BackColor = root.screenColor;
@@ -55,6 +58,11 @@ namespace GUI
         private void fContract_Load(object sender, EventArgs e)
         {
             btnGoodsReceipt.PerformClick();
+            if (dgvContract.DataSource == null)
+            {
+                Enabled = false;
+                return;
+            }
             string error = null;
             cbbEname.DataSource = bll_employee.GetStockManagers(ref error);
             cbbEname.ValueMember = "Name";
@@ -89,10 +97,10 @@ namespace GUI
             dgvContract.Columns["Unit"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvContract.Columns["Price"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dgvContract.Columns["Price"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dgvContract.Columns["Price"].DefaultCellStyle.Format = "#,##0 VND";
+            dgvContract.Columns["Price"].DefaultCellStyle.Format = "#,##0 đ";
             dgvContract.Columns["Total Price"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dgvContract.Columns["Total Price"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dgvContract.Columns["Total Price"].DefaultCellStyle.Format = "#,##0 VND";
+            dgvContract.Columns["Total Price"].DefaultCellStyle.Format = "#,##0 đ";
             dgvContract.Columns["EID"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
             dgvContract.Columns["EID"].MinimumWidth = 60;
             dgvContract.Columns["EID"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -269,7 +277,6 @@ namespace GUI
         {
             if (btnGoodsReceipt.FillColor == root.buttonChoosingContract)
             {
-                rbGOld.Checked = true;
                 btnSideBarConfirm.Enabled = false;
                 pnGeneralInformation.Enabled = false;
                 foreach (Control c in gbImportedItemInformation.Controls)
@@ -510,24 +517,6 @@ namespace GUI
                 Color.Transparent, 0, ButtonBorderStyle.Solid);
         }
 
-        private void rbGOld_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rbGOld.Checked)
-            {
-                txtItemName.Hide();
-                cbbItemsName.Show();
-                txtGid.Enabled = false;
-                cbbUnit.Enabled = false;
-                txtItemPrice.Enabled = false;
-                txtUrl.Enabled = false;
-            }
-            else
-            {
-                txtItemName.Show();
-                cbbItemsName.Hide();
-            }
-        }
-
         private void cbbItemsName_TextChanged(object sender, EventArgs e)
         {
             string gname = cbbItemsName.Text;
@@ -688,16 +677,6 @@ namespace GUI
             tlpWrapper.ColumnStyles[2].Width = 0;
         }
 
-        private void txtItemPrice_Enter(object sender, EventArgs e)
-        {
-            txtItemPrice.Text = root.TurnOffMoneyFormat(txtItemPrice.Text);
-        }
-
-        private void txtItemPrice_Leave(object sender, EventArgs e)
-        {
-            txtItemPrice.Text = root.MoneyFormat(txtItemPrice.Text);
-        }
-
         private void rbGnew3_CheckedChanged(object sender, EventArgs e)
         {
             txtGname3.Visible = true;
@@ -792,34 +771,58 @@ namespace GUI
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DialogResult chosen = root.MyMessageBox("Do you want to delete this contract or this goods in contract?",
-                "WARNING", "Delete contract", "Delete goods", "Cancel");
-            DataTable dt = (DataTable)dgvContract.DataSource;
-            int row = dgvContract.CurrentRow.Index;
-            int cid = 0;
-            for (int i = row; ; i--)
-                if (dt.Rows[i]["CID"] != DBNull.Value)
+            if (btnGoodsReceipt.FillColor == root.buttonChoosingContract)
+            {
+                DialogResult chosen = root.MyMessageBox("Do you want to delete this contract or this goods in contract?",
+                    "WARNING", "Delete contract", "Delete goods", "Cancel");
+                DataTable dt = (DataTable)dgvContract.DataSource;
+                int row = dgvContract.CurrentRow.Index;
+                int cid = 0;
+                for (int i = row; ; i--)
+                    if (dt.Rows[i]["CID"] != DBNull.Value)
+                    {
+                        cid = (int)dt.Rows[i]["CID"];
+                        break;
+                    }
+                string message = null;
+                if (chosen == DialogResult.Yes)
                 {
-                    cid = (int)dt.Rows[i]["CID"];
-                    break;
+                    message = bll.DeleteContract(cid);
+                    if (message != null)
+                        MessageBox.Show(message);
                 }
-            string message = null;
-            if (chosen == DialogResult.Yes)
-            {
-                message = bll.DeleteContract(cid);
-                if (message != null)
-                    MessageBox.Show(message);
+                else if (chosen == DialogResult.No)
+                {
+                    string gname = (string)dt.Rows[row]["Goods name"];
+                    message = bll.DeleteGoodsInContract(cid, gname);
+                    if (message != null)
+                        MessageBox.Show(message);
+                }
+                else
+                    return;
+                ReloadGoodsReceipt();
             }
-            else if (chosen == DialogResult.No)
+            else if (btnProvider.FillColor == root.buttonChoosingContract)
             {
-                string gname = (string)dt.Rows[row]["Goods name"];
-                message = bll.DeleteGoodsInContract(cid, gname);
-                if (message != null)
-                    MessageBox.Show(message);
+                DialogResult dr = MessageBox.Show("If you don't have any contract with provider, we will delete permanent. Unless we only disable this provider." +
+                    "\nDo you want to delete ?", "WARNING", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.No)
+                    return;
+                int row = dgvContract.CurrentRow.Index;
+                int pid = (int)dgvContract.Rows[row].Cells["ID"].Value;
+                string message = bll.DeleteProvider(pid);
+                if (message.ToLower().Contains("fail"))
+                {
+                    string pname = (string)dgvContract.Rows[row].Cells["Name"].Value;
+                    string paddress = (string)dgvContract.Rows[row].Cells["Address"].Value;
+                    string pphoneNumber = (string)dgvContract.Rows[row].Cells["Phone Number"].Value;
+                    message = bll.UpdateInformationProvider(pid, pname, paddress, pphoneNumber, false);
+                    MessageBox.Show("Disable provider successful!");
+                }
+                else
+                    MessageBox.Show("Delete successful!");
+                ReloadProvider();
             }
-            else
-                return;
-            ReloadGoodsReceipt();
         }
 
         private void btnAddContract_Click(object sender, EventArgs e)

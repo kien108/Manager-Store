@@ -128,8 +128,9 @@
             // btnLogin
             // 
             this.btnLogin.Animated = true;
+            this.btnLogin.AutoRoundedCorners = true;
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
-            this.btnLogin.BorderRadius = 5;
+            this.btnLogin.BorderRadius = 24;
             this.btnLogin.CheckedState.Parent = this.btnLogin;
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.CustomImages.Parent = this.btnLogin;
@@ -242,7 +243,7 @@
             this.lbWelcome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.lbWelcome.Font = new System.Drawing.Font("Poppins Black", 27F, System.Drawing.FontStyle.Bold);
             this.lbWelcome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(166)))), ((int)(((byte)(137)))));
-            this.lbWelcome.Location = new System.Drawing.Point(135, 153);
+            this.lbWelcome.Location = new System.Drawing.Point(135, 144);
             this.lbWelcome.Name = "lbWelcome";
             this.lbWelcome.Size = new System.Drawing.Size(268, 79);
             this.lbWelcome.TabIndex = 23;
@@ -253,10 +254,10 @@
             // 
             this.pbImage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.pbImage2.Image = ((System.Drawing.Image)(resources.GetObject("pbImage2.Image")));
-            this.pbImage2.Location = new System.Drawing.Point(215, 59);
+            this.pbImage2.Location = new System.Drawing.Point(201, 57);
             this.pbImage2.Name = "pbImage2";
-            this.pbImage2.Size = new System.Drawing.Size(95, 80);
-            this.pbImage2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbImage2.Size = new System.Drawing.Size(125, 80);
+            this.pbImage2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbImage2.TabIndex = 22;
             this.pbImage2.TabStop = false;
             // 

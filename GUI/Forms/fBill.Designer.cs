@@ -29,11 +29,11 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlpWrapper = new System.Windows.Forms.TableLayoutPanel();
             this.pnSideBar = new Guna.UI2.WinForms.Guna2Panel();
             this.pnSideBarBody = new Guna.UI2.WinForms.Guna2Panel();
@@ -1121,8 +1121,8 @@ namespace GUI
             // tlpSearch
             // 
             this.tlpSearch.ColumnCount = 2;
-            this.tlpSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.06551F));
-            this.tlpSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.93449F));
+            this.tlpSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.16786F));
+            this.tlpSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.83214F));
             this.tlpSearch.Controls.Add(this.pnSearchAndFunction, 0, 0);
             this.tlpSearch.Controls.Add(this.pnFunctions, 1, 0);
             this.tlpSearch.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1145,7 +1145,7 @@ namespace GUI
             this.pnSearchAndFunction.Name = "pnSearchAndFunction";
             this.pnSearchAndFunction.Padding = new System.Windows.Forms.Padding(10, 10, 15, 10);
             this.pnSearchAndFunction.ShadowDecoration.Parent = this.pnSearchAndFunction;
-            this.pnSearchAndFunction.Size = new System.Drawing.Size(655, 50);
+            this.pnSearchAndFunction.Size = new System.Drawing.Size(656, 50);
             this.pnSearchAndFunction.TabIndex = 0;
             // 
             // pnSearch
@@ -1165,7 +1165,7 @@ namespace GUI
             this.pnSearch.Name = "pnSearch";
             this.pnSearch.Padding = new System.Windows.Forms.Padding(8, 5, 10, 5);
             this.pnSearch.ShadowDecoration.Parent = this.pnSearch;
-            this.pnSearch.Size = new System.Drawing.Size(630, 30);
+            this.pnSearch.Size = new System.Drawing.Size(631, 30);
             this.pnSearch.TabIndex = 2;
             // 
             // txtSearch
@@ -1175,7 +1175,7 @@ namespace GUI
             this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearch.DefaultText = "";
             this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.Transparent;
             this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSearch.DisabledState.Parent = this.txtSearch;
             this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -1187,7 +1187,7 @@ namespace GUI
             this.txtSearch.ForeColor = System.Drawing.Color.BlanchedAlmond;
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
-            this.txtSearch.Location = new System.Drawing.Point(136, 5);
+            this.txtSearch.Location = new System.Drawing.Point(129, 5);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
@@ -1195,7 +1195,7 @@ namespace GUI
             this.txtSearch.PlaceholderText = "Enter bill ID...";
             this.txtSearch.SelectedText = "";
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
-            this.txtSearch.Size = new System.Drawing.Size(467, 20);
+            this.txtSearch.Size = new System.Drawing.Size(475, 20);
             this.txtSearch.TabIndex = 9;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
@@ -1226,7 +1226,7 @@ namespace GUI
             this.cbbFilter.Location = new System.Drawing.Point(8, 5);
             this.cbbFilter.Name = "cbbFilter";
             this.cbbFilter.ShadowDecoration.Parent = this.cbbFilter;
-            this.cbbFilter.Size = new System.Drawing.Size(128, 36);
+            this.cbbFilter.Size = new System.Drawing.Size(121, 36);
             this.cbbFilter.StartIndex = 0;
             this.cbbFilter.TabIndex = 8;
             this.cbbFilter.TextOffset = new System.Drawing.Point(5, 2);
@@ -1238,7 +1238,7 @@ namespace GUI
             this.btnDeleteSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnDeleteSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteSearch.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnDeleteSearch.Location = new System.Drawing.Point(603, 5);
+            this.btnDeleteSearch.Location = new System.Drawing.Point(604, 5);
             this.btnDeleteSearch.Name = "btnDeleteSearch";
             this.btnDeleteSearch.ShadowDecoration.Parent = this.btnDeleteSearch;
             this.btnDeleteSearch.Size = new System.Drawing.Size(17, 20);
@@ -1253,11 +1253,11 @@ namespace GUI
             this.pnFunctions.Controls.Add(this.tlpFunction);
             this.pnFunctions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnFunctions.FillColor = System.Drawing.Color.MistyRose;
-            this.pnFunctions.Location = new System.Drawing.Point(675, 5);
+            this.pnFunctions.Location = new System.Drawing.Point(676, 5);
             this.pnFunctions.Margin = new System.Windows.Forms.Padding(10, 5, 10, 3);
             this.pnFunctions.Name = "pnFunctions";
             this.pnFunctions.ShadowDecoration.Parent = this.pnFunctions;
-            this.pnFunctions.Size = new System.Drawing.Size(292, 50);
+            this.pnFunctions.Size = new System.Drawing.Size(291, 50);
             this.pnFunctions.TabIndex = 1;
             // 
             // tlpFunction
@@ -1274,7 +1274,7 @@ namespace GUI
             this.tlpFunction.Name = "tlpFunction";
             this.tlpFunction.RowCount = 1;
             this.tlpFunction.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpFunction.Size = new System.Drawing.Size(292, 50);
+            this.tlpFunction.Size = new System.Drawing.Size(291, 50);
             this.tlpFunction.TabIndex = 0;
             // 
             // pnBtnEdit
@@ -1286,7 +1286,7 @@ namespace GUI
             this.pnBtnEdit.Margin = new System.Windows.Forms.Padding(0);
             this.pnBtnEdit.Name = "pnBtnEdit";
             this.pnBtnEdit.Padding = new System.Windows.Forms.Padding(13, 10, 5, 10);
-            this.pnBtnEdit.Size = new System.Drawing.Size(146, 50);
+            this.pnBtnEdit.Size = new System.Drawing.Size(145, 50);
             this.pnBtnEdit.TabIndex = 14;
             // 
             // btnDetail
@@ -1314,7 +1314,7 @@ namespace GUI
             this.btnDetail.Name = "btnDetail";
             this.btnDetail.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.btnDetail.ShadowDecoration.Parent = this.btnDetail;
-            this.btnDetail.Size = new System.Drawing.Size(128, 30);
+            this.btnDetail.Size = new System.Drawing.Size(127, 30);
             this.btnDetail.TabIndex = 0;
             this.btnDetail.Text = "Detail";
             this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
@@ -1324,7 +1324,7 @@ namespace GUI
             this.pnDelete.BackColor = System.Drawing.Color.Transparent;
             this.pnDelete.Controls.Add(this.btnDelete);
             this.pnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnDelete.Location = new System.Drawing.Point(146, 0);
+            this.pnDelete.Location = new System.Drawing.Point(145, 0);
             this.pnDelete.Margin = new System.Windows.Forms.Padding(0);
             this.pnDelete.Name = "pnDelete";
             this.pnDelete.Padding = new System.Windows.Forms.Padding(5, 10, 13, 10);
@@ -1367,10 +1367,11 @@ namespace GUI
             this.pnDgvWrapper.BorderRadius = 10;
             this.pnDgvWrapper.Controls.Add(this.dgvBills);
             this.pnDgvWrapper.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnDgvWrapper.Location = new System.Drawing.Point(3, 67);
+            this.pnDgvWrapper.Location = new System.Drawing.Point(10, 74);
+            this.pnDgvWrapper.Margin = new System.Windows.Forms.Padding(10);
             this.pnDgvWrapper.Name = "pnDgvWrapper";
             this.pnDgvWrapper.ShadowDecoration.Parent = this.pnDgvWrapper;
-            this.pnDgvWrapper.Size = new System.Drawing.Size(977, 685);
+            this.pnDgvWrapper.Size = new System.Drawing.Size(963, 671);
             this.pnDgvWrapper.TabIndex = 2;
             // 
             // dgvBills
@@ -1378,31 +1379,31 @@ namespace GUI
             this.dgvBills.AllowUserToAddRows = false;
             this.dgvBills.AllowUserToDeleteRows = false;
             this.dgvBills.AllowUserToResizeRows = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.dgvBills.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.dgvBills.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvBills.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBills.BackgroundColor = System.Drawing.Color.CadetBlue;
             this.dgvBills.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBills.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvBills.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBills.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBills.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvBills.ColumnHeadersHeight = 45;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(133)))), ((int)(((byte)(147)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBills.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(133)))), ((int)(((byte)(147)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBills.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvBills.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvBills.EnableHeadersVisualStyles = false;
             this.dgvBills.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(199)))), ((int)(((byte)(206)))));
@@ -1412,22 +1413,22 @@ namespace GUI
             this.dgvBills.Name = "dgvBills";
             this.dgvBills.ReadOnly = true;
             this.dgvBills.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBills.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBills.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvBills.RowHeadersVisible = false;
             this.dgvBills.RowHeadersWidth = 51;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.Padding = new System.Windows.Forms.Padding(5);
-            this.dgvBills.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(5);
+            this.dgvBills.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvBills.RowTemplate.Height = 40;
             this.dgvBills.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBills.Size = new System.Drawing.Size(977, 685);
+            this.dgvBills.Size = new System.Drawing.Size(963, 671);
             this.dgvBills.TabIndex = 3;
             this.dgvBills.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.WetAsphalt;
             this.dgvBills.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
@@ -1523,21 +1524,6 @@ namespace GUI
         private System.Windows.Forms.Label lbSideBarTitle;
         private Guna.UI2.WinForms.Guna2Button btnTick;
         private Guna.UI2.WinForms.Guna2Button btnCollapse;
-        private System.Windows.Forms.TableLayoutPanel tlpMain;
-        private System.Windows.Forms.TableLayoutPanel tlpSearch;
-        private Guna.UI2.WinForms.Guna2Panel pnSearchAndFunction;
-        private Guna.UI2.WinForms.Guna2Panel pnSearch;
-        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
-        private Guna.UI2.WinForms.Guna2ComboBox cbbFilter;
-        private Guna.UI2.WinForms.Guna2Panel btnDeleteSearch;
-        private Guna.UI2.WinForms.Guna2Panel pnFunctions;
-        private System.Windows.Forms.TableLayoutPanel tlpFunction;
-        private System.Windows.Forms.Panel pnBtnEdit;
-        private Guna.UI2.WinForms.Guna2Button btnDetail;
-        private System.Windows.Forms.Panel pnDelete;
-        private Guna.UI2.WinForms.Guna2Button btnDelete;
-        private Guna.UI2.WinForms.Guna2Panel pnDgvWrapper;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvBills;
         private ElipseToolDemo.ElipseControl ecDgvBill;
         private Guna.UI2.WinForms.Guna2Panel pnName;
         private System.Windows.Forms.Label lbName;
@@ -1576,5 +1562,20 @@ namespace GUI
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2Panel pnGoodsInBill;
         private System.Windows.Forms.TableLayoutPanel tlpGoodsInBill;
+        private System.Windows.Forms.TableLayoutPanel tlpMain;
+        private System.Windows.Forms.TableLayoutPanel tlpSearch;
+        private Guna.UI2.WinForms.Guna2Panel pnSearchAndFunction;
+        private Guna.UI2.WinForms.Guna2Panel pnSearch;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbFilter;
+        private Guna.UI2.WinForms.Guna2Panel btnDeleteSearch;
+        private Guna.UI2.WinForms.Guna2Panel pnFunctions;
+        private System.Windows.Forms.TableLayoutPanel tlpFunction;
+        private System.Windows.Forms.Panel pnBtnEdit;
+        private Guna.UI2.WinForms.Guna2Button btnDetail;
+        private System.Windows.Forms.Panel pnDelete;
+        private Guna.UI2.WinForms.Guna2Button btnDelete;
+        private Guna.UI2.WinForms.Guna2Panel pnDgvWrapper;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvBills;
     }
 }

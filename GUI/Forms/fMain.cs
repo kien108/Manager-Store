@@ -38,10 +38,17 @@ namespace GUI
             {
                 lbName.Text = root.RemoveSignOfVietnameseString(Profile.Name).ToUpper();
                 lbRole.Text = Profile.Role;
+                pbAvatar.Image = Image.FromFile(root.ProjectPath() + emp.UrlImage);
             }
             pnHeader.FillColor = root.titleBarColor;
             pnNav.FillColor = root.navBarColor;
             pnScreen.FillColor = root.screenColor;
+
+            //ContextMenu cm = new ContextMenu();
+            //cm.MenuItems.Add("My profile");
+            //cm.MenuItems.Add("Log out");
+
+            //pnAccount.ContextMenu = cm;
         }
 
         private void fMain_Load(object sender, EventArgs e)
@@ -85,9 +92,18 @@ namespace GUI
                 c.Click += new EventHandler(OpenContractForm);
 
             // Open employees form
-            PnFunctions[5].Click += new EventHandler(OpenEmployeeForm);
+            PnFunctions[4].Click += new EventHandler(OpenEmployeeForm);
             foreach (Control c in PnFunctions[4].Controls)
                 c.Click += new EventHandler(OpenEmployeeForm);
+
+            // Open meny strip
+            pnAccount.Tag = false;
+            pnAccount.Click += new EventHandler(OpenContextMenuStripAccount);
+            foreach (Control c in pnAccount.Controls)
+                c.Click += new EventHandler(OpenContextMenuStripAccount);
+
+            cmsAccount.Items["myProfileToolStripMenuItem"].Click += new EventHandler(OpenProfile);
+            cmsAccount.Items["logOutToolStripMenuItem"].Click += new EventHandler(Logout);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -132,6 +148,9 @@ namespace GUI
                     pn.name.Hide(); 
                     pn.Width = pnNav.Width - pn.Margin.Left * 2;
                 }
+                lbLogo.Hide();
+                pnNameAndRole.Hide();
+                pbLogo.Dock = DockStyle.Fill;
                 pnContainer.Width = Width - pnNav.Width;
             }
             else
@@ -141,10 +160,12 @@ namespace GUI
                 {
                     pn.AutoSize = false;
                     pn.name.Show();
+                    pbLogo.Dock = DockStyle.Left;
                     pn.Width = pnNav.Width - pn.Margin.Left * 2;
                 }
+                lbLogo.Show();
+                pnNameAndRole.Show();
                 pnContainer.Width = Width - pnNav.Width;
-                pnNav.Width = expandSize;
             }
         }
 
@@ -189,6 +210,24 @@ namespace GUI
         {
             HighlightOption(4);
             OpenChildForm(new fEmployee());
+        }
+
+        private void OpenContextMenuStripAccount(object sender, EventArgs e)
+        {
+            cmsAccount.Show(pnAccount, new Point(pnAccount.Width, pnAccount.Height), ToolStripDropDownDirection.AboveRight);
+        }
+
+        private void OpenProfile(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Logout(object sender, EventArgs e)
+        {
+            Hide();
+            fLogin logout = new fLogin();
+            logout.ShowDialog();
+            Close();
         }
     }
 }

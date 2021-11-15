@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -122,7 +124,7 @@ namespace GUI.DefinedFramework
                     File.Copy(currentPath, newAbsolutePath);
                 }
             }
-            catch (Exception e) { return e.Message; }
+            catch (IOException e) { return e.Message; }
             return null;
         }
 

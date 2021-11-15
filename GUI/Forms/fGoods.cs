@@ -5,6 +5,7 @@ using System;
 using System.Data;
 using System.Drawing;
 using System.IO;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace GUI
@@ -36,12 +37,17 @@ namespace GUI
             txtSearch.FillColor = root.backColorComponentGoods;
             pnSideBar.FillColor = root.backGroundSideBarGoods;
             tlpPictureSide.BackColor = root.darkerBackGroundSideBarGoods;
-            pnState.FillColor = root.darkerBackGroundSideBarGoods;
+            pnStateOptionWrapper.FillColor = root.darkerBackGroundSideBarGoods;
         }
 
         private void fGoods_Load(object sender, EventArgs e)
         {
             btnAllGoods.PerformClick();
+            if (dgvGoods.DataSource == null)
+            {
+                Enabled = false;
+                return;
+            }
             btnDeleteSearch.Hide();
             lbTypeInput.Hide();
         }
@@ -94,10 +100,10 @@ namespace GUI
             dgvGoods.Columns["Unit"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvGoods.Columns["Price"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dgvGoods.Columns["Price"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dgvGoods.Columns["Price"].DefaultCellStyle.Format = "#,##0 VND";
+            dgvGoods.Columns["Price"].DefaultCellStyle.Format = "#,##0 đ";
             dgvGoods.Columns["Profit"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dgvGoods.Columns["Profit"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dgvGoods.Columns["Profit"].DefaultCellStyle.Format = "#,##0 VND";
+            dgvGoods.Columns["Profit"].DefaultCellStyle.Format = "#,##0 đ";
             dgvGoods.Columns["Quantity"].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             dgvGoods.Columns["Quantity"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvGoods.Columns["Selling"].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
@@ -258,12 +264,12 @@ namespace GUI
             string temp = root.ProjectPath() + root.imageGoods + txtName.Text.Replace(' ', '_') + ".png";
             if (File.Exists(temp))
             {
-                pbPiture.Image = Image.FromFile(temp);
+                pbPicture.Image = Image.FromFile(temp);
                 txtUrlImage.Text = temp;
             }
             else
             {
-                pbPiture.Image = Image.FromFile(root.ProjectPath() + root.imageGoods + "notFound.png");
+                pbPicture.Image = Image.FromFile(root.ProjectPath() + root.imageGoods + "notFound.png");
                 txtUrlImage.Clear();
             }
             nudPrice.Value = decimal.Parse(dr["Price"].ToString());
@@ -277,13 +283,14 @@ namespace GUI
             lbSideBarTitle.Text = "Detail Information";
             btnTick.Image = Manage_Store.Properties.Resources.edit2;
 
-            txtName.Enabled = false;
-            cbbUnit.Enabled = false;
-            nudPrice.Enabled = false;
-            pnState.Enabled = false;
-            txtUrlImage.Enabled = false;
-            btnChangePicture.Enabled = false;
-            btnDeletePicture.Enabled = false;
+            //txtName.Enabled = false;
+            //cbbUnit.Enabled = false;
+            //nudPrice.Enabled = false;
+            //pnState.Enabled = false;
+            //txtUrlImage.Enabled = false;
+            //btnChangePicture.Enabled = false;
+            //btnDeletePicture.Enabled = false;
+            pnSideBarBody.Enabled = false;
             btnSideBarConfirm.Enabled = false;
             tlpWrapper.ColumnStyles[1].Width = 550;
         }
@@ -307,15 +314,16 @@ namespace GUI
             {
                 lbSideBarTitle.Text = "Edit Information";
                 btnTick.Image = global::Manage_Store.Properties.Resources.tick;
-                txtName.Enabled = true;
-                cbbUnit.Enabled = true;
-                nudPrice.Enabled = true;
-                pnState.Enabled = true;
-                txtUrlImage.Enabled = true;
-                btnChangePicture.Enabled = true;
-                btnDeletePicture.Enabled = true;
+                //txtName.Enabled = true;
+                //cbbUnit.Enabled = true;
+                //nudPrice.Enabled = true;
+                //txtQuantity.Enabled = true;
+                //pnState.Enabled = true;
+                //txtUrlImage.Enabled = true;
+                //btnChangePicture.Enabled = true;
+                //btnDeletePicture.Enabled = true;
+                pnSideBarBody.Enabled = true;
                 btnSideBarConfirm.Enabled = true;
-                txtQuantity.Enabled = true;
             }
             else if (lbSideBarTitle.Text.ToLower().Contains("edit"))
                 btnSideBarConfirm_Click(btnSideBarConfirm, new EventArgs());
@@ -376,20 +384,20 @@ namespace GUI
             if (string.IsNullOrEmpty(openFile.FileName))
                 return;
             txtUrlImage.Text = openFile.FileName;
-            pbPiture.Image = Image.FromFile(openFile.FileName);
+            pbPicture.Image = Image.FromFile(openFile.FileName);
         }
 
         private void txtUrlImage_TextChanged(object sender, EventArgs e)
         {
             if (!File.Exists(txtUrlImage.Text))
             {
-                pbPiture.Image = Image.FromFile(root.ProjectPath() + root.imageGoods + "notFound.png");
+                pbPicture.Image = Image.FromFile(root.ProjectPath() + root.imageGoods + "notFound.png");
                 txtUrlImage.FocusedState.BorderColor = Color.Red;
             }
             else if (txtUrlImage.FocusedState.BorderColor == Color.Red)
             {
                 txtUrlImage.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-                pbPiture.Image = Image.FromFile(txtUrlImage.Text);
+                pbPicture.Image = Image.FromFile(txtUrlImage.Text);
             }
         }
 
@@ -458,7 +466,7 @@ namespace GUI
             nudPrice.Value = 1000;
             txtQuantity.Text = "0";
             txtUrlImage.Clear();
-            pbPiture.Image = Image.FromFile(root.ProjectPath() + root.imageGoods + "addGoods.png");
+            pbPicture.Image = Image.FromFile(root.ProjectPath() + root.imageGoods + "addGoods.png");
         }
 
         private void txtName_TextChanged(object sender, EventArgs e)

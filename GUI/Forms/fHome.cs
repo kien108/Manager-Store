@@ -43,7 +43,7 @@ namespace GUI
 
         private void fHome_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void LoadGoods()

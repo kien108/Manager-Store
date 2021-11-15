@@ -52,8 +52,8 @@ namespace GUI.DefinedFramework
             // tlpPriceAndQuantity
             // 
             this.tlpPriceAndQuantity.ColumnCount = 2;
-            this.tlpPriceAndQuantity.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53F));
-            this.tlpPriceAndQuantity.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47F));
+            this.tlpPriceAndQuantity.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.92857F));
+            this.tlpPriceAndQuantity.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.07143F));
             this.tlpPriceAndQuantity.Controls.Add(this.lbPrice, 0, 0);
             this.tlpPriceAndQuantity.Controls.Add(this.pnQuantity, 1, 0);
             this.tlpPriceAndQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -73,7 +73,7 @@ namespace GUI.DefinedFramework
             this.lbPrice.Location = new System.Drawing.Point(0, 0);
             this.lbPrice.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(145, 44);
+            this.lbPrice.Size = new System.Drawing.Size(133, 44);
             this.lbPrice.TabIndex = 3;
             this.lbPrice.Text = "6,000 đ";
             this.lbPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -87,10 +87,10 @@ namespace GUI.DefinedFramework
             this.pnQuantity.Controls.Add(this.btnMinus);
             this.pnQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnQuantity.FillColor = System.Drawing.Color.White;
-            this.pnQuantity.Location = new System.Drawing.Point(151, 3);
+            this.pnQuantity.Location = new System.Drawing.Point(139, 3);
             this.pnQuantity.Name = "pnQuantity";
             this.pnQuantity.ShadowDecoration.Parent = this.pnQuantity;
-            this.pnQuantity.Size = new System.Drawing.Size(126, 38);
+            this.pnQuantity.Size = new System.Drawing.Size(138, 38);
             this.pnQuantity.TabIndex = 2;
             // 
             // nudQuantity
@@ -110,7 +110,7 @@ namespace GUI.DefinedFramework
             this.nudQuantity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.nudQuantity.Name = "nudQuantity";
             this.nudQuantity.ShadowDecoration.Parent = this.nudQuantity;
-            this.nudQuantity.Size = new System.Drawing.Size(90, 38);
+            this.nudQuantity.Size = new System.Drawing.Size(102, 38);
             this.nudQuantity.TabIndex = 2;
             this.nudQuantity.ValueChanged += new System.EventHandler(this.nudQuantity_ValueChanged);
             // 
@@ -136,7 +136,7 @@ namespace GUI.DefinedFramework
             this.btnPlus.HoverState.Parent = this.btnPlus;
             this.btnPlus.Image = global::Manage_Store.Properties.Resources.plus;
             this.btnPlus.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnPlus.Location = new System.Drawing.Point(108, 0);
+            this.btnPlus.Location = new System.Drawing.Point(120, 0);
             this.btnPlus.Name = "btnPlus";
             this.btnPlus.ShadowDecoration.Parent = this.btnPlus;
             this.btnPlus.Size = new System.Drawing.Size(18, 38);

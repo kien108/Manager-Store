@@ -11,32 +11,31 @@ namespace BLL
 {
     public class BLL_Contract
     {
-        DataAccess dal = new DataAccess();
         public DataTable GetAllGoodsReceipt(ref string error)
         {
-            return dal.ExecuteQueryData("sp_GetAllContracts", CommandType.StoredProcedure, ref error);
+            return BLL.dal.ExecuteQueryData("sp_GetAllContracts", CommandType.StoredProcedure, ref error);
         }
 
         public DataTable GetAllProviders(ref string error)
         {
-            return dal.ExecuteQueryData("sp_GetAllProviders", CommandType.StoredProcedure, ref error);
+            return BLL.dal.ExecuteQueryData("sp_GetAllProviders", CommandType.StoredProcedure, ref error);
         }
 
         public DataTable SearchInContract(string paramName, object paramValue, ref string error)
         {
-            return dal.ExecuteQueryData("sp_SearchContracts", CommandType.StoredProcedure, 
+            return BLL.dal.ExecuteQueryData("sp_SearchContracts", CommandType.StoredProcedure, 
                 ref error, new SqlParameter(paramName, paramValue));
         }
 
         public DataTable SearchProvider(string paramName, object paramValue, ref string error)
         {
-            return dal.ExecuteQueryData("sp_SearchProvider", CommandType.StoredProcedure,
+            return BLL.dal.ExecuteQueryData("sp_SearchProvider", CommandType.StoredProcedure,
                    ref error, new SqlParameter(paramName, paramValue));
         }
 
         public DataTable DetailGoodsInContract(int cid, ref string error)
         {
-            return dal.ExecuteQueryData("sp_DetailGoodsInContract", CommandType.StoredProcedure,
+            return BLL.dal.ExecuteQueryData("sp_DetailGoodsInContract", CommandType.StoredProcedure,
                    ref error, new SqlParameter("cid", cid));
         }
 
@@ -44,7 +43,7 @@ namespace BLL
             string pname, string paddress, string pphonenumber, int eid, string cdate, int cquantity, double cprice)
         {
             string error = null, message = null;
-            bool updated = dal.ExecuteNonQuery("sp_UpdateContract", CommandType.StoredProcedure, ref error, ref message,
+            bool updated = BLL.dal.ExecuteNonQuery("sp_UpdateContract", CommandType.StoredProcedure, ref error, ref message,
                 new SqlParameter("cid", cid),
                 new SqlParameter("gname", gname),
                 new SqlParameter("unit", unit),
@@ -69,7 +68,7 @@ namespace BLL
         public string UpdateInformationProvider(int id, string name, string address, string phoneNumber, bool providing)
         {
             string error = null, message = null;
-            bool updated = dal.ExecuteNonQuery("sp_UpdateProvider", CommandType.StoredProcedure, ref error, ref message,
+            bool updated = BLL.dal.ExecuteNonQuery("sp_UpdateProvider", CommandType.StoredProcedure, ref error, ref message,
                 new SqlParameter("id", id),
                 new SqlParameter("name", name),
                 new SqlParameter("address", address),
@@ -85,7 +84,7 @@ namespace BLL
         public string DeleteContract(int cid)
         {
             string error = null, message = null;
-            bool deleted = dal.ExecuteNonQuery("sp_DeleteContract", CommandType.StoredProcedure, ref error, ref message,
+            bool deleted = BLL.dal.ExecuteNonQuery("sp_DeleteContract", CommandType.StoredProcedure, ref error, ref message,
                 new SqlParameter("cid", cid));
             if (error != null)
                 return "Delete failed!\n" + error;
@@ -95,7 +94,7 @@ namespace BLL
         public string DeleteGoodsInContract(int cid, string gname)
         {
             string error = null, message = null;
-            bool deleted = dal.ExecuteNonQuery("sp_DeleteGoodsInContract", CommandType.StoredProcedure, ref error, ref message,
+            bool deleted = BLL.dal.ExecuteNonQuery("sp_DeleteGoodsInContract", CommandType.StoredProcedure, ref error, ref message,
                 new SqlParameter("cid", cid),
                 new SqlParameter("gname", gname));
             if (error != null)
@@ -107,14 +106,14 @@ namespace BLL
         public int GetNewContractID()
         {
             string error = null;
-            return (int)dal.ExecuteScalar("select dbo.ft_CreateContractId()", CommandType.Text, ref error);
+            return (int)BLL.dal.ExecuteScalar("select dbo.ft_CreateContractId()", CommandType.Text, ref error);
         }
 
         public string InsertContract(int cid, string gname, string unit, double gprice, string gphoto, string pname, 
             string paddress, string pphoneNumber, int eid, string date, int cquantity, double cprice)
         {
             string error = null, message = null;
-            bool inserted = dal.ExecuteNonQuery("sp_InsertContract", CommandType.StoredProcedure, ref error, ref message,
+            bool inserted = BLL.dal.ExecuteNonQuery("sp_InsertContract", CommandType.StoredProcedure, ref error, ref message,
                 new SqlParameter("cid", cid),
                 new SqlParameter("gname", gname),
                 new SqlParameter("unit", unit),
@@ -134,6 +133,26 @@ namespace BLL
             if (!inserted)
                 return "No data is insert!";
             return "Insert successful!";
+        }
+
+        public string DeleteProvider(int pid)
+        {
+            string error = null, message = null;
+            bool deleted = BLL.dal.ExecuteNonQuery("sp_DeleteProvider", CommandType.StoredProcedure, ref error, ref message,
+                new SqlParameter("pid", pid));
+            if (error != null)
+                return "Delete failed!\n" + error;
+            return "Delete successful!";
+        }
+
+        public string DeleteProvider(string pname)
+        {
+            string error = null, message = null;
+            bool deleted = BLL.dal.ExecuteNonQuery("sp_DeleteProvider", CommandType.StoredProcedure, ref error, ref message,
+                new SqlParameter("pname", pname));
+            if (error != null)
+                return "Delete failed!\n" + error;
+            return "Delete successful!";
         }
     }
 }

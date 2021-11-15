@@ -6,11 +6,9 @@ namespace BLL
 {
     public class BLL_Goods
     {
-        DataAccess dal = new DataAccess();
-
         public DataTable GetGoodsTable(ref string error)
         {
-            DataTable temp = dal.ExecuteQueryData("sp_GetAllGoodsWithProfit", CommandType.StoredProcedure, ref error);
+            DataTable temp = BLL.dal.ExecuteQueryData("sp_GetAllGoodsWithProfit", CommandType.StoredProcedure, ref error);
             if (temp == null)
                 return null;
             DataTable dt = temp.Clone();
@@ -22,7 +20,7 @@ namespace BLL
 
         public DataTable GetStokingGoodTable(ref string error)
         {
-            DataTable temp = dal.ExecuteQueryData("sp_GetStockingGoods", CommandType.StoredProcedure, ref error);
+            DataTable temp = BLL.dal.ExecuteQueryData("sp_GetStockingGoods", CommandType.StoredProcedure, ref error);
             if (temp == null)
                 return null;
             DataTable dt = temp.Clone();
@@ -34,7 +32,7 @@ namespace BLL
 
         public DataTable GetSoldOutGoodTable(ref string error)
         {
-            DataTable temp = dal.ExecuteQueryData("sp_GetSoldOutGoods", CommandType.StoredProcedure, ref error);
+            DataTable temp = BLL.dal.ExecuteQueryData("sp_GetSoldOutGoods", CommandType.StoredProcedure, ref error);
             if (temp == null)
                 return null;
             DataTable dt = temp.Clone();
@@ -46,7 +44,7 @@ namespace BLL
 
         public DataTable GetStopSellingGoodTable(ref string error)
         {
-            DataTable temp = dal.ExecuteQueryData("sp_GetStopSellingGoods", CommandType.StoredProcedure, ref error);
+            DataTable temp = BLL.dal.ExecuteQueryData("sp_GetStopSellingGoods", CommandType.StoredProcedure, ref error);
             if (temp == null)
                 return null;
             DataTable dt = temp.Clone();
@@ -58,7 +56,7 @@ namespace BLL
 
         public DataTable SearchGoods(int id, string state, ref string error)
         {
-            DataTable temp = dal.ExecuteQueryData("sp_SearchGoods", CommandType.StoredProcedure, ref error,
+            DataTable temp = BLL.dal.ExecuteQueryData("sp_SearchGoods", CommandType.StoredProcedure, ref error,
                 new SqlParameter("id", id), new SqlParameter("state", state));
             if (temp == null)
                 return null;
@@ -71,7 +69,7 @@ namespace BLL
 
         public DataTable SearchGoods(string name, string state, ref string error)
         {
-            DataTable temp = dal.ExecuteQueryData("sp_SearchGoods", CommandType.StoredProcedure, ref error,
+            DataTable temp = BLL.dal.ExecuteQueryData("sp_SearchGoods", CommandType.StoredProcedure, ref error,
                 new SqlParameter("name", name), new SqlParameter("state", state));
             if (temp == null)
                 return null;
@@ -85,7 +83,7 @@ namespace BLL
         public string UpdateInformationGoods(int id, string name, string unit, double price, bool state, string url)
         {
             string error = null, message = null;
-            bool updated = dal.ExecuteNonQuery("sp_UpdateGoods", CommandType.StoredProcedure, ref error, ref message,
+            bool updated = BLL.dal.ExecuteNonQuery("sp_UpdateGoods", CommandType.StoredProcedure, ref error, ref message,
                 new SqlParameter("id", id),
                 new SqlParameter("name", name),
                 new SqlParameter("unit", unit),
@@ -103,7 +101,7 @@ namespace BLL
         public string DeleteGoods(int id)
         {
             string error = null, message = null;
-            bool deleted = dal.ExecuteNonQuery("sp_UpdateGoods", CommandType.StoredProcedure, ref error, ref message,
+            bool deleted = BLL.dal.ExecuteNonQuery("sp_UpdateGoods", CommandType.StoredProcedure, ref error, ref message,
                 new SqlParameter("id", id),
                 new SqlParameter("state", false));
             if (error != null)
@@ -116,7 +114,7 @@ namespace BLL
         public string InsertGoods(string name, string unit, double price, string url)
         {
             string error = null, message = null;
-            bool inserted = dal.ExecuteNonQuery("sp_InsertGoods", CommandType.StoredProcedure, ref error, ref message,
+            bool inserted = BLL.dal.ExecuteNonQuery("sp_InsertGoods", CommandType.StoredProcedure, ref error, ref message,
                 new SqlParameter("name", name),
                 new SqlParameter("unit", unit),
                 new SqlParameter("price", price),
@@ -130,7 +128,7 @@ namespace BLL
 
         public DataTable GetGoodsStillSelling(ref string error)
         {
-            return dal.ExecuteQueryData("sp_GetAllGoodsStillSelling", CommandType.StoredProcedure, ref error);
+            return BLL.dal.ExecuteQueryData("sp_GetAllGoodsStillSelling", CommandType.StoredProcedure, ref error);
         }
     }
 }

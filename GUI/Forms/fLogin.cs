@@ -24,6 +24,16 @@ namespace GUI
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string phoneNumber = txtPhoneNumber.Text, password = txtPassword.Text;
+            if (string.IsNullOrEmpty(phoneNumber))
+            {
+                txtPhoneNumber.Focus();
+                return;
+            }
+            else if(string.IsNullOrEmpty(password))
+            {
+                txtPassword.Focus();
+                return;
+            }
             string error = null;
             string response = bll.CheckAccountInfo(phoneNumber, password, ref error);
             if (error != null)
@@ -56,6 +66,7 @@ namespace GUI
             string error = null;
             Employee emp = bll.GetEmployeeProfile(id, ref error);
             fMain f2 = new fMain(emp);
+            bll.ChangeRole(emp.Role);
             f2.ShowDialog();
             Close();
         }
@@ -76,7 +87,7 @@ namespace GUI
 
         private void txtPhoneNumber_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
             {
                 e.SuppressKeyPress = true;
                 txtPassword.Focus();

@@ -59,6 +59,11 @@ namespace GUI
         {
             string error = null;
             dgvBills.DataSource = bll.GetAllBills(ref error);
+            if (dgvBills.DataSource == null)
+            {
+                Enabled = false;
+                return;
+            }
             if (error != null)
                 MessageBox.Show(error);
             else
@@ -92,10 +97,10 @@ namespace GUI
             dgvBills.Columns["Unit"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvBills.Columns["Price"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dgvBills.Columns["Price"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dgvBills.Columns["Price"].DefaultCellStyle.Format = "#,##0 VND";
+            dgvBills.Columns["Price"].DefaultCellStyle.Format = "#,##0 đ";
             dgvBills.Columns["Total Price"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dgvBills.Columns["Total Price"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dgvBills.Columns["Total Price"].DefaultCellStyle.Format = "#,##0 VND";
+            dgvBills.Columns["Total Price"].DefaultCellStyle.Format = "#,##0 đ";
             dgvBills.Columns["EID"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
             dgvBills.Columns["EID"].MinimumWidth = 60;
             dgvBills.Columns["EID"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;

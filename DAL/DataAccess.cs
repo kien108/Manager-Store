@@ -12,15 +12,29 @@ namespace DAL
         private SqlDataAdapter da = null;
         private string computerName = Environment.MachineName.ToString();
         private string databaseName = "GroceryStore";
-        private string userId = "GS_admin";
-        private string password = "123";
         private string connectionString = "Server={0};Database={1};User Id={2};Password={3};";
         private string message = "";
         
         // Contructor
-        public DataAccess()
+        public DataAccess(string role)
         {
-            Authorization("GS_admin", "123");
+            string username = string.Empty, password = string.Empty;
+            if (role == "ADMIN")
+            {
+                username = "GS_admin";
+                password = "admin";
+            }
+            else if (role == "STAFF")
+            {
+                username = "GS_staff";
+                password = "staff";
+            }
+            else
+            {
+                username = "GS_stockmanager";
+                password = "stockmanager";
+            }
+            Authorization(username, password);
         }
 
         // Open sql server connection

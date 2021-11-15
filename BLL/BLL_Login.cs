@@ -12,22 +12,15 @@ namespace BLL
 {
     public class BLL_Login
     {
-        DataAccess dal = new DataAccess();
-
         public void ChangeRole(string role)
         {
-            if (role == "ADMIN")
-                dal.Authorization("GS_admin", "123");
-            else if (role == "STAFF")
-                dal.Authorization("GS_staff", "123");
-            else if (role == "STOCK MANAGER")
-                dal.Authorization("GS_stockManager", "123");
+            BLL.dal = new DataAccess(role);
         }
 
         public string CheckAccountInfo(string phoneNumber, string password, ref string error)
         {
             string sql = "select dbo.ft_CheckLogin(@phoneNumber, @password)";
-            return dal.ExecuteScalar(sql, CommandType.Text, ref error,
+            return BLL.dal.ExecuteScalar(sql, CommandType.Text, ref error,
                 new SqlParameter("phoneNumber", phoneNumber),
                 new SqlParameter("password", password)).ToString();
         }
@@ -35,7 +28,7 @@ namespace BLL
         public Employee GetEmployeeProfile(int id, ref string error)
         {
             string sql = "sp_LoadProfile";
-            DataTable result = dal.ExecuteQueryData(sql, CommandType.StoredProcedure, ref error, new SqlParameter("id", id));
+            DataTable result = BLL.dal.ExecuteQueryData(sql, CommandType.StoredProcedure, ref error, new SqlParameter("id", id));
             string name = result.Rows[0]["ename"].ToString();
             DateTime birthday = DateTime.Parse(result.Rows[0]["birthday"].ToString());
             string address = result.Rows[0]["eaddress"].ToString();

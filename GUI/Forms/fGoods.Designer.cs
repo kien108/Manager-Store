@@ -38,36 +38,39 @@ namespace GUI
             this.tlpWrapper = new System.Windows.Forms.TableLayoutPanel();
             this.pnSideBar = new Guna.UI2.WinForms.Guna2Panel();
             this.pnSideBarBody = new Guna.UI2.WinForms.Guna2Panel();
-            this.tlpSideBarBody = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.pnUrl = new Guna.UI2.WinForms.Guna2Panel();
             this.txtUrlImage = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lbUrlImage = new System.Windows.Forms.Label();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.lbState = new System.Windows.Forms.Label();
+            this.lbUrl = new System.Windows.Forms.Label();
+            this.pnStateOption = new Guna.UI2.WinForms.Guna2Panel();
             this.pnState = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnStateOptionWrapper = new Guna.UI2.WinForms.Guna2Panel();
             this.rbStopSelling = new System.Windows.Forms.RadioButton();
             this.rbSelling = new System.Windows.Forms.RadioButton();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbState = new System.Windows.Forms.Label();
+            this.pnPriceAndQuantity = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnQuantity = new Guna.UI2.WinForms.Guna2Panel();
             this.txtQuantity = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lbQuantity = new System.Windows.Forms.Label();
+            this.pnPrice = new Guna.UI2.WinForms.Guna2Panel();
             this.nudPrice = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.lbPrice = new System.Windows.Forms.Label();
-            this.lbQuantity = new System.Windows.Forms.Label();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.cbbUnit = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.lbID = new System.Windows.Forms.Label();
+            this.pnPhoneAndID = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnId = new Guna.UI2.WinForms.Guna2Panel();
             this.txtID = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lbUnit = new System.Windows.Forms.Label();
+            this.lbID = new System.Windows.Forms.Label();
+            this.pnPhoneNumber = new Guna.UI2.WinForms.Guna2Panel();
+            this.cbbUnit = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.lbPhoneNumber = new System.Windows.Forms.Label();
+            this.pnName = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lbName = new System.Windows.Forms.Label();
             this.tlpPictureSide = new System.Windows.Forms.TableLayoutPanel();
-            this.pbPiture = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pbPicture = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnPictureButton = new Guna.UI2.WinForms.Guna2Panel();
             this.pnDeletePicture = new System.Windows.Forms.Panel();
             this.btnDeletePicture = new Guna.UI2.WinForms.Guna2Button();
             this.pnChangePicture = new System.Windows.Forms.Panel();
             this.btnChangePicture = new Guna.UI2.WinForms.Guna2Button();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lbName = new System.Windows.Forms.Label();
-            this.lbTypeInput = new System.Windows.Forms.Label();
             this.pnSideBarFooter = new Guna.UI2.WinForms.Guna2Panel();
             this.tlpSideBarFooter = new System.Windows.Forms.TableLayoutPanel();
             this.btnSideBarCancel = new Guna.UI2.WinForms.Guna2Button();
@@ -97,24 +100,29 @@ namespace GUI
             this.pnBtnAdd = new System.Windows.Forms.Panel();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.dgvGoods = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.lbTypeInput = new System.Windows.Forms.Label();
             this.ecDgvGoods = new ElipseToolDemo.ElipseControl();
             this.ecTlpPictureSide = new ElipseToolDemo.ElipseControl();
             this.tlpWrapper.SuspendLayout();
             this.pnSideBar.SuspendLayout();
             this.pnSideBarBody.SuspendLayout();
-            this.tlpSideBarBody.SuspendLayout();
-            this.tableLayoutPanel8.SuspendLayout();
-            this.tableLayoutPanel7.SuspendLayout();
+            this.pnUrl.SuspendLayout();
+            this.pnStateOption.SuspendLayout();
             this.pnState.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
+            this.pnStateOptionWrapper.SuspendLayout();
+            this.pnPriceAndQuantity.SuspendLayout();
+            this.pnQuantity.SuspendLayout();
+            this.pnPrice.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrice)).BeginInit();
-            this.tableLayoutPanel5.SuspendLayout();
+            this.pnPhoneAndID.SuspendLayout();
+            this.pnId.SuspendLayout();
+            this.pnPhoneNumber.SuspendLayout();
+            this.pnName.SuspendLayout();
             this.tlpPictureSide.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPiture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).BeginInit();
             this.pnPictureButton.SuspendLayout();
             this.pnDeletePicture.SuspendLayout();
             this.pnChangePicture.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
             this.pnSideBarFooter.SuspendLayout();
             this.tlpSideBarFooter.SuspendLayout();
             this.pnSideBarHeader.SuspendLayout();
@@ -170,7 +178,13 @@ namespace GUI
             // pnSideBarBody
             // 
             this.pnSideBarBody.BackColor = System.Drawing.Color.Transparent;
-            this.pnSideBarBody.Controls.Add(this.tlpSideBarBody);
+            this.pnSideBarBody.Controls.Add(this.lbTypeInput);
+            this.pnSideBarBody.Controls.Add(this.pnUrl);
+            this.pnSideBarBody.Controls.Add(this.pnStateOption);
+            this.pnSideBarBody.Controls.Add(this.pnPriceAndQuantity);
+            this.pnSideBarBody.Controls.Add(this.pnPhoneAndID);
+            this.pnSideBarBody.Controls.Add(this.pnName);
+            this.pnSideBarBody.Controls.Add(this.tlpPictureSide);
             this.pnSideBarBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnSideBarBody.Location = new System.Drawing.Point(3, 32);
             this.pnSideBarBody.Name = "pnSideBarBody";
@@ -179,48 +193,18 @@ namespace GUI
             this.pnSideBarBody.Size = new System.Drawing.Size(494, 775);
             this.pnSideBarBody.TabIndex = 2;
             // 
-            // tlpSideBarBody
+            // pnUrl
             // 
-            this.tlpSideBarBody.BackColor = System.Drawing.Color.Transparent;
-            this.tlpSideBarBody.ColumnCount = 1;
-            this.tlpSideBarBody.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpSideBarBody.Controls.Add(this.tableLayoutPanel8, 0, 5);
-            this.tlpSideBarBody.Controls.Add(this.tableLayoutPanel7, 0, 4);
-            this.tlpSideBarBody.Controls.Add(this.tableLayoutPanel6, 0, 3);
-            this.tlpSideBarBody.Controls.Add(this.tableLayoutPanel5, 0, 2);
-            this.tlpSideBarBody.Controls.Add(this.tlpPictureSide, 0, 0);
-            this.tlpSideBarBody.Controls.Add(this.tableLayoutPanel4, 0, 1);
-            this.tlpSideBarBody.Controls.Add(this.lbTypeInput, 0, 6);
-            this.tlpSideBarBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpSideBarBody.Location = new System.Drawing.Point(5, 5);
-            this.tlpSideBarBody.Name = "tlpSideBarBody";
-            this.tlpSideBarBody.RowCount = 7;
-            this.tlpSideBarBody.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 140F));
-            this.tlpSideBarBody.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.tlpSideBarBody.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tlpSideBarBody.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tlpSideBarBody.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.tlpSideBarBody.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 113F));
-            this.tlpSideBarBody.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpSideBarBody.Size = new System.Drawing.Size(484, 765);
-            this.tlpSideBarBody.TabIndex = 0;
-            // 
-            // tableLayoutPanel8
-            // 
-            this.tableLayoutPanel8.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel8.ColumnCount = 1;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Controls.Add(this.txtUrlImage, 0, 1);
-            this.tableLayoutPanel8.Controls.Add(this.lbUrlImage, 0, 0);
-            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(5, 336);
-            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 5);
-            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 2;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.71186F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.28814F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(474, 108);
-            this.tableLayoutPanel8.TabIndex = 5;
+            this.pnUrl.BackColor = System.Drawing.Color.Transparent;
+            this.pnUrl.Controls.Add(this.txtUrlImage);
+            this.pnUrl.Controls.Add(this.lbUrl);
+            this.pnUrl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnUrl.Location = new System.Drawing.Point(5, 320);
+            this.pnUrl.Name = "pnUrl";
+            this.pnUrl.Padding = new System.Windows.Forms.Padding(10, 5, 10, 0);
+            this.pnUrl.ShadowDecoration.Parent = this.pnUrl;
+            this.pnUrl.Size = new System.Drawing.Size(484, 92);
+            this.pnUrl.TabIndex = 21;
             // 
             // txtUrlImage
             // 
@@ -235,95 +219,94 @@ namespace GUI
             this.txtUrlImage.DisabledState.Parent = this.txtUrlImage;
             this.txtUrlImage.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtUrlImage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtUrlImage.Enabled = false;
             this.txtUrlImage.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.txtUrlImage.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUrlImage.FocusedState.Parent = this.txtUrlImage;
-            this.txtUrlImage.Font = new System.Drawing.Font("Roboto Medium", 10.8F, System.Drawing.FontStyle.Bold);
-            this.txtUrlImage.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.txtUrlImage.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold);
+            this.txtUrlImage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtUrlImage.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUrlImage.HoverState.Parent = this.txtUrlImage;
-            this.txtUrlImage.Location = new System.Drawing.Point(10, 16);
-            this.txtUrlImage.Margin = new System.Windows.Forms.Padding(10, 3, 10, 5);
+            this.txtUrlImage.Location = new System.Drawing.Point(10, 22);
+            this.txtUrlImage.Margin = new System.Windows.Forms.Padding(9, 3, 9, 5);
+            this.txtUrlImage.MaximumSize = new System.Drawing.Size(455, 100);
             this.txtUrlImage.Multiline = true;
             this.txtUrlImage.Name = "txtUrlImage";
-            this.txtUrlImage.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.txtUrlImage.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.txtUrlImage.PasswordChar = '\0';
             this.txtUrlImage.PlaceholderText = "";
             this.txtUrlImage.SelectedText = "";
             this.txtUrlImage.ShadowDecoration.Parent = this.txtUrlImage;
-            this.txtUrlImage.Size = new System.Drawing.Size(454, 87);
-            this.txtUrlImage.TabIndex = 28;
+            this.txtUrlImage.Size = new System.Drawing.Size(455, 70);
+            this.txtUrlImage.TabIndex = 32;
+            this.txtUrlImage.TextOffset = new System.Drawing.Point(10, 0);
             this.txtUrlImage.TextChanged += new System.EventHandler(this.txtUrlImage_TextChanged);
             // 
-            // lbUrlImage
+            // lbUrl
             // 
-            this.lbUrlImage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbUrlImage.Font = new System.Drawing.Font("Poppins", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUrlImage.ForeColor = System.Drawing.Color.Orange;
-            this.lbUrlImage.Location = new System.Drawing.Point(20, 0);
-            this.lbUrlImage.Margin = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.lbUrlImage.Name = "lbUrlImage";
-            this.lbUrlImage.Size = new System.Drawing.Size(454, 13);
-            this.lbUrlImage.TabIndex = 27;
-            this.lbUrlImage.Text = "URL Image";
+            this.lbUrl.BackColor = System.Drawing.Color.Transparent;
+            this.lbUrl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbUrl.Font = new System.Drawing.Font("Poppins", 11F);
+            this.lbUrl.ForeColor = System.Drawing.Color.Orange;
+            this.lbUrl.Location = new System.Drawing.Point(10, 5);
+            this.lbUrl.Margin = new System.Windows.Forms.Padding(0);
+            this.lbUrl.Name = "lbUrl";
+            this.lbUrl.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.lbUrl.Size = new System.Drawing.Size(464, 17);
+            this.lbUrl.TabIndex = 31;
+            this.lbUrl.Text = "URL image";
+            this.lbUrl.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // tableLayoutPanel7
+            // pnStateOption
             // 
-            this.tableLayoutPanel7.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel7.ColumnCount = 1;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Controls.Add(this.lbState, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.pnState, 0, 1);
-            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(5, 288);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 5);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 2;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(474, 43);
-            this.tableLayoutPanel7.TabIndex = 4;
-            // 
-            // lbState
-            // 
-            this.lbState.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbState.Font = new System.Drawing.Font("Poppins", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbState.ForeColor = System.Drawing.Color.Orange;
-            this.lbState.Location = new System.Drawing.Point(20, 0);
-            this.lbState.Margin = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.lbState.Name = "lbState";
-            this.lbState.Size = new System.Drawing.Size(454, 14);
-            this.lbState.TabIndex = 30;
-            this.lbState.Text = "State";
+            this.pnStateOption.BackColor = System.Drawing.Color.Transparent;
+            this.pnStateOption.Controls.Add(this.pnState);
+            this.pnStateOption.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnStateOption.Location = new System.Drawing.Point(5, 275);
+            this.pnStateOption.Name = "pnStateOption";
+            this.pnStateOption.Padding = new System.Windows.Forms.Padding(10, 5, 100, 0);
+            this.pnStateOption.ShadowDecoration.Parent = this.pnStateOption;
+            this.pnStateOption.Size = new System.Drawing.Size(484, 45);
+            this.pnStateOption.TabIndex = 20;
             // 
             // pnState
             // 
-            this.pnState.AutoRoundedCorners = true;
-            this.pnState.BorderRadius = 9;
-            this.pnState.Controls.Add(this.rbStopSelling);
-            this.pnState.Controls.Add(this.rbSelling);
+            this.pnState.BackColor = System.Drawing.Color.Transparent;
+            this.pnState.Controls.Add(this.pnStateOptionWrapper);
+            this.pnState.Controls.Add(this.lbState);
             this.pnState.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnState.Enabled = false;
-            this.pnState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.pnState.Location = new System.Drawing.Point(10, 17);
-            this.pnState.Margin = new System.Windows.Forms.Padding(10, 3, 80, 5);
+            this.pnState.Location = new System.Drawing.Point(10, 5);
             this.pnState.Name = "pnState";
-            this.pnState.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.pnState.ShadowDecoration.Parent = this.pnState;
-            this.pnState.Size = new System.Drawing.Size(384, 21);
-            this.pnState.TabIndex = 31;
+            this.pnState.Size = new System.Drawing.Size(374, 40);
+            this.pnState.TabIndex = 0;
+            // 
+            // pnStateOptionWrapper
+            // 
+            this.pnStateOptionWrapper.AutoRoundedCorners = true;
+            this.pnStateOptionWrapper.BorderColor = System.Drawing.Color.Goldenrod;
+            this.pnStateOptionWrapper.BorderRadius = 10;
+            this.pnStateOptionWrapper.BorderThickness = 2;
+            this.pnStateOptionWrapper.Controls.Add(this.rbStopSelling);
+            this.pnStateOptionWrapper.Controls.Add(this.rbSelling);
+            this.pnStateOptionWrapper.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnStateOptionWrapper.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.pnStateOptionWrapper.Location = new System.Drawing.Point(0, 17);
+            this.pnStateOptionWrapper.Name = "pnStateOptionWrapper";
+            this.pnStateOptionWrapper.Padding = new System.Windows.Forms.Padding(20, 0, 15, 0);
+            this.pnStateOptionWrapper.ShadowDecoration.Parent = this.pnStateOptionWrapper;
+            this.pnStateOptionWrapper.Size = new System.Drawing.Size(374, 23);
+            this.pnStateOptionWrapper.TabIndex = 34;
             // 
             // rbStopSelling
             // 
             this.rbStopSelling.AutoSize = true;
-            this.rbStopSelling.Dock = System.Windows.Forms.DockStyle.Left;
-            this.rbStopSelling.Font = new System.Drawing.Font("Poppins", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbStopSelling.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
-            this.rbStopSelling.Location = new System.Drawing.Point(119, 0);
+            this.rbStopSelling.Dock = System.Windows.Forms.DockStyle.Right;
+            this.rbStopSelling.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold);
+            this.rbStopSelling.ForeColor = System.Drawing.Color.Orange;
+            this.rbStopSelling.Location = new System.Drawing.Point(212, 0);
             this.rbStopSelling.Name = "rbStopSelling";
-            this.rbStopSelling.Size = new System.Drawing.Size(146, 21);
-            this.rbStopSelling.TabIndex = 3;
+            this.rbStopSelling.Size = new System.Drawing.Size(147, 23);
+            this.rbStopSelling.TabIndex = 1;
             this.rbStopSelling.Text = "Stop selling";
             this.rbStopSelling.UseVisualStyleBackColor = true;
             // 
@@ -332,46 +315,65 @@ namespace GUI
             this.rbSelling.AutoSize = true;
             this.rbSelling.Checked = true;
             this.rbSelling.Dock = System.Windows.Forms.DockStyle.Left;
-            this.rbSelling.Font = new System.Drawing.Font("Poppins", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbSelling.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
-            this.rbSelling.Location = new System.Drawing.Point(10, 0);
+            this.rbSelling.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold);
+            this.rbSelling.ForeColor = System.Drawing.Color.Orange;
+            this.rbSelling.Location = new System.Drawing.Point(20, 0);
             this.rbSelling.Name = "rbSelling";
-            this.rbSelling.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.rbSelling.Size = new System.Drawing.Size(109, 21);
+            this.rbSelling.Size = new System.Drawing.Size(98, 23);
             this.rbSelling.TabIndex = 0;
             this.rbSelling.TabStop = true;
             this.rbSelling.Text = "Selling";
             this.rbSelling.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel6
+            // lbState
             // 
-            this.tableLayoutPanel6.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel6.ColumnCount = 3;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.0211F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.70886F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.48101F));
-            this.tableLayoutPanel6.Controls.Add(this.txtQuantity, 1, 1);
-            this.tableLayoutPanel6.Controls.Add(this.nudPrice, 0, 1);
-            this.tableLayoutPanel6.Controls.Add(this.lbPrice, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.lbQuantity, 1, 0);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(5, 238);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 5);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 2;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.55556F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64.44444F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(474, 45);
-            this.tableLayoutPanel6.TabIndex = 3;
+            this.lbState.BackColor = System.Drawing.Color.Transparent;
+            this.lbState.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbState.Font = new System.Drawing.Font("Poppins", 11F);
+            this.lbState.ForeColor = System.Drawing.Color.Orange;
+            this.lbState.Location = new System.Drawing.Point(0, 0);
+            this.lbState.Margin = new System.Windows.Forms.Padding(0);
+            this.lbState.Name = "lbState";
+            this.lbState.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.lbState.Size = new System.Drawing.Size(374, 17);
+            this.lbState.TabIndex = 33;
+            this.lbState.Text = "State";
+            this.lbState.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // pnPriceAndQuantity
+            // 
+            this.pnPriceAndQuantity.BackColor = System.Drawing.Color.Transparent;
+            this.pnPriceAndQuantity.Controls.Add(this.pnQuantity);
+            this.pnPriceAndQuantity.Controls.Add(this.pnPrice);
+            this.pnPriceAndQuantity.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnPriceAndQuantity.Location = new System.Drawing.Point(5, 230);
+            this.pnPriceAndQuantity.Name = "pnPriceAndQuantity";
+            this.pnPriceAndQuantity.Padding = new System.Windows.Forms.Padding(10, 5, 10, 0);
+            this.pnPriceAndQuantity.ShadowDecoration.Parent = this.pnPriceAndQuantity;
+            this.pnPriceAndQuantity.Size = new System.Drawing.Size(484, 45);
+            this.pnPriceAndQuantity.TabIndex = 12;
+            // 
+            // pnQuantity
+            // 
+            this.pnQuantity.BackColor = System.Drawing.Color.Transparent;
+            this.pnQuantity.Controls.Add(this.txtQuantity);
+            this.pnQuantity.Controls.Add(this.lbQuantity);
+            this.pnQuantity.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnQuantity.Location = new System.Drawing.Point(141, 5);
+            this.pnQuantity.Name = "pnQuantity";
+            this.pnQuantity.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.pnQuantity.ShadowDecoration.Parent = this.pnQuantity;
+            this.pnQuantity.Size = new System.Drawing.Size(53, 40);
+            this.pnQuantity.TabIndex = 2;
             // 
             // txtQuantity
             // 
             this.txtQuantity.AutoRoundedCorners = true;
             this.txtQuantity.BorderColor = System.Drawing.Color.Goldenrod;
-            this.txtQuantity.BorderRadius = 9;
+            this.txtQuantity.BorderRadius = 10;
             this.txtQuantity.BorderThickness = 2;
             this.txtQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtQuantity.DefaultText = "0";
+            this.txtQuantity.DefaultText = "";
             this.txtQuantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtQuantity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtQuantity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -382,29 +384,57 @@ namespace GUI
             this.txtQuantity.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.txtQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtQuantity.FocusedState.Parent = this.txtQuantity;
-            this.txtQuantity.Font = new System.Drawing.Font("Roboto Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantity.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.txtQuantity.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtQuantity.HoverState.Parent = this.txtQuantity;
-            this.txtQuantity.Location = new System.Drawing.Point(175, 19);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(10, 3, 10, 5);
-            this.txtQuantity.MaximumSize = new System.Drawing.Size(500, 50);
+            this.txtQuantity.Location = new System.Drawing.Point(5, 17);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(9, 3, 9, 5);
+            this.txtQuantity.MaximumSize = new System.Drawing.Size(455, 45);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.txtQuantity.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.txtQuantity.PasswordChar = '\0';
             this.txtQuantity.PlaceholderText = "";
             this.txtQuantity.SelectedText = "";
-            this.txtQuantity.SelectionStart = 1;
             this.txtQuantity.ShadowDecoration.Parent = this.txtQuantity;
-            this.txtQuantity.Size = new System.Drawing.Size(153, 21);
-            this.txtQuantity.TabIndex = 30;
+            this.txtQuantity.Size = new System.Drawing.Size(48, 23);
+            this.txtQuantity.TabIndex = 34;
+            this.txtQuantity.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // lbQuantity
+            // 
+            this.lbQuantity.BackColor = System.Drawing.Color.Transparent;
+            this.lbQuantity.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbQuantity.Font = new System.Drawing.Font("Poppins", 11F);
+            this.lbQuantity.ForeColor = System.Drawing.Color.Orange;
+            this.lbQuantity.Location = new System.Drawing.Point(5, 0);
+            this.lbQuantity.Margin = new System.Windows.Forms.Padding(0);
+            this.lbQuantity.Name = "lbQuantity";
+            this.lbQuantity.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.lbQuantity.Size = new System.Drawing.Size(48, 17);
+            this.lbQuantity.TabIndex = 33;
+            this.lbQuantity.Text = "Quantity";
+            this.lbQuantity.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // pnPrice
+            // 
+            this.pnPrice.BackColor = System.Drawing.Color.Transparent;
+            this.pnPrice.Controls.Add(this.nudPrice);
+            this.pnPrice.Controls.Add(this.lbPrice);
+            this.pnPrice.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnPrice.Location = new System.Drawing.Point(10, 5);
+            this.pnPrice.Name = "pnPrice";
+            this.pnPrice.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.pnPrice.ShadowDecoration.Parent = this.pnPrice;
+            this.pnPrice.Size = new System.Drawing.Size(131, 40);
+            this.pnPrice.TabIndex = 1;
             // 
             // nudPrice
             // 
             this.nudPrice.AutoRoundedCorners = true;
             this.nudPrice.BackColor = System.Drawing.Color.Transparent;
             this.nudPrice.BorderColor = System.Drawing.Color.Goldenrod;
-            this.nudPrice.BorderRadius = 9;
+            this.nudPrice.BorderRadius = 10;
             this.nudPrice.BorderThickness = 2;
             this.nudPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nudPrice.DisabledState.Parent = this.nudPrice;
@@ -418,7 +448,7 @@ namespace GUI
             0,
             0,
             0});
-            this.nudPrice.Location = new System.Drawing.Point(10, 19);
+            this.nudPrice.Location = new System.Drawing.Point(0, 17);
             this.nudPrice.Margin = new System.Windows.Forms.Padding(10, 3, 10, 5);
             this.nudPrice.Maximum = new decimal(new int[] {
             1000000,
@@ -433,8 +463,9 @@ namespace GUI
             0});
             this.nudPrice.Name = "nudPrice";
             this.nudPrice.ShadowDecoration.Parent = this.nudPrice;
-            this.nudPrice.Size = new System.Drawing.Size(145, 21);
-            this.nudPrice.TabIndex = 29;
+            this.nudPrice.Size = new System.Drawing.Size(121, 23);
+            this.nudPrice.TabIndex = 34;
+            this.nudPrice.TextOffset = new System.Drawing.Point(10, 0);
             this.nudPrice.UpDownButtonFillColor = System.Drawing.Color.Orange;
             this.nudPrice.Value = new decimal(new int[] {
             1000,
@@ -444,48 +475,107 @@ namespace GUI
             // 
             // lbPrice
             // 
-            this.lbPrice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbPrice.Font = new System.Drawing.Font("Poppins", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPrice.BackColor = System.Drawing.Color.Transparent;
+            this.lbPrice.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbPrice.Font = new System.Drawing.Font("Poppins", 11F);
             this.lbPrice.ForeColor = System.Drawing.Color.Orange;
-            this.lbPrice.Location = new System.Drawing.Point(20, 0);
-            this.lbPrice.Margin = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.lbPrice.Location = new System.Drawing.Point(0, 0);
+            this.lbPrice.Margin = new System.Windows.Forms.Padding(0);
             this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(145, 16);
-            this.lbPrice.TabIndex = 29;
+            this.lbPrice.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.lbPrice.Size = new System.Drawing.Size(121, 17);
+            this.lbPrice.TabIndex = 33;
             this.lbPrice.Text = "Price";
+            this.lbPrice.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // lbQuantity
+            // pnPhoneAndID
             // 
-            this.lbQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbQuantity.Font = new System.Drawing.Font("Poppins", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbQuantity.ForeColor = System.Drawing.Color.Orange;
-            this.lbQuantity.Location = new System.Drawing.Point(185, 0);
-            this.lbQuantity.Margin = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.lbQuantity.Name = "lbQuantity";
-            this.lbQuantity.Size = new System.Drawing.Size(153, 16);
-            this.lbQuantity.TabIndex = 29;
-            this.lbQuantity.Text = "Quantity";
+            this.pnPhoneAndID.BackColor = System.Drawing.Color.Transparent;
+            this.pnPhoneAndID.Controls.Add(this.pnId);
+            this.pnPhoneAndID.Controls.Add(this.pnPhoneNumber);
+            this.pnPhoneAndID.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnPhoneAndID.Location = new System.Drawing.Point(5, 185);
+            this.pnPhoneAndID.Name = "pnPhoneAndID";
+            this.pnPhoneAndID.Padding = new System.Windows.Forms.Padding(10, 5, 10, 0);
+            this.pnPhoneAndID.ShadowDecoration.Parent = this.pnPhoneAndID;
+            this.pnPhoneAndID.Size = new System.Drawing.Size(484, 45);
+            this.pnPhoneAndID.TabIndex = 11;
             // 
-            // tableLayoutPanel5
+            // pnId
             // 
-            this.tableLayoutPanel5.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel5.ColumnCount = 3;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.23207F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.2616F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.7173F));
-            this.tableLayoutPanel5.Controls.Add(this.cbbUnit, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.lbID, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.txtID, 1, 1);
-            this.tableLayoutPanel5.Controls.Add(this.lbUnit, 0, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(5, 188);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 5);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 2;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.77778F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.22222F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(474, 45);
-            this.tableLayoutPanel5.TabIndex = 2;
+            this.pnId.BackColor = System.Drawing.Color.Transparent;
+            this.pnId.Controls.Add(this.txtID);
+            this.pnId.Controls.Add(this.lbID);
+            this.pnId.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnId.Location = new System.Drawing.Point(141, 5);
+            this.pnId.Name = "pnId";
+            this.pnId.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.pnId.ShadowDecoration.Parent = this.pnId;
+            this.pnId.Size = new System.Drawing.Size(53, 40);
+            this.pnId.TabIndex = 3;
+            // 
+            // txtID
+            // 
+            this.txtID.AutoRoundedCorners = true;
+            this.txtID.BorderColor = System.Drawing.Color.Goldenrod;
+            this.txtID.BorderRadius = 10;
+            this.txtID.BorderThickness = 2;
+            this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtID.DefaultText = "";
+            this.txtID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtID.DisabledState.Parent = this.txtID;
+            this.txtID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtID.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtID.Enabled = false;
+            this.txtID.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
+            this.txtID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtID.FocusedState.Parent = this.txtID;
+            this.txtID.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtID.HoverState.Parent = this.txtID;
+            this.txtID.Location = new System.Drawing.Point(5, 17);
+            this.txtID.Margin = new System.Windows.Forms.Padding(9, 3, 9, 5);
+            this.txtID.MaximumSize = new System.Drawing.Size(455, 45);
+            this.txtID.Name = "txtID";
+            this.txtID.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.txtID.PasswordChar = '\0';
+            this.txtID.PlaceholderText = "";
+            this.txtID.SelectedText = "";
+            this.txtID.ShadowDecoration.Parent = this.txtID;
+            this.txtID.Size = new System.Drawing.Size(48, 23);
+            this.txtID.TabIndex = 34;
+            this.txtID.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // lbID
+            // 
+            this.lbID.BackColor = System.Drawing.Color.Transparent;
+            this.lbID.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbID.Font = new System.Drawing.Font("Poppins", 11F);
+            this.lbID.ForeColor = System.Drawing.Color.Orange;
+            this.lbID.Location = new System.Drawing.Point(5, 0);
+            this.lbID.Margin = new System.Windows.Forms.Padding(0);
+            this.lbID.Name = "lbID";
+            this.lbID.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.lbID.Size = new System.Drawing.Size(48, 17);
+            this.lbID.TabIndex = 33;
+            this.lbID.Text = "ID";
+            this.lbID.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // pnPhoneNumber
+            // 
+            this.pnPhoneNumber.BackColor = System.Drawing.Color.Transparent;
+            this.pnPhoneNumber.Controls.Add(this.cbbUnit);
+            this.pnPhoneNumber.Controls.Add(this.lbPhoneNumber);
+            this.pnPhoneNumber.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnPhoneNumber.Location = new System.Drawing.Point(10, 5);
+            this.pnPhoneNumber.Name = "pnPhoneNumber";
+            this.pnPhoneNumber.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.pnPhoneNumber.ShadowDecoration.Parent = this.pnPhoneNumber;
+            this.pnPhoneNumber.Size = new System.Drawing.Size(131, 40);
+            this.pnPhoneNumber.TabIndex = 1;
             // 
             // cbbUnit
             // 
@@ -518,72 +608,93 @@ namespace GUI
             "Cái",
             "Thùng"});
             this.cbbUnit.ItemsAppearance.Parent = this.cbbUnit;
-            this.cbbUnit.Location = new System.Drawing.Point(10, 20);
+            this.cbbUnit.Location = new System.Drawing.Point(0, 17);
             this.cbbUnit.Margin = new System.Windows.Forms.Padding(10, 3, 10, 5);
             this.cbbUnit.MaximumSize = new System.Drawing.Size(500, 0);
             this.cbbUnit.Name = "cbbUnit";
             this.cbbUnit.ShadowDecoration.Parent = this.cbbUnit;
-            this.cbbUnit.Size = new System.Drawing.Size(146, 36);
-            this.cbbUnit.TabIndex = 30;
+            this.cbbUnit.Size = new System.Drawing.Size(121, 36);
+            this.cbbUnit.TabIndex = 34;
+            this.cbbUnit.TextOffset = new System.Drawing.Point(10, 0);
             this.cbbUnit.SelectedIndexChanged += new System.EventHandler(this.cbbUnit_SelectedIndexChanged);
             // 
-            // lbID
+            // lbPhoneNumber
             // 
-            this.lbID.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbID.Font = new System.Drawing.Font("Poppins", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbID.ForeColor = System.Drawing.Color.Orange;
-            this.lbID.Location = new System.Drawing.Point(186, 0);
-            this.lbID.Margin = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.lbID.Name = "lbID";
-            this.lbID.Size = new System.Drawing.Size(94, 17);
-            this.lbID.TabIndex = 29;
-            this.lbID.Text = "ID";
+            this.lbPhoneNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lbPhoneNumber.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbPhoneNumber.Font = new System.Drawing.Font("Poppins", 11F);
+            this.lbPhoneNumber.ForeColor = System.Drawing.Color.Orange;
+            this.lbPhoneNumber.Location = new System.Drawing.Point(0, 0);
+            this.lbPhoneNumber.Margin = new System.Windows.Forms.Padding(0);
+            this.lbPhoneNumber.Name = "lbPhoneNumber";
+            this.lbPhoneNumber.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.lbPhoneNumber.Size = new System.Drawing.Size(121, 17);
+            this.lbPhoneNumber.TabIndex = 33;
+            this.lbPhoneNumber.Text = "Unit";
+            this.lbPhoneNumber.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // txtID
+            // pnName
             // 
-            this.txtID.AutoRoundedCorners = true;
-            this.txtID.BorderColor = System.Drawing.Color.Goldenrod;
-            this.txtID.BorderRadius = 9;
-            this.txtID.BorderThickness = 2;
-            this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtID.DefaultText = "";
-            this.txtID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtID.DisabledState.Parent = this.txtID;
-            this.txtID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtID.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtID.Enabled = false;
-            this.txtID.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
-            this.txtID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtID.FocusedState.Parent = this.txtID;
-            this.txtID.Font = new System.Drawing.Font("Roboto Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txtID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtID.HoverState.Parent = this.txtID;
-            this.txtID.Location = new System.Drawing.Point(176, 20);
-            this.txtID.Margin = new System.Windows.Forms.Padding(10, 3, 10, 5);
-            this.txtID.MaximumSize = new System.Drawing.Size(500, 50);
-            this.txtID.Name = "txtID";
-            this.txtID.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.txtID.PasswordChar = '\0';
-            this.txtID.PlaceholderText = "";
-            this.txtID.SelectedText = "";
-            this.txtID.ShadowDecoration.Parent = this.txtID;
-            this.txtID.Size = new System.Drawing.Size(94, 20);
-            this.txtID.TabIndex = 30;
+            this.pnName.BackColor = System.Drawing.Color.Transparent;
+            this.pnName.Controls.Add(this.txtName);
+            this.pnName.Controls.Add(this.lbName);
+            this.pnName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnName.Location = new System.Drawing.Point(5, 140);
+            this.pnName.Name = "pnName";
+            this.pnName.Padding = new System.Windows.Forms.Padding(10, 5, 10, 0);
+            this.pnName.ShadowDecoration.Parent = this.pnName;
+            this.pnName.Size = new System.Drawing.Size(484, 45);
+            this.pnName.TabIndex = 10;
             // 
-            // lbUnit
+            // txtName
             // 
-            this.lbUnit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbUnit.Font = new System.Drawing.Font("Poppins", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUnit.ForeColor = System.Drawing.Color.Orange;
-            this.lbUnit.Location = new System.Drawing.Point(20, 0);
-            this.lbUnit.Margin = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.lbUnit.Name = "lbUnit";
-            this.lbUnit.Size = new System.Drawing.Size(146, 17);
-            this.lbUnit.TabIndex = 30;
-            this.lbUnit.Text = "Unit";
+            this.txtName.AutoRoundedCorners = true;
+            this.txtName.BorderColor = System.Drawing.Color.Goldenrod;
+            this.txtName.BorderRadius = 10;
+            this.txtName.BorderThickness = 2;
+            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtName.DefaultText = "";
+            this.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtName.DisabledState.Parent = this.txtName;
+            this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
+            this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtName.FocusedState.Parent = this.txtName;
+            this.txtName.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtName.HoverState.Parent = this.txtName;
+            this.txtName.Location = new System.Drawing.Point(10, 22);
+            this.txtName.Margin = new System.Windows.Forms.Padding(9, 3, 9, 5);
+            this.txtName.MaximumSize = new System.Drawing.Size(455, 45);
+            this.txtName.Name = "txtName";
+            this.txtName.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.txtName.PasswordChar = '\0';
+            this.txtName.PlaceholderText = "";
+            this.txtName.SelectedText = "";
+            this.txtName.ShadowDecoration.Parent = this.txtName;
+            this.txtName.Size = new System.Drawing.Size(455, 23);
+            this.txtName.TabIndex = 32;
+            this.txtName.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
+            // 
+            // lbName
+            // 
+            this.lbName.BackColor = System.Drawing.Color.Transparent;
+            this.lbName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbName.Font = new System.Drawing.Font("Poppins", 11F);
+            this.lbName.ForeColor = System.Drawing.Color.Orange;
+            this.lbName.Location = new System.Drawing.Point(10, 5);
+            this.lbName.Margin = new System.Windows.Forms.Padding(0);
+            this.lbName.Name = "lbName";
+            this.lbName.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.lbName.Size = new System.Drawing.Size(464, 17);
+            this.lbName.TabIndex = 31;
+            this.lbName.Text = "Name";
+            this.lbName.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // tlpPictureSide
             // 
@@ -591,33 +702,33 @@ namespace GUI
             this.tlpPictureSide.ColumnCount = 2;
             this.tlpPictureSide.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.85106F));
             this.tlpPictureSide.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.14894F));
-            this.tlpPictureSide.Controls.Add(this.pbPiture, 0, 0);
+            this.tlpPictureSide.Controls.Add(this.pbPicture, 0, 0);
             this.tlpPictureSide.Controls.Add(this.pnPictureButton, 1, 0);
-            this.tlpPictureSide.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpPictureSide.Dock = System.Windows.Forms.DockStyle.Top;
             this.tlpPictureSide.Location = new System.Drawing.Point(5, 5);
             this.tlpPictureSide.Margin = new System.Windows.Forms.Padding(5);
             this.tlpPictureSide.Name = "tlpPictureSide";
             this.tlpPictureSide.RowCount = 1;
             this.tlpPictureSide.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpPictureSide.Size = new System.Drawing.Size(474, 130);
-            this.tlpPictureSide.TabIndex = 0;
+            this.tlpPictureSide.Size = new System.Drawing.Size(484, 135);
+            this.tlpPictureSide.TabIndex = 2;
             // 
-            // pbPiture
+            // pbPicture
             // 
-            this.pbPiture.BorderRadius = 10;
-            this.pbPiture.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbPiture.FillColor = System.Drawing.Color.Silver;
-            this.pbPiture.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.pbPiture.Image = ((System.Drawing.Image)(resources.GetObject("pbPiture.Image")));
-            this.pbPiture.ImageRotate = 0F;
-            this.pbPiture.Location = new System.Drawing.Point(10, 10);
-            this.pbPiture.Margin = new System.Windows.Forms.Padding(10, 10, 0, 10);
-            this.pbPiture.Name = "pbPiture";
-            this.pbPiture.ShadowDecoration.Parent = this.pbPiture;
-            this.pbPiture.Size = new System.Drawing.Size(231, 110);
-            this.pbPiture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPiture.TabIndex = 5;
-            this.pbPiture.TabStop = false;
+            this.pbPicture.BorderRadius = 10;
+            this.pbPicture.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbPicture.FillColor = System.Drawing.Color.Silver;
+            this.pbPicture.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.pbPicture.Image = ((System.Drawing.Image)(resources.GetObject("pbPicture.Image")));
+            this.pbPicture.ImageRotate = 0F;
+            this.pbPicture.Location = new System.Drawing.Point(10, 10);
+            this.pbPicture.Margin = new System.Windows.Forms.Padding(10, 10, 0, 10);
+            this.pbPicture.Name = "pbPicture";
+            this.pbPicture.ShadowDecoration.Parent = this.pbPicture;
+            this.pbPicture.Size = new System.Drawing.Size(236, 115);
+            this.pbPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPicture.TabIndex = 5;
+            this.pbPicture.TabStop = false;
             // 
             // pnPictureButton
             // 
@@ -625,12 +736,12 @@ namespace GUI
             this.pnPictureButton.Controls.Add(this.pnDeletePicture);
             this.pnPictureButton.Controls.Add(this.pnChangePicture);
             this.pnPictureButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnPictureButton.Location = new System.Drawing.Point(246, 5);
+            this.pnPictureButton.Location = new System.Drawing.Point(251, 5);
             this.pnPictureButton.Margin = new System.Windows.Forms.Padding(5);
             this.pnPictureButton.Name = "pnPictureButton";
             this.pnPictureButton.Padding = new System.Windows.Forms.Padding(10);
             this.pnPictureButton.ShadowDecoration.Parent = this.pnPictureButton;
-            this.pnPictureButton.Size = new System.Drawing.Size(223, 120);
+            this.pnPictureButton.Size = new System.Drawing.Size(228, 125);
             this.pnPictureButton.TabIndex = 6;
             // 
             // pnDeletePicture
@@ -641,7 +752,7 @@ namespace GUI
             this.pnDeletePicture.Location = new System.Drawing.Point(10, 49);
             this.pnDeletePicture.Name = "pnDeletePicture";
             this.pnDeletePicture.Padding = new System.Windows.Forms.Padding(5, 5, 5, 10);
-            this.pnDeletePicture.Size = new System.Drawing.Size(203, 39);
+            this.pnDeletePicture.Size = new System.Drawing.Size(208, 39);
             this.pnDeletePicture.TabIndex = 1;
             // 
             // btnDeletePicture
@@ -670,7 +781,7 @@ namespace GUI
             this.btnDeletePicture.Name = "btnDeletePicture";
             this.btnDeletePicture.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
             this.btnDeletePicture.ShadowDecoration.Parent = this.btnDeletePicture;
-            this.btnDeletePicture.Size = new System.Drawing.Size(193, 24);
+            this.btnDeletePicture.Size = new System.Drawing.Size(198, 24);
             this.btnDeletePicture.TabIndex = 1;
             this.btnDeletePicture.Text = "Delete";
             this.btnDeletePicture.Click += new System.EventHandler(this.btnDeletePicture_Click);
@@ -683,7 +794,7 @@ namespace GUI
             this.pnChangePicture.Location = new System.Drawing.Point(10, 10);
             this.pnChangePicture.Name = "pnChangePicture";
             this.pnChangePicture.Padding = new System.Windows.Forms.Padding(5, 5, 5, 10);
-            this.pnChangePicture.Size = new System.Drawing.Size(203, 39);
+            this.pnChangePicture.Size = new System.Drawing.Size(208, 39);
             this.pnChangePicture.TabIndex = 0;
             // 
             // btnChangePicture
@@ -712,86 +823,10 @@ namespace GUI
             this.btnChangePicture.Name = "btnChangePicture";
             this.btnChangePicture.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
             this.btnChangePicture.ShadowDecoration.Parent = this.btnChangePicture;
-            this.btnChangePicture.Size = new System.Drawing.Size(193, 24);
+            this.btnChangePicture.Size = new System.Drawing.Size(198, 24);
             this.btnChangePicture.TabIndex = 1;
             this.btnChangePicture.Text = "Change";
             this.btnChangePicture.Click += new System.EventHandler(this.btnChangePicture_Click);
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.AutoSize = true;
-            this.tableLayoutPanel4.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Controls.Add(this.txtName, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.lbName, 0, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(5, 140);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 5);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.55556F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64.44444F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(474, 43);
-            this.tableLayoutPanel4.TabIndex = 1;
-            // 
-            // txtName
-            // 
-            this.txtName.AutoRoundedCorners = true;
-            this.txtName.BorderColor = System.Drawing.Color.Goldenrod;
-            this.txtName.BorderRadius = 9;
-            this.txtName.BorderThickness = 2;
-            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtName.DefaultText = "";
-            this.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtName.DisabledState.Parent = this.txtName;
-            this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
-            this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.FocusedState.Parent = this.txtName;
-            this.txtName.Font = new System.Drawing.Font("Roboto Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.HoverState.Parent = this.txtName;
-            this.txtName.Location = new System.Drawing.Point(10, 18);
-            this.txtName.Margin = new System.Windows.Forms.Padding(10, 3, 10, 5);
-            this.txtName.MaximumSize = new System.Drawing.Size(500, 50);
-            this.txtName.Name = "txtName";
-            this.txtName.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.txtName.PasswordChar = '\0';
-            this.txtName.PlaceholderText = "";
-            this.txtName.SelectedText = "";
-            this.txtName.ShadowDecoration.Parent = this.txtName;
-            this.txtName.Size = new System.Drawing.Size(454, 20);
-            this.txtName.TabIndex = 29;
-            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
-            // 
-            // lbName
-            // 
-            this.lbName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbName.Font = new System.Drawing.Font("Poppins", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.ForeColor = System.Drawing.Color.Orange;
-            this.lbName.Location = new System.Drawing.Point(20, 0);
-            this.lbName.Margin = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(454, 15);
-            this.lbName.TabIndex = 28;
-            this.lbName.Text = "Name";
-            // 
-            // lbTypeInput
-            // 
-            this.lbTypeInput.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbTypeInput.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTypeInput.ForeColor = System.Drawing.Color.Red;
-            this.lbTypeInput.Location = new System.Drawing.Point(10, 750);
-            this.lbTypeInput.Margin = new System.Windows.Forms.Padding(10, 5, 5, 0);
-            this.lbTypeInput.Name = "lbTypeInput";
-            this.lbTypeInput.Size = new System.Drawing.Size(469, 15);
-            this.lbTypeInput.TabIndex = 6;
-            this.lbTypeInput.Text = "*Please type all information*";
             // 
             // pnSideBarFooter
             // 
@@ -1461,6 +1496,18 @@ namespace GUI
             this.dgvGoods.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvGoods.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGoods_CellClick);
             // 
+            // lbTypeInput
+            // 
+            this.lbTypeInput.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbTypeInput.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTypeInput.ForeColor = System.Drawing.Color.Red;
+            this.lbTypeInput.Location = new System.Drawing.Point(5, 755);
+            this.lbTypeInput.Margin = new System.Windows.Forms.Padding(10, 5, 5, 0);
+            this.lbTypeInput.Name = "lbTypeInput";
+            this.lbTypeInput.Size = new System.Drawing.Size(484, 15);
+            this.lbTypeInput.TabIndex = 22;
+            this.lbTypeInput.Text = "*Please type all information*";
+            // 
             // ecDgvGoods
             // 
             this.ecDgvGoods.CornerRadius = 20;
@@ -1485,21 +1532,24 @@ namespace GUI
             this.tlpWrapper.PerformLayout();
             this.pnSideBar.ResumeLayout(false);
             this.pnSideBarBody.ResumeLayout(false);
-            this.tlpSideBarBody.ResumeLayout(false);
-            this.tlpSideBarBody.PerformLayout();
-            this.tableLayoutPanel8.ResumeLayout(false);
-            this.tableLayoutPanel7.ResumeLayout(false);
+            this.pnUrl.ResumeLayout(false);
+            this.pnStateOption.ResumeLayout(false);
             this.pnState.ResumeLayout(false);
-            this.pnState.PerformLayout();
-            this.tableLayoutPanel6.ResumeLayout(false);
+            this.pnStateOptionWrapper.ResumeLayout(false);
+            this.pnStateOptionWrapper.PerformLayout();
+            this.pnPriceAndQuantity.ResumeLayout(false);
+            this.pnQuantity.ResumeLayout(false);
+            this.pnPrice.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nudPrice)).EndInit();
-            this.tableLayoutPanel5.ResumeLayout(false);
+            this.pnPhoneAndID.ResumeLayout(false);
+            this.pnId.ResumeLayout(false);
+            this.pnPhoneNumber.ResumeLayout(false);
+            this.pnName.ResumeLayout(false);
             this.tlpPictureSide.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbPiture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).EndInit();
             this.pnPictureButton.ResumeLayout(false);
             this.pnDeletePicture.ResumeLayout(false);
             this.pnChangePicture.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
             this.pnSideBarFooter.ResumeLayout(false);
             this.tlpSideBarFooter.ResumeLayout(false);
             this.pnSideBarHeader.ResumeLayout(false);
@@ -1549,46 +1599,50 @@ namespace GUI
         private Guna.UI2.WinForms.Guna2DataGridView dgvGoods;
         private Guna.UI2.WinForms.Guna2Panel pnSideBar;
         private Guna.UI2.WinForms.Guna2Panel pnSideBarBody;
-        private System.Windows.Forms.TableLayoutPanel tlpSideBarBody;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private Guna.UI2.WinForms.Guna2TextBox txtUrlImage;
-        private System.Windows.Forms.Label lbUrlImage;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.Label lbState;
-        private Guna.UI2.WinForms.Guna2Panel pnState;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private Guna.UI2.WinForms.Guna2TextBox txtQuantity;
-        private System.Windows.Forms.Label lbPrice;
-        private System.Windows.Forms.Label lbQuantity;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private Guna.UI2.WinForms.Guna2ComboBox cbbUnit;
-        private System.Windows.Forms.Label lbID;
-        private Guna.UI2.WinForms.Guna2TextBox txtID;
-        private System.Windows.Forms.Label lbUnit;
-        private System.Windows.Forms.TableLayoutPanel tlpPictureSide;
-        private Guna.UI2.WinForms.Guna2PictureBox pbPiture;
-        private Guna.UI2.WinForms.Guna2Panel pnPictureButton;
-        private System.Windows.Forms.Panel pnDeletePicture;
-        private Guna.UI2.WinForms.Guna2Button btnDeletePicture;
-        private System.Windows.Forms.Panel pnChangePicture;
-        private Guna.UI2.WinForms.Guna2Button btnChangePicture;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private Guna.UI2.WinForms.Guna2TextBox txtName;
-        private System.Windows.Forms.Label lbName;
         private Guna.UI2.WinForms.Guna2Panel pnSideBarFooter;
         private System.Windows.Forms.TableLayoutPanel tlpSideBarFooter;
         private Guna.UI2.WinForms.Guna2Button btnSideBarCancel;
         private Guna.UI2.WinForms.Guna2Button btnSideBarConfirm;
         private Guna.UI2.WinForms.Guna2Panel pnSideBarHeader;
         private Guna.UI2.WinForms.Guna2Button btnTick;
-        private System.Windows.Forms.RadioButton rbSelling;
         private Guna.UI2.WinForms.Guna2Button btnCollapse;
-        private Guna.UI2.WinForms.Guna2NumericUpDown nudPrice;
         private System.Windows.Forms.Label lbSideBarTitle;
         private ElipseToolDemo.ElipseControl ecTlpPictureSide;
-        private System.Windows.Forms.RadioButton rbStopSelling;
-        private System.Windows.Forms.Label lbTypeInput;
         private Guna.UI2.WinForms.Guna2Button btnStopSelling;
         private Guna.UI2.WinForms.Guna2Button btnSoldOut;
+        private System.Windows.Forms.TableLayoutPanel tlpPictureSide;
+        private Guna.UI2.WinForms.Guna2PictureBox pbPicture;
+        private Guna.UI2.WinForms.Guna2Panel pnPictureButton;
+        private System.Windows.Forms.Panel pnDeletePicture;
+        private Guna.UI2.WinForms.Guna2Button btnDeletePicture;
+        private System.Windows.Forms.Panel pnChangePicture;
+        private Guna.UI2.WinForms.Guna2Button btnChangePicture;
+        private Guna.UI2.WinForms.Guna2Panel pnName;
+        private Guna.UI2.WinForms.Guna2TextBox txtName;
+        private System.Windows.Forms.Label lbName;
+        private Guna.UI2.WinForms.Guna2Panel pnPhoneAndID;
+        private Guna.UI2.WinForms.Guna2Panel pnId;
+        private Guna.UI2.WinForms.Guna2TextBox txtID;
+        private System.Windows.Forms.Label lbID;
+        private Guna.UI2.WinForms.Guna2Panel pnPhoneNumber;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbUnit;
+        private System.Windows.Forms.Label lbPhoneNumber;
+        private Guna.UI2.WinForms.Guna2Panel pnPriceAndQuantity;
+        private Guna.UI2.WinForms.Guna2Panel pnQuantity;
+        private Guna.UI2.WinForms.Guna2TextBox txtQuantity;
+        private System.Windows.Forms.Label lbQuantity;
+        private Guna.UI2.WinForms.Guna2Panel pnPrice;
+        private Guna.UI2.WinForms.Guna2NumericUpDown nudPrice;
+        private System.Windows.Forms.Label lbPrice;
+        private Guna.UI2.WinForms.Guna2Panel pnUrl;
+        private Guna.UI2.WinForms.Guna2TextBox txtUrlImage;
+        private System.Windows.Forms.Label lbUrl;
+        private Guna.UI2.WinForms.Guna2Panel pnStateOption;
+        private Guna.UI2.WinForms.Guna2Panel pnState;
+        private Guna.UI2.WinForms.Guna2Panel pnStateOptionWrapper;
+        private System.Windows.Forms.RadioButton rbStopSelling;
+        private System.Windows.Forms.RadioButton rbSelling;
+        private System.Windows.Forms.Label lbState;
+        private System.Windows.Forms.Label lbTypeInput;
     }
 }

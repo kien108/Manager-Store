@@ -11,22 +11,21 @@ namespace BLL
 {
     public class BLL_Bill
     {
-        DataAccess dal = new DataAccess();
 
         public DataTable GetAllBills(ref string error)
         {
-            return dal.ExecuteQueryData("sp_GetAllBills", CommandType.StoredProcedure, ref error);
+            return BLL.dal.ExecuteQueryData("sp_GetAllBills", CommandType.StoredProcedure, ref error);
         }
 
         public DataTable SearchBills(string paramName, object paramValue, ref string error)
         {
-            return dal.ExecuteQueryData("sp_SearchBill", CommandType.StoredProcedure, ref error, new SqlParameter(paramName, paramValue));
+            return BLL.dal.ExecuteQueryData("sp_SearchBill", CommandType.StoredProcedure, ref error, new SqlParameter(paramName, paramValue));
         }
 
         public string UpdateBill(int bid, int eid, string time)
         {
             string error = null, message = null;
-            bool updated = dal.ExecuteNonQuery("sp_UpdateBill", CommandType.StoredProcedure, ref error, ref message,
+            bool updated = BLL.dal.ExecuteNonQuery("sp_UpdateBill", CommandType.StoredProcedure, ref error, ref message,
                 new SqlParameter("bid", bid),
                 new SqlParameter("eid", eid),
                 new SqlParameter("time", time));
@@ -40,7 +39,7 @@ namespace BLL
         public string UpdateBill(int bid, int gid, int quantity)
         {
             string error = null, message = null;
-            bool updated = dal.ExecuteNonQuery("sp_UpdateBill", CommandType.StoredProcedure, ref error, ref message,
+            bool updated = BLL.dal.ExecuteNonQuery("sp_UpdateBill", CommandType.StoredProcedure, ref error, ref message,
                 new SqlParameter("bid", bid),
                 new SqlParameter("gid", gid),
                 new SqlParameter("quantity", quantity));
@@ -54,7 +53,7 @@ namespace BLL
         public string DeleteBill(int bid)
         {
             string error = null, message = null;
-            bool updated = dal.ExecuteNonQuery("sp_DeleteBill", CommandType.StoredProcedure, ref error, ref message,
+            bool updated = BLL.dal.ExecuteNonQuery("sp_DeleteBill", CommandType.StoredProcedure, ref error, ref message,
                 new SqlParameter("bid", bid));
             if (error != null)
                 return "Delete failed!\n" + error;
@@ -66,7 +65,7 @@ namespace BLL
         public string DeleteBill(int bid, int gid)
         {
             string error = null, message = null;
-            bool updated = dal.ExecuteNonQuery("sp_DeleteBill", CommandType.StoredProcedure, ref error, ref message,
+            bool updated = BLL.dal.ExecuteNonQuery("sp_DeleteGoodsInBill", CommandType.StoredProcedure, ref error, ref message,
                 new SqlParameter("bid", bid),
                 new SqlParameter("gid", gid));
             if (error != null)
@@ -79,13 +78,13 @@ namespace BLL
         public int GetNewBillID()
         {
             string error = null;
-            return (int)dal.ExecuteScalar("select dbo.ft_CreateBillId()", CommandType.Text, ref error);
+            return (int)BLL.dal.ExecuteScalar("select dbo.ft_CreateBillId()", CommandType.Text, ref error);
         }
 
         public string InsertBill(int bid, string gname, int eid, int quantity)
         {
             string error = null, message = null;
-            bool inserted = dal.ExecuteNonQuery("sp_InsertBill", CommandType.StoredProcedure, ref error, ref message,
+            bool inserted = BLL.dal.ExecuteNonQuery("sp_InsertBill", CommandType.StoredProcedure, ref error, ref message,
                 new SqlParameter("bid", bid),
                 new SqlParameter("gname", gname),
                 new SqlParameter("eid", eid),
