@@ -32,33 +32,33 @@ namespace GUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain));
             this.pnLogo = new System.Windows.Forms.Panel();
             this.lbLogo = new System.Windows.Forms.Label();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.pnAccount = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnNameAndRole = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbRole = new System.Windows.Forms.Label();
+            this.lbName = new System.Windows.Forms.Label();
+            this.pbAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnNav = new Guna.UI2.WinForms.Guna2Panel();
             this.pnHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.pnWindowButton = new System.Windows.Forms.Panel();
+            this.btnMinimize = new Guna.UI2.WinForms.Guna2Button();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.lbHeader = new System.Windows.Forms.Label();
             this.pnContainer = new System.Windows.Forms.Panel();
             this.pnScreen = new Guna.UI2.WinForms.Guna2Panel();
             this.cmsAccount = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.myProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnNameAndRole = new Guna.UI2.WinForms.Guna2Panel();
-            this.lbName = new System.Windows.Forms.Label();
-            this.lbRole = new System.Windows.Forms.Label();
-            this.btnMinimize = new Guna.UI2.WinForms.Guna2Button();
-            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.pbAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.pnLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.pnAccount.SuspendLayout();
+            this.pnNameAndRole.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.pnNav.SuspendLayout();
             this.pnHeader.SuspendLayout();
             this.pnWindowButton.SuspendLayout();
             this.pnContainer.SuspendLayout();
             this.cmsAccount.SuspendLayout();
-            this.pnNameAndRole.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnLogo
@@ -86,6 +86,18 @@ namespace GUI
             this.lbLogo.Text = "WIBU MART";
             this.lbLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pbLogo
+            // 
+            this.pbLogo.BackgroundImage = global::Manage_Store.Properties.Resources.logo_yellow;
+            this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbLogo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pbLogo.Location = new System.Drawing.Point(15, 15);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(60, 61);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo.TabIndex = 3;
+            this.pbLogo.TabStop = false;
+            // 
             // pnAccount
             // 
             this.pnAccount.BackColor = System.Drawing.Color.Transparent;
@@ -101,6 +113,60 @@ namespace GUI
             this.pnAccount.Size = new System.Drawing.Size(200, 79);
             this.pnAccount.TabIndex = 1;
             this.pnAccount.UseTransparentBackground = true;
+            // 
+            // pnNameAndRole
+            // 
+            this.pnNameAndRole.Controls.Add(this.lbRole);
+            this.pnNameAndRole.Controls.Add(this.lbName);
+            this.pnNameAndRole.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnNameAndRole.Location = new System.Drawing.Point(75, 10);
+            this.pnNameAndRole.Name = "pnNameAndRole";
+            this.pnNameAndRole.Padding = new System.Windows.Forms.Padding(10, 5, 5, 5);
+            this.pnNameAndRole.ShadowDecoration.Parent = this.pnNameAndRole;
+            this.pnNameAndRole.Size = new System.Drawing.Size(115, 59);
+            this.pnNameAndRole.TabIndex = 1;
+            // 
+            // lbRole
+            // 
+            this.lbRole.AutoSize = true;
+            this.lbRole.BackColor = System.Drawing.Color.Transparent;
+            this.lbRole.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRole.ForeColor = System.Drawing.Color.BlanchedAlmond;
+            this.lbRole.Location = new System.Drawing.Point(10, 34);
+            this.lbRole.Name = "lbRole";
+            this.lbRole.Size = new System.Drawing.Size(63, 20);
+            this.lbRole.TabIndex = 4;
+            this.lbRole.Text = "ADMIN";
+            // 
+            // lbName
+            // 
+            this.lbName.AutoSize = true;
+            this.lbName.BackColor = System.Drawing.Color.Transparent;
+            this.lbName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.ForeColor = System.Drawing.Color.BlanchedAlmond;
+            this.lbName.Location = new System.Drawing.Point(10, 5);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(242, 25);
+            this.lbName.TabIndex = 3;
+            this.lbName.Text = "NGUYEN QUANG VINH";
+            // 
+            // pbAvatar
+            // 
+            this.pbAvatar.AutoRoundedCorners = true;
+            this.pbAvatar.BorderRadius = 28;
+            this.pbAvatar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pbAvatar.FillColor = System.Drawing.Color.Transparent;
+            this.pbAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pbAvatar.Image")));
+            this.pbAvatar.ImageRotate = 0F;
+            this.pbAvatar.Location = new System.Drawing.Point(15, 10);
+            this.pbAvatar.Name = "pbAvatar";
+            this.pbAvatar.ShadowDecoration.Parent = this.pbAvatar;
+            this.pbAvatar.Size = new System.Drawing.Size(60, 59);
+            this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbAvatar.TabIndex = 0;
+            this.pbAvatar.TabStop = false;
             // 
             // pnNav
             // 
@@ -141,6 +207,55 @@ namespace GUI
             this.pnWindowButton.Size = new System.Drawing.Size(94, 78);
             this.pnWindowButton.TabIndex = 1;
             // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimize.Animated = true;
+            this.btnMinimize.BorderRadius = 5;
+            this.btnMinimize.CheckedState.Parent = this.btnMinimize;
+            this.btnMinimize.CustomImages.Parent = this.btnMinimize;
+            this.btnMinimize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMinimize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMinimize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMinimize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMinimize.DisabledState.Parent = this.btnMinimize;
+            this.btnMinimize.FillColor = System.Drawing.Color.Transparent;
+            this.btnMinimize.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnMinimize.ForeColor = System.Drawing.Color.White;
+            this.btnMinimize.HoverState.Parent = this.btnMinimize;
+            this.btnMinimize.Image = global::Manage_Store.Properties.Resources.minimize;
+            this.btnMinimize.Location = new System.Drawing.Point(12, 0);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
+            this.btnMinimize.Size = new System.Drawing.Size(40, 40);
+            this.btnMinimize.TabIndex = 1;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.Animated = true;
+            this.btnClose.BorderRadius = 5;
+            this.btnClose.CheckedState.Parent = this.btnClose;
+            this.btnClose.CustomImages.Parent = this.btnClose;
+            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClose.DisabledState.Parent = this.btnClose;
+            this.btnClose.FillColor = System.Drawing.Color.Transparent;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.HoverState.Parent = this.btnClose;
+            this.btnClose.Image = global::Manage_Store.Properties.Resources.close;
+            this.btnClose.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnClose.Location = new System.Drawing.Point(54, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.ShadowDecoration.Parent = this.btnClose;
+            this.btnClose.Size = new System.Drawing.Size(40, 40);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // lbHeader
             // 
             this.lbHeader.BackColor = System.Drawing.Color.Transparent;
@@ -150,7 +265,7 @@ namespace GUI
             this.lbHeader.Location = new System.Drawing.Point(0, 0);
             this.lbHeader.Name = "lbHeader";
             this.lbHeader.Padding = new System.Windows.Forms.Padding(20, 3, 0, 0);
-            this.lbHeader.Size = new System.Drawing.Size(286, 78);
+            this.lbHeader.Size = new System.Drawing.Size(374, 78);
             this.lbHeader.TabIndex = 0;
             this.lbHeader.Text = "HOME";
             this.lbHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -209,121 +324,6 @@ namespace GUI
             this.logOutToolStripMenuItem.Size = new System.Drawing.Size(146, 24);
             this.logOutToolStripMenuItem.Text = "Log out";
             // 
-            // pnNameAndRole
-            // 
-            this.pnNameAndRole.Controls.Add(this.lbRole);
-            this.pnNameAndRole.Controls.Add(this.lbName);
-            this.pnNameAndRole.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnNameAndRole.Location = new System.Drawing.Point(75, 10);
-            this.pnNameAndRole.Name = "pnNameAndRole";
-            this.pnNameAndRole.Padding = new System.Windows.Forms.Padding(10, 5, 5, 5);
-            this.pnNameAndRole.ShadowDecoration.Parent = this.pnNameAndRole;
-            this.pnNameAndRole.Size = new System.Drawing.Size(115, 59);
-            this.pnNameAndRole.TabIndex = 1;
-            // 
-            // lbName
-            // 
-            this.lbName.AutoSize = true;
-            this.lbName.BackColor = System.Drawing.Color.Transparent;
-            this.lbName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbName.Font = new System.Drawing.Font("Roboto Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.lbName.Location = new System.Drawing.Point(10, 5);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(215, 24);
-            this.lbName.TabIndex = 3;
-            this.lbName.Text = "NGUYEN QUANG VINH";
-            // 
-            // lbRole
-            // 
-            this.lbRole.AutoSize = true;
-            this.lbRole.BackColor = System.Drawing.Color.Transparent;
-            this.lbRole.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbRole.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRole.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.lbRole.Location = new System.Drawing.Point(10, 34);
-            this.lbRole.Name = "lbRole";
-            this.lbRole.Size = new System.Drawing.Size(63, 20);
-            this.lbRole.TabIndex = 4;
-            this.lbRole.Text = "ADMIN";
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimize.Animated = true;
-            this.btnMinimize.BorderRadius = 5;
-            this.btnMinimize.CheckedState.Parent = this.btnMinimize;
-            this.btnMinimize.CustomImages.Parent = this.btnMinimize;
-            this.btnMinimize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMinimize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnMinimize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMinimize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMinimize.DisabledState.Parent = this.btnMinimize;
-            this.btnMinimize.FillColor = System.Drawing.Color.Transparent;
-            this.btnMinimize.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnMinimize.ForeColor = System.Drawing.Color.White;
-            this.btnMinimize.HoverState.Parent = this.btnMinimize;
-            this.btnMinimize.Image = global::Manage_Store.Properties.Resources.minimize;
-            this.btnMinimize.Location = new System.Drawing.Point(12, 0);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.ShadowDecoration.Parent = this.btnMinimize;
-            this.btnMinimize.Size = new System.Drawing.Size(40, 40);
-            this.btnMinimize.TabIndex = 1;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Animated = true;
-            this.btnClose.BorderRadius = 5;
-            this.btnClose.CheckedState.Parent = this.btnClose;
-            this.btnClose.CustomImages.Parent = this.btnClose;
-            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClose.DisabledState.Parent = this.btnClose;
-            this.btnClose.FillColor = System.Drawing.Color.Transparent;
-            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.HoverState.Parent = this.btnClose;
-            this.btnClose.Image = global::Manage_Store.Properties.Resources.close;
-            this.btnClose.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnClose.Location = new System.Drawing.Point(54, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.ShadowDecoration.Parent = this.btnClose;
-            this.btnClose.Size = new System.Drawing.Size(40, 40);
-            this.btnClose.TabIndex = 0;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // pbAvatar
-            // 
-            this.pbAvatar.AutoRoundedCorners = true;
-            this.pbAvatar.BorderRadius = 28;
-            this.pbAvatar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pbAvatar.FillColor = System.Drawing.Color.Transparent;
-            this.pbAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pbAvatar.Image")));
-            this.pbAvatar.ImageRotate = 0F;
-            this.pbAvatar.Location = new System.Drawing.Point(15, 10);
-            this.pbAvatar.Name = "pbAvatar";
-            this.pbAvatar.ShadowDecoration.Parent = this.pbAvatar;
-            this.pbAvatar.Size = new System.Drawing.Size(60, 59);
-            this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbAvatar.TabIndex = 0;
-            this.pbAvatar.TabStop = false;
-            // 
-            // pbLogo
-            // 
-            this.pbLogo.BackgroundImage = global::Manage_Store.Properties.Resources.logo_yellow;
-            this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbLogo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pbLogo.Location = new System.Drawing.Point(15, 15);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(60, 61);
-            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbLogo.TabIndex = 3;
-            this.pbLogo.TabStop = false;
-            // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -339,16 +339,16 @@ namespace GUI
             this.Load += new System.EventHandler(this.fMain_Load);
             this.SizeChanged += new System.EventHandler(this.fMain_SizeChanged);
             this.pnLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.pnAccount.ResumeLayout(false);
+            this.pnNameAndRole.ResumeLayout(false);
+            this.pnNameAndRole.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.pnNav.ResumeLayout(false);
             this.pnHeader.ResumeLayout(false);
             this.pnWindowButton.ResumeLayout(false);
             this.pnContainer.ResumeLayout(false);
             this.cmsAccount.ResumeLayout(false);
-            this.pnNameAndRole.ResumeLayout(false);
-            this.pnNameAndRole.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

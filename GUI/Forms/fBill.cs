@@ -80,7 +80,7 @@ namespace GUI
             else
                 pnSearch.BorderColor = root.billPrimaryColor;
             dgvBills.CellBorderStyle = DataGridViewCellBorderStyle.Single;
-
+            
             dgvBills.DefaultCellStyle.Font = new Font(new FontFamily("Roboto"), 12, FontStyle.Bold);
             dgvBills.Columns["BID"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
             dgvBills.Columns["BID"].MinimumWidth = 60;

@@ -151,6 +151,7 @@ namespace GUI
                 lbLogo.Hide();
                 pnNameAndRole.Hide();
                 pbLogo.Dock = DockStyle.Fill;
+                pbAvatar.Dock = DockStyle.Fill; 
                 pnContainer.Width = Width - pnNav.Width;
             }
             else
@@ -161,6 +162,7 @@ namespace GUI
                     pn.AutoSize = false;
                     pn.name.Show();
                     pbLogo.Dock = DockStyle.Left;
+                    pbAvatar.Dock = DockStyle.Left;
                     pn.Width = pnNav.Width - pn.Margin.Left * 2;
                 }
                 lbLogo.Show();
@@ -178,8 +180,8 @@ namespace GUI
 
         private void pnScreen_Paint(object sender, PaintEventArgs e)
         {
-            HighlightOption(0);
-            OpenChildForm(new fHome());
+            HighlightOption(4);
+            OpenChildForm(new fEmployee());
         }
 
         private void OpenHomePage(object sender, EventArgs e)

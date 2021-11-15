@@ -27,9 +27,9 @@ namespace GUI
             InitializeComponent();
             tlpWrapper.ColumnStyles[1].Width = 0;
             tlpWrapper.ColumnStyles[2].Width = 0;
-            tlpMain.RowStyles[0].Height = 12;
-            tlpMain.RowStyles[1].Height = 11.5F;
-            tlpMain.RowStyles[2].Height = 76.5F;
+            tlpMain.RowStyles[0].Height = 10;
+            tlpMain.RowStyles[1].Height = 10;
+            tlpMain.RowStyles[2].Height = 80;
             tlpMain.RowStyles[3].Height = 0;
 
             BackColor = root.screenColor;
@@ -196,10 +196,9 @@ namespace GUI
             dgvContract.DataSource = dt;
             CustomGoodsReceiptTable();
             ChangeTable(btnGoodsReceipt);
-            tlpMain.RowStyles[1].Height = 11.5F;
-            tlpMain.RowStyles[2].Height = 76.5F;
+            tlpMain.RowStyles[1].Height = 10;
+            tlpMain.RowStyles[2].Height = 80;
             tlpMain.RowStyles[3].Height = 0;
-
         }
 
         private void ReloadGoodsReceipt()
@@ -231,10 +230,9 @@ namespace GUI
             dgvContract.DataSource = dt;
             CustomProviderTable();
             ChangeTable(btnProvider);
-            tlpMain.RowStyles[1].Height = 11.5F;
-            tlpMain.RowStyles[2].Height = 76.5F;
+            tlpMain.RowStyles[1].Height = 10;
+            tlpMain.RowStyles[2].Height = 80;
             tlpMain.RowStyles[3].Height = 0;
-
         }
 
         private void ReloadProvider()
@@ -256,7 +254,7 @@ namespace GUI
             tlpWrapper.ColumnStyles[2].Width = 0;
             tlpMain.RowStyles[1].Height = 0;
             tlpMain.RowStyles[2].Height = 0;
-            tlpMain.RowStyles[3].Height = 88;
+            tlpMain.RowStyles[3].Height = 90;
             ChangeTable(btnImport);
 
             string error = null;
@@ -856,6 +854,16 @@ namespace GUI
         {
             txtSearch.Clear();
             txtSearch.Focus();
+        }
+
+        private void txtSellingPrice3_Enter(object sender, EventArgs e)
+        {
+            txtSellingPrice3.Text = root.TurnOffMoneyFormat(txtSellingPrice3.Text);
+        }
+
+        private void txtSellingPrice3_Leave(object sender, EventArgs e)
+        {
+            txtSellingPrice3.Text = root.MoneyFormat(txtSellingPrice3.Text);
         }
     }
 }

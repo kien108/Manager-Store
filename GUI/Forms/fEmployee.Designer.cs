@@ -70,14 +70,9 @@ namespace GUI
             this.nudDayWage = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.lbDayWage = new System.Windows.Forms.Label();
             this.pnMonthDay = new Guna.UI2.WinForms.Guna2Panel();
-            this.txtMonthSalary = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbMonthSalary = new System.Windows.Forms.Label();
             this.pnRoleAndWorkingDay = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnRole = new Guna.UI2.WinForms.Guna2Panel();
-            this.cbbRole = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.lbRole = new System.Windows.Forms.Label();
             this.pnWorkingDays = new Guna.UI2.WinForms.Guna2Panel();
-            this.nudWorkingDays = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.lbWorking = new System.Windows.Forms.Label();
             this.pnStateOption = new Guna.UI2.WinForms.Guna2Panel();
             this.pnState = new Guna.UI2.WinForms.Guna2Panel();
@@ -123,11 +118,16 @@ namespace GUI
             this.pnChangePicture = new System.Windows.Forms.Panel();
             this.btnChangePicture = new Guna.UI2.WinForms.Guna2Button();
             this.pnSideBarFooter = new Guna.UI2.WinForms.Guna2Panel();
-            this.tlpSideBarFooter = new System.Windows.Forms.TableLayoutPanel();
-            this.btnSideBarCancel = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSideBarConfirm = new Guna.UI2.WinForms.Guna2Button();
             this.ecTlpPictureSide = new ElipseToolDemo.ElipseControl();
             this.ecDgvEmployees = new ElipseToolDemo.ElipseControl();
+            this.btnSideBarConfirm = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSideBarCancel = new Guna.UI2.WinForms.Guna2Button();
+            this.tlpSideBarFooter = new System.Windows.Forms.TableLayoutPanel();
+            this.lbRole = new System.Windows.Forms.Label();
+            this.cbbRole = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.pnRole = new Guna.UI2.WinForms.Guna2Panel();
+            this.nudWorkingDays = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.txtMonthSalary = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnSideBarHeader.SuspendLayout();
             this.tlpMain.SuspendLayout();
             this.tlpEmployeeType.SuspendLayout();
@@ -151,9 +151,7 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.nudDayWage)).BeginInit();
             this.pnMonthDay.SuspendLayout();
             this.pnRoleAndWorkingDay.SuspendLayout();
-            this.pnRole.SuspendLayout();
             this.pnWorkingDays.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudWorkingDays)).BeginInit();
             this.pnStateOption.SuspendLayout();
             this.pnState.SuspendLayout();
             this.pnStateOptionWrapper.SuspendLayout();
@@ -177,6 +175,8 @@ namespace GUI
             this.pnChangePicture.SuspendLayout();
             this.pnSideBarFooter.SuspendLayout();
             this.tlpSideBarFooter.SuspendLayout();
+            this.pnRole.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudWorkingDays)).BeginInit();
             this.SuspendLayout();
             // 
             // pnSideBarHeader
@@ -195,7 +195,7 @@ namespace GUI
             this.pnSideBarHeader.Name = "pnSideBarHeader";
             this.pnSideBarHeader.Padding = new System.Windows.Forms.Padding(3);
             this.pnSideBarHeader.ShadowDecoration.Parent = this.pnSideBarHeader;
-            this.pnSideBarHeader.Size = new System.Drawing.Size(357, 35);
+            this.pnSideBarHeader.Size = new System.Drawing.Size(564, 40);
             this.pnSideBarHeader.TabIndex = 0;
             // 
             // lbSideBarTitle
@@ -204,10 +204,10 @@ namespace GUI
             this.lbSideBarTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbSideBarTitle.Font = new System.Drawing.Font("Poppins", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSideBarTitle.ForeColor = System.Drawing.Color.Orange;
-            this.lbSideBarTitle.Location = new System.Drawing.Point(34, 3);
+            this.lbSideBarTitle.Location = new System.Drawing.Point(43, 3);
             this.lbSideBarTitle.Name = "lbSideBarTitle";
             this.lbSideBarTitle.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.lbSideBarTitle.Size = new System.Drawing.Size(289, 29);
+            this.lbSideBarTitle.Size = new System.Drawing.Size(478, 34);
             this.lbSideBarTitle.TabIndex = 6;
             this.lbSideBarTitle.Text = "Detail Information";
             this.lbSideBarTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -231,10 +231,10 @@ namespace GUI
             this.btnTick.HoverState.Parent = this.btnTick;
             this.btnTick.Image = global::Manage_Store.Properties.Resources.edit2;
             this.btnTick.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnTick.Location = new System.Drawing.Point(323, 3);
+            this.btnTick.Location = new System.Drawing.Point(521, 3);
             this.btnTick.Name = "btnTick";
             this.btnTick.ShadowDecoration.Parent = this.btnTick;
-            this.btnTick.Size = new System.Drawing.Size(31, 29);
+            this.btnTick.Size = new System.Drawing.Size(40, 34);
             this.btnTick.TabIndex = 3;
             this.btnTick.Click += new System.EventHandler(this.btnTick_Click);
             // 
@@ -261,7 +261,7 @@ namespace GUI
             this.btnCollapse.Location = new System.Drawing.Point(3, 3);
             this.btnCollapse.Name = "btnCollapse";
             this.btnCollapse.ShadowDecoration.Parent = this.btnCollapse;
-            this.btnCollapse.Size = new System.Drawing.Size(31, 29);
+            this.btnCollapse.Size = new System.Drawing.Size(40, 34);
             this.btnCollapse.TabIndex = 2;
             this.btnCollapse.Click += new System.EventHandler(this.btnCollapse_Click);
             // 
@@ -278,10 +278,10 @@ namespace GUI
             this.tlpMain.Location = new System.Drawing.Point(3, 3);
             this.tlpMain.Name = "tlpMain";
             this.tlpMain.RowCount = 3;
-            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.5F));
-            this.tlpMain.Size = new System.Drawing.Size(1220, 724);
+            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11F));
+            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89F));
+            this.tlpMain.Size = new System.Drawing.Size(1013, 724);
             this.tlpMain.TabIndex = 1;
             // 
             // tlpEmployeeType
@@ -300,7 +300,7 @@ namespace GUI
             this.tlpEmployeeType.Name = "tlpEmployeeType";
             this.tlpEmployeeType.RowCount = 1;
             this.tlpEmployeeType.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpEmployeeType.Size = new System.Drawing.Size(1214, 76);
+            this.tlpEmployeeType.Size = new System.Drawing.Size(1007, 65);
             this.tlpEmployeeType.TabIndex = 0;
             // 
             // btnStaff
@@ -321,12 +321,12 @@ namespace GUI
             this.btnStaff.Font = new System.Drawing.Font("Poppins SemiBold", 14F, System.Drawing.FontStyle.Bold);
             this.btnStaff.ForeColor = System.Drawing.Color.BlanchedAlmond;
             this.btnStaff.HoverState.Parent = this.btnStaff;
-            this.btnStaff.Location = new System.Drawing.Point(313, 10);
+            this.btnStaff.Location = new System.Drawing.Point(261, 10);
             this.btnStaff.Margin = new System.Windows.Forms.Padding(10, 10, 10, 8);
             this.btnStaff.Name = "btnStaff";
             this.btnStaff.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.btnStaff.ShadowDecoration.Parent = this.btnStaff;
-            this.btnStaff.Size = new System.Drawing.Size(283, 58);
+            this.btnStaff.Size = new System.Drawing.Size(231, 47);
             this.btnStaff.TabIndex = 3;
             this.btnStaff.Text = "Staff";
             this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
@@ -349,12 +349,12 @@ namespace GUI
             this.btnRetiredEmployee.Font = new System.Drawing.Font("Poppins SemiBold", 14F, System.Drawing.FontStyle.Bold);
             this.btnRetiredEmployee.ForeColor = System.Drawing.Color.BlanchedAlmond;
             this.btnRetiredEmployee.HoverState.Parent = this.btnRetiredEmployee;
-            this.btnRetiredEmployee.Location = new System.Drawing.Point(919, 10);
+            this.btnRetiredEmployee.Location = new System.Drawing.Point(763, 10);
             this.btnRetiredEmployee.Margin = new System.Windows.Forms.Padding(10, 10, 10, 8);
             this.btnRetiredEmployee.Name = "btnRetiredEmployee";
             this.btnRetiredEmployee.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.btnRetiredEmployee.ShadowDecoration.Parent = this.btnRetiredEmployee;
-            this.btnRetiredEmployee.Size = new System.Drawing.Size(285, 58);
+            this.btnRetiredEmployee.Size = new System.Drawing.Size(234, 47);
             this.btnRetiredEmployee.TabIndex = 2;
             this.btnRetiredEmployee.Text = "Retired employee";
             this.btnRetiredEmployee.Click += new System.EventHandler(this.btnRetiredEmployee_Click);
@@ -377,12 +377,12 @@ namespace GUI
             this.btnStockManager.Font = new System.Drawing.Font("Poppins SemiBold", 14F, System.Drawing.FontStyle.Bold);
             this.btnStockManager.ForeColor = System.Drawing.Color.BlanchedAlmond;
             this.btnStockManager.HoverState.Parent = this.btnStockManager;
-            this.btnStockManager.Location = new System.Drawing.Point(616, 10);
+            this.btnStockManager.Location = new System.Drawing.Point(512, 10);
             this.btnStockManager.Margin = new System.Windows.Forms.Padding(10, 10, 10, 8);
             this.btnStockManager.Name = "btnStockManager";
             this.btnStockManager.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.btnStockManager.ShadowDecoration.Parent = this.btnStockManager;
-            this.btnStockManager.Size = new System.Drawing.Size(283, 58);
+            this.btnStockManager.Size = new System.Drawing.Size(231, 47);
             this.btnStockManager.TabIndex = 1;
             this.btnStockManager.Text = "Stock manager";
             this.btnStockManager.Click += new System.EventHandler(this.btnStockManager_Click);
@@ -410,7 +410,7 @@ namespace GUI
             this.btnAllRoles.Name = "btnAllRoles";
             this.btnAllRoles.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.btnAllRoles.ShadowDecoration.Parent = this.btnAllRoles;
-            this.btnAllRoles.Size = new System.Drawing.Size(283, 58);
+            this.btnAllRoles.Size = new System.Drawing.Size(231, 47);
             this.btnAllRoles.TabIndex = 0;
             this.btnAllRoles.Text = "All roles";
             this.btnAllRoles.Click += new System.EventHandler(this.btnAllRoles_Click);
@@ -423,17 +423,17 @@ namespace GUI
             this.tlpSearch.Controls.Add(this.pnSearchAndFunction, 0, 0);
             this.tlpSearch.Controls.Add(this.pnFunctions, 1, 0);
             this.tlpSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpSearch.Location = new System.Drawing.Point(3, 85);
+            this.tlpSearch.Location = new System.Drawing.Point(3, 74);
             this.tlpSearch.Name = "tlpSearch";
             this.tlpSearch.RowCount = 1;
             this.tlpSearch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpSearch.Size = new System.Drawing.Size(1214, 58);
+            this.tlpSearch.Size = new System.Drawing.Size(1007, 64);
             this.tlpSearch.TabIndex = 1;
             // 
             // pnSearchAndFunction
             // 
             this.pnSearchAndFunction.AutoRoundedCorners = true;
-            this.pnSearchAndFunction.BorderRadius = 24;
+            this.pnSearchAndFunction.BorderRadius = 27;
             this.pnSearchAndFunction.Controls.Add(this.pnSearch);
             this.pnSearchAndFunction.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnSearchAndFunction.FillColor = System.Drawing.Color.MistyRose;
@@ -442,7 +442,7 @@ namespace GUI
             this.pnSearchAndFunction.Name = "pnSearchAndFunction";
             this.pnSearchAndFunction.Padding = new System.Windows.Forms.Padding(10);
             this.pnSearchAndFunction.ShadowDecoration.Parent = this.pnSearchAndFunction;
-            this.pnSearchAndFunction.Size = new System.Drawing.Size(597, 50);
+            this.pnSearchAndFunction.Size = new System.Drawing.Size(493, 56);
             this.pnSearchAndFunction.TabIndex = 0;
             // 
             // pnSearch
@@ -450,7 +450,7 @@ namespace GUI
             this.pnSearch.AutoRoundedCorners = true;
             this.pnSearch.BackColor = System.Drawing.Color.Transparent;
             this.pnSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(166)))), ((int)(((byte)(137)))));
-            this.pnSearch.BorderRadius = 14;
+            this.pnSearch.BorderRadius = 17;
             this.pnSearch.BorderThickness = 2;
             this.pnSearch.Controls.Add(this.txtSearch);
             this.pnSearch.Controls.Add(this.cbbFilter);
@@ -462,7 +462,7 @@ namespace GUI
             this.pnSearch.Name = "pnSearch";
             this.pnSearch.Padding = new System.Windows.Forms.Padding(8, 5, 10, 5);
             this.pnSearch.ShadowDecoration.Parent = this.pnSearch;
-            this.pnSearch.Size = new System.Drawing.Size(577, 30);
+            this.pnSearch.Size = new System.Drawing.Size(473, 36);
             this.pnSearch.TabIndex = 2;
             // 
             // txtSearch
@@ -480,11 +480,11 @@ namespace GUI
             this.txtSearch.FillColor = System.Drawing.Color.MistyRose;
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.FocusedState.Parent = this.txtSearch;
-            this.txtSearch.Font = new System.Drawing.Font("Roboto", 12F);
+            this.txtSearch.Font = new System.Drawing.Font("Poppins", 14F);
             this.txtSearch.ForeColor = System.Drawing.Color.Gainsboro;
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
-            this.txtSearch.Location = new System.Drawing.Point(84, 5);
+            this.txtSearch.Location = new System.Drawing.Point(186, 5);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
@@ -492,7 +492,7 @@ namespace GUI
             this.txtSearch.PlaceholderText = "Search...";
             this.txtSearch.SelectedText = "";
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
-            this.txtSearch.Size = new System.Drawing.Size(466, 20);
+            this.txtSearch.Size = new System.Drawing.Size(260, 26);
             this.txtSearch.TabIndex = 9;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
@@ -511,7 +511,7 @@ namespace GUI
             this.cbbFilter.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(166)))), ((int)(((byte)(137)))));
             this.cbbFilter.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(166)))), ((int)(((byte)(137)))));
             this.cbbFilter.FocusedState.Parent = this.cbbFilter;
-            this.cbbFilter.Font = new System.Drawing.Font("Roboto", 12.5F);
+            this.cbbFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
             this.cbbFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.cbbFilter.HoverState.Parent = this.cbbFilter;
             this.cbbFilter.ItemHeight = 30;
@@ -525,7 +525,7 @@ namespace GUI
             this.cbbFilter.Location = new System.Drawing.Point(8, 5);
             this.cbbFilter.Name = "cbbFilter";
             this.cbbFilter.ShadowDecoration.Parent = this.cbbFilter;
-            this.cbbFilter.Size = new System.Drawing.Size(76, 36);
+            this.cbbFilter.Size = new System.Drawing.Size(178, 36);
             this.cbbFilter.StartIndex = 0;
             this.cbbFilter.TabIndex = 8;
             this.cbbFilter.TextOffset = new System.Drawing.Point(5, 2);
@@ -536,25 +536,25 @@ namespace GUI
             this.btnDeleteSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnDeleteSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteSearch.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnDeleteSearch.Location = new System.Drawing.Point(550, 5);
+            this.btnDeleteSearch.Location = new System.Drawing.Point(446, 5);
             this.btnDeleteSearch.Name = "btnDeleteSearch";
             this.btnDeleteSearch.ShadowDecoration.Parent = this.btnDeleteSearch;
-            this.btnDeleteSearch.Size = new System.Drawing.Size(17, 20);
+            this.btnDeleteSearch.Size = new System.Drawing.Size(17, 26);
             this.btnDeleteSearch.TabIndex = 3;
             this.btnDeleteSearch.Click += new System.EventHandler(this.btnDeleteSearch_Click);
             // 
             // pnFunctions
             // 
             this.pnFunctions.AutoRoundedCorners = true;
-            this.pnFunctions.BorderRadius = 24;
+            this.pnFunctions.BorderRadius = 27;
             this.pnFunctions.Controls.Add(this.tlpFunction);
             this.pnFunctions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnFunctions.FillColor = System.Drawing.Color.MistyRose;
-            this.pnFunctions.Location = new System.Drawing.Point(617, 5);
+            this.pnFunctions.Location = new System.Drawing.Point(513, 5);
             this.pnFunctions.Margin = new System.Windows.Forms.Padding(10, 5, 10, 3);
             this.pnFunctions.Name = "pnFunctions";
             this.pnFunctions.ShadowDecoration.Parent = this.pnFunctions;
-            this.pnFunctions.Size = new System.Drawing.Size(587, 50);
+            this.pnFunctions.Size = new System.Drawing.Size(484, 56);
             this.pnFunctions.TabIndex = 1;
             // 
             // tlpFunction
@@ -572,7 +572,7 @@ namespace GUI
             this.tlpFunction.Name = "tlpFunction";
             this.tlpFunction.RowCount = 1;
             this.tlpFunction.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpFunction.Size = new System.Drawing.Size(587, 50);
+            this.tlpFunction.Size = new System.Drawing.Size(484, 56);
             this.tlpFunction.TabIndex = 0;
             // 
             // pnBtnEdit
@@ -584,14 +584,14 @@ namespace GUI
             this.pnBtnEdit.Margin = new System.Windows.Forms.Padding(0);
             this.pnBtnEdit.Name = "pnBtnEdit";
             this.pnBtnEdit.Padding = new System.Windows.Forms.Padding(13, 10, 5, 10);
-            this.pnBtnEdit.Size = new System.Drawing.Size(195, 50);
+            this.pnBtnEdit.Size = new System.Drawing.Size(161, 56);
             this.pnBtnEdit.TabIndex = 14;
             // 
             // btnDetail
             // 
             this.btnDetail.Animated = true;
             this.btnDetail.AutoRoundedCorners = true;
-            this.btnDetail.BorderRadius = 14;
+            this.btnDetail.BorderRadius = 17;
             this.btnDetail.CheckedState.Parent = this.btnDetail;
             this.btnDetail.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDetail.CustomImages.Parent = this.btnDetail;
@@ -612,7 +612,7 @@ namespace GUI
             this.btnDetail.Name = "btnDetail";
             this.btnDetail.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.btnDetail.ShadowDecoration.Parent = this.btnDetail;
-            this.btnDetail.Size = new System.Drawing.Size(177, 30);
+            this.btnDetail.Size = new System.Drawing.Size(143, 36);
             this.btnDetail.TabIndex = 0;
             this.btnDetail.Text = "Detail";
             this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
@@ -622,18 +622,18 @@ namespace GUI
             this.pnDelete.BackColor = System.Drawing.Color.Transparent;
             this.pnDelete.Controls.Add(this.btnDelete);
             this.pnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnDelete.Location = new System.Drawing.Point(390, 0);
+            this.pnDelete.Location = new System.Drawing.Point(322, 0);
             this.pnDelete.Margin = new System.Windows.Forms.Padding(0);
             this.pnDelete.Name = "pnDelete";
             this.pnDelete.Padding = new System.Windows.Forms.Padding(5, 10, 13, 10);
-            this.pnDelete.Size = new System.Drawing.Size(197, 50);
+            this.pnDelete.Size = new System.Drawing.Size(162, 56);
             this.pnDelete.TabIndex = 12;
             // 
             // btnDelete
             // 
             this.btnDelete.Animated = true;
             this.btnDelete.AutoRoundedCorners = true;
-            this.btnDelete.BorderRadius = 14;
+            this.btnDelete.BorderRadius = 17;
             this.btnDelete.CheckedState.Parent = this.btnDelete;
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.CustomImages.Parent = this.btnDelete;
@@ -654,7 +654,7 @@ namespace GUI
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.btnDelete.ShadowDecoration.Parent = this.btnDelete;
-            this.btnDelete.Size = new System.Drawing.Size(179, 30);
+            this.btnDelete.Size = new System.Drawing.Size(144, 36);
             this.btnDelete.TabIndex = 0;
             this.btnDelete.Text = "Delete";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -664,18 +664,18 @@ namespace GUI
             this.pnBtnAdd.BackColor = System.Drawing.Color.Transparent;
             this.pnBtnAdd.Controls.Add(this.btnAdd);
             this.pnBtnAdd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnBtnAdd.Location = new System.Drawing.Point(195, 0);
+            this.pnBtnAdd.Location = new System.Drawing.Point(161, 0);
             this.pnBtnAdd.Margin = new System.Windows.Forms.Padding(0);
             this.pnBtnAdd.Name = "pnBtnAdd";
             this.pnBtnAdd.Padding = new System.Windows.Forms.Padding(5, 10, 4, 10);
-            this.pnBtnAdd.Size = new System.Drawing.Size(195, 50);
+            this.pnBtnAdd.Size = new System.Drawing.Size(161, 56);
             this.pnBtnAdd.TabIndex = 10;
             // 
             // btnAdd
             // 
             this.btnAdd.Animated = true;
             this.btnAdd.AutoRoundedCorners = true;
-            this.btnAdd.BorderRadius = 14;
+            this.btnAdd.BorderRadius = 17;
             this.btnAdd.CheckedState.Parent = this.btnAdd;
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.CustomImages.Parent = this.btnAdd;
@@ -696,7 +696,7 @@ namespace GUI
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.btnAdd.ShadowDecoration.Parent = this.btnAdd;
-            this.btnAdd.Size = new System.Drawing.Size(186, 30);
+            this.btnAdd.Size = new System.Drawing.Size(152, 36);
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Add";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -708,10 +708,10 @@ namespace GUI
             this.pnDgvWrapper.BorderRadius = 10;
             this.pnDgvWrapper.Controls.Add(this.dgvEmployees);
             this.pnDgvWrapper.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnDgvWrapper.Location = new System.Drawing.Point(3, 149);
+            this.pnDgvWrapper.Location = new System.Drawing.Point(3, 144);
             this.pnDgvWrapper.Name = "pnDgvWrapper";
             this.pnDgvWrapper.ShadowDecoration.Parent = this.pnDgvWrapper;
-            this.pnDgvWrapper.Size = new System.Drawing.Size(1214, 572);
+            this.pnDgvWrapper.Size = new System.Drawing.Size(1007, 577);
             this.pnDgvWrapper.TabIndex = 2;
             // 
             // dgvEmployees
@@ -798,7 +798,7 @@ namespace GUI
             this.tlpWrapper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.tlpWrapper.ColumnCount = 2;
             this.tlpWrapper.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpWrapper.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 357F));
+            this.tlpWrapper.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 564F));
             this.tlpWrapper.Controls.Add(this.pnSideBar, 0, 0);
             this.tlpWrapper.Controls.Add(this.tlpMain, 0, 0);
             this.tlpWrapper.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -821,11 +821,11 @@ namespace GUI
             this.pnSideBar.CustomizableEdges.TopRight = false;
             this.pnSideBar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnSideBar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.pnSideBar.Location = new System.Drawing.Point(1226, 0);
+            this.pnSideBar.Location = new System.Drawing.Point(1019, 0);
             this.pnSideBar.Margin = new System.Windows.Forms.Padding(0);
             this.pnSideBar.Name = "pnSideBar";
             this.pnSideBar.ShadowDecoration.Parent = this.pnSideBar;
-            this.pnSideBar.Size = new System.Drawing.Size(357, 730);
+            this.pnSideBar.Size = new System.Drawing.Size(564, 730);
             this.pnSideBar.TabIndex = 5;
             // 
             // pnSideBarBody
@@ -838,11 +838,11 @@ namespace GUI
             this.pnSideBarBody.Controls.Add(this.pnPersonalInformation);
             this.pnSideBarBody.Controls.Add(this.tlpPictureSide);
             this.pnSideBarBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnSideBarBody.Location = new System.Drawing.Point(0, 35);
+            this.pnSideBarBody.Location = new System.Drawing.Point(0, 40);
             this.pnSideBarBody.Name = "pnSideBarBody";
             this.pnSideBarBody.Padding = new System.Windows.Forms.Padding(10, 5, 10, 10);
             this.pnSideBarBody.ShadowDecoration.Parent = this.pnSideBarBody;
-            this.pnSideBarBody.Size = new System.Drawing.Size(357, 655);
+            this.pnSideBarBody.Size = new System.Drawing.Size(564, 640);
             this.pnSideBarBody.TabIndex = 11;
             // 
             // pnWorkInformation
@@ -850,11 +850,11 @@ namespace GUI
             this.pnWorkInformation.BackColor = System.Drawing.Color.Transparent;
             this.pnWorkInformation.Controls.Add(this.gbWorkInformation);
             this.pnWorkInformation.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnWorkInformation.Location = new System.Drawing.Point(10, 479);
+            this.pnWorkInformation.Location = new System.Drawing.Point(10, 584);
             this.pnWorkInformation.Name = "pnWorkInformation";
             this.pnWorkInformation.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.pnWorkInformation.ShadowDecoration.Parent = this.pnWorkInformation;
-            this.pnWorkInformation.Size = new System.Drawing.Size(316, 179);
+            this.pnWorkInformation.Size = new System.Drawing.Size(523, 219);
             this.pnWorkInformation.TabIndex = 13;
             // 
             // gbWorkInformation
@@ -873,9 +873,9 @@ namespace GUI
             this.gbWorkInformation.ForeColor = System.Drawing.Color.Orange;
             this.gbWorkInformation.Location = new System.Drawing.Point(0, 10);
             this.gbWorkInformation.Name = "gbWorkInformation";
-            this.gbWorkInformation.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
+            this.gbWorkInformation.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.gbWorkInformation.ShadowDecoration.Parent = this.gbWorkInformation;
-            this.gbWorkInformation.Size = new System.Drawing.Size(316, 169);
+            this.gbWorkInformation.Size = new System.Drawing.Size(523, 209);
             this.gbWorkInformation.TabIndex = 9;
             this.gbWorkInformation.Text = "Work Information";
             // 
@@ -885,11 +885,11 @@ namespace GUI
             this.pnDayWageAndMonthSalary.Controls.Add(this.pnDayWage);
             this.pnDayWageAndMonthSalary.Controls.Add(this.pnMonthDay);
             this.pnDayWageAndMonthSalary.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnDayWageAndMonthSalary.Location = new System.Drawing.Point(0, 110);
+            this.pnDayWageAndMonthSalary.Location = new System.Drawing.Point(0, 140);
             this.pnDayWageAndMonthSalary.Name = "pnDayWageAndMonthSalary";
             this.pnDayWageAndMonthSalary.Padding = new System.Windows.Forms.Padding(10, 5, 10, 0);
             this.pnDayWageAndMonthSalary.ShadowDecoration.Parent = this.pnDayWageAndMonthSalary;
-            this.pnDayWageAndMonthSalary.Size = new System.Drawing.Size(316, 45);
+            this.pnDayWageAndMonthSalary.Size = new System.Drawing.Size(523, 55);
             this.pnDayWageAndMonthSalary.TabIndex = 20;
             // 
             // pnDayWage
@@ -902,7 +902,7 @@ namespace GUI
             this.pnDayWage.Name = "pnDayWage";
             this.pnDayWage.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
             this.pnDayWage.ShadowDecoration.Parent = this.pnDayWage;
-            this.pnDayWage.Size = new System.Drawing.Size(158, 40);
+            this.pnDayWage.Size = new System.Drawing.Size(330, 50);
             this.pnDayWage.TabIndex = 1;
             // 
             // nudDayWage
@@ -910,22 +910,22 @@ namespace GUI
             this.nudDayWage.AutoRoundedCorners = true;
             this.nudDayWage.BackColor = System.Drawing.Color.Transparent;
             this.nudDayWage.BorderColor = System.Drawing.Color.Orange;
-            this.nudDayWage.BorderRadius = 10;
+            this.nudDayWage.BorderRadius = 13;
             this.nudDayWage.BorderThickness = 2;
             this.nudDayWage.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nudDayWage.DisabledState.Parent = this.nudDayWage;
             this.nudDayWage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.nudDayWage.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.nudDayWage.FocusedState.Parent = this.nudDayWage;
-            this.nudDayWage.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold);
+            this.nudDayWage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.nudDayWage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.nudDayWage.Increment = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.nudDayWage.Location = new System.Drawing.Point(0, 17);
-            this.nudDayWage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudDayWage.Location = new System.Drawing.Point(0, 22);
+            this.nudDayWage.Margin = new System.Windows.Forms.Padding(4);
             this.nudDayWage.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -933,7 +933,7 @@ namespace GUI
             0});
             this.nudDayWage.Name = "nudDayWage";
             this.nudDayWage.ShadowDecoration.Parent = this.nudDayWage;
-            this.nudDayWage.Size = new System.Drawing.Size(143, 23);
+            this.nudDayWage.Size = new System.Drawing.Size(315, 28);
             this.nudDayWage.TabIndex = 39;
             this.nudDayWage.TextOffset = new System.Drawing.Point(10, 2);
             this.nudDayWage.UpDownButtonFillColor = System.Drawing.Color.Orange;
@@ -948,7 +948,7 @@ namespace GUI
             this.lbDayWage.Margin = new System.Windows.Forms.Padding(0);
             this.lbDayWage.Name = "lbDayWage";
             this.lbDayWage.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lbDayWage.Size = new System.Drawing.Size(143, 17);
+            this.lbDayWage.Size = new System.Drawing.Size(315, 22);
             this.lbDayWage.TabIndex = 33;
             this.lbDayWage.Text = "Day\'s wage";
             this.lbDayWage.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -959,46 +959,11 @@ namespace GUI
             this.pnMonthDay.Controls.Add(this.txtMonthSalary);
             this.pnMonthDay.Controls.Add(this.lbMonthSalary);
             this.pnMonthDay.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnMonthDay.Location = new System.Drawing.Point(168, 5);
+            this.pnMonthDay.Location = new System.Drawing.Point(340, 5);
             this.pnMonthDay.Name = "pnMonthDay";
             this.pnMonthDay.ShadowDecoration.Parent = this.pnMonthDay;
-            this.pnMonthDay.Size = new System.Drawing.Size(138, 40);
+            this.pnMonthDay.Size = new System.Drawing.Size(173, 50);
             this.pnMonthDay.TabIndex = 0;
-            // 
-            // txtMonthSalary
-            // 
-            this.txtMonthSalary.AutoRoundedCorners = true;
-            this.txtMonthSalary.BorderColor = System.Drawing.Color.Goldenrod;
-            this.txtMonthSalary.BorderRadius = 10;
-            this.txtMonthSalary.BorderThickness = 2;
-            this.txtMonthSalary.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMonthSalary.DefaultText = "";
-            this.txtMonthSalary.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMonthSalary.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMonthSalary.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMonthSalary.DisabledState.Parent = this.txtMonthSalary;
-            this.txtMonthSalary.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMonthSalary.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtMonthSalary.Enabled = false;
-            this.txtMonthSalary.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
-            this.txtMonthSalary.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMonthSalary.FocusedState.Parent = this.txtMonthSalary;
-            this.txtMonthSalary.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMonthSalary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMonthSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMonthSalary.HoverState.Parent = this.txtMonthSalary;
-            this.txtMonthSalary.Location = new System.Drawing.Point(0, 17);
-            this.txtMonthSalary.Margin = new System.Windows.Forms.Padding(9, 3, 9, 5);
-            this.txtMonthSalary.MaximumSize = new System.Drawing.Size(455, 45);
-            this.txtMonthSalary.Name = "txtMonthSalary";
-            this.txtMonthSalary.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.txtMonthSalary.PasswordChar = '\0';
-            this.txtMonthSalary.PlaceholderText = "";
-            this.txtMonthSalary.SelectedText = "";
-            this.txtMonthSalary.ShadowDecoration.Parent = this.txtMonthSalary;
-            this.txtMonthSalary.Size = new System.Drawing.Size(138, 23);
-            this.txtMonthSalary.TabIndex = 34;
-            this.txtMonthSalary.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // lbMonthSalary
             // 
@@ -1010,7 +975,7 @@ namespace GUI
             this.lbMonthSalary.Margin = new System.Windows.Forms.Padding(0);
             this.lbMonthSalary.Name = "lbMonthSalary";
             this.lbMonthSalary.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lbMonthSalary.Size = new System.Drawing.Size(138, 17);
+            this.lbMonthSalary.Size = new System.Drawing.Size(173, 22);
             this.lbMonthSalary.TabIndex = 33;
             this.lbMonthSalary.Text = "Month Salary";
             this.lbMonthSalary.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -1021,71 +986,12 @@ namespace GUI
             this.pnRoleAndWorkingDay.Controls.Add(this.pnRole);
             this.pnRoleAndWorkingDay.Controls.Add(this.pnWorkingDays);
             this.pnRoleAndWorkingDay.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnRoleAndWorkingDay.Location = new System.Drawing.Point(0, 65);
+            this.pnRoleAndWorkingDay.Location = new System.Drawing.Point(0, 85);
             this.pnRoleAndWorkingDay.Name = "pnRoleAndWorkingDay";
             this.pnRoleAndWorkingDay.Padding = new System.Windows.Forms.Padding(10, 5, 10, 0);
             this.pnRoleAndWorkingDay.ShadowDecoration.Parent = this.pnRoleAndWorkingDay;
-            this.pnRoleAndWorkingDay.Size = new System.Drawing.Size(316, 45);
+            this.pnRoleAndWorkingDay.Size = new System.Drawing.Size(523, 55);
             this.pnRoleAndWorkingDay.TabIndex = 19;
-            // 
-            // pnRole
-            // 
-            this.pnRole.BackColor = System.Drawing.Color.Transparent;
-            this.pnRole.Controls.Add(this.cbbRole);
-            this.pnRole.Controls.Add(this.lbRole);
-            this.pnRole.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnRole.Location = new System.Drawing.Point(10, 5);
-            this.pnRole.Name = "pnRole";
-            this.pnRole.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
-            this.pnRole.ShadowDecoration.Parent = this.pnRole;
-            this.pnRole.Size = new System.Drawing.Size(157, 40);
-            this.pnRole.TabIndex = 1;
-            // 
-            // cbbRole
-            // 
-            this.cbbRole.AutoRoundedCorners = true;
-            this.cbbRole.BackColor = System.Drawing.Color.Transparent;
-            this.cbbRole.BorderColor = System.Drawing.Color.Goldenrod;
-            this.cbbRole.BorderRadius = 17;
-            this.cbbRole.BorderThickness = 2;
-            this.cbbRole.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbbRole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbRole.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
-            this.cbbRole.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbRole.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbRole.FocusedState.Parent = this.cbbRole;
-            this.cbbRole.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold);
-            this.cbbRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbbRole.HoverState.Parent = this.cbbRole;
-            this.cbbRole.ItemHeight = 30;
-            this.cbbRole.Items.AddRange(new object[] {
-            "Staff",
-            "Stock manager",
-            "Admin"});
-            this.cbbRole.ItemsAppearance.Parent = this.cbbRole;
-            this.cbbRole.Location = new System.Drawing.Point(0, 17);
-            this.cbbRole.Name = "cbbRole";
-            this.cbbRole.ShadowDecoration.Parent = this.cbbRole;
-            this.cbbRole.Size = new System.Drawing.Size(142, 36);
-            this.cbbRole.StartIndex = 0;
-            this.cbbRole.TabIndex = 34;
-            this.cbbRole.TextOffset = new System.Drawing.Point(10, 2);
-            // 
-            // lbRole
-            // 
-            this.lbRole.BackColor = System.Drawing.Color.Transparent;
-            this.lbRole.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbRole.Font = new System.Drawing.Font("Poppins", 11F);
-            this.lbRole.ForeColor = System.Drawing.Color.Orange;
-            this.lbRole.Location = new System.Drawing.Point(0, 0);
-            this.lbRole.Margin = new System.Windows.Forms.Padding(0);
-            this.lbRole.Name = "lbRole";
-            this.lbRole.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lbRole.Size = new System.Drawing.Size(142, 17);
-            this.lbRole.TabIndex = 33;
-            this.lbRole.Text = "Role";
-            this.lbRole.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // pnWorkingDays
             // 
@@ -1093,39 +999,11 @@ namespace GUI
             this.pnWorkingDays.Controls.Add(this.nudWorkingDays);
             this.pnWorkingDays.Controls.Add(this.lbWorking);
             this.pnWorkingDays.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnWorkingDays.Location = new System.Drawing.Point(167, 5);
+            this.pnWorkingDays.Location = new System.Drawing.Point(340, 5);
             this.pnWorkingDays.Name = "pnWorkingDays";
             this.pnWorkingDays.ShadowDecoration.Parent = this.pnWorkingDays;
-            this.pnWorkingDays.Size = new System.Drawing.Size(139, 40);
+            this.pnWorkingDays.Size = new System.Drawing.Size(173, 50);
             this.pnWorkingDays.TabIndex = 0;
-            // 
-            // nudWorkingDays
-            // 
-            this.nudWorkingDays.AutoRoundedCorners = true;
-            this.nudWorkingDays.BackColor = System.Drawing.Color.Transparent;
-            this.nudWorkingDays.BorderColor = System.Drawing.Color.Orange;
-            this.nudWorkingDays.BorderRadius = 10;
-            this.nudWorkingDays.BorderThickness = 2;
-            this.nudWorkingDays.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nudWorkingDays.DisabledState.Parent = this.nudWorkingDays;
-            this.nudWorkingDays.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nudWorkingDays.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
-            this.nudWorkingDays.FocusedState.Parent = this.nudWorkingDays;
-            this.nudWorkingDays.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold);
-            this.nudWorkingDays.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.nudWorkingDays.Location = new System.Drawing.Point(0, 17);
-            this.nudWorkingDays.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.nudWorkingDays.Maximum = new decimal(new int[] {
-            31,
-            0,
-            0,
-            0});
-            this.nudWorkingDays.Name = "nudWorkingDays";
-            this.nudWorkingDays.ShadowDecoration.Parent = this.nudWorkingDays;
-            this.nudWorkingDays.Size = new System.Drawing.Size(139, 23);
-            this.nudWorkingDays.TabIndex = 38;
-            this.nudWorkingDays.TextOffset = new System.Drawing.Point(10, 2);
-            this.nudWorkingDays.UpDownButtonFillColor = System.Drawing.Color.Orange;
             // 
             // lbWorking
             // 
@@ -1137,7 +1015,7 @@ namespace GUI
             this.lbWorking.Margin = new System.Windows.Forms.Padding(0);
             this.lbWorking.Name = "lbWorking";
             this.lbWorking.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lbWorking.Size = new System.Drawing.Size(139, 17);
+            this.lbWorking.Size = new System.Drawing.Size(173, 22);
             this.lbWorking.TabIndex = 36;
             this.lbWorking.Text = "Working days";
             this.lbWorking.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -1147,11 +1025,11 @@ namespace GUI
             this.pnStateOption.BackColor = System.Drawing.Color.Transparent;
             this.pnStateOption.Controls.Add(this.pnState);
             this.pnStateOption.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnStateOption.Location = new System.Drawing.Point(0, 20);
+            this.pnStateOption.Location = new System.Drawing.Point(0, 30);
             this.pnStateOption.Name = "pnStateOption";
-            this.pnStateOption.Padding = new System.Windows.Forms.Padding(10, 5, 100, 0);
+            this.pnStateOption.Padding = new System.Windows.Forms.Padding(10, 5, 150, 0);
             this.pnStateOption.ShadowDecoration.Parent = this.pnStateOption;
-            this.pnStateOption.Size = new System.Drawing.Size(316, 45);
+            this.pnStateOption.Size = new System.Drawing.Size(523, 55);
             this.pnStateOption.TabIndex = 15;
             // 
             // pnState
@@ -1163,34 +1041,34 @@ namespace GUI
             this.pnState.Location = new System.Drawing.Point(10, 5);
             this.pnState.Name = "pnState";
             this.pnState.ShadowDecoration.Parent = this.pnState;
-            this.pnState.Size = new System.Drawing.Size(206, 40);
+            this.pnState.Size = new System.Drawing.Size(363, 50);
             this.pnState.TabIndex = 0;
             // 
             // pnStateOptionWrapper
             // 
             this.pnStateOptionWrapper.AutoRoundedCorners = true;
             this.pnStateOptionWrapper.BorderColor = System.Drawing.Color.Goldenrod;
-            this.pnStateOptionWrapper.BorderRadius = 10;
+            this.pnStateOptionWrapper.BorderRadius = 13;
             this.pnStateOptionWrapper.BorderThickness = 2;
             this.pnStateOptionWrapper.Controls.Add(this.rbQuitWork);
             this.pnStateOptionWrapper.Controls.Add(this.rbWorking);
             this.pnStateOptionWrapper.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnStateOptionWrapper.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.pnStateOptionWrapper.Location = new System.Drawing.Point(0, 17);
+            this.pnStateOptionWrapper.Location = new System.Drawing.Point(0, 22);
             this.pnStateOptionWrapper.Name = "pnStateOptionWrapper";
-            this.pnStateOptionWrapper.Padding = new System.Windows.Forms.Padding(20, 0, 15, 0);
+            this.pnStateOptionWrapper.Padding = new System.Windows.Forms.Padding(30, 0, 30, 0);
             this.pnStateOptionWrapper.ShadowDecoration.Parent = this.pnStateOptionWrapper;
-            this.pnStateOptionWrapper.Size = new System.Drawing.Size(206, 23);
+            this.pnStateOptionWrapper.Size = new System.Drawing.Size(363, 28);
             this.pnStateOptionWrapper.TabIndex = 34;
             // 
             // rbQuitWork
             // 
             this.rbQuitWork.AutoSize = true;
             this.rbQuitWork.Dock = System.Windows.Forms.DockStyle.Right;
-            this.rbQuitWork.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold);
-            this.rbQuitWork.Location = new System.Drawing.Point(66, 0);
+            this.rbQuitWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.rbQuitWork.Location = new System.Drawing.Point(209, 0);
             this.rbQuitWork.Name = "rbQuitWork";
-            this.rbQuitWork.Size = new System.Drawing.Size(125, 23);
+            this.rbQuitWork.Size = new System.Drawing.Size(124, 28);
             this.rbQuitWork.TabIndex = 1;
             this.rbQuitWork.Text = "Quit work";
             this.rbQuitWork.UseVisualStyleBackColor = true;
@@ -1200,10 +1078,10 @@ namespace GUI
             this.rbWorking.AutoSize = true;
             this.rbWorking.Checked = true;
             this.rbWorking.Dock = System.Windows.Forms.DockStyle.Left;
-            this.rbWorking.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold);
-            this.rbWorking.Location = new System.Drawing.Point(20, 0);
+            this.rbWorking.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.rbWorking.Location = new System.Drawing.Point(30, 0);
             this.rbWorking.Name = "rbWorking";
-            this.rbWorking.Size = new System.Drawing.Size(111, 23);
+            this.rbWorking.Size = new System.Drawing.Size(113, 28);
             this.rbWorking.TabIndex = 0;
             this.rbWorking.TabStop = true;
             this.rbWorking.Text = "Working";
@@ -1219,7 +1097,7 @@ namespace GUI
             this.lbState.Margin = new System.Windows.Forms.Padding(0);
             this.lbState.Name = "lbState";
             this.lbState.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lbState.Size = new System.Drawing.Size(206, 17);
+            this.lbState.Size = new System.Drawing.Size(363, 22);
             this.lbState.TabIndex = 33;
             this.lbState.Text = "State";
             this.lbState.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -1229,11 +1107,11 @@ namespace GUI
             this.pnPersonalInformation.BackColor = System.Drawing.Color.Transparent;
             this.pnPersonalInformation.Controls.Add(this.gbPersonalInformation);
             this.pnPersonalInformation.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnPersonalInformation.Location = new System.Drawing.Point(10, 122);
+            this.pnPersonalInformation.Location = new System.Drawing.Point(10, 154);
             this.pnPersonalInformation.Name = "pnPersonalInformation";
             this.pnPersonalInformation.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.pnPersonalInformation.ShadowDecoration.Parent = this.pnPersonalInformation;
-            this.pnPersonalInformation.Size = new System.Drawing.Size(316, 357);
+            this.pnPersonalInformation.Size = new System.Drawing.Size(523, 430);
             this.pnPersonalInformation.TabIndex = 10;
             // 
             // gbPersonalInformation
@@ -1255,9 +1133,9 @@ namespace GUI
             this.gbPersonalInformation.ForeColor = System.Drawing.Color.Orange;
             this.gbPersonalInformation.Location = new System.Drawing.Point(0, 10);
             this.gbPersonalInformation.Name = "gbPersonalInformation";
-            this.gbPersonalInformation.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
+            this.gbPersonalInformation.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.gbPersonalInformation.ShadowDecoration.Parent = this.gbPersonalInformation;
-            this.gbPersonalInformation.Size = new System.Drawing.Size(316, 347);
+            this.gbPersonalInformation.Size = new System.Drawing.Size(523, 420);
             this.gbPersonalInformation.TabIndex = 9;
             this.gbPersonalInformation.Text = "Personal Information";
             // 
@@ -1267,11 +1145,11 @@ namespace GUI
             this.pnUrl.Controls.Add(this.txtUrl);
             this.pnUrl.Controls.Add(this.lbUrl);
             this.pnUrl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnUrl.Location = new System.Drawing.Point(0, 245);
+            this.pnUrl.Location = new System.Drawing.Point(0, 305);
             this.pnUrl.Name = "pnUrl";
             this.pnUrl.Padding = new System.Windows.Forms.Padding(10, 5, 10, 0);
             this.pnUrl.ShadowDecoration.Parent = this.pnUrl;
-            this.pnUrl.Size = new System.Drawing.Size(316, 92);
+            this.pnUrl.Size = new System.Drawing.Size(523, 102);
             this.pnUrl.TabIndex = 18;
             // 
             // txtUrl
@@ -1290,11 +1168,11 @@ namespace GUI
             this.txtUrl.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.txtUrl.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUrl.FocusedState.Parent = this.txtUrl;
-            this.txtUrl.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold);
+            this.txtUrl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.txtUrl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtUrl.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUrl.HoverState.Parent = this.txtUrl;
-            this.txtUrl.Location = new System.Drawing.Point(10, 22);
+            this.txtUrl.Location = new System.Drawing.Point(10, 27);
             this.txtUrl.Margin = new System.Windows.Forms.Padding(9, 3, 9, 5);
             this.txtUrl.MaximumSize = new System.Drawing.Size(455, 100);
             this.txtUrl.Multiline = true;
@@ -1304,7 +1182,7 @@ namespace GUI
             this.txtUrl.PlaceholderText = "";
             this.txtUrl.SelectedText = "";
             this.txtUrl.ShadowDecoration.Parent = this.txtUrl;
-            this.txtUrl.Size = new System.Drawing.Size(296, 70);
+            this.txtUrl.Size = new System.Drawing.Size(455, 75);
             this.txtUrl.TabIndex = 32;
             this.txtUrl.TextOffset = new System.Drawing.Point(10, 0);
             this.txtUrl.TextChanged += new System.EventHandler(this.txtUrl_TextChanged);
@@ -1319,7 +1197,7 @@ namespace GUI
             this.lbUrl.Margin = new System.Windows.Forms.Padding(0);
             this.lbUrl.Name = "lbUrl";
             this.lbUrl.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lbUrl.Size = new System.Drawing.Size(296, 17);
+            this.lbUrl.Size = new System.Drawing.Size(503, 22);
             this.lbUrl.TabIndex = 31;
             this.lbUrl.Text = "URL image";
             this.lbUrl.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -1330,18 +1208,18 @@ namespace GUI
             this.pnPassword.Controls.Add(this.txtPassword);
             this.pnPassword.Controls.Add(this.lbPassword);
             this.pnPassword.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnPassword.Location = new System.Drawing.Point(0, 200);
+            this.pnPassword.Location = new System.Drawing.Point(0, 250);
             this.pnPassword.Name = "pnPassword";
             this.pnPassword.Padding = new System.Windows.Forms.Padding(10, 5, 10, 0);
             this.pnPassword.ShadowDecoration.Parent = this.pnPassword;
-            this.pnPassword.Size = new System.Drawing.Size(316, 45);
+            this.pnPassword.Size = new System.Drawing.Size(523, 55);
             this.pnPassword.TabIndex = 17;
             // 
             // txtPassword
             // 
             this.txtPassword.AutoRoundedCorners = true;
             this.txtPassword.BorderColor = System.Drawing.Color.Goldenrod;
-            this.txtPassword.BorderRadius = 10;
+            this.txtPassword.BorderRadius = 13;
             this.txtPassword.BorderThickness = 2;
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.DefaultText = "";
@@ -1354,11 +1232,11 @@ namespace GUI
             this.txtPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.FocusedState.Parent = this.txtPassword;
-            this.txtPassword.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.HoverState.Parent = this.txtPassword;
-            this.txtPassword.Location = new System.Drawing.Point(10, 22);
+            this.txtPassword.Location = new System.Drawing.Point(10, 27);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(9, 3, 9, 5);
             this.txtPassword.MaximumSize = new System.Drawing.Size(455, 45);
             this.txtPassword.Name = "txtPassword";
@@ -1367,7 +1245,7 @@ namespace GUI
             this.txtPassword.PlaceholderText = "";
             this.txtPassword.SelectedText = "";
             this.txtPassword.ShadowDecoration.Parent = this.txtPassword;
-            this.txtPassword.Size = new System.Drawing.Size(296, 23);
+            this.txtPassword.Size = new System.Drawing.Size(455, 28);
             this.txtPassword.TabIndex = 32;
             this.txtPassword.TextOffset = new System.Drawing.Point(10, 0);
             // 
@@ -1381,7 +1259,7 @@ namespace GUI
             this.lbPassword.Margin = new System.Windows.Forms.Padding(0);
             this.lbPassword.Name = "lbPassword";
             this.lbPassword.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lbPassword.Size = new System.Drawing.Size(296, 17);
+            this.lbPassword.Size = new System.Drawing.Size(503, 22);
             this.lbPassword.TabIndex = 31;
             this.lbPassword.Text = "Password";
             this.lbPassword.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -1392,18 +1270,18 @@ namespace GUI
             this.pnAddress.Controls.Add(this.txtAddress);
             this.pnAddress.Controls.Add(this.lbAddress);
             this.pnAddress.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnAddress.Location = new System.Drawing.Point(0, 155);
+            this.pnAddress.Location = new System.Drawing.Point(0, 195);
             this.pnAddress.Name = "pnAddress";
             this.pnAddress.Padding = new System.Windows.Forms.Padding(10, 5, 10, 0);
             this.pnAddress.ShadowDecoration.Parent = this.pnAddress;
-            this.pnAddress.Size = new System.Drawing.Size(316, 45);
+            this.pnAddress.Size = new System.Drawing.Size(523, 55);
             this.pnAddress.TabIndex = 16;
             // 
             // txtAddress
             // 
             this.txtAddress.AutoRoundedCorners = true;
             this.txtAddress.BorderColor = System.Drawing.Color.Goldenrod;
-            this.txtAddress.BorderRadius = 10;
+            this.txtAddress.BorderRadius = 13;
             this.txtAddress.BorderThickness = 2;
             this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAddress.DefaultText = "";
@@ -1416,11 +1294,11 @@ namespace GUI
             this.txtAddress.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAddress.FocusedState.Parent = this.txtAddress;
-            this.txtAddress.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.txtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAddress.HoverState.Parent = this.txtAddress;
-            this.txtAddress.Location = new System.Drawing.Point(10, 22);
+            this.txtAddress.Location = new System.Drawing.Point(10, 27);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(9, 3, 9, 5);
             this.txtAddress.MaximumSize = new System.Drawing.Size(455, 45);
             this.txtAddress.Name = "txtAddress";
@@ -1429,7 +1307,7 @@ namespace GUI
             this.txtAddress.PlaceholderText = "";
             this.txtAddress.SelectedText = "";
             this.txtAddress.ShadowDecoration.Parent = this.txtAddress;
-            this.txtAddress.Size = new System.Drawing.Size(296, 23);
+            this.txtAddress.Size = new System.Drawing.Size(455, 28);
             this.txtAddress.TabIndex = 32;
             this.txtAddress.TextOffset = new System.Drawing.Point(10, 0);
             // 
@@ -1443,7 +1321,7 @@ namespace GUI
             this.lbAddress.Margin = new System.Windows.Forms.Padding(0);
             this.lbAddress.Name = "lbAddress";
             this.lbAddress.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lbAddress.Size = new System.Drawing.Size(296, 17);
+            this.lbAddress.Size = new System.Drawing.Size(503, 22);
             this.lbAddress.TabIndex = 31;
             this.lbAddress.Text = "Address";
             this.lbAddress.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -1454,11 +1332,11 @@ namespace GUI
             this.pnBirthdayAndGender.Controls.Add(this.pnGender);
             this.pnBirthdayAndGender.Controls.Add(this.pbBirthday);
             this.pnBirthdayAndGender.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnBirthdayAndGender.Location = new System.Drawing.Point(0, 110);
+            this.pnBirthdayAndGender.Location = new System.Drawing.Point(0, 140);
             this.pnBirthdayAndGender.Name = "pnBirthdayAndGender";
             this.pnBirthdayAndGender.Padding = new System.Windows.Forms.Padding(10, 5, 10, 0);
             this.pnBirthdayAndGender.ShadowDecoration.Parent = this.pnBirthdayAndGender;
-            this.pnBirthdayAndGender.Size = new System.Drawing.Size(316, 45);
+            this.pnBirthdayAndGender.Size = new System.Drawing.Size(523, 55);
             this.pnBirthdayAndGender.TabIndex = 15;
             // 
             // pnGender
@@ -1467,37 +1345,37 @@ namespace GUI
             this.pnGender.Controls.Add(this.pnGenderOption);
             this.pnGender.Controls.Add(this.lbGender);
             this.pnGender.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnGender.Location = new System.Drawing.Point(141, 5);
+            this.pnGender.Location = new System.Drawing.Point(227, 5);
             this.pnGender.Name = "pnGender";
             this.pnGender.ShadowDecoration.Parent = this.pnGender;
-            this.pnGender.Size = new System.Drawing.Size(165, 40);
+            this.pnGender.Size = new System.Drawing.Size(286, 50);
             this.pnGender.TabIndex = 2;
             // 
             // pnGenderOption
             // 
             this.pnGenderOption.AutoRoundedCorners = true;
             this.pnGenderOption.BorderColor = System.Drawing.Color.Goldenrod;
-            this.pnGenderOption.BorderRadius = 10;
+            this.pnGenderOption.BorderRadius = 13;
             this.pnGenderOption.BorderThickness = 2;
             this.pnGenderOption.Controls.Add(this.rbFemale);
             this.pnGenderOption.Controls.Add(this.rbMale);
             this.pnGenderOption.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnGenderOption.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.pnGenderOption.Location = new System.Drawing.Point(0, 17);
+            this.pnGenderOption.Location = new System.Drawing.Point(0, 22);
             this.pnGenderOption.Name = "pnGenderOption";
-            this.pnGenderOption.Padding = new System.Windows.Forms.Padding(15, 0, 10, 0);
+            this.pnGenderOption.Padding = new System.Windows.Forms.Padding(30, 0, 25, 0);
             this.pnGenderOption.ShadowDecoration.Parent = this.pnGenderOption;
-            this.pnGenderOption.Size = new System.Drawing.Size(165, 23);
+            this.pnGenderOption.Size = new System.Drawing.Size(286, 28);
             this.pnGenderOption.TabIndex = 37;
             // 
             // rbFemale
             // 
             this.rbFemale.AutoSize = true;
             this.rbFemale.Dock = System.Windows.Forms.DockStyle.Right;
-            this.rbFemale.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold);
-            this.rbFemale.Location = new System.Drawing.Point(52, 0);
+            this.rbFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.rbFemale.Location = new System.Drawing.Point(157, 0);
             this.rbFemale.Name = "rbFemale";
-            this.rbFemale.Size = new System.Drawing.Size(103, 23);
+            this.rbFemale.Size = new System.Drawing.Size(104, 28);
             this.rbFemale.TabIndex = 1;
             this.rbFemale.Text = "Female";
             this.rbFemale.UseVisualStyleBackColor = true;
@@ -1507,10 +1385,10 @@ namespace GUI
             this.rbMale.AutoSize = true;
             this.rbMale.Checked = true;
             this.rbMale.Dock = System.Windows.Forms.DockStyle.Left;
-            this.rbMale.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold);
-            this.rbMale.Location = new System.Drawing.Point(15, 0);
+            this.rbMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.rbMale.Location = new System.Drawing.Point(30, 0);
             this.rbMale.Name = "rbMale";
-            this.rbMale.Size = new System.Drawing.Size(80, 23);
+            this.rbMale.Size = new System.Drawing.Size(80, 28);
             this.rbMale.TabIndex = 0;
             this.rbMale.TabStop = true;
             this.rbMale.Text = "Male";
@@ -1526,7 +1404,7 @@ namespace GUI
             this.lbGender.Margin = new System.Windows.Forms.Padding(0);
             this.lbGender.Name = "lbGender";
             this.lbGender.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lbGender.Size = new System.Drawing.Size(165, 17);
+            this.lbGender.Size = new System.Drawing.Size(286, 22);
             this.lbGender.TabIndex = 33;
             this.lbGender.Text = "Gender";
             this.lbGender.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -1541,7 +1419,7 @@ namespace GUI
             this.pbBirthday.Name = "pbBirthday";
             this.pbBirthday.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
             this.pbBirthday.ShadowDecoration.Parent = this.pbBirthday;
-            this.pbBirthday.Size = new System.Drawing.Size(131, 40);
+            this.pbBirthday.Size = new System.Drawing.Size(217, 50);
             this.pbBirthday.TabIndex = 1;
             // 
             // dtpBirthday
@@ -1549,23 +1427,23 @@ namespace GUI
             this.dtpBirthday.Animated = true;
             this.dtpBirthday.AutoRoundedCorners = true;
             this.dtpBirthday.BorderColor = System.Drawing.Color.Goldenrod;
-            this.dtpBirthday.BorderRadius = 10;
+            this.dtpBirthday.BorderRadius = 13;
             this.dtpBirthday.BorderThickness = 2;
             this.dtpBirthday.CheckedState.Parent = this.dtpBirthday;
             this.dtpBirthday.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpBirthday.CustomFormat = "dd-MM-yyyy";
             this.dtpBirthday.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtpBirthday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
-            this.dtpBirthday.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.dtpBirthday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpBirthday.HoverState.Parent = this.dtpBirthday;
-            this.dtpBirthday.Location = new System.Drawing.Point(0, 17);
+            this.dtpBirthday.Location = new System.Drawing.Point(0, 22);
             this.dtpBirthday.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpBirthday.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpBirthday.Name = "dtpBirthday";
             this.dtpBirthday.ShadowDecoration.Parent = this.dtpBirthday;
-            this.dtpBirthday.Size = new System.Drawing.Size(111, 23);
+            this.dtpBirthday.Size = new System.Drawing.Size(197, 28);
             this.dtpBirthday.TabIndex = 34;
             this.dtpBirthday.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.dtpBirthday.Value = new System.DateTime(2001, 11, 18, 0, 0, 0, 0);
@@ -1580,7 +1458,7 @@ namespace GUI
             this.lbBirthday.Margin = new System.Windows.Forms.Padding(0);
             this.lbBirthday.Name = "lbBirthday";
             this.lbBirthday.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lbBirthday.Size = new System.Drawing.Size(111, 17);
+            this.lbBirthday.Size = new System.Drawing.Size(197, 22);
             this.lbBirthday.TabIndex = 33;
             this.lbBirthday.Text = "Birthday";
             this.lbBirthday.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -1591,11 +1469,11 @@ namespace GUI
             this.pnPhoneAndID.Controls.Add(this.pnPhoneNumber);
             this.pnPhoneAndID.Controls.Add(this.pnID);
             this.pnPhoneAndID.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnPhoneAndID.Location = new System.Drawing.Point(0, 65);
+            this.pnPhoneAndID.Location = new System.Drawing.Point(0, 85);
             this.pnPhoneAndID.Name = "pnPhoneAndID";
             this.pnPhoneAndID.Padding = new System.Windows.Forms.Padding(10, 5, 10, 0);
             this.pnPhoneAndID.ShadowDecoration.Parent = this.pnPhoneAndID;
-            this.pnPhoneAndID.Size = new System.Drawing.Size(316, 45);
+            this.pnPhoneAndID.Size = new System.Drawing.Size(523, 55);
             this.pnPhoneAndID.TabIndex = 9;
             // 
             // pnPhoneNumber
@@ -1608,14 +1486,14 @@ namespace GUI
             this.pnPhoneNumber.Name = "pnPhoneNumber";
             this.pnPhoneNumber.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
             this.pnPhoneNumber.ShadowDecoration.Parent = this.pnPhoneNumber;
-            this.pnPhoneNumber.Size = new System.Drawing.Size(243, 40);
+            this.pnPhoneNumber.Size = new System.Drawing.Size(450, 50);
             this.pnPhoneNumber.TabIndex = 1;
             // 
             // txtPhoneNumber
             // 
             this.txtPhoneNumber.AutoRoundedCorners = true;
             this.txtPhoneNumber.BorderColor = System.Drawing.Color.Goldenrod;
-            this.txtPhoneNumber.BorderRadius = 10;
+            this.txtPhoneNumber.BorderRadius = 13;
             this.txtPhoneNumber.BorderThickness = 2;
             this.txtPhoneNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPhoneNumber.DefaultText = "";
@@ -1628,11 +1506,11 @@ namespace GUI
             this.txtPhoneNumber.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.txtPhoneNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPhoneNumber.FocusedState.Parent = this.txtPhoneNumber;
-            this.txtPhoneNumber.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.txtPhoneNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPhoneNumber.HoverState.Parent = this.txtPhoneNumber;
-            this.txtPhoneNumber.Location = new System.Drawing.Point(0, 17);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(0, 22);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(9, 3, 9, 5);
             this.txtPhoneNumber.MaximumSize = new System.Drawing.Size(455, 45);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
@@ -1641,7 +1519,7 @@ namespace GUI
             this.txtPhoneNumber.PlaceholderText = "";
             this.txtPhoneNumber.SelectedText = "";
             this.txtPhoneNumber.ShadowDecoration.Parent = this.txtPhoneNumber;
-            this.txtPhoneNumber.Size = new System.Drawing.Size(223, 23);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(430, 28);
             this.txtPhoneNumber.TabIndex = 34;
             this.txtPhoneNumber.TextOffset = new System.Drawing.Point(10, 0);
             // 
@@ -1655,7 +1533,7 @@ namespace GUI
             this.lbPhoneNumber.Margin = new System.Windows.Forms.Padding(0);
             this.lbPhoneNumber.Name = "lbPhoneNumber";
             this.lbPhoneNumber.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lbPhoneNumber.Size = new System.Drawing.Size(223, 17);
+            this.lbPhoneNumber.Size = new System.Drawing.Size(430, 22);
             this.lbPhoneNumber.TabIndex = 33;
             this.lbPhoneNumber.Text = "Phone number";
             this.lbPhoneNumber.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -1666,17 +1544,17 @@ namespace GUI
             this.pnID.Controls.Add(this.txtID);
             this.pnID.Controls.Add(this.lbID);
             this.pnID.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnID.Location = new System.Drawing.Point(253, 5);
+            this.pnID.Location = new System.Drawing.Point(460, 5);
             this.pnID.Name = "pnID";
             this.pnID.ShadowDecoration.Parent = this.pnID;
-            this.pnID.Size = new System.Drawing.Size(53, 40);
+            this.pnID.Size = new System.Drawing.Size(53, 50);
             this.pnID.TabIndex = 0;
             // 
             // txtID
             // 
             this.txtID.AutoRoundedCorners = true;
             this.txtID.BorderColor = System.Drawing.Color.Goldenrod;
-            this.txtID.BorderRadius = 10;
+            this.txtID.BorderRadius = 13;
             this.txtID.BorderThickness = 2;
             this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtID.DefaultText = "";
@@ -1690,11 +1568,11 @@ namespace GUI
             this.txtID.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.txtID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtID.FocusedState.Parent = this.txtID;
-            this.txtID.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.txtID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtID.HoverState.Parent = this.txtID;
-            this.txtID.Location = new System.Drawing.Point(0, 17);
+            this.txtID.Location = new System.Drawing.Point(0, 22);
             this.txtID.Margin = new System.Windows.Forms.Padding(9, 3, 9, 5);
             this.txtID.MaximumSize = new System.Drawing.Size(455, 45);
             this.txtID.Name = "txtID";
@@ -1703,7 +1581,7 @@ namespace GUI
             this.txtID.PlaceholderText = "";
             this.txtID.SelectedText = "";
             this.txtID.ShadowDecoration.Parent = this.txtID;
-            this.txtID.Size = new System.Drawing.Size(53, 23);
+            this.txtID.Size = new System.Drawing.Size(53, 28);
             this.txtID.TabIndex = 34;
             this.txtID.TextOffset = new System.Drawing.Point(10, 0);
             // 
@@ -1717,7 +1595,7 @@ namespace GUI
             this.lbID.Margin = new System.Windows.Forms.Padding(0);
             this.lbID.Name = "lbID";
             this.lbID.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lbID.Size = new System.Drawing.Size(53, 17);
+            this.lbID.Size = new System.Drawing.Size(53, 22);
             this.lbID.TabIndex = 33;
             this.lbID.Text = "ID";
             this.lbID.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -1728,18 +1606,18 @@ namespace GUI
             this.pnName.Controls.Add(this.txtName);
             this.pnName.Controls.Add(this.lbName);
             this.pnName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnName.Location = new System.Drawing.Point(0, 20);
+            this.pnName.Location = new System.Drawing.Point(0, 30);
             this.pnName.Name = "pnName";
             this.pnName.Padding = new System.Windows.Forms.Padding(10, 5, 10, 0);
             this.pnName.ShadowDecoration.Parent = this.pnName;
-            this.pnName.Size = new System.Drawing.Size(316, 45);
+            this.pnName.Size = new System.Drawing.Size(523, 55);
             this.pnName.TabIndex = 8;
             // 
             // txtName
             // 
             this.txtName.AutoRoundedCorners = true;
             this.txtName.BorderColor = System.Drawing.Color.Goldenrod;
-            this.txtName.BorderRadius = 10;
+            this.txtName.BorderRadius = 13;
             this.txtName.BorderThickness = 2;
             this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtName.DefaultText = "";
@@ -1752,11 +1630,11 @@ namespace GUI
             this.txtName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.FocusedState.Parent = this.txtName;
-            this.txtName.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.HoverState.Parent = this.txtName;
-            this.txtName.Location = new System.Drawing.Point(10, 22);
+            this.txtName.Location = new System.Drawing.Point(10, 27);
             this.txtName.Margin = new System.Windows.Forms.Padding(9, 3, 9, 5);
             this.txtName.MaximumSize = new System.Drawing.Size(455, 45);
             this.txtName.Name = "txtName";
@@ -1765,7 +1643,7 @@ namespace GUI
             this.txtName.PlaceholderText = "";
             this.txtName.SelectedText = "";
             this.txtName.ShadowDecoration.Parent = this.txtName;
-            this.txtName.Size = new System.Drawing.Size(296, 23);
+            this.txtName.Size = new System.Drawing.Size(455, 28);
             this.txtName.TabIndex = 32;
             this.txtName.TextOffset = new System.Drawing.Point(10, 0);
             // 
@@ -1779,7 +1657,7 @@ namespace GUI
             this.lbName.Margin = new System.Windows.Forms.Padding(0);
             this.lbName.Name = "lbName";
             this.lbName.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lbName.Size = new System.Drawing.Size(296, 17);
+            this.lbName.Size = new System.Drawing.Size(503, 22);
             this.lbName.TabIndex = 31;
             this.lbName.Text = "Name";
             this.lbName.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -1799,7 +1677,7 @@ namespace GUI
             this.tlpPictureSide.Name = "tlpPictureSide";
             this.tlpPictureSide.RowCount = 1;
             this.tlpPictureSide.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpPictureSide.Size = new System.Drawing.Size(316, 117);
+            this.tlpPictureSide.Size = new System.Drawing.Size(523, 149);
             this.tlpPictureSide.TabIndex = 9;
             // 
             // pbPiture
@@ -1813,7 +1691,7 @@ namespace GUI
             this.pbPiture.Margin = new System.Windows.Forms.Padding(10, 10, 0, 10);
             this.pbPiture.Name = "pbPiture";
             this.pbPiture.ShadowDecoration.Parent = this.pbPiture;
-            this.pbPiture.Size = new System.Drawing.Size(150, 97);
+            this.pbPiture.Size = new System.Drawing.Size(255, 129);
             this.pbPiture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbPiture.TabIndex = 5;
             this.pbPiture.TabStop = false;
@@ -1824,12 +1702,12 @@ namespace GUI
             this.pnPictureButton.Controls.Add(this.pnDeletePicture);
             this.pnPictureButton.Controls.Add(this.pnChangePicture);
             this.pnPictureButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnPictureButton.Location = new System.Drawing.Point(165, 5);
+            this.pnPictureButton.Location = new System.Drawing.Point(270, 5);
             this.pnPictureButton.Margin = new System.Windows.Forms.Padding(5);
             this.pnPictureButton.Name = "pnPictureButton";
             this.pnPictureButton.Padding = new System.Windows.Forms.Padding(10);
             this.pnPictureButton.ShadowDecoration.Parent = this.pnPictureButton;
-            this.pnPictureButton.Size = new System.Drawing.Size(146, 107);
+            this.pnPictureButton.Size = new System.Drawing.Size(248, 139);
             this.pnPictureButton.TabIndex = 6;
             // 
             // pnDeletePicture
@@ -1837,10 +1715,10 @@ namespace GUI
             this.pnDeletePicture.BackColor = System.Drawing.Color.Transparent;
             this.pnDeletePicture.Controls.Add(this.btnDeletePicture);
             this.pnDeletePicture.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnDeletePicture.Location = new System.Drawing.Point(10, 49);
+            this.pnDeletePicture.Location = new System.Drawing.Point(10, 55);
             this.pnDeletePicture.Name = "pnDeletePicture";
             this.pnDeletePicture.Padding = new System.Windows.Forms.Padding(5, 5, 5, 10);
-            this.pnDeletePicture.Size = new System.Drawing.Size(126, 39);
+            this.pnDeletePicture.Size = new System.Drawing.Size(228, 45);
             this.pnDeletePicture.TabIndex = 1;
             // 
             // btnDeletePicture
@@ -1848,7 +1726,7 @@ namespace GUI
             this.btnDeletePicture.Animated = true;
             this.btnDeletePicture.AutoRoundedCorners = true;
             this.btnDeletePicture.BackColor = System.Drawing.Color.Transparent;
-            this.btnDeletePicture.BorderRadius = 11;
+            this.btnDeletePicture.BorderRadius = 14;
             this.btnDeletePicture.CheckedState.Parent = this.btnDeletePicture;
             this.btnDeletePicture.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeletePicture.CustomImages.Parent = this.btnDeletePicture;
@@ -1869,7 +1747,7 @@ namespace GUI
             this.btnDeletePicture.Name = "btnDeletePicture";
             this.btnDeletePicture.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
             this.btnDeletePicture.ShadowDecoration.Parent = this.btnDeletePicture;
-            this.btnDeletePicture.Size = new System.Drawing.Size(116, 24);
+            this.btnDeletePicture.Size = new System.Drawing.Size(218, 30);
             this.btnDeletePicture.TabIndex = 1;
             this.btnDeletePicture.Text = "Delete";
             this.btnDeletePicture.Click += new System.EventHandler(this.btnDeletePicture_Click);
@@ -1882,7 +1760,7 @@ namespace GUI
             this.pnChangePicture.Location = new System.Drawing.Point(10, 10);
             this.pnChangePicture.Name = "pnChangePicture";
             this.pnChangePicture.Padding = new System.Windows.Forms.Padding(5, 5, 5, 10);
-            this.pnChangePicture.Size = new System.Drawing.Size(126, 39);
+            this.pnChangePicture.Size = new System.Drawing.Size(228, 45);
             this.pnChangePicture.TabIndex = 0;
             // 
             // btnChangePicture
@@ -1890,7 +1768,7 @@ namespace GUI
             this.btnChangePicture.Animated = true;
             this.btnChangePicture.AutoRoundedCorners = true;
             this.btnChangePicture.BackColor = System.Drawing.Color.Transparent;
-            this.btnChangePicture.BorderRadius = 11;
+            this.btnChangePicture.BorderRadius = 14;
             this.btnChangePicture.CheckedState.Parent = this.btnChangePicture;
             this.btnChangePicture.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChangePicture.CustomImages.Parent = this.btnChangePicture;
@@ -1911,7 +1789,7 @@ namespace GUI
             this.btnChangePicture.Name = "btnChangePicture";
             this.btnChangePicture.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
             this.btnChangePicture.ShadowDecoration.Parent = this.btnChangePicture;
-            this.btnChangePicture.Size = new System.Drawing.Size(116, 24);
+            this.btnChangePicture.Size = new System.Drawing.Size(218, 30);
             this.btnChangePicture.TabIndex = 1;
             this.btnChangePicture.Text = "Change";
             this.btnChangePicture.Click += new System.EventHandler(this.btnChangePicture_Click);
@@ -1924,66 +1802,29 @@ namespace GUI
             this.pnSideBarFooter.CustomizableEdges.TopLeft = false;
             this.pnSideBarFooter.CustomizableEdges.TopRight = false;
             this.pnSideBarFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnSideBarFooter.Location = new System.Drawing.Point(0, 690);
+            this.pnSideBarFooter.Location = new System.Drawing.Point(0, 680);
             this.pnSideBarFooter.Name = "pnSideBarFooter";
             this.pnSideBarFooter.Padding = new System.Windows.Forms.Padding(10, 0, 0, 1);
             this.pnSideBarFooter.ShadowDecoration.Parent = this.pnSideBarFooter;
-            this.pnSideBarFooter.Size = new System.Drawing.Size(357, 40);
+            this.pnSideBarFooter.Size = new System.Drawing.Size(564, 50);
             this.pnSideBarFooter.TabIndex = 10;
             // 
-            // tlpSideBarFooter
+            // ecTlpPictureSide
             // 
-            this.tlpSideBarFooter.ColumnCount = 2;
-            this.tlpSideBarFooter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpSideBarFooter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpSideBarFooter.Controls.Add(this.btnSideBarCancel, 0, 0);
-            this.tlpSideBarFooter.Controls.Add(this.btnSideBarConfirm, 0, 0);
-            this.tlpSideBarFooter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpSideBarFooter.Location = new System.Drawing.Point(10, 0);
-            this.tlpSideBarFooter.Name = "tlpSideBarFooter";
-            this.tlpSideBarFooter.RowCount = 1;
-            this.tlpSideBarFooter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpSideBarFooter.Size = new System.Drawing.Size(347, 39);
-            this.tlpSideBarFooter.TabIndex = 10;
+            this.ecTlpPictureSide.CornerRadius = 11;
+            this.ecTlpPictureSide.TargetControl = this.tlpPictureSide;
             // 
-            // btnSideBarCancel
+            // ecDgvEmployees
             // 
-            this.btnSideBarCancel.Animated = true;
-            this.btnSideBarCancel.AutoRoundedCorners = true;
-            this.btnSideBarCancel.BackColor = System.Drawing.Color.Transparent;
-            this.btnSideBarCancel.BorderRadius = 13;
-            this.btnSideBarCancel.CheckedState.Parent = this.btnSideBarCancel;
-            this.btnSideBarCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSideBarCancel.CustomImages.Parent = this.btnSideBarCancel;
-            this.btnSideBarCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSideBarCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSideBarCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSideBarCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSideBarCancel.DisabledState.Parent = this.btnSideBarCancel;
-            this.btnSideBarCancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSideBarCancel.FillColor = System.Drawing.Color.Brown;
-            this.btnSideBarCancel.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSideBarCancel.ForeColor = System.Drawing.Color.White;
-            this.btnSideBarCancel.HoverState.Parent = this.btnSideBarCancel;
-            this.btnSideBarCancel.Image = global::Manage_Store.Properties.Resources.cancel;
-            this.btnSideBarCancel.ImageOffset = new System.Drawing.Point(1, -1);
-            this.btnSideBarCancel.ImageSize = new System.Drawing.Size(22, 22);
-            this.btnSideBarCancel.Location = new System.Drawing.Point(183, 5);
-            this.btnSideBarCancel.Margin = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.btnSideBarCancel.Name = "btnSideBarCancel";
-            this.btnSideBarCancel.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            this.btnSideBarCancel.ShadowDecoration.Parent = this.btnSideBarCancel;
-            this.btnSideBarCancel.Size = new System.Drawing.Size(154, 29);
-            this.btnSideBarCancel.TabIndex = 3;
-            this.btnSideBarCancel.Text = "Cancel";
-            this.btnSideBarCancel.Click += new System.EventHandler(this.btnSideBarCancel_Click);
+            this.ecDgvEmployees.CornerRadius = 11;
+            this.ecDgvEmployees.TargetControl = this.dgvEmployees;
             // 
             // btnSideBarConfirm
             // 
             this.btnSideBarConfirm.Animated = true;
             this.btnSideBarConfirm.AutoRoundedCorners = true;
             this.btnSideBarConfirm.BackColor = System.Drawing.Color.Transparent;
-            this.btnSideBarConfirm.BorderRadius = 13;
+            this.btnSideBarConfirm.BorderRadius = 18;
             this.btnSideBarConfirm.CheckedState.Parent = this.btnSideBarConfirm;
             this.btnSideBarConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideBarConfirm.CustomImages.Parent = this.btnSideBarConfirm;
@@ -2005,20 +1846,179 @@ namespace GUI
             this.btnSideBarConfirm.Name = "btnSideBarConfirm";
             this.btnSideBarConfirm.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
             this.btnSideBarConfirm.ShadowDecoration.Parent = this.btnSideBarConfirm;
-            this.btnSideBarConfirm.Size = new System.Drawing.Size(153, 29);
+            this.btnSideBarConfirm.Size = new System.Drawing.Size(257, 39);
             this.btnSideBarConfirm.TabIndex = 2;
             this.btnSideBarConfirm.Text = "Confirm";
             this.btnSideBarConfirm.Click += new System.EventHandler(this.btnSideBarConfirm_Click);
             // 
-            // ecTlpPictureSide
+            // btnSideBarCancel
             // 
-            this.ecTlpPictureSide.CornerRadius = 11;
-            this.ecTlpPictureSide.TargetControl = this.tlpPictureSide;
+            this.btnSideBarCancel.Animated = true;
+            this.btnSideBarCancel.AutoRoundedCorners = true;
+            this.btnSideBarCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnSideBarCancel.BorderRadius = 18;
+            this.btnSideBarCancel.CheckedState.Parent = this.btnSideBarCancel;
+            this.btnSideBarCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSideBarCancel.CustomImages.Parent = this.btnSideBarCancel;
+            this.btnSideBarCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSideBarCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSideBarCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSideBarCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSideBarCancel.DisabledState.Parent = this.btnSideBarCancel;
+            this.btnSideBarCancel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSideBarCancel.FillColor = System.Drawing.Color.Brown;
+            this.btnSideBarCancel.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSideBarCancel.ForeColor = System.Drawing.Color.White;
+            this.btnSideBarCancel.HoverState.Parent = this.btnSideBarCancel;
+            this.btnSideBarCancel.Image = global::Manage_Store.Properties.Resources.cancel;
+            this.btnSideBarCancel.ImageOffset = new System.Drawing.Point(1, -1);
+            this.btnSideBarCancel.ImageSize = new System.Drawing.Size(22, 22);
+            this.btnSideBarCancel.Location = new System.Drawing.Point(287, 5);
+            this.btnSideBarCancel.Margin = new System.Windows.Forms.Padding(10, 5, 10, 5);
+            this.btnSideBarCancel.Name = "btnSideBarCancel";
+            this.btnSideBarCancel.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
+            this.btnSideBarCancel.ShadowDecoration.Parent = this.btnSideBarCancel;
+            this.btnSideBarCancel.Size = new System.Drawing.Size(257, 39);
+            this.btnSideBarCancel.TabIndex = 3;
+            this.btnSideBarCancel.Text = "Cancel";
+            this.btnSideBarCancel.Click += new System.EventHandler(this.btnSideBarCancel_Click);
             // 
-            // ecDgvEmployees
+            // tlpSideBarFooter
             // 
-            this.ecDgvEmployees.CornerRadius = 11;
-            this.ecDgvEmployees.TargetControl = this.dgvEmployees;
+            this.tlpSideBarFooter.ColumnCount = 2;
+            this.tlpSideBarFooter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpSideBarFooter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpSideBarFooter.Controls.Add(this.btnSideBarCancel, 0, 0);
+            this.tlpSideBarFooter.Controls.Add(this.btnSideBarConfirm, 0, 0);
+            this.tlpSideBarFooter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpSideBarFooter.Location = new System.Drawing.Point(10, 0);
+            this.tlpSideBarFooter.Name = "tlpSideBarFooter";
+            this.tlpSideBarFooter.RowCount = 1;
+            this.tlpSideBarFooter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpSideBarFooter.Size = new System.Drawing.Size(554, 49);
+            this.tlpSideBarFooter.TabIndex = 10;
+            // 
+            // lbRole
+            // 
+            this.lbRole.BackColor = System.Drawing.Color.Transparent;
+            this.lbRole.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbRole.Font = new System.Drawing.Font("Poppins", 11F);
+            this.lbRole.ForeColor = System.Drawing.Color.Orange;
+            this.lbRole.Location = new System.Drawing.Point(0, 0);
+            this.lbRole.Margin = new System.Windows.Forms.Padding(0);
+            this.lbRole.Name = "lbRole";
+            this.lbRole.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.lbRole.Size = new System.Drawing.Size(315, 22);
+            this.lbRole.TabIndex = 33;
+            this.lbRole.Text = "Role";
+            this.lbRole.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // cbbRole
+            // 
+            this.cbbRole.AutoRoundedCorners = true;
+            this.cbbRole.BackColor = System.Drawing.Color.Transparent;
+            this.cbbRole.BorderColor = System.Drawing.Color.Goldenrod;
+            this.cbbRole.BorderRadius = 17;
+            this.cbbRole.BorderThickness = 2;
+            this.cbbRole.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbbRole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbRole.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
+            this.cbbRole.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbRole.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbRole.FocusedState.Parent = this.cbbRole;
+            this.cbbRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.cbbRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbRole.HoverState.Parent = this.cbbRole;
+            this.cbbRole.ItemHeight = 30;
+            this.cbbRole.Items.AddRange(new object[] {
+            "Staff",
+            "Stock manager",
+            "Admin"});
+            this.cbbRole.ItemsAppearance.Parent = this.cbbRole;
+            this.cbbRole.Location = new System.Drawing.Point(0, 22);
+            this.cbbRole.Name = "cbbRole";
+            this.cbbRole.ShadowDecoration.Parent = this.cbbRole;
+            this.cbbRole.Size = new System.Drawing.Size(315, 36);
+            this.cbbRole.StartIndex = 0;
+            this.cbbRole.TabIndex = 34;
+            this.cbbRole.TextOffset = new System.Drawing.Point(10, 2);
+            // 
+            // pnRole
+            // 
+            this.pnRole.BackColor = System.Drawing.Color.Transparent;
+            this.pnRole.Controls.Add(this.cbbRole);
+            this.pnRole.Controls.Add(this.lbRole);
+            this.pnRole.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnRole.Location = new System.Drawing.Point(10, 5);
+            this.pnRole.Name = "pnRole";
+            this.pnRole.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
+            this.pnRole.ShadowDecoration.Parent = this.pnRole;
+            this.pnRole.Size = new System.Drawing.Size(330, 50);
+            this.pnRole.TabIndex = 1;
+            // 
+            // nudWorkingDays
+            // 
+            this.nudWorkingDays.AutoRoundedCorners = true;
+            this.nudWorkingDays.BackColor = System.Drawing.Color.Transparent;
+            this.nudWorkingDays.BorderColor = System.Drawing.Color.Orange;
+            this.nudWorkingDays.BorderRadius = 13;
+            this.nudWorkingDays.BorderThickness = 2;
+            this.nudWorkingDays.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nudWorkingDays.DisabledState.Parent = this.nudWorkingDays;
+            this.nudWorkingDays.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nudWorkingDays.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
+            this.nudWorkingDays.FocusedState.Parent = this.nudWorkingDays;
+            this.nudWorkingDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.nudWorkingDays.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.nudWorkingDays.Location = new System.Drawing.Point(0, 22);
+            this.nudWorkingDays.Margin = new System.Windows.Forms.Padding(4);
+            this.nudWorkingDays.Maximum = new decimal(new int[] {
+            31,
+            0,
+            0,
+            0});
+            this.nudWorkingDays.Name = "nudWorkingDays";
+            this.nudWorkingDays.ShadowDecoration.Parent = this.nudWorkingDays;
+            this.nudWorkingDays.Size = new System.Drawing.Size(173, 28);
+            this.nudWorkingDays.TabIndex = 38;
+            this.nudWorkingDays.TextOffset = new System.Drawing.Point(10, 2);
+            this.nudWorkingDays.UpDownButtonFillColor = System.Drawing.Color.Orange;
+            // 
+            // txtMonthSalary
+            // 
+            this.txtMonthSalary.AutoRoundedCorners = true;
+            this.txtMonthSalary.BorderColor = System.Drawing.Color.Goldenrod;
+            this.txtMonthSalary.BorderRadius = 13;
+            this.txtMonthSalary.BorderThickness = 2;
+            this.txtMonthSalary.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMonthSalary.DefaultText = "";
+            this.txtMonthSalary.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMonthSalary.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMonthSalary.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMonthSalary.DisabledState.Parent = this.txtMonthSalary;
+            this.txtMonthSalary.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMonthSalary.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtMonthSalary.Enabled = false;
+            this.txtMonthSalary.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
+            this.txtMonthSalary.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMonthSalary.FocusedState.Parent = this.txtMonthSalary;
+            this.txtMonthSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.txtMonthSalary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtMonthSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMonthSalary.HoverState.Parent = this.txtMonthSalary;
+            this.txtMonthSalary.Location = new System.Drawing.Point(0, 22);
+            this.txtMonthSalary.Margin = new System.Windows.Forms.Padding(9, 3, 9, 5);
+            this.txtMonthSalary.MaximumSize = new System.Drawing.Size(455, 45);
+            this.txtMonthSalary.Name = "txtMonthSalary";
+            this.txtMonthSalary.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.txtMonthSalary.PasswordChar = '\0';
+            this.txtMonthSalary.PlaceholderText = "";
+            this.txtMonthSalary.SelectedText = "";
+            this.txtMonthSalary.ShadowDecoration.Parent = this.txtMonthSalary;
+            this.txtMonthSalary.Size = new System.Drawing.Size(173, 28);
+            this.txtMonthSalary.TabIndex = 34;
+            this.txtMonthSalary.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // fEmployee
             // 
@@ -2053,9 +2053,7 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.nudDayWage)).EndInit();
             this.pnMonthDay.ResumeLayout(false);
             this.pnRoleAndWorkingDay.ResumeLayout(false);
-            this.pnRole.ResumeLayout(false);
             this.pnWorkingDays.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nudWorkingDays)).EndInit();
             this.pnStateOption.ResumeLayout(false);
             this.pnState.ResumeLayout(false);
             this.pnStateOptionWrapper.ResumeLayout(false);
@@ -2081,6 +2079,8 @@ namespace GUI
             this.pnChangePicture.ResumeLayout(false);
             this.pnSideBarFooter.ResumeLayout(false);
             this.tlpSideBarFooter.ResumeLayout(false);
+            this.pnRole.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nudWorkingDays)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2122,9 +2122,6 @@ namespace GUI
         private Guna.UI2.WinForms.Guna2TextBox txtName;
         private System.Windows.Forms.Label lbName;
         private Guna.UI2.WinForms.Guna2Panel pnSideBarFooter;
-        private System.Windows.Forms.TableLayoutPanel tlpSideBarFooter;
-        private Guna.UI2.WinForms.Guna2Button btnSideBarCancel;
-        private Guna.UI2.WinForms.Guna2Button btnSideBarConfirm;
         private Guna.UI2.WinForms.Guna2Panel pnPhoneNumber;
         private Guna.UI2.WinForms.Guna2Panel pnID;
         private Guna.UI2.WinForms.Guna2TextBox txtPhoneNumber;
@@ -2146,9 +2143,6 @@ namespace GUI
         private Guna.UI2.WinForms.Guna2Panel pnWorkInformation;
         private Guna.UI2.WinForms.Guna2GroupBox gbWorkInformation;
         private Guna.UI2.WinForms.Guna2Panel pnRoleAndWorkingDay;
-        private Guna.UI2.WinForms.Guna2Panel pnRole;
-        private Guna.UI2.WinForms.Guna2ComboBox cbbRole;
-        private System.Windows.Forms.Label lbRole;
         private Guna.UI2.WinForms.Guna2Panel pnWorkingDays;
         private Guna.UI2.WinForms.Guna2Panel pnStateOption;
         private Guna.UI2.WinForms.Guna2Panel pnState;
@@ -2163,7 +2157,6 @@ namespace GUI
         private Guna.UI2.WinForms.Guna2Panel pnMonthDay;
         private System.Windows.Forms.Label lbMonthSalary;
         private Guna.UI2.WinForms.Guna2NumericUpDown nudDayWage;
-        private Guna.UI2.WinForms.Guna2NumericUpDown nudWorkingDays;
         private Guna.UI2.WinForms.Guna2Panel pnGender;
         private Guna.UI2.WinForms.Guna2Panel pnGenderOption;
         private System.Windows.Forms.RadioButton rbFemale;
@@ -2179,7 +2172,14 @@ namespace GUI
         private System.Windows.Forms.Panel pnChangePicture;
         private Guna.UI2.WinForms.Guna2Button btnChangePicture;
         private Guna.UI2.WinForms.Guna2TextBox txtUrl;
-        private Guna.UI2.WinForms.Guna2TextBox txtMonthSalary;
         private Guna.UI2.WinForms.Guna2Button btnStaff;
+        private System.Windows.Forms.TableLayoutPanel tlpSideBarFooter;
+        private Guna.UI2.WinForms.Guna2Button btnSideBarCancel;
+        private Guna.UI2.WinForms.Guna2Button btnSideBarConfirm;
+        private Guna.UI2.WinForms.Guna2TextBox txtMonthSalary;
+        private Guna.UI2.WinForms.Guna2Panel pnRole;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbRole;
+        private System.Windows.Forms.Label lbRole;
+        private Guna.UI2.WinForms.Guna2NumericUpDown nudWorkingDays;
     }
 }

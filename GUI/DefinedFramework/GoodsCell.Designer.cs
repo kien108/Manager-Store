@@ -32,17 +32,17 @@ namespace GUI.DefinedFramework
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GoodsCell));
             this.tlpPriceAndQuantity = new System.Windows.Forms.TableLayoutPanel();
-            this.lbPrice = new System.Windows.Forms.Label();
             this.pnQuantity = new Guna.UI2.WinForms.Guna2Panel();
             this.nudQuantity = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.btnPlus = new Guna.UI2.WinForms.Guna2Button();
             this.btnMinus = new Guna.UI2.WinForms.Guna2Button();
             this.lbName = new System.Windows.Forms.Label();
             this.pnImage = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnAddToCart = new Guna.UI2.WinForms.Guna2Button();
             this.tlpWrapper = new System.Windows.Forms.TableLayoutPanel();
             this.ecImage = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.ecCell = new ElipseToolDemo.ElipseControl();
+            this.lbPrice = new System.Windows.Forms.Label();
+            this.btnAddToCart = new Guna.UI2.WinForms.Guna2Button();
             this.tlpPriceAndQuantity.SuspendLayout();
             this.pnQuantity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
@@ -52,45 +52,32 @@ namespace GUI.DefinedFramework
             // tlpPriceAndQuantity
             // 
             this.tlpPriceAndQuantity.ColumnCount = 2;
-            this.tlpPriceAndQuantity.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.92857F));
-            this.tlpPriceAndQuantity.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.07143F));
+            this.tlpPriceAndQuantity.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.07143F));
+            this.tlpPriceAndQuantity.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.92857F));
             this.tlpPriceAndQuantity.Controls.Add(this.lbPrice, 0, 0);
             this.tlpPriceAndQuantity.Controls.Add(this.pnQuantity, 1, 0);
             this.tlpPriceAndQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpPriceAndQuantity.Location = new System.Drawing.Point(10, 235);
+            this.tlpPriceAndQuantity.Location = new System.Drawing.Point(10, 241);
             this.tlpPriceAndQuantity.Margin = new System.Windows.Forms.Padding(10, 5, 10, 0);
             this.tlpPriceAndQuantity.Name = "tlpPriceAndQuantity";
             this.tlpPriceAndQuantity.RowCount = 1;
             this.tlpPriceAndQuantity.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpPriceAndQuantity.Size = new System.Drawing.Size(280, 44);
+            this.tlpPriceAndQuantity.Size = new System.Drawing.Size(280, 48);
             this.tlpPriceAndQuantity.TabIndex = 6;
-            // 
-            // lbPrice
-            // 
-            this.lbPrice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbPrice.Font = new System.Drawing.Font("Roboto Medium", 12.5F, System.Drawing.FontStyle.Bold);
-            this.lbPrice.ForeColor = System.Drawing.Color.White;
-            this.lbPrice.Location = new System.Drawing.Point(0, 0);
-            this.lbPrice.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(133, 44);
-            this.lbPrice.TabIndex = 3;
-            this.lbPrice.Text = "6,000 đ";
-            this.lbPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pnQuantity
             // 
             this.pnQuantity.AutoRoundedCorners = true;
-            this.pnQuantity.BorderRadius = 18;
+            this.pnQuantity.BorderRadius = 20;
             this.pnQuantity.Controls.Add(this.nudQuantity);
             this.pnQuantity.Controls.Add(this.btnPlus);
             this.pnQuantity.Controls.Add(this.btnMinus);
             this.pnQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnQuantity.FillColor = System.Drawing.Color.White;
-            this.pnQuantity.Location = new System.Drawing.Point(139, 3);
+            this.pnQuantity.Location = new System.Drawing.Point(160, 3);
             this.pnQuantity.Name = "pnQuantity";
             this.pnQuantity.ShadowDecoration.Parent = this.pnQuantity;
-            this.pnQuantity.Size = new System.Drawing.Size(138, 38);
+            this.pnQuantity.Size = new System.Drawing.Size(117, 42);
             this.pnQuantity.TabIndex = 2;
             // 
             // nudQuantity
@@ -104,13 +91,13 @@ namespace GUI.DefinedFramework
             this.nudQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
             this.nudQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.nudQuantity.FocusedState.Parent = this.nudQuantity;
-            this.nudQuantity.Font = new System.Drawing.Font("Poppins", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudQuantity.Font = new System.Drawing.Font("Poppins", 14F, System.Drawing.FontStyle.Bold);
             this.nudQuantity.ForeColor = System.Drawing.Color.Black;
-            this.nudQuantity.Location = new System.Drawing.Point(18, 0);
+            this.nudQuantity.Location = new System.Drawing.Point(25, 0);
             this.nudQuantity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.nudQuantity.Name = "nudQuantity";
             this.nudQuantity.ShadowDecoration.Parent = this.nudQuantity;
-            this.nudQuantity.Size = new System.Drawing.Size(102, 38);
+            this.nudQuantity.Size = new System.Drawing.Size(67, 42);
             this.nudQuantity.TabIndex = 2;
             this.nudQuantity.ValueChanged += new System.EventHandler(this.nudQuantity_ValueChanged);
             // 
@@ -119,7 +106,7 @@ namespace GUI.DefinedFramework
             this.btnPlus.Animated = true;
             this.btnPlus.AutoRoundedCorners = true;
             this.btnPlus.BackColor = System.Drawing.Color.Transparent;
-            this.btnPlus.BorderRadius = 8;
+            this.btnPlus.BorderRadius = 11;
             this.btnPlus.CheckedState.Parent = this.btnPlus;
             this.btnPlus.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPlus.CustomImages.Parent = this.btnPlus;
@@ -136,10 +123,10 @@ namespace GUI.DefinedFramework
             this.btnPlus.HoverState.Parent = this.btnPlus;
             this.btnPlus.Image = global::Manage_Store.Properties.Resources.plus;
             this.btnPlus.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnPlus.Location = new System.Drawing.Point(120, 0);
+            this.btnPlus.Location = new System.Drawing.Point(92, 0);
             this.btnPlus.Name = "btnPlus";
             this.btnPlus.ShadowDecoration.Parent = this.btnPlus;
-            this.btnPlus.Size = new System.Drawing.Size(18, 38);
+            this.btnPlus.Size = new System.Drawing.Size(25, 42);
             this.btnPlus.TabIndex = 1;
             this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
             // 
@@ -148,7 +135,7 @@ namespace GUI.DefinedFramework
             this.btnMinus.Animated = true;
             this.btnMinus.AutoRoundedCorners = true;
             this.btnMinus.BackColor = System.Drawing.Color.Transparent;
-            this.btnMinus.BorderRadius = 8;
+            this.btnMinus.BorderRadius = 11;
             this.btnMinus.CheckedState.Parent = this.btnMinus;
             this.btnMinus.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinus.CustomImages.Parent = this.btnMinus;
@@ -169,19 +156,19 @@ namespace GUI.DefinedFramework
             this.btnMinus.Location = new System.Drawing.Point(0, 0);
             this.btnMinus.Name = "btnMinus";
             this.btnMinus.ShadowDecoration.Parent = this.btnMinus;
-            this.btnMinus.Size = new System.Drawing.Size(18, 38);
+            this.btnMinus.Size = new System.Drawing.Size(25, 42);
             this.btnMinus.TabIndex = 0;
             this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
             // 
             // lbName
             // 
             this.lbName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbName.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.ForeColor = System.Drawing.Color.White;
-            this.lbName.Location = new System.Drawing.Point(10, 206);
+            this.lbName.Location = new System.Drawing.Point(10, 202);
             this.lbName.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(280, 24);
+            this.lbName.Size = new System.Drawing.Size(280, 34);
             this.lbName.TabIndex = 1;
             this.lbName.Text = "Mì Hảo Hảo tôm chua cay 75g";
             this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -196,35 +183,9 @@ namespace GUI.DefinedFramework
             this.pnImage.Location = new System.Drawing.Point(3, 3);
             this.pnImage.Name = "pnImage";
             this.pnImage.ShadowDecoration.Parent = this.pnImage;
-            this.pnImage.Size = new System.Drawing.Size(294, 200);
+            this.pnImage.Size = new System.Drawing.Size(294, 196);
             this.pnImage.TabIndex = 0;
             this.pnImage.Paint += new System.Windows.Forms.PaintEventHandler(this.pnImage_Paint);
-            // 
-            // btnAddToCart
-            // 
-            this.btnAddToCart.Animated = true;
-            this.btnAddToCart.BorderRadius = 10;
-            this.btnAddToCart.CheckedState.Parent = this.btnAddToCart;
-            this.btnAddToCart.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddToCart.CustomImages.Parent = this.btnAddToCart;
-            this.btnAddToCart.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddToCart.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddToCart.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddToCart.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddToCart.DisabledState.Parent = this.btnAddToCart;
-            this.btnAddToCart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAddToCart.Enabled = false;
-            this.btnAddToCart.Font = new System.Drawing.Font("Poppins", 10.8F, System.Drawing.FontStyle.Bold);
-            this.btnAddToCart.ForeColor = System.Drawing.Color.White;
-            this.btnAddToCart.HoverState.Parent = this.btnAddToCart;
-            this.btnAddToCart.Location = new System.Drawing.Point(5, 284);
-            this.btnAddToCart.Margin = new System.Windows.Forms.Padding(5);
-            this.btnAddToCart.Name = "btnAddToCart";
-            this.btnAddToCart.ShadowDecoration.Parent = this.btnAddToCart;
-            this.btnAddToCart.Size = new System.Drawing.Size(290, 61);
-            this.btnAddToCart.TabIndex = 5;
-            this.btnAddToCart.Text = "Add to Cart";
-            this.btnAddToCart.TextOffset = new System.Drawing.Point(0, 2);
             // 
             // tlpWrapper
             // 
@@ -238,10 +199,10 @@ namespace GUI.DefinedFramework
             this.tlpWrapper.Location = new System.Drawing.Point(0, 0);
             this.tlpWrapper.Name = "tlpWrapper";
             this.tlpWrapper.RowCount = 4;
-            this.tlpWrapper.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 59F));
-            this.tlpWrapper.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
-            this.tlpWrapper.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14F));
-            this.tlpWrapper.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpWrapper.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.71429F));
+            this.tlpWrapper.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.714286F));
+            this.tlpWrapper.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.14286F));
+            this.tlpWrapper.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.14286F));
             this.tlpWrapper.Size = new System.Drawing.Size(300, 350);
             this.tlpWrapper.TabIndex = 0;
             // 
@@ -254,6 +215,47 @@ namespace GUI.DefinedFramework
             // 
             this.ecCell.CornerRadius = 11;
             this.ecCell.TargetControl = this;
+            // 
+            // lbPrice
+            // 
+            this.lbPrice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbPrice.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold);
+            this.lbPrice.ForeColor = System.Drawing.Color.White;
+            this.lbPrice.Location = new System.Drawing.Point(0, 0);
+            this.lbPrice.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.lbPrice.Name = "lbPrice";
+            this.lbPrice.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
+            this.lbPrice.Size = new System.Drawing.Size(154, 48);
+            this.lbPrice.TabIndex = 3;
+            this.lbPrice.Text = "6,000 đ";
+            this.lbPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnAddToCart
+            // 
+            this.btnAddToCart.Animated = true;
+            this.btnAddToCart.AutoRoundedCorners = true;
+            this.btnAddToCart.BorderRadius = 24;
+            this.btnAddToCart.CheckedState.Parent = this.btnAddToCart;
+            this.btnAddToCart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddToCart.CustomImages.Parent = this.btnAddToCart;
+            this.btnAddToCart.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddToCart.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddToCart.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddToCart.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddToCart.DisabledState.Parent = this.btnAddToCart;
+            this.btnAddToCart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAddToCart.Enabled = false;
+            this.btnAddToCart.Font = new System.Drawing.Font("Poppins", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btnAddToCart.ForeColor = System.Drawing.Color.White;
+            this.btnAddToCart.HoverState.Parent = this.btnAddToCart;
+            this.btnAddToCart.Location = new System.Drawing.Point(5, 294);
+            this.btnAddToCart.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAddToCart.Name = "btnAddToCart";
+            this.btnAddToCart.ShadowDecoration.Parent = this.btnAddToCart;
+            this.btnAddToCart.Size = new System.Drawing.Size(290, 51);
+            this.btnAddToCart.TabIndex = 5;
+            this.btnAddToCart.Text = "Add to Cart";
+            this.btnAddToCart.TextOffset = new System.Drawing.Point(0, 2);
             // 
             // GoodsCell
             // 
@@ -274,15 +276,15 @@ namespace GUI.DefinedFramework
         #endregion
         private ElipseToolDemo.ElipseControl ecCell;
         private System.Windows.Forms.TableLayoutPanel tlpWrapper;
-        public Guna.UI2.WinForms.Guna2Button btnAddToCart;
         private Guna.UI2.WinForms.Guna2Panel pnImage;
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.TableLayoutPanel tlpPriceAndQuantity;
-        private System.Windows.Forms.Label lbPrice;
         private Guna.UI2.WinForms.Guna2Panel pnQuantity;
         private Guna.UI2.WinForms.Guna2Button btnPlus;
         private Guna.UI2.WinForms.Guna2Button btnMinus;
         public Guna.UI2.WinForms.Guna2NumericUpDown nudQuantity;
         private Guna.UI2.WinForms.Guna2Elipse ecImage;
+        private System.Windows.Forms.Label lbPrice;
+        public Guna.UI2.WinForms.Guna2Button btnAddToCart;
     }
 }

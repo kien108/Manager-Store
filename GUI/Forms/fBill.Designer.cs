@@ -29,11 +29,11 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlpWrapper = new System.Windows.Forms.TableLayoutPanel();
             this.pnSideBar = new Guna.UI2.WinForms.Guna2Panel();
             this.pnSideBarBody = new Guna.UI2.WinForms.Guna2Panel();
@@ -194,7 +194,7 @@ namespace GUI
             this.guna2Panel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel7.Controls.Add(this.gbItemsInformation);
             this.guna2Panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel7.Location = new System.Drawing.Point(10, 179);
+            this.guna2Panel7.Location = new System.Drawing.Point(10, 211);
             this.guna2Panel7.Name = "guna2Panel7";
             this.guna2Panel7.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.guna2Panel7.ShadowDecoration.Parent = this.guna2Panel7;
@@ -228,11 +228,11 @@ namespace GUI
             this.pnQuantityAndItemPrice.Controls.Add(this.guna2Panel23);
             this.pnQuantityAndItemPrice.Controls.Add(this.guna2Panel20);
             this.pnQuantityAndItemPrice.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnQuantityAndItemPrice.Location = new System.Drawing.Point(10, 180);
+            this.pnQuantityAndItemPrice.Location = new System.Drawing.Point(10, 190);
             this.pnQuantityAndItemPrice.Name = "pnQuantityAndItemPrice";
             this.pnQuantityAndItemPrice.Padding = new System.Windows.Forms.Padding(0, 5, 5, 0);
             this.pnQuantityAndItemPrice.ShadowDecoration.Parent = this.pnQuantityAndItemPrice;
-            this.pnQuantityAndItemPrice.Size = new System.Drawing.Size(437, 45);
+            this.pnQuantityAndItemPrice.Size = new System.Drawing.Size(437, 55);
             this.pnQuantityAndItemPrice.TabIndex = 24;
             // 
             // guna2Panel23
@@ -245,14 +245,14 @@ namespace GUI
             this.guna2Panel23.Name = "guna2Panel23";
             this.guna2Panel23.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
             this.guna2Panel23.ShadowDecoration.Parent = this.guna2Panel23;
-            this.guna2Panel23.Size = new System.Drawing.Size(149, 40);
+            this.guna2Panel23.Size = new System.Drawing.Size(149, 50);
             this.guna2Panel23.TabIndex = 4;
             // 
             // txtItemPrice
             // 
             this.txtItemPrice.AutoRoundedCorners = true;
             this.txtItemPrice.BorderColor = System.Drawing.Color.Goldenrod;
-            this.txtItemPrice.BorderRadius = 10;
+            this.txtItemPrice.BorderRadius = 13;
             this.txtItemPrice.BorderThickness = 2;
             this.txtItemPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtItemPrice.DefaultText = "30000";
@@ -266,11 +266,11 @@ namespace GUI
             this.txtItemPrice.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.txtItemPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtItemPrice.FocusedState.Parent = this.txtItemPrice;
-            this.txtItemPrice.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtItemPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtItemPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtItemPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtItemPrice.HoverState.Parent = this.txtItemPrice;
-            this.txtItemPrice.Location = new System.Drawing.Point(0, 17);
+            this.txtItemPrice.Location = new System.Drawing.Point(0, 22);
             this.txtItemPrice.Margin = new System.Windows.Forms.Padding(9, 3, 9, 5);
             this.txtItemPrice.MaximumSize = new System.Drawing.Size(455, 45);
             this.txtItemPrice.Name = "txtItemPrice";
@@ -280,7 +280,7 @@ namespace GUI
             this.txtItemPrice.SelectedText = "";
             this.txtItemPrice.SelectionStart = 5;
             this.txtItemPrice.ShadowDecoration.Parent = this.txtItemPrice;
-            this.txtItemPrice.Size = new System.Drawing.Size(129, 23);
+            this.txtItemPrice.Size = new System.Drawing.Size(129, 28);
             this.txtItemPrice.TabIndex = 34;
             this.txtItemPrice.TextOffset = new System.Drawing.Point(10, 0);
             // 
@@ -294,7 +294,7 @@ namespace GUI
             this.label18.Margin = new System.Windows.Forms.Padding(0);
             this.label18.Name = "label18";
             this.label18.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label18.Size = new System.Drawing.Size(129, 17);
+            this.label18.Size = new System.Drawing.Size(129, 22);
             this.label18.TabIndex = 33;
             this.label18.Text = "Price";
             this.label18.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -309,21 +309,21 @@ namespace GUI
             this.guna2Panel20.Name = "guna2Panel20";
             this.guna2Panel20.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
             this.guna2Panel20.ShadowDecoration.Parent = this.guna2Panel20;
-            this.guna2Panel20.Size = new System.Drawing.Size(158, 40);
+            this.guna2Panel20.Size = new System.Drawing.Size(158, 50);
             this.guna2Panel20.TabIndex = 3;
             // 
             // guna2Panel24
             // 
             this.guna2Panel24.AutoRoundedCorners = true;
             this.guna2Panel24.BorderColor = System.Drawing.Color.Goldenrod;
-            this.guna2Panel24.BorderRadius = 10;
+            this.guna2Panel24.BorderRadius = 13;
             this.guna2Panel24.Controls.Add(this.nudQuantity);
             this.guna2Panel24.Controls.Add(this.lbUnit);
             this.guna2Panel24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel24.Location = new System.Drawing.Point(0, 17);
+            this.guna2Panel24.Location = new System.Drawing.Point(0, 22);
             this.guna2Panel24.Name = "guna2Panel24";
             this.guna2Panel24.ShadowDecoration.Parent = this.guna2Panel24;
-            this.guna2Panel24.Size = new System.Drawing.Size(138, 23);
+            this.guna2Panel24.Size = new System.Drawing.Size(138, 28);
             this.guna2Panel24.TabIndex = 35;
             // 
             // nudQuantity
@@ -331,14 +331,14 @@ namespace GUI
             this.nudQuantity.AutoRoundedCorners = true;
             this.nudQuantity.BackColor = System.Drawing.Color.Transparent;
             this.nudQuantity.BorderColor = System.Drawing.Color.Goldenrod;
-            this.nudQuantity.BorderRadius = 10;
+            this.nudQuantity.BorderRadius = 13;
             this.nudQuantity.BorderThickness = 2;
             this.nudQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nudQuantity.DisabledState.Parent = this.nudQuantity;
             this.nudQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
             this.nudQuantity.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.nudQuantity.FocusedState.Parent = this.nudQuantity;
-            this.nudQuantity.Font = new System.Drawing.Font("Roboto Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudQuantity.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.nudQuantity.Location = new System.Drawing.Point(0, 0);
             this.nudQuantity.Margin = new System.Windows.Forms.Padding(10, 3, 10, 5);
@@ -355,7 +355,7 @@ namespace GUI
             0});
             this.nudQuantity.Name = "nudQuantity";
             this.nudQuantity.ShadowDecoration.Parent = this.nudQuantity;
-            this.nudQuantity.Size = new System.Drawing.Size(87, 23);
+            this.nudQuantity.Size = new System.Drawing.Size(87, 28);
             this.nudQuantity.TabIndex = 37;
             this.nudQuantity.TextOffset = new System.Drawing.Point(10, 0);
             this.nudQuantity.UpDownButtonBorderVisible = false;
@@ -375,7 +375,7 @@ namespace GUI
             this.lbUnit.Location = new System.Drawing.Point(87, 0);
             this.lbUnit.Name = "lbUnit";
             this.lbUnit.Padding = new System.Windows.Forms.Padding(5, 1, 0, 0);
-            this.lbUnit.Size = new System.Drawing.Size(51, 23);
+            this.lbUnit.Size = new System.Drawing.Size(51, 28);
             this.lbUnit.TabIndex = 36;
             this.lbUnit.Text = "GÓI";
             this.lbUnit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -390,7 +390,7 @@ namespace GUI
             this.label16.Margin = new System.Windows.Forms.Padding(0);
             this.label16.Name = "label16";
             this.label16.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label16.Size = new System.Drawing.Size(138, 17);
+            this.label16.Size = new System.Drawing.Size(138, 22);
             this.label16.TabIndex = 34;
             this.label16.Text = "Quantity";
             this.label16.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -405,7 +405,7 @@ namespace GUI
             this.pnItemNameAndID.Name = "pnItemNameAndID";
             this.pnItemNameAndID.Padding = new System.Windows.Forms.Padding(0, 5, 5, 0);
             this.pnItemNameAndID.ShadowDecoration.Parent = this.pnItemNameAndID;
-            this.pnItemNameAndID.Size = new System.Drawing.Size(437, 45);
+            this.pnItemNameAndID.Size = new System.Drawing.Size(437, 55);
             this.pnItemNameAndID.TabIndex = 21;
             // 
             // guna2Panel3
@@ -414,18 +414,18 @@ namespace GUI
             this.guna2Panel3.Controls.Add(this.txtGid);
             this.guna2Panel3.Controls.Add(this.label2);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel3.Location = new System.Drawing.Point(226, 5);
+            this.guna2Panel3.Location = new System.Drawing.Point(350, 5);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
-            this.guna2Panel3.Size = new System.Drawing.Size(206, 40);
+            this.guna2Panel3.Size = new System.Drawing.Size(82, 50);
             this.guna2Panel3.TabIndex = 2;
             // 
             // txtGid
             // 
             this.txtGid.AutoRoundedCorners = true;
             this.txtGid.BorderColor = System.Drawing.Color.Goldenrod;
-            this.txtGid.BorderRadius = 10;
+            this.txtGid.BorderRadius = 13;
             this.txtGid.BorderThickness = 2;
             this.txtGid.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtGid.DefaultText = "17";
@@ -439,11 +439,11 @@ namespace GUI
             this.txtGid.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.txtGid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGid.FocusedState.Parent = this.txtGid;
-            this.txtGid.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtGid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGid.HoverState.Parent = this.txtGid;
-            this.txtGid.Location = new System.Drawing.Point(0, 17);
+            this.txtGid.Location = new System.Drawing.Point(0, 22);
             this.txtGid.Margin = new System.Windows.Forms.Padding(9, 3, 9, 5);
             this.txtGid.MaximumSize = new System.Drawing.Size(455, 45);
             this.txtGid.Name = "txtGid";
@@ -452,7 +452,7 @@ namespace GUI
             this.txtGid.SelectedText = "";
             this.txtGid.SelectionStart = 2;
             this.txtGid.ShadowDecoration.Parent = this.txtGid;
-            this.txtGid.Size = new System.Drawing.Size(201, 23);
+            this.txtGid.Size = new System.Drawing.Size(77, 28);
             this.txtGid.TabIndex = 35;
             this.txtGid.TextOffset = new System.Drawing.Point(10, 0);
             // 
@@ -466,7 +466,7 @@ namespace GUI
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label2.Size = new System.Drawing.Size(201, 17);
+            this.label2.Size = new System.Drawing.Size(77, 22);
             this.label2.TabIndex = 33;
             this.label2.Text = "GID";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -481,7 +481,7 @@ namespace GUI
             this.pnItemName.Name = "pnItemName";
             this.pnItemName.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
             this.pnItemName.ShadowDecoration.Parent = this.pnItemName;
-            this.pnItemName.Size = new System.Drawing.Size(226, 40);
+            this.pnItemName.Size = new System.Drawing.Size(350, 50);
             this.pnItemName.TabIndex = 1;
             // 
             // cbbItemName
@@ -498,18 +498,18 @@ namespace GUI
             this.cbbItemName.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbbItemName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbbItemName.FocusedState.Parent = this.cbbItemName;
-            this.cbbItemName.Font = new System.Drawing.Font("Roboto Medium", 10.8F, System.Drawing.FontStyle.Bold);
+            this.cbbItemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbItemName.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.cbbItemName.HoverState.Parent = this.cbbItemName;
             this.cbbItemName.ItemHeight = 30;
             this.cbbItemName.Items.AddRange(new object[] {
             "Mì Hảo Hảo tôm chua cay 75g"});
             this.cbbItemName.ItemsAppearance.Parent = this.cbbItemName;
-            this.cbbItemName.Location = new System.Drawing.Point(0, 17);
+            this.cbbItemName.Location = new System.Drawing.Point(0, 22);
             this.cbbItemName.Margin = new System.Windows.Forms.Padding(10, 3, 10, 5);
             this.cbbItemName.Name = "cbbItemName";
             this.cbbItemName.ShadowDecoration.Parent = this.cbbItemName;
-            this.cbbItemName.Size = new System.Drawing.Size(206, 36);
+            this.cbbItemName.Size = new System.Drawing.Size(330, 36);
             this.cbbItemName.StartIndex = 0;
             this.cbbItemName.TabIndex = 34;
             this.cbbItemName.TextOffset = new System.Drawing.Point(10, 1);
@@ -525,7 +525,7 @@ namespace GUI
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
             this.label6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label6.Size = new System.Drawing.Size(206, 17);
+            this.label6.Size = new System.Drawing.Size(330, 22);
             this.label6.TabIndex = 33;
             this.label6.Text = "Item name";
             this.label6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -568,7 +568,7 @@ namespace GUI
             this.pnPersonalInformation.Name = "pnPersonalInformation";
             this.pnPersonalInformation.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.pnPersonalInformation.ShadowDecoration.Parent = this.pnPersonalInformation;
-            this.pnPersonalInformation.Size = new System.Drawing.Size(452, 179);
+            this.pnPersonalInformation.Size = new System.Drawing.Size(452, 211);
             this.pnPersonalInformation.TabIndex = 10;
             // 
             // gbBillInformation
@@ -587,9 +587,9 @@ namespace GUI
             this.gbBillInformation.ForeColor = System.Drawing.Color.Orange;
             this.gbBillInformation.Location = new System.Drawing.Point(0, 10);
             this.gbBillInformation.Name = "gbBillInformation";
-            this.gbBillInformation.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
+            this.gbBillInformation.Padding = new System.Windows.Forms.Padding(0, 25, 0, 0);
             this.gbBillInformation.ShadowDecoration.Parent = this.gbBillInformation;
-            this.gbBillInformation.Size = new System.Drawing.Size(452, 169);
+            this.gbBillInformation.Size = new System.Drawing.Size(452, 201);
             this.gbBillInformation.TabIndex = 9;
             this.gbBillInformation.Text = "Bill Information";
             // 
@@ -599,11 +599,11 @@ namespace GUI
             this.pnName.Controls.Add(this.dtpTime);
             this.pnName.Controls.Add(this.lbName);
             this.pnName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnName.Location = new System.Drawing.Point(0, 110);
+            this.pnName.Location = new System.Drawing.Point(0, 135);
             this.pnName.Name = "pnName";
             this.pnName.Padding = new System.Windows.Forms.Padding(10, 5, 10, 0);
             this.pnName.ShadowDecoration.Parent = this.pnName;
-            this.pnName.Size = new System.Drawing.Size(452, 45);
+            this.pnName.Size = new System.Drawing.Size(452, 55);
             this.pnName.TabIndex = 22;
             // 
             // dtpTime
@@ -611,23 +611,23 @@ namespace GUI
             this.dtpTime.Animated = true;
             this.dtpTime.AutoRoundedCorners = true;
             this.dtpTime.BorderColor = System.Drawing.Color.Goldenrod;
-            this.dtpTime.BorderRadius = 10;
+            this.dtpTime.BorderRadius = 13;
             this.dtpTime.BorderThickness = 2;
             this.dtpTime.CheckedState.Parent = this.dtpTime;
             this.dtpTime.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpTime.CustomFormat = "dddd, MMMM dd yyyy hh:mm:ss tt";
             this.dtpTime.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtpTime.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
-            this.dtpTime.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold);
+            this.dtpTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpTime.HoverState.Parent = this.dtpTime;
-            this.dtpTime.Location = new System.Drawing.Point(10, 22);
+            this.dtpTime.Location = new System.Drawing.Point(10, 27);
             this.dtpTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpTime.Name = "dtpTime";
             this.dtpTime.ShadowDecoration.Parent = this.dtpTime;
-            this.dtpTime.Size = new System.Drawing.Size(432, 23);
+            this.dtpTime.Size = new System.Drawing.Size(432, 28);
             this.dtpTime.TabIndex = 32;
             this.dtpTime.TextOffset = new System.Drawing.Point(10, 0);
             this.dtpTime.Value = new System.DateTime(2021, 10, 29, 16, 21, 0, 0);
@@ -642,7 +642,7 @@ namespace GUI
             this.lbName.Margin = new System.Windows.Forms.Padding(0);
             this.lbName.Name = "lbName";
             this.lbName.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lbName.Size = new System.Drawing.Size(432, 17);
+            this.lbName.Size = new System.Drawing.Size(432, 22);
             this.lbName.TabIndex = 31;
             this.lbName.Text = "Time";
             this.lbName.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -652,11 +652,11 @@ namespace GUI
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 65);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 80);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Padding = new System.Windows.Forms.Padding(10, 5, 10, 0);
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(452, 45);
+            this.guna2Panel1.Size = new System.Drawing.Size(452, 55);
             this.guna2Panel1.TabIndex = 21;
             // 
             // guna2Panel2
@@ -668,7 +668,7 @@ namespace GUI
             this.guna2Panel2.Location = new System.Drawing.Point(10, 5);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(432, 40);
+            this.guna2Panel2.Size = new System.Drawing.Size(432, 50);
             this.guna2Panel2.TabIndex = 2;
             // 
             // cbbEname
@@ -685,14 +685,14 @@ namespace GUI
             this.cbbEname.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbbEname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbbEname.FocusedState.Parent = this.cbbEname;
-            this.cbbEname.Font = new System.Drawing.Font("Roboto Medium", 10.8F, System.Drawing.FontStyle.Bold);
+            this.cbbEname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbEname.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.cbbEname.HoverState.Parent = this.cbbEname;
             this.cbbEname.ItemHeight = 30;
             this.cbbEname.Items.AddRange(new object[] {
             "Nguyễn Phương Nam"});
             this.cbbEname.ItemsAppearance.Parent = this.cbbEname;
-            this.cbbEname.Location = new System.Drawing.Point(0, 17);
+            this.cbbEname.Location = new System.Drawing.Point(0, 22);
             this.cbbEname.Margin = new System.Windows.Forms.Padding(10, 3, 10, 5);
             this.cbbEname.Name = "cbbEname";
             this.cbbEname.ShadowDecoration.Parent = this.cbbEname;
@@ -712,7 +712,7 @@ namespace GUI
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label1.Size = new System.Drawing.Size(432, 17);
+            this.label1.Size = new System.Drawing.Size(432, 22);
             this.label1.TabIndex = 33;
             this.label1.Text = "Employee name";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -724,11 +724,11 @@ namespace GUI
             this.guna2Panel4.Controls.Add(this.guna2Panel6);
             this.guna2Panel4.Controls.Add(this.guna2Panel5);
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel4.Location = new System.Drawing.Point(0, 20);
+            this.guna2Panel4.Location = new System.Drawing.Point(0, 25);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Padding = new System.Windows.Forms.Padding(10, 5, 10, 0);
             this.guna2Panel4.ShadowDecoration.Parent = this.guna2Panel4;
-            this.guna2Panel4.Size = new System.Drawing.Size(452, 45);
+            this.guna2Panel4.Size = new System.Drawing.Size(452, 55);
             this.guna2Panel4.TabIndex = 20;
             // 
             // guna2Panel22
@@ -740,14 +740,14 @@ namespace GUI
             this.guna2Panel22.Location = new System.Drawing.Point(170, 5);
             this.guna2Panel22.Name = "guna2Panel22";
             this.guna2Panel22.ShadowDecoration.Parent = this.guna2Panel22;
-            this.guna2Panel22.Size = new System.Drawing.Size(272, 40);
+            this.guna2Panel22.Size = new System.Drawing.Size(272, 50);
             this.guna2Panel22.TabIndex = 3;
             // 
             // txtTotalPrice
             // 
             this.txtTotalPrice.AutoRoundedCorners = true;
             this.txtTotalPrice.BorderColor = System.Drawing.Color.Goldenrod;
-            this.txtTotalPrice.BorderRadius = 10;
+            this.txtTotalPrice.BorderRadius = 13;
             this.txtTotalPrice.BorderThickness = 2;
             this.txtTotalPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTotalPrice.DefaultText = "95000";
@@ -761,11 +761,11 @@ namespace GUI
             this.txtTotalPrice.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.txtTotalPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTotalPrice.FocusedState.Parent = this.txtTotalPrice;
-            this.txtTotalPrice.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTotalPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTotalPrice.HoverState.Parent = this.txtTotalPrice;
-            this.txtTotalPrice.Location = new System.Drawing.Point(0, 17);
+            this.txtTotalPrice.Location = new System.Drawing.Point(0, 22);
             this.txtTotalPrice.Margin = new System.Windows.Forms.Padding(9, 3, 9, 5);
             this.txtTotalPrice.MaximumSize = new System.Drawing.Size(455, 45);
             this.txtTotalPrice.Name = "txtTotalPrice";
@@ -775,7 +775,7 @@ namespace GUI
             this.txtTotalPrice.SelectedText = "";
             this.txtTotalPrice.SelectionStart = 5;
             this.txtTotalPrice.ShadowDecoration.Parent = this.txtTotalPrice;
-            this.txtTotalPrice.Size = new System.Drawing.Size(272, 23);
+            this.txtTotalPrice.Size = new System.Drawing.Size(272, 28);
             this.txtTotalPrice.TabIndex = 34;
             this.txtTotalPrice.TextOffset = new System.Drawing.Point(10, 0);
             // 
@@ -789,7 +789,7 @@ namespace GUI
             this.label12.Margin = new System.Windows.Forms.Padding(0);
             this.label12.Name = "label12";
             this.label12.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label12.Size = new System.Drawing.Size(272, 17);
+            this.label12.Size = new System.Drawing.Size(272, 22);
             this.label12.TabIndex = 33;
             this.label12.Text = "Total price";
             this.label12.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -804,7 +804,7 @@ namespace GUI
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
             this.guna2Panel6.ShadowDecoration.Parent = this.guna2Panel6;
-            this.guna2Panel6.Size = new System.Drawing.Size(80, 40);
+            this.guna2Panel6.Size = new System.Drawing.Size(80, 50);
             this.guna2Panel6.TabIndex = 2;
             // 
             // cbbEid
@@ -821,7 +821,7 @@ namespace GUI
             this.cbbEid.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbbEid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbbEid.FocusedState.Parent = this.cbbEid;
-            this.cbbEid.Font = new System.Drawing.Font("Roboto Medium", 10.8F, System.Drawing.FontStyle.Bold);
+            this.cbbEid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbEid.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.cbbEid.HoverState.Parent = this.cbbEid;
             this.cbbEid.ItemHeight = 30;
@@ -829,7 +829,7 @@ namespace GUI
             "1",
             "2"});
             this.cbbEid.ItemsAppearance.Parent = this.cbbEid;
-            this.cbbEid.Location = new System.Drawing.Point(0, 17);
+            this.cbbEid.Location = new System.Drawing.Point(0, 22);
             this.cbbEid.Margin = new System.Windows.Forms.Padding(10, 3, 10, 5);
             this.cbbEid.Name = "cbbEid";
             this.cbbEid.ShadowDecoration.Parent = this.cbbEid;
@@ -849,7 +849,7 @@ namespace GUI
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label4.Size = new System.Drawing.Size(60, 17);
+            this.label4.Size = new System.Drawing.Size(60, 22);
             this.label4.TabIndex = 33;
             this.label4.Text = "EID";
             this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -864,14 +864,14 @@ namespace GUI
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
             this.guna2Panel5.ShadowDecoration.Parent = this.guna2Panel5;
-            this.guna2Panel5.Size = new System.Drawing.Size(80, 40);
+            this.guna2Panel5.Size = new System.Drawing.Size(80, 50);
             this.guna2Panel5.TabIndex = 1;
             // 
             // txtBid
             // 
             this.txtBid.AutoRoundedCorners = true;
             this.txtBid.BorderColor = System.Drawing.Color.Goldenrod;
-            this.txtBid.BorderRadius = 10;
+            this.txtBid.BorderRadius = 13;
             this.txtBid.BorderThickness = 2;
             this.txtBid.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBid.DefaultText = "1";
@@ -885,11 +885,11 @@ namespace GUI
             this.txtBid.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.txtBid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBid.FocusedState.Parent = this.txtBid;
-            this.txtBid.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtBid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBid.HoverState.Parent = this.txtBid;
-            this.txtBid.Location = new System.Drawing.Point(0, 17);
+            this.txtBid.Location = new System.Drawing.Point(0, 22);
             this.txtBid.Margin = new System.Windows.Forms.Padding(9, 3, 9, 5);
             this.txtBid.MaximumSize = new System.Drawing.Size(455, 45);
             this.txtBid.Name = "txtBid";
@@ -899,7 +899,7 @@ namespace GUI
             this.txtBid.SelectedText = "";
             this.txtBid.SelectionStart = 1;
             this.txtBid.ShadowDecoration.Parent = this.txtBid;
-            this.txtBid.Size = new System.Drawing.Size(60, 23);
+            this.txtBid.Size = new System.Drawing.Size(60, 28);
             this.txtBid.TabIndex = 34;
             this.txtBid.TextOffset = new System.Drawing.Point(10, 0);
             // 
@@ -913,7 +913,7 @@ namespace GUI
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label3.Size = new System.Drawing.Size(60, 17);
+            this.label3.Size = new System.Drawing.Size(60, 22);
             this.label3.TabIndex = 33;
             this.label3.Text = "BID";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -1112,7 +1112,7 @@ namespace GUI
             this.tlpMain.Location = new System.Drawing.Point(3, 3);
             this.tlpMain.Name = "tlpMain";
             this.tlpMain.RowCount = 2;
-            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
+            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 72F));
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpMain.Size = new System.Drawing.Size(983, 755);
@@ -1130,13 +1130,13 @@ namespace GUI
             this.tlpSearch.Name = "tlpSearch";
             this.tlpSearch.RowCount = 1;
             this.tlpSearch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpSearch.Size = new System.Drawing.Size(977, 58);
+            this.tlpSearch.Size = new System.Drawing.Size(977, 66);
             this.tlpSearch.TabIndex = 1;
             // 
             // pnSearchAndFunction
             // 
             this.pnSearchAndFunction.AutoRoundedCorners = true;
-            this.pnSearchAndFunction.BorderRadius = 24;
+            this.pnSearchAndFunction.BorderRadius = 28;
             this.pnSearchAndFunction.Controls.Add(this.pnSearch);
             this.pnSearchAndFunction.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnSearchAndFunction.FillColor = System.Drawing.Color.MistyRose;
@@ -1145,7 +1145,7 @@ namespace GUI
             this.pnSearchAndFunction.Name = "pnSearchAndFunction";
             this.pnSearchAndFunction.Padding = new System.Windows.Forms.Padding(10, 10, 15, 10);
             this.pnSearchAndFunction.ShadowDecoration.Parent = this.pnSearchAndFunction;
-            this.pnSearchAndFunction.Size = new System.Drawing.Size(656, 50);
+            this.pnSearchAndFunction.Size = new System.Drawing.Size(656, 58);
             this.pnSearchAndFunction.TabIndex = 0;
             // 
             // pnSearch
@@ -1153,7 +1153,7 @@ namespace GUI
             this.pnSearch.AutoRoundedCorners = true;
             this.pnSearch.BackColor = System.Drawing.Color.Transparent;
             this.pnSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(166)))), ((int)(((byte)(137)))));
-            this.pnSearch.BorderRadius = 14;
+            this.pnSearch.BorderRadius = 18;
             this.pnSearch.BorderThickness = 2;
             this.pnSearch.Controls.Add(this.txtSearch);
             this.pnSearch.Controls.Add(this.cbbFilter);
@@ -1163,9 +1163,9 @@ namespace GUI
             this.pnSearch.Location = new System.Drawing.Point(10, 10);
             this.pnSearch.Margin = new System.Windows.Forms.Padding(0);
             this.pnSearch.Name = "pnSearch";
-            this.pnSearch.Padding = new System.Windows.Forms.Padding(8, 5, 10, 5);
+            this.pnSearch.Padding = new System.Windows.Forms.Padding(8, 8, 10, 8);
             this.pnSearch.ShadowDecoration.Parent = this.pnSearch;
-            this.pnSearch.Size = new System.Drawing.Size(631, 30);
+            this.pnSearch.Size = new System.Drawing.Size(631, 38);
             this.pnSearch.TabIndex = 2;
             // 
             // txtSearch
@@ -1183,11 +1183,11 @@ namespace GUI
             this.txtSearch.FillColor = System.Drawing.Color.MistyRose;
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.FocusedState.Parent = this.txtSearch;
-            this.txtSearch.Font = new System.Drawing.Font("Roboto", 12F);
+            this.txtSearch.Font = new System.Drawing.Font("Poppins", 14F);
             this.txtSearch.ForeColor = System.Drawing.Color.BlanchedAlmond;
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
-            this.txtSearch.Location = new System.Drawing.Point(129, 5);
+            this.txtSearch.Location = new System.Drawing.Point(185, 8);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
@@ -1195,7 +1195,7 @@ namespace GUI
             this.txtSearch.PlaceholderText = "Enter bill ID...";
             this.txtSearch.SelectedText = "";
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
-            this.txtSearch.Size = new System.Drawing.Size(475, 20);
+            this.txtSearch.Size = new System.Drawing.Size(412, 22);
             this.txtSearch.TabIndex = 9;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
@@ -1214,7 +1214,7 @@ namespace GUI
             this.cbbFilter.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(166)))), ((int)(((byte)(137)))));
             this.cbbFilter.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(166)))), ((int)(((byte)(137)))));
             this.cbbFilter.FocusedState.Parent = this.cbbFilter;
-            this.cbbFilter.Font = new System.Drawing.Font("Roboto", 12.5F);
+            this.cbbFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
             this.cbbFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.cbbFilter.HoverState.Parent = this.cbbFilter;
             this.cbbFilter.ItemHeight = 30;
@@ -1223,10 +1223,10 @@ namespace GUI
             "EID/Emp Name",
             "GID/Goods Name"});
             this.cbbFilter.ItemsAppearance.Parent = this.cbbFilter;
-            this.cbbFilter.Location = new System.Drawing.Point(8, 5);
+            this.cbbFilter.Location = new System.Drawing.Point(8, 8);
             this.cbbFilter.Name = "cbbFilter";
             this.cbbFilter.ShadowDecoration.Parent = this.cbbFilter;
-            this.cbbFilter.Size = new System.Drawing.Size(121, 36);
+            this.cbbFilter.Size = new System.Drawing.Size(177, 36);
             this.cbbFilter.StartIndex = 0;
             this.cbbFilter.TabIndex = 8;
             this.cbbFilter.TextOffset = new System.Drawing.Point(5, 2);
@@ -1238,10 +1238,10 @@ namespace GUI
             this.btnDeleteSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnDeleteSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteSearch.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnDeleteSearch.Location = new System.Drawing.Point(604, 5);
+            this.btnDeleteSearch.Location = new System.Drawing.Point(597, 8);
             this.btnDeleteSearch.Name = "btnDeleteSearch";
             this.btnDeleteSearch.ShadowDecoration.Parent = this.btnDeleteSearch;
-            this.btnDeleteSearch.Size = new System.Drawing.Size(17, 20);
+            this.btnDeleteSearch.Size = new System.Drawing.Size(24, 22);
             this.btnDeleteSearch.TabIndex = 3;
             this.btnDeleteSearch.Visible = false;
             this.btnDeleteSearch.Click += new System.EventHandler(this.btnDeleteSearch_Click);
@@ -1249,7 +1249,7 @@ namespace GUI
             // pnFunctions
             // 
             this.pnFunctions.AutoRoundedCorners = true;
-            this.pnFunctions.BorderRadius = 24;
+            this.pnFunctions.BorderRadius = 28;
             this.pnFunctions.Controls.Add(this.tlpFunction);
             this.pnFunctions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnFunctions.FillColor = System.Drawing.Color.MistyRose;
@@ -1257,7 +1257,7 @@ namespace GUI
             this.pnFunctions.Margin = new System.Windows.Forms.Padding(10, 5, 10, 3);
             this.pnFunctions.Name = "pnFunctions";
             this.pnFunctions.ShadowDecoration.Parent = this.pnFunctions;
-            this.pnFunctions.Size = new System.Drawing.Size(291, 50);
+            this.pnFunctions.Size = new System.Drawing.Size(291, 58);
             this.pnFunctions.TabIndex = 1;
             // 
             // tlpFunction
@@ -1274,7 +1274,7 @@ namespace GUI
             this.tlpFunction.Name = "tlpFunction";
             this.tlpFunction.RowCount = 1;
             this.tlpFunction.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpFunction.Size = new System.Drawing.Size(291, 50);
+            this.tlpFunction.Size = new System.Drawing.Size(291, 58);
             this.tlpFunction.TabIndex = 0;
             // 
             // pnBtnEdit
@@ -1286,14 +1286,14 @@ namespace GUI
             this.pnBtnEdit.Margin = new System.Windows.Forms.Padding(0);
             this.pnBtnEdit.Name = "pnBtnEdit";
             this.pnBtnEdit.Padding = new System.Windows.Forms.Padding(13, 10, 5, 10);
-            this.pnBtnEdit.Size = new System.Drawing.Size(145, 50);
+            this.pnBtnEdit.Size = new System.Drawing.Size(145, 58);
             this.pnBtnEdit.TabIndex = 14;
             // 
             // btnDetail
             // 
             this.btnDetail.Animated = true;
             this.btnDetail.AutoRoundedCorners = true;
-            this.btnDetail.BorderRadius = 14;
+            this.btnDetail.BorderRadius = 18;
             this.btnDetail.CheckedState.Parent = this.btnDetail;
             this.btnDetail.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDetail.CustomImages.Parent = this.btnDetail;
@@ -1314,7 +1314,7 @@ namespace GUI
             this.btnDetail.Name = "btnDetail";
             this.btnDetail.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.btnDetail.ShadowDecoration.Parent = this.btnDetail;
-            this.btnDetail.Size = new System.Drawing.Size(127, 30);
+            this.btnDetail.Size = new System.Drawing.Size(127, 38);
             this.btnDetail.TabIndex = 0;
             this.btnDetail.Text = "Detail";
             this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
@@ -1328,14 +1328,14 @@ namespace GUI
             this.pnDelete.Margin = new System.Windows.Forms.Padding(0);
             this.pnDelete.Name = "pnDelete";
             this.pnDelete.Padding = new System.Windows.Forms.Padding(5, 10, 13, 10);
-            this.pnDelete.Size = new System.Drawing.Size(146, 50);
+            this.pnDelete.Size = new System.Drawing.Size(146, 58);
             this.pnDelete.TabIndex = 12;
             // 
             // btnDelete
             // 
             this.btnDelete.Animated = true;
             this.btnDelete.AutoRoundedCorners = true;
-            this.btnDelete.BorderRadius = 14;
+            this.btnDelete.BorderRadius = 18;
             this.btnDelete.CheckedState.Parent = this.btnDelete;
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.CustomImages.Parent = this.btnDelete;
@@ -1356,7 +1356,7 @@ namespace GUI
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.btnDelete.ShadowDecoration.Parent = this.btnDelete;
-            this.btnDelete.Size = new System.Drawing.Size(128, 30);
+            this.btnDelete.Size = new System.Drawing.Size(128, 38);
             this.btnDelete.TabIndex = 0;
             this.btnDelete.Text = "Delete";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -1367,11 +1367,11 @@ namespace GUI
             this.pnDgvWrapper.BorderRadius = 10;
             this.pnDgvWrapper.Controls.Add(this.dgvBills);
             this.pnDgvWrapper.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnDgvWrapper.Location = new System.Drawing.Point(10, 74);
+            this.pnDgvWrapper.Location = new System.Drawing.Point(10, 82);
             this.pnDgvWrapper.Margin = new System.Windows.Forms.Padding(10);
             this.pnDgvWrapper.Name = "pnDgvWrapper";
             this.pnDgvWrapper.ShadowDecoration.Parent = this.pnDgvWrapper;
-            this.pnDgvWrapper.Size = new System.Drawing.Size(963, 671);
+            this.pnDgvWrapper.Size = new System.Drawing.Size(963, 663);
             this.pnDgvWrapper.TabIndex = 2;
             // 
             // dgvBills
@@ -1379,31 +1379,31 @@ namespace GUI
             this.dgvBills.AllowUserToAddRows = false;
             this.dgvBills.AllowUserToDeleteRows = false;
             this.dgvBills.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.dgvBills.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.dgvBills.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvBills.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBills.BackgroundColor = System.Drawing.Color.CadetBlue;
             this.dgvBills.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBills.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvBills.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBills.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBills.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvBills.ColumnHeadersHeight = 45;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(133)))), ((int)(((byte)(147)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBills.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(133)))), ((int)(((byte)(147)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBills.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvBills.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvBills.EnableHeadersVisualStyles = false;
             this.dgvBills.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(199)))), ((int)(((byte)(206)))));
@@ -1413,22 +1413,22 @@ namespace GUI
             this.dgvBills.Name = "dgvBills";
             this.dgvBills.ReadOnly = true;
             this.dgvBills.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBills.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBills.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvBills.RowHeadersVisible = false;
             this.dgvBills.RowHeadersWidth = 51;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(5);
-            this.dgvBills.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(5);
+            this.dgvBills.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvBills.RowTemplate.Height = 40;
             this.dgvBills.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBills.Size = new System.Drawing.Size(963, 671);
+            this.dgvBills.Size = new System.Drawing.Size(963, 663);
             this.dgvBills.TabIndex = 3;
             this.dgvBills.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.WetAsphalt;
             this.dgvBills.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));

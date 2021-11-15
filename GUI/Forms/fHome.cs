@@ -63,7 +63,7 @@ namespace GUI
             int rowCount = dt.Rows.Count % colCount == 0 ? dt.Rows.Count / colCount : dt.Rows.Count / colCount + 1;
             tlpGoods.ColumnCount = colCount;
             tlpGoods.RowCount = rowCount;
-            tlpGoods.Height = (int)((tlpGoods.Width / colCount) * (350.0 / 300.0) * rowCount);
+            tlpGoods.Height = (int)((tlpGoods.Width / colCount) * (400.0 / 300.0) * rowCount);
             for (int i = 1; i < colCount; i++)
                 tlpGoods.ColumnStyles.Add(new ColumnStyle(SizeType.Percent));
             for (int i = 1; i < rowCount; i++)
@@ -165,7 +165,6 @@ namespace GUI
         {
             foreach (GoodsCell gc in cells)
                 gc.Reset();
-
         }
 
         private void btnCleanCart_Click(object sender, EventArgs e)
@@ -179,8 +178,7 @@ namespace GUI
         private void btnCheckout_Click(object sender, EventArgs e)
         {
             int bid = bll_bill.GetNewBillID();
-            //int eid = ((fMain)Parent.Parent.Parent).Profile.Id;
-            int eid = 7;
+            int eid = ((fMain)Parent.Parent.Parent).Profile.Id;
             string message = null;
             foreach (PanelGoodsInCart pn in pnCartBody.Controls)
             {
@@ -193,6 +191,9 @@ namespace GUI
                     return;
                 }
             }
+            MessageBox.Show("Add bill successful!");
+            btnCleanCart.PerformClick();
+            btnBack.PerformClick();
         }
     }
 }

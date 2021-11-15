@@ -19,7 +19,7 @@ namespace GUI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Employee emp = null;
-            Application.Run(new fLogin());
+            Application.Run(new fMain(emp));
         }
     }
 }

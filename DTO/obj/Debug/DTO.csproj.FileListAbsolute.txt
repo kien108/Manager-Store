@@ -4,3 +4,9 @@ D:\Document\~project\Manager-Store\DTO\obj\Debug\DTO.csproj.AssemblyReference.ca
 D:\Document\~project\Manager-Store\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\Document\~project\Manager-Store\DTO\obj\Debug\DTO.dll
 D:\Document\~project\Manager-Store\DTO\obj\Debug\DTO.pdb
+D:\~project\Manager-Store\DTO\bin\Debug\DTO.dll
+D:\~project\Manager-Store\DTO\bin\Debug\DTO.pdb
+D:\~project\Manager-Store\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\~project\Manager-Store\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\~project\Manager-Store\DTO\obj\Debug\DTO.dll
+D:\~project\Manager-Store\DTO\obj\Debug\DTO.pdb

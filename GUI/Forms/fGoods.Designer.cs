@@ -30,14 +30,15 @@ namespace GUI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fGoods));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlpWrapper = new System.Windows.Forms.TableLayoutPanel();
             this.pnSideBar = new Guna.UI2.WinForms.Guna2Panel();
             this.pnSideBarBody = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbTypeInput = new System.Windows.Forms.Label();
             this.pnUrl = new Guna.UI2.WinForms.Guna2Panel();
             this.txtUrlImage = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbUrl = new System.Windows.Forms.Label();
@@ -80,11 +81,6 @@ namespace GUI
             this.btnTick = new Guna.UI2.WinForms.Guna2Button();
             this.btnCollapse = new Guna.UI2.WinForms.Guna2Button();
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
-            this.tlpGoodsType = new System.Windows.Forms.TableLayoutPanel();
-            this.btnStopSelling = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSoldOut = new Guna.UI2.WinForms.Guna2Button();
-            this.btnStocking = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAllGoods = new Guna.UI2.WinForms.Guna2Button();
             this.tlpSearch = new System.Windows.Forms.TableLayoutPanel();
             this.pnSearchAndFunction = new Guna.UI2.WinForms.Guna2Panel();
             this.pnSearch = new Guna.UI2.WinForms.Guna2Panel();
@@ -100,9 +96,13 @@ namespace GUI
             this.pnBtnAdd = new System.Windows.Forms.Panel();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.dgvGoods = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.lbTypeInput = new System.Windows.Forms.Label();
             this.ecDgvGoods = new ElipseToolDemo.ElipseControl();
             this.ecTlpPictureSide = new ElipseToolDemo.ElipseControl();
+            this.btnAllGoods = new Guna.UI2.WinForms.Guna2Button();
+            this.btnStocking = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSoldOut = new Guna.UI2.WinForms.Guna2Button();
+            this.btnStopSelling = new Guna.UI2.WinForms.Guna2Button();
+            this.tlpGoodsType = new System.Windows.Forms.TableLayoutPanel();
             this.tlpWrapper.SuspendLayout();
             this.pnSideBar.SuspendLayout();
             this.pnSideBarBody.SuspendLayout();
@@ -127,7 +127,6 @@ namespace GUI
             this.tlpSideBarFooter.SuspendLayout();
             this.pnSideBarHeader.SuspendLayout();
             this.tlpMain.SuspendLayout();
-            this.tlpGoodsType.SuspendLayout();
             this.tlpSearch.SuspendLayout();
             this.pnSearchAndFunction.SuspendLayout();
             this.pnSearch.SuspendLayout();
@@ -137,6 +136,7 @@ namespace GUI
             this.pnDelete.SuspendLayout();
             this.pnBtnAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGoods)).BeginInit();
+            this.tlpGoodsType.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpWrapper
@@ -186,12 +186,24 @@ namespace GUI
             this.pnSideBarBody.Controls.Add(this.pnName);
             this.pnSideBarBody.Controls.Add(this.tlpPictureSide);
             this.pnSideBarBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnSideBarBody.Location = new System.Drawing.Point(3, 32);
+            this.pnSideBarBody.Location = new System.Drawing.Point(3, 38);
             this.pnSideBarBody.Name = "pnSideBarBody";
             this.pnSideBarBody.Padding = new System.Windows.Forms.Padding(5);
             this.pnSideBarBody.ShadowDecoration.Parent = this.pnSideBarBody;
-            this.pnSideBarBody.Size = new System.Drawing.Size(494, 775);
+            this.pnSideBarBody.Size = new System.Drawing.Size(494, 758);
             this.pnSideBarBody.TabIndex = 2;
+            // 
+            // lbTypeInput
+            // 
+            this.lbTypeInput.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbTypeInput.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTypeInput.ForeColor = System.Drawing.Color.Red;
+            this.lbTypeInput.Location = new System.Drawing.Point(5, 738);
+            this.lbTypeInput.Margin = new System.Windows.Forms.Padding(10, 5, 5, 0);
+            this.lbTypeInput.Name = "lbTypeInput";
+            this.lbTypeInput.Size = new System.Drawing.Size(484, 15);
+            this.lbTypeInput.TabIndex = 22;
+            this.lbTypeInput.Text = "*Please type all information*";
             // 
             // pnUrl
             // 
@@ -199,7 +211,7 @@ namespace GUI
             this.pnUrl.Controls.Add(this.txtUrlImage);
             this.pnUrl.Controls.Add(this.lbUrl);
             this.pnUrl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnUrl.Location = new System.Drawing.Point(5, 320);
+            this.pnUrl.Location = new System.Drawing.Point(5, 360);
             this.pnUrl.Name = "pnUrl";
             this.pnUrl.Padding = new System.Windows.Forms.Padding(10, 5, 10, 0);
             this.pnUrl.ShadowDecoration.Parent = this.pnUrl;
@@ -222,11 +234,11 @@ namespace GUI
             this.txtUrlImage.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.txtUrlImage.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUrlImage.FocusedState.Parent = this.txtUrlImage;
-            this.txtUrlImage.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold);
+            this.txtUrlImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.txtUrlImage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtUrlImage.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUrlImage.HoverState.Parent = this.txtUrlImage;
-            this.txtUrlImage.Location = new System.Drawing.Point(10, 22);
+            this.txtUrlImage.Location = new System.Drawing.Point(10, 27);
             this.txtUrlImage.Margin = new System.Windows.Forms.Padding(9, 3, 9, 5);
             this.txtUrlImage.MaximumSize = new System.Drawing.Size(455, 100);
             this.txtUrlImage.Multiline = true;
@@ -236,7 +248,7 @@ namespace GUI
             this.txtUrlImage.PlaceholderText = "";
             this.txtUrlImage.SelectedText = "";
             this.txtUrlImage.ShadowDecoration.Parent = this.txtUrlImage;
-            this.txtUrlImage.Size = new System.Drawing.Size(455, 70);
+            this.txtUrlImage.Size = new System.Drawing.Size(455, 65);
             this.txtUrlImage.TabIndex = 32;
             this.txtUrlImage.TextOffset = new System.Drawing.Point(10, 0);
             this.txtUrlImage.TextChanged += new System.EventHandler(this.txtUrlImage_TextChanged);
@@ -251,7 +263,7 @@ namespace GUI
             this.lbUrl.Margin = new System.Windows.Forms.Padding(0);
             this.lbUrl.Name = "lbUrl";
             this.lbUrl.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lbUrl.Size = new System.Drawing.Size(464, 17);
+            this.lbUrl.Size = new System.Drawing.Size(464, 22);
             this.lbUrl.TabIndex = 31;
             this.lbUrl.Text = "URL image";
             this.lbUrl.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -261,11 +273,11 @@ namespace GUI
             this.pnStateOption.BackColor = System.Drawing.Color.Transparent;
             this.pnStateOption.Controls.Add(this.pnState);
             this.pnStateOption.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnStateOption.Location = new System.Drawing.Point(5, 275);
+            this.pnStateOption.Location = new System.Drawing.Point(5, 305);
             this.pnStateOption.Name = "pnStateOption";
             this.pnStateOption.Padding = new System.Windows.Forms.Padding(10, 5, 100, 0);
             this.pnStateOption.ShadowDecoration.Parent = this.pnStateOption;
-            this.pnStateOption.Size = new System.Drawing.Size(484, 45);
+            this.pnStateOption.Size = new System.Drawing.Size(484, 55);
             this.pnStateOption.TabIndex = 20;
             // 
             // pnState
@@ -277,35 +289,35 @@ namespace GUI
             this.pnState.Location = new System.Drawing.Point(10, 5);
             this.pnState.Name = "pnState";
             this.pnState.ShadowDecoration.Parent = this.pnState;
-            this.pnState.Size = new System.Drawing.Size(374, 40);
+            this.pnState.Size = new System.Drawing.Size(374, 50);
             this.pnState.TabIndex = 0;
             // 
             // pnStateOptionWrapper
             // 
             this.pnStateOptionWrapper.AutoRoundedCorners = true;
             this.pnStateOptionWrapper.BorderColor = System.Drawing.Color.Goldenrod;
-            this.pnStateOptionWrapper.BorderRadius = 10;
+            this.pnStateOptionWrapper.BorderRadius = 13;
             this.pnStateOptionWrapper.BorderThickness = 2;
             this.pnStateOptionWrapper.Controls.Add(this.rbStopSelling);
             this.pnStateOptionWrapper.Controls.Add(this.rbSelling);
             this.pnStateOptionWrapper.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnStateOptionWrapper.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.pnStateOptionWrapper.Location = new System.Drawing.Point(0, 17);
+            this.pnStateOptionWrapper.Location = new System.Drawing.Point(0, 22);
             this.pnStateOptionWrapper.Name = "pnStateOptionWrapper";
-            this.pnStateOptionWrapper.Padding = new System.Windows.Forms.Padding(20, 0, 15, 0);
+            this.pnStateOptionWrapper.Padding = new System.Windows.Forms.Padding(30, 0, 25, 0);
             this.pnStateOptionWrapper.ShadowDecoration.Parent = this.pnStateOptionWrapper;
-            this.pnStateOptionWrapper.Size = new System.Drawing.Size(374, 23);
+            this.pnStateOptionWrapper.Size = new System.Drawing.Size(374, 28);
             this.pnStateOptionWrapper.TabIndex = 34;
             // 
             // rbStopSelling
             // 
             this.rbStopSelling.AutoSize = true;
             this.rbStopSelling.Dock = System.Windows.Forms.DockStyle.Right;
-            this.rbStopSelling.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold);
+            this.rbStopSelling.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.rbStopSelling.ForeColor = System.Drawing.Color.Orange;
-            this.rbStopSelling.Location = new System.Drawing.Point(212, 0);
+            this.rbStopSelling.Location = new System.Drawing.Point(203, 0);
             this.rbStopSelling.Name = "rbStopSelling";
-            this.rbStopSelling.Size = new System.Drawing.Size(147, 23);
+            this.rbStopSelling.Size = new System.Drawing.Size(146, 28);
             this.rbStopSelling.TabIndex = 1;
             this.rbStopSelling.Text = "Stop selling";
             this.rbStopSelling.UseVisualStyleBackColor = true;
@@ -315,11 +327,11 @@ namespace GUI
             this.rbSelling.AutoSize = true;
             this.rbSelling.Checked = true;
             this.rbSelling.Dock = System.Windows.Forms.DockStyle.Left;
-            this.rbSelling.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold);
+            this.rbSelling.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.rbSelling.ForeColor = System.Drawing.Color.Orange;
-            this.rbSelling.Location = new System.Drawing.Point(20, 0);
+            this.rbSelling.Location = new System.Drawing.Point(30, 0);
             this.rbSelling.Name = "rbSelling";
-            this.rbSelling.Size = new System.Drawing.Size(98, 23);
+            this.rbSelling.Size = new System.Drawing.Size(99, 28);
             this.rbSelling.TabIndex = 0;
             this.rbSelling.TabStop = true;
             this.rbSelling.Text = "Selling";
@@ -335,7 +347,7 @@ namespace GUI
             this.lbState.Margin = new System.Windows.Forms.Padding(0);
             this.lbState.Name = "lbState";
             this.lbState.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lbState.Size = new System.Drawing.Size(374, 17);
+            this.lbState.Size = new System.Drawing.Size(374, 22);
             this.lbState.TabIndex = 33;
             this.lbState.Text = "State";
             this.lbState.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -346,11 +358,11 @@ namespace GUI
             this.pnPriceAndQuantity.Controls.Add(this.pnQuantity);
             this.pnPriceAndQuantity.Controls.Add(this.pnPrice);
             this.pnPriceAndQuantity.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnPriceAndQuantity.Location = new System.Drawing.Point(5, 230);
+            this.pnPriceAndQuantity.Location = new System.Drawing.Point(5, 250);
             this.pnPriceAndQuantity.Name = "pnPriceAndQuantity";
             this.pnPriceAndQuantity.Padding = new System.Windows.Forms.Padding(10, 5, 10, 0);
             this.pnPriceAndQuantity.ShadowDecoration.Parent = this.pnPriceAndQuantity;
-            this.pnPriceAndQuantity.Size = new System.Drawing.Size(484, 45);
+            this.pnPriceAndQuantity.Size = new System.Drawing.Size(484, 55);
             this.pnPriceAndQuantity.TabIndex = 12;
             // 
             // pnQuantity
@@ -363,14 +375,14 @@ namespace GUI
             this.pnQuantity.Name = "pnQuantity";
             this.pnQuantity.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.pnQuantity.ShadowDecoration.Parent = this.pnQuantity;
-            this.pnQuantity.Size = new System.Drawing.Size(53, 40);
+            this.pnQuantity.Size = new System.Drawing.Size(174, 50);
             this.pnQuantity.TabIndex = 2;
             // 
             // txtQuantity
             // 
             this.txtQuantity.AutoRoundedCorners = true;
             this.txtQuantity.BorderColor = System.Drawing.Color.Goldenrod;
-            this.txtQuantity.BorderRadius = 10;
+            this.txtQuantity.BorderRadius = 13;
             this.txtQuantity.BorderThickness = 2;
             this.txtQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtQuantity.DefaultText = "";
@@ -384,11 +396,11 @@ namespace GUI
             this.txtQuantity.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.txtQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtQuantity.FocusedState.Parent = this.txtQuantity;
-            this.txtQuantity.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.txtQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtQuantity.HoverState.Parent = this.txtQuantity;
-            this.txtQuantity.Location = new System.Drawing.Point(5, 17);
+            this.txtQuantity.Location = new System.Drawing.Point(5, 22);
             this.txtQuantity.Margin = new System.Windows.Forms.Padding(9, 3, 9, 5);
             this.txtQuantity.MaximumSize = new System.Drawing.Size(455, 45);
             this.txtQuantity.Name = "txtQuantity";
@@ -397,7 +409,7 @@ namespace GUI
             this.txtQuantity.PlaceholderText = "";
             this.txtQuantity.SelectedText = "";
             this.txtQuantity.ShadowDecoration.Parent = this.txtQuantity;
-            this.txtQuantity.Size = new System.Drawing.Size(48, 23);
+            this.txtQuantity.Size = new System.Drawing.Size(169, 28);
             this.txtQuantity.TabIndex = 34;
             this.txtQuantity.TextOffset = new System.Drawing.Point(10, 0);
             // 
@@ -411,7 +423,7 @@ namespace GUI
             this.lbQuantity.Margin = new System.Windows.Forms.Padding(0);
             this.lbQuantity.Name = "lbQuantity";
             this.lbQuantity.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lbQuantity.Size = new System.Drawing.Size(48, 17);
+            this.lbQuantity.Size = new System.Drawing.Size(169, 22);
             this.lbQuantity.TabIndex = 33;
             this.lbQuantity.Text = "Quantity";
             this.lbQuantity.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -426,7 +438,7 @@ namespace GUI
             this.pnPrice.Name = "pnPrice";
             this.pnPrice.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.pnPrice.ShadowDecoration.Parent = this.pnPrice;
-            this.pnPrice.Size = new System.Drawing.Size(131, 40);
+            this.pnPrice.Size = new System.Drawing.Size(131, 50);
             this.pnPrice.TabIndex = 1;
             // 
             // nudPrice
@@ -434,21 +446,21 @@ namespace GUI
             this.nudPrice.AutoRoundedCorners = true;
             this.nudPrice.BackColor = System.Drawing.Color.Transparent;
             this.nudPrice.BorderColor = System.Drawing.Color.Goldenrod;
-            this.nudPrice.BorderRadius = 10;
+            this.nudPrice.BorderRadius = 13;
             this.nudPrice.BorderThickness = 2;
             this.nudPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nudPrice.DisabledState.Parent = this.nudPrice;
             this.nudPrice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.nudPrice.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.nudPrice.FocusedState.Parent = this.nudPrice;
-            this.nudPrice.Font = new System.Drawing.Font("Roboto Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.nudPrice.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.nudPrice.Increment = new decimal(new int[] {
             500,
             0,
             0,
             0});
-            this.nudPrice.Location = new System.Drawing.Point(0, 17);
+            this.nudPrice.Location = new System.Drawing.Point(0, 22);
             this.nudPrice.Margin = new System.Windows.Forms.Padding(10, 3, 10, 5);
             this.nudPrice.Maximum = new decimal(new int[] {
             1000000,
@@ -463,7 +475,7 @@ namespace GUI
             0});
             this.nudPrice.Name = "nudPrice";
             this.nudPrice.ShadowDecoration.Parent = this.nudPrice;
-            this.nudPrice.Size = new System.Drawing.Size(121, 23);
+            this.nudPrice.Size = new System.Drawing.Size(121, 28);
             this.nudPrice.TabIndex = 34;
             this.nudPrice.TextOffset = new System.Drawing.Point(10, 0);
             this.nudPrice.UpDownButtonFillColor = System.Drawing.Color.Orange;
@@ -483,7 +495,7 @@ namespace GUI
             this.lbPrice.Margin = new System.Windows.Forms.Padding(0);
             this.lbPrice.Name = "lbPrice";
             this.lbPrice.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lbPrice.Size = new System.Drawing.Size(121, 17);
+            this.lbPrice.Size = new System.Drawing.Size(121, 22);
             this.lbPrice.TabIndex = 33;
             this.lbPrice.Text = "Price";
             this.lbPrice.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -494,11 +506,11 @@ namespace GUI
             this.pnPhoneAndID.Controls.Add(this.pnId);
             this.pnPhoneAndID.Controls.Add(this.pnPhoneNumber);
             this.pnPhoneAndID.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnPhoneAndID.Location = new System.Drawing.Point(5, 185);
+            this.pnPhoneAndID.Location = new System.Drawing.Point(5, 195);
             this.pnPhoneAndID.Name = "pnPhoneAndID";
             this.pnPhoneAndID.Padding = new System.Windows.Forms.Padding(10, 5, 10, 0);
             this.pnPhoneAndID.ShadowDecoration.Parent = this.pnPhoneAndID;
-            this.pnPhoneAndID.Size = new System.Drawing.Size(484, 45);
+            this.pnPhoneAndID.Size = new System.Drawing.Size(484, 55);
             this.pnPhoneAndID.TabIndex = 11;
             // 
             // pnId
@@ -511,14 +523,14 @@ namespace GUI
             this.pnId.Name = "pnId";
             this.pnId.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.pnId.ShadowDecoration.Parent = this.pnId;
-            this.pnId.Size = new System.Drawing.Size(53, 40);
+            this.pnId.Size = new System.Drawing.Size(79, 50);
             this.pnId.TabIndex = 3;
             // 
             // txtID
             // 
             this.txtID.AutoRoundedCorners = true;
             this.txtID.BorderColor = System.Drawing.Color.Goldenrod;
-            this.txtID.BorderRadius = 10;
+            this.txtID.BorderRadius = 13;
             this.txtID.BorderThickness = 2;
             this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtID.DefaultText = "";
@@ -532,11 +544,11 @@ namespace GUI
             this.txtID.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.txtID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtID.FocusedState.Parent = this.txtID;
-            this.txtID.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.txtID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtID.HoverState.Parent = this.txtID;
-            this.txtID.Location = new System.Drawing.Point(5, 17);
+            this.txtID.Location = new System.Drawing.Point(5, 22);
             this.txtID.Margin = new System.Windows.Forms.Padding(9, 3, 9, 5);
             this.txtID.MaximumSize = new System.Drawing.Size(455, 45);
             this.txtID.Name = "txtID";
@@ -545,7 +557,7 @@ namespace GUI
             this.txtID.PlaceholderText = "";
             this.txtID.SelectedText = "";
             this.txtID.ShadowDecoration.Parent = this.txtID;
-            this.txtID.Size = new System.Drawing.Size(48, 23);
+            this.txtID.Size = new System.Drawing.Size(74, 28);
             this.txtID.TabIndex = 34;
             this.txtID.TextOffset = new System.Drawing.Point(10, 0);
             // 
@@ -559,7 +571,7 @@ namespace GUI
             this.lbID.Margin = new System.Windows.Forms.Padding(0);
             this.lbID.Name = "lbID";
             this.lbID.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lbID.Size = new System.Drawing.Size(48, 17);
+            this.lbID.Size = new System.Drawing.Size(74, 22);
             this.lbID.TabIndex = 33;
             this.lbID.Text = "ID";
             this.lbID.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -574,7 +586,7 @@ namespace GUI
             this.pnPhoneNumber.Name = "pnPhoneNumber";
             this.pnPhoneNumber.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.pnPhoneNumber.ShadowDecoration.Parent = this.pnPhoneNumber;
-            this.pnPhoneNumber.Size = new System.Drawing.Size(131, 40);
+            this.pnPhoneNumber.Size = new System.Drawing.Size(131, 50);
             this.pnPhoneNumber.TabIndex = 1;
             // 
             // cbbUnit
@@ -591,7 +603,7 @@ namespace GUI
             this.cbbUnit.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbbUnit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbbUnit.FocusedState.Parent = this.cbbUnit;
-            this.cbbUnit.Font = new System.Drawing.Font("Roboto Medium", 10.8F, System.Drawing.FontStyle.Bold);
+            this.cbbUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.cbbUnit.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.cbbUnit.HoverState.Parent = this.cbbUnit;
             this.cbbUnit.ItemHeight = 30;
@@ -608,7 +620,7 @@ namespace GUI
             "Cái",
             "Thùng"});
             this.cbbUnit.ItemsAppearance.Parent = this.cbbUnit;
-            this.cbbUnit.Location = new System.Drawing.Point(0, 17);
+            this.cbbUnit.Location = new System.Drawing.Point(0, 22);
             this.cbbUnit.Margin = new System.Windows.Forms.Padding(10, 3, 10, 5);
             this.cbbUnit.MaximumSize = new System.Drawing.Size(500, 0);
             this.cbbUnit.Name = "cbbUnit";
@@ -628,7 +640,7 @@ namespace GUI
             this.lbPhoneNumber.Margin = new System.Windows.Forms.Padding(0);
             this.lbPhoneNumber.Name = "lbPhoneNumber";
             this.lbPhoneNumber.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lbPhoneNumber.Size = new System.Drawing.Size(121, 17);
+            this.lbPhoneNumber.Size = new System.Drawing.Size(121, 22);
             this.lbPhoneNumber.TabIndex = 33;
             this.lbPhoneNumber.Text = "Unit";
             this.lbPhoneNumber.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -643,14 +655,14 @@ namespace GUI
             this.pnName.Name = "pnName";
             this.pnName.Padding = new System.Windows.Forms.Padding(10, 5, 10, 0);
             this.pnName.ShadowDecoration.Parent = this.pnName;
-            this.pnName.Size = new System.Drawing.Size(484, 45);
+            this.pnName.Size = new System.Drawing.Size(484, 55);
             this.pnName.TabIndex = 10;
             // 
             // txtName
             // 
             this.txtName.AutoRoundedCorners = true;
             this.txtName.BorderColor = System.Drawing.Color.Goldenrod;
-            this.txtName.BorderRadius = 10;
+            this.txtName.BorderRadius = 13;
             this.txtName.BorderThickness = 2;
             this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtName.DefaultText = "";
@@ -663,11 +675,11 @@ namespace GUI
             this.txtName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.FocusedState.Parent = this.txtName;
-            this.txtName.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.HoverState.Parent = this.txtName;
-            this.txtName.Location = new System.Drawing.Point(10, 22);
+            this.txtName.Location = new System.Drawing.Point(10, 27);
             this.txtName.Margin = new System.Windows.Forms.Padding(9, 3, 9, 5);
             this.txtName.MaximumSize = new System.Drawing.Size(455, 45);
             this.txtName.Name = "txtName";
@@ -676,7 +688,7 @@ namespace GUI
             this.txtName.PlaceholderText = "";
             this.txtName.SelectedText = "";
             this.txtName.ShadowDecoration.Parent = this.txtName;
-            this.txtName.Size = new System.Drawing.Size(455, 23);
+            this.txtName.Size = new System.Drawing.Size(455, 28);
             this.txtName.TabIndex = 32;
             this.txtName.TextOffset = new System.Drawing.Point(10, 0);
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
@@ -691,7 +703,7 @@ namespace GUI
             this.lbName.Margin = new System.Windows.Forms.Padding(0);
             this.lbName.Name = "lbName";
             this.lbName.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lbName.Size = new System.Drawing.Size(464, 17);
+            this.lbName.Size = new System.Drawing.Size(464, 22);
             this.lbName.TabIndex = 31;
             this.lbName.Text = "Name";
             this.lbName.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -833,11 +845,11 @@ namespace GUI
             this.pnSideBarFooter.BackColor = System.Drawing.Color.Transparent;
             this.pnSideBarFooter.Controls.Add(this.tlpSideBarFooter);
             this.pnSideBarFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnSideBarFooter.Location = new System.Drawing.Point(3, 807);
+            this.pnSideBarFooter.Location = new System.Drawing.Point(3, 796);
             this.pnSideBarFooter.Name = "pnSideBarFooter";
             this.pnSideBarFooter.Padding = new System.Windows.Forms.Padding(5);
             this.pnSideBarFooter.ShadowDecoration.Parent = this.pnSideBarFooter;
-            this.pnSideBarFooter.Size = new System.Drawing.Size(494, 39);
+            this.pnSideBarFooter.Size = new System.Drawing.Size(494, 50);
             this.pnSideBarFooter.TabIndex = 1;
             // 
             // tlpSideBarFooter
@@ -853,7 +865,7 @@ namespace GUI
             this.tlpSideBarFooter.Name = "tlpSideBarFooter";
             this.tlpSideBarFooter.RowCount = 1;
             this.tlpSideBarFooter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpSideBarFooter.Size = new System.Drawing.Size(484, 29);
+            this.tlpSideBarFooter.Size = new System.Drawing.Size(484, 40);
             this.tlpSideBarFooter.TabIndex = 0;
             // 
             // btnSideBarCancel
@@ -861,7 +873,7 @@ namespace GUI
             this.btnSideBarCancel.Animated = true;
             this.btnSideBarCancel.AutoRoundedCorners = true;
             this.btnSideBarCancel.BackColor = System.Drawing.Color.Transparent;
-            this.btnSideBarCancel.BorderRadius = 13;
+            this.btnSideBarCancel.BorderRadius = 19;
             this.btnSideBarCancel.CheckedState.Parent = this.btnSideBarCancel;
             this.btnSideBarCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideBarCancel.CustomImages.Parent = this.btnSideBarCancel;
@@ -883,7 +895,7 @@ namespace GUI
             this.btnSideBarCancel.Name = "btnSideBarCancel";
             this.btnSideBarCancel.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
             this.btnSideBarCancel.ShadowDecoration.Parent = this.btnSideBarCancel;
-            this.btnSideBarCancel.Size = new System.Drawing.Size(222, 29);
+            this.btnSideBarCancel.Size = new System.Drawing.Size(222, 40);
             this.btnSideBarCancel.TabIndex = 3;
             this.btnSideBarCancel.Text = "Cancel";
             this.btnSideBarCancel.Click += new System.EventHandler(this.btnSideBarCancel_Click);
@@ -893,7 +905,7 @@ namespace GUI
             this.btnSideBarConfirm.Animated = true;
             this.btnSideBarConfirm.AutoRoundedCorners = true;
             this.btnSideBarConfirm.BackColor = System.Drawing.Color.Transparent;
-            this.btnSideBarConfirm.BorderRadius = 13;
+            this.btnSideBarConfirm.BorderRadius = 19;
             this.btnSideBarConfirm.CheckedState.Parent = this.btnSideBarConfirm;
             this.btnSideBarConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSideBarConfirm.CustomImages.Parent = this.btnSideBarConfirm;
@@ -914,7 +926,7 @@ namespace GUI
             this.btnSideBarConfirm.Name = "btnSideBarConfirm";
             this.btnSideBarConfirm.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
             this.btnSideBarConfirm.ShadowDecoration.Parent = this.btnSideBarConfirm;
-            this.btnSideBarConfirm.Size = new System.Drawing.Size(222, 29);
+            this.btnSideBarConfirm.Size = new System.Drawing.Size(222, 40);
             this.btnSideBarConfirm.TabIndex = 2;
             this.btnSideBarConfirm.Text = "Confirm";
             this.btnSideBarConfirm.Click += new System.EventHandler(this.btnSideBarConfirm_Click);
@@ -929,7 +941,7 @@ namespace GUI
             this.pnSideBarHeader.Location = new System.Drawing.Point(3, 3);
             this.pnSideBarHeader.Name = "pnSideBarHeader";
             this.pnSideBarHeader.ShadowDecoration.Parent = this.pnSideBarHeader;
-            this.pnSideBarHeader.Size = new System.Drawing.Size(494, 29);
+            this.pnSideBarHeader.Size = new System.Drawing.Size(494, 35);
             this.pnSideBarHeader.TabIndex = 0;
             // 
             // lbSideBarTitle
@@ -941,7 +953,7 @@ namespace GUI
             this.lbSideBarTitle.Location = new System.Drawing.Point(31, 0);
             this.lbSideBarTitle.Name = "lbSideBarTitle";
             this.lbSideBarTitle.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.lbSideBarTitle.Size = new System.Drawing.Size(432, 29);
+            this.lbSideBarTitle.Size = new System.Drawing.Size(432, 35);
             this.lbSideBarTitle.TabIndex = 6;
             this.lbSideBarTitle.Text = "Add new Goods";
             this.lbSideBarTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -969,7 +981,7 @@ namespace GUI
             this.btnTick.Location = new System.Drawing.Point(463, 0);
             this.btnTick.Name = "btnTick";
             this.btnTick.ShadowDecoration.Parent = this.btnTick;
-            this.btnTick.Size = new System.Drawing.Size(31, 29);
+            this.btnTick.Size = new System.Drawing.Size(31, 35);
             this.btnTick.TabIndex = 3;
             this.btnTick.Click += new System.EventHandler(this.btnTick_Click);
             // 
@@ -996,7 +1008,7 @@ namespace GUI
             this.btnCollapse.Location = new System.Drawing.Point(0, 0);
             this.btnCollapse.Name = "btnCollapse";
             this.btnCollapse.ShadowDecoration.Parent = this.btnCollapse;
-            this.btnCollapse.Size = new System.Drawing.Size(31, 29);
+            this.btnCollapse.Size = new System.Drawing.Size(31, 35);
             this.btnCollapse.TabIndex = 2;
             this.btnCollapse.Click += new System.EventHandler(this.btnCollapse_Click);
             // 
@@ -1013,142 +1025,11 @@ namespace GUI
             this.tlpMain.Location = new System.Drawing.Point(3, 3);
             this.tlpMain.Name = "tlpMain";
             this.tlpMain.RowCount = 3;
-            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.5F));
+            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11F));
+            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89F));
             this.tlpMain.Size = new System.Drawing.Size(1077, 843);
             this.tlpMain.TabIndex = 1;
-            // 
-            // tlpGoodsType
-            // 
-            this.tlpGoodsType.ColumnCount = 4;
-            this.tlpGoodsType.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpGoodsType.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpGoodsType.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpGoodsType.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpGoodsType.Controls.Add(this.btnStopSelling, 3, 0);
-            this.tlpGoodsType.Controls.Add(this.btnSoldOut, 2, 0);
-            this.tlpGoodsType.Controls.Add(this.btnStocking, 1, 0);
-            this.tlpGoodsType.Controls.Add(this.btnAllGoods, 0, 0);
-            this.tlpGoodsType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpGoodsType.Location = new System.Drawing.Point(3, 3);
-            this.tlpGoodsType.Name = "tlpGoodsType";
-            this.tlpGoodsType.RowCount = 1;
-            this.tlpGoodsType.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpGoodsType.Size = new System.Drawing.Size(1071, 91);
-            this.tlpGoodsType.TabIndex = 0;
-            // 
-            // btnStopSelling
-            // 
-            this.btnStopSelling.Animated = true;
-            this.btnStopSelling.BackColor = System.Drawing.Color.Transparent;
-            this.btnStopSelling.BorderRadius = 10;
-            this.btnStopSelling.CheckedState.Parent = this.btnStopSelling;
-            this.btnStopSelling.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStopSelling.CustomImages.Parent = this.btnStopSelling;
-            this.btnStopSelling.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnStopSelling.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnStopSelling.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnStopSelling.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnStopSelling.DisabledState.Parent = this.btnStopSelling;
-            this.btnStopSelling.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnStopSelling.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(166)))), ((int)(((byte)(137)))));
-            this.btnStopSelling.Font = new System.Drawing.Font("Poppins SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.btnStopSelling.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.btnStopSelling.HoverState.Parent = this.btnStopSelling;
-            this.btnStopSelling.Location = new System.Drawing.Point(811, 10);
-            this.btnStopSelling.Margin = new System.Windows.Forms.Padding(10, 10, 10, 8);
-            this.btnStopSelling.Name = "btnStopSelling";
-            this.btnStopSelling.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.btnStopSelling.ShadowDecoration.Parent = this.btnStopSelling;
-            this.btnStopSelling.Size = new System.Drawing.Size(250, 73);
-            this.btnStopSelling.TabIndex = 3;
-            this.btnStopSelling.Text = "Stop selling";
-            this.btnStopSelling.Click += new System.EventHandler(this.btnStopSelling_Click);
-            // 
-            // btnSoldOut
-            // 
-            this.btnSoldOut.Animated = true;
-            this.btnSoldOut.BackColor = System.Drawing.Color.Transparent;
-            this.btnSoldOut.BorderRadius = 10;
-            this.btnSoldOut.CheckedState.Parent = this.btnSoldOut;
-            this.btnSoldOut.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSoldOut.CustomImages.Parent = this.btnSoldOut;
-            this.btnSoldOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSoldOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSoldOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSoldOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSoldOut.DisabledState.Parent = this.btnSoldOut;
-            this.btnSoldOut.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSoldOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(166)))), ((int)(((byte)(137)))));
-            this.btnSoldOut.Font = new System.Drawing.Font("Poppins SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.btnSoldOut.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.btnSoldOut.HoverState.Parent = this.btnSoldOut;
-            this.btnSoldOut.Location = new System.Drawing.Point(544, 10);
-            this.btnSoldOut.Margin = new System.Windows.Forms.Padding(10, 10, 10, 8);
-            this.btnSoldOut.Name = "btnSoldOut";
-            this.btnSoldOut.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.btnSoldOut.ShadowDecoration.Parent = this.btnSoldOut;
-            this.btnSoldOut.Size = new System.Drawing.Size(247, 73);
-            this.btnSoldOut.TabIndex = 2;
-            this.btnSoldOut.Text = "Sold out";
-            this.btnSoldOut.Click += new System.EventHandler(this.btnSoldOut_Click);
-            // 
-            // btnStocking
-            // 
-            this.btnStocking.Animated = true;
-            this.btnStocking.BackColor = System.Drawing.Color.Transparent;
-            this.btnStocking.BorderRadius = 10;
-            this.btnStocking.CheckedState.Parent = this.btnStocking;
-            this.btnStocking.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStocking.CustomImages.Parent = this.btnStocking;
-            this.btnStocking.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnStocking.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnStocking.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnStocking.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnStocking.DisabledState.Parent = this.btnStocking;
-            this.btnStocking.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnStocking.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(166)))), ((int)(((byte)(137)))));
-            this.btnStocking.Font = new System.Drawing.Font("Poppins SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.btnStocking.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.btnStocking.HoverState.Parent = this.btnStocking;
-            this.btnStocking.Location = new System.Drawing.Point(277, 10);
-            this.btnStocking.Margin = new System.Windows.Forms.Padding(10, 10, 10, 8);
-            this.btnStocking.Name = "btnStocking";
-            this.btnStocking.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.btnStocking.ShadowDecoration.Parent = this.btnStocking;
-            this.btnStocking.Size = new System.Drawing.Size(247, 73);
-            this.btnStocking.TabIndex = 1;
-            this.btnStocking.Text = "Stocking";
-            this.btnStocking.Click += new System.EventHandler(this.btnStocking_Click);
-            // 
-            // btnAllGoods
-            // 
-            this.btnAllGoods.Animated = true;
-            this.btnAllGoods.BackColor = System.Drawing.Color.Transparent;
-            this.btnAllGoods.BorderRadius = 10;
-            this.btnAllGoods.CheckedState.Parent = this.btnAllGoods;
-            this.btnAllGoods.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAllGoods.CustomImages.Parent = this.btnAllGoods;
-            this.btnAllGoods.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAllGoods.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAllGoods.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAllGoods.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAllGoods.DisabledState.Parent = this.btnAllGoods;
-            this.btnAllGoods.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAllGoods.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(166)))), ((int)(((byte)(137)))));
-            this.btnAllGoods.Font = new System.Drawing.Font("Poppins SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.btnAllGoods.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.btnAllGoods.HoverState.Parent = this.btnAllGoods;
-            this.btnAllGoods.Location = new System.Drawing.Point(10, 10);
-            this.btnAllGoods.Margin = new System.Windows.Forms.Padding(10, 10, 10, 8);
-            this.btnAllGoods.Name = "btnAllGoods";
-            this.btnAllGoods.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.btnAllGoods.ShadowDecoration.Parent = this.btnAllGoods;
-            this.btnAllGoods.Size = new System.Drawing.Size(247, 73);
-            this.btnAllGoods.TabIndex = 0;
-            this.btnAllGoods.Text = "All goods";
-            this.btnAllGoods.Click += new System.EventHandler(this.btnAll_Click);
             // 
             // tlpSearch
             // 
@@ -1195,7 +1076,7 @@ namespace GUI
             this.pnSearch.Location = new System.Drawing.Point(10, 10);
             this.pnSearch.Margin = new System.Windows.Forms.Padding(0);
             this.pnSearch.Name = "pnSearch";
-            this.pnSearch.Padding = new System.Windows.Forms.Padding(5, 5, 8, 5);
+            this.pnSearch.Padding = new System.Windows.Forms.Padding(5, 5, 10, 5);
             this.pnSearch.ShadowDecoration.Parent = this.pnSearch;
             this.pnSearch.Size = new System.Drawing.Size(505, 30);
             this.pnSearch.TabIndex = 2;
@@ -1216,17 +1097,18 @@ namespace GUI
             this.txtSearch.FillColor = System.Drawing.Color.MistyRose;
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.Transparent;
             this.txtSearch.FocusedState.Parent = this.txtSearch;
-            this.txtSearch.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Font = new System.Drawing.Font("Poppins", 14F);
+            this.txtSearch.ForeColor = System.Drawing.Color.BlanchedAlmond;
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
-            this.txtSearch.Location = new System.Drawing.Point(45, 5);
+            this.txtSearch.Location = new System.Drawing.Point(69, 5);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Search by ID or goods name...";
             this.txtSearch.SelectedText = "";
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
-            this.txtSearch.Size = new System.Drawing.Size(432, 20);
+            this.txtSearch.Size = new System.Drawing.Size(402, 20);
             this.txtSearch.TabIndex = 3;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
@@ -1237,10 +1119,10 @@ namespace GUI
             this.btnDeleteSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnDeleteSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteSearch.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnDeleteSearch.Location = new System.Drawing.Point(477, 5);
+            this.btnDeleteSearch.Location = new System.Drawing.Point(471, 5);
             this.btnDeleteSearch.Name = "btnDeleteSearch";
             this.btnDeleteSearch.ShadowDecoration.Parent = this.btnDeleteSearch;
-            this.btnDeleteSearch.Size = new System.Drawing.Size(20, 20);
+            this.btnDeleteSearch.Size = new System.Drawing.Size(24, 20);
             this.btnDeleteSearch.TabIndex = 2;
             this.btnDeleteSearch.Click += new System.EventHandler(this.btnDeleteSearch_Click);
             // 
@@ -1253,7 +1135,7 @@ namespace GUI
             this.btnSearch.Location = new System.Drawing.Point(5, 5);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.ShadowDecoration.Parent = this.btnSearch;
-            this.btnSearch.Size = new System.Drawing.Size(40, 20);
+            this.btnSearch.Size = new System.Drawing.Size(64, 20);
             this.btnSearch.TabIndex = 0;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             this.btnSearch.Paint += new System.Windows.Forms.PaintEventHandler(this.btnSearch_Paint);
@@ -1421,31 +1303,31 @@ namespace GUI
             this.dgvGoods.AllowUserToAddRows = false;
             this.dgvGoods.AllowUserToDeleteRows = false;
             this.dgvGoods.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.dgvGoods.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.dgvGoods.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvGoods.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvGoods.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.dgvGoods.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvGoods.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvGoods.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGoods.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGoods.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvGoods.ColumnHeadersHeight = 45;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(133)))), ((int)(((byte)(147)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvGoods.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(133)))), ((int)(((byte)(147)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvGoods.DefaultCellStyle = dataGridViewCellStyle13;
             this.dgvGoods.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvGoods.EnableHeadersVisualStyles = false;
             this.dgvGoods.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(199)))), ((int)(((byte)(206)))));
@@ -1455,19 +1337,19 @@ namespace GUI
             this.dgvGoods.Name = "dgvGoods";
             this.dgvGoods.ReadOnly = true;
             this.dgvGoods.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGoods.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGoods.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvGoods.RowHeadersVisible = false;
             this.dgvGoods.RowHeadersWidth = 51;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(5);
-            this.dgvGoods.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.Padding = new System.Windows.Forms.Padding(5);
+            this.dgvGoods.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvGoods.RowTemplate.Height = 40;
             this.dgvGoods.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvGoods.Size = new System.Drawing.Size(1064, 672);
@@ -1496,18 +1378,6 @@ namespace GUI
             this.dgvGoods.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvGoods.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGoods_CellClick);
             // 
-            // lbTypeInput
-            // 
-            this.lbTypeInput.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbTypeInput.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTypeInput.ForeColor = System.Drawing.Color.Red;
-            this.lbTypeInput.Location = new System.Drawing.Point(5, 755);
-            this.lbTypeInput.Margin = new System.Windows.Forms.Padding(10, 5, 5, 0);
-            this.lbTypeInput.Name = "lbTypeInput";
-            this.lbTypeInput.Size = new System.Drawing.Size(484, 15);
-            this.lbTypeInput.TabIndex = 22;
-            this.lbTypeInput.Text = "*Please type all information*";
-            // 
             // ecDgvGoods
             // 
             this.ecDgvGoods.CornerRadius = 20;
@@ -1517,6 +1387,137 @@ namespace GUI
             // 
             this.ecTlpPictureSide.CornerRadius = 11;
             this.ecTlpPictureSide.TargetControl = this.tlpPictureSide;
+            // 
+            // btnAllGoods
+            // 
+            this.btnAllGoods.Animated = true;
+            this.btnAllGoods.BackColor = System.Drawing.Color.Transparent;
+            this.btnAllGoods.BorderRadius = 10;
+            this.btnAllGoods.CheckedState.Parent = this.btnAllGoods;
+            this.btnAllGoods.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAllGoods.CustomImages.Parent = this.btnAllGoods;
+            this.btnAllGoods.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAllGoods.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAllGoods.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAllGoods.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAllGoods.DisabledState.Parent = this.btnAllGoods;
+            this.btnAllGoods.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAllGoods.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(166)))), ((int)(((byte)(137)))));
+            this.btnAllGoods.Font = new System.Drawing.Font("Poppins SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.btnAllGoods.ForeColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnAllGoods.HoverState.Parent = this.btnAllGoods;
+            this.btnAllGoods.Location = new System.Drawing.Point(10, 10);
+            this.btnAllGoods.Margin = new System.Windows.Forms.Padding(10, 10, 10, 8);
+            this.btnAllGoods.Name = "btnAllGoods";
+            this.btnAllGoods.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.btnAllGoods.ShadowDecoration.Parent = this.btnAllGoods;
+            this.btnAllGoods.Size = new System.Drawing.Size(247, 73);
+            this.btnAllGoods.TabIndex = 0;
+            this.btnAllGoods.Text = "All goods";
+            this.btnAllGoods.Click += new System.EventHandler(this.btnAll_Click);
+            // 
+            // btnStocking
+            // 
+            this.btnStocking.Animated = true;
+            this.btnStocking.BackColor = System.Drawing.Color.Transparent;
+            this.btnStocking.BorderRadius = 10;
+            this.btnStocking.CheckedState.Parent = this.btnStocking;
+            this.btnStocking.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStocking.CustomImages.Parent = this.btnStocking;
+            this.btnStocking.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnStocking.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnStocking.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnStocking.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnStocking.DisabledState.Parent = this.btnStocking;
+            this.btnStocking.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnStocking.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(166)))), ((int)(((byte)(137)))));
+            this.btnStocking.Font = new System.Drawing.Font("Poppins SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.btnStocking.ForeColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnStocking.HoverState.Parent = this.btnStocking;
+            this.btnStocking.Location = new System.Drawing.Point(277, 10);
+            this.btnStocking.Margin = new System.Windows.Forms.Padding(10, 10, 10, 8);
+            this.btnStocking.Name = "btnStocking";
+            this.btnStocking.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.btnStocking.ShadowDecoration.Parent = this.btnStocking;
+            this.btnStocking.Size = new System.Drawing.Size(247, 73);
+            this.btnStocking.TabIndex = 1;
+            this.btnStocking.Text = "Stocking";
+            this.btnStocking.Click += new System.EventHandler(this.btnStocking_Click);
+            // 
+            // btnSoldOut
+            // 
+            this.btnSoldOut.Animated = true;
+            this.btnSoldOut.BackColor = System.Drawing.Color.Transparent;
+            this.btnSoldOut.BorderRadius = 10;
+            this.btnSoldOut.CheckedState.Parent = this.btnSoldOut;
+            this.btnSoldOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSoldOut.CustomImages.Parent = this.btnSoldOut;
+            this.btnSoldOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSoldOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSoldOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSoldOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSoldOut.DisabledState.Parent = this.btnSoldOut;
+            this.btnSoldOut.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSoldOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(166)))), ((int)(((byte)(137)))));
+            this.btnSoldOut.Font = new System.Drawing.Font("Poppins SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.btnSoldOut.ForeColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnSoldOut.HoverState.Parent = this.btnSoldOut;
+            this.btnSoldOut.Location = new System.Drawing.Point(544, 10);
+            this.btnSoldOut.Margin = new System.Windows.Forms.Padding(10, 10, 10, 8);
+            this.btnSoldOut.Name = "btnSoldOut";
+            this.btnSoldOut.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.btnSoldOut.ShadowDecoration.Parent = this.btnSoldOut;
+            this.btnSoldOut.Size = new System.Drawing.Size(247, 73);
+            this.btnSoldOut.TabIndex = 2;
+            this.btnSoldOut.Text = "Sold out";
+            this.btnSoldOut.Click += new System.EventHandler(this.btnSoldOut_Click);
+            // 
+            // btnStopSelling
+            // 
+            this.btnStopSelling.Animated = true;
+            this.btnStopSelling.BackColor = System.Drawing.Color.Transparent;
+            this.btnStopSelling.BorderRadius = 10;
+            this.btnStopSelling.CheckedState.Parent = this.btnStopSelling;
+            this.btnStopSelling.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStopSelling.CustomImages.Parent = this.btnStopSelling;
+            this.btnStopSelling.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnStopSelling.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnStopSelling.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnStopSelling.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnStopSelling.DisabledState.Parent = this.btnStopSelling;
+            this.btnStopSelling.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnStopSelling.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(166)))), ((int)(((byte)(137)))));
+            this.btnStopSelling.Font = new System.Drawing.Font("Poppins SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.btnStopSelling.ForeColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnStopSelling.HoverState.Parent = this.btnStopSelling;
+            this.btnStopSelling.Location = new System.Drawing.Point(811, 10);
+            this.btnStopSelling.Margin = new System.Windows.Forms.Padding(10, 10, 10, 8);
+            this.btnStopSelling.Name = "btnStopSelling";
+            this.btnStopSelling.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.btnStopSelling.ShadowDecoration.Parent = this.btnStopSelling;
+            this.btnStopSelling.Size = new System.Drawing.Size(250, 73);
+            this.btnStopSelling.TabIndex = 3;
+            this.btnStopSelling.Text = "Stop selling";
+            this.btnStopSelling.Click += new System.EventHandler(this.btnStopSelling_Click);
+            // 
+            // tlpGoodsType
+            // 
+            this.tlpGoodsType.ColumnCount = 4;
+            this.tlpGoodsType.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpGoodsType.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpGoodsType.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpGoodsType.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpGoodsType.Controls.Add(this.btnStopSelling, 3, 0);
+            this.tlpGoodsType.Controls.Add(this.btnSoldOut, 2, 0);
+            this.tlpGoodsType.Controls.Add(this.btnStocking, 1, 0);
+            this.tlpGoodsType.Controls.Add(this.btnAllGoods, 0, 0);
+            this.tlpGoodsType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpGoodsType.Location = new System.Drawing.Point(3, 3);
+            this.tlpGoodsType.Name = "tlpGoodsType";
+            this.tlpGoodsType.RowCount = 1;
+            this.tlpGoodsType.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpGoodsType.Size = new System.Drawing.Size(1071, 91);
+            this.tlpGoodsType.TabIndex = 0;
             // 
             // fGoods
             // 
@@ -1554,7 +1555,6 @@ namespace GUI
             this.tlpSideBarFooter.ResumeLayout(false);
             this.pnSideBarHeader.ResumeLayout(false);
             this.tlpMain.ResumeLayout(false);
-            this.tlpGoodsType.ResumeLayout(false);
             this.tlpSearch.ResumeLayout(false);
             this.pnSearchAndFunction.ResumeLayout(false);
             this.pnSearch.ResumeLayout(false);
@@ -1564,6 +1564,7 @@ namespace GUI
             this.pnDelete.ResumeLayout(false);
             this.pnBtnAdd.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGoods)).EndInit();
+            this.tlpGoodsType.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1578,9 +1579,6 @@ namespace GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn goodsImageDataGridViewTextBoxColumn;
         private System.Windows.Forms.TableLayoutPanel tlpWrapper;
         private System.Windows.Forms.TableLayoutPanel tlpMain;
-        private System.Windows.Forms.TableLayoutPanel tlpGoodsType;
-        private Guna.UI2.WinForms.Guna2Button btnStocking;
-        private Guna.UI2.WinForms.Guna2Button btnAllGoods;
         private System.Windows.Forms.TableLayoutPanel tlpSearch;
         private Guna.UI2.WinForms.Guna2Panel pnSearchAndFunction;
         private Guna.UI2.WinForms.Guna2Panel pnSearch;
@@ -1608,8 +1606,6 @@ namespace GUI
         private Guna.UI2.WinForms.Guna2Button btnCollapse;
         private System.Windows.Forms.Label lbSideBarTitle;
         private ElipseToolDemo.ElipseControl ecTlpPictureSide;
-        private Guna.UI2.WinForms.Guna2Button btnStopSelling;
-        private Guna.UI2.WinForms.Guna2Button btnSoldOut;
         private System.Windows.Forms.TableLayoutPanel tlpPictureSide;
         private Guna.UI2.WinForms.Guna2PictureBox pbPicture;
         private Guna.UI2.WinForms.Guna2Panel pnPictureButton;
@@ -1644,5 +1640,10 @@ namespace GUI
         private System.Windows.Forms.RadioButton rbSelling;
         private System.Windows.Forms.Label lbState;
         private System.Windows.Forms.Label lbTypeInput;
+        private System.Windows.Forms.TableLayoutPanel tlpGoodsType;
+        private Guna.UI2.WinForms.Guna2Button btnStopSelling;
+        private Guna.UI2.WinForms.Guna2Button btnSoldOut;
+        private Guna.UI2.WinForms.Guna2Button btnStocking;
+        private Guna.UI2.WinForms.Guna2Button btnAllGoods;
     }
 }
