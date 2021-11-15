@@ -20,6 +20,7 @@ namespace GUI
         private BLL_Contract bll = new BLL_Contract();
         private BLL_Employee bll_employee = new BLL_Employee();
         private BLL_Goods bll_goods = new BLL_Goods();
+        private DataTable dt_provider = null;
         private Contract contractDetail;
         
         public fContract()
@@ -68,6 +69,7 @@ namespace GUI
             cbbEname.ValueMember = "Name";
             cbbPname.DataSource = bll.GetAllProviders(ref error);
             cbbPname.ValueMember = "Name";
+            dt_provider = bll.GetAllProviders(ref error);
         }
 
         private void CustomGoodsReceiptTable()
@@ -219,7 +221,7 @@ namespace GUI
         {
             tlpWrapper.ColumnStyles[1].Width = 0;
             string error = null;
-            DataTable dt = bll.GetAllProviders(ref error);
+            dt_provider = bll.GetAllProviders(ref error);
             if (error != null)
             {
                 MessageBox.Show(error);
@@ -227,7 +229,7 @@ namespace GUI
                 ChangeTable(btnProvider);
                 return;
             }
-            dgvContract.DataSource = dt;
+            dgvContract.DataSource = dt_provider;
             CustomProviderTable();
             ChangeTable(btnProvider);
             tlpMain.RowStyles[1].Height = 10;
@@ -238,14 +240,14 @@ namespace GUI
         private void ReloadProvider()
         {
             string error = null;
-            DataTable dt = bll.GetAllProviders(ref error);
+            dt_provider = bll.GetAllProviders(ref error);
             if (error != null)
             {
                 MessageBox.Show(error);
                 dgvContract.DataSource = null;
                 return;
             }
-            dgvContract.DataSource = dt;
+            dgvContract.DataSource = dt_provider;
         }
 
         private void btnImport_Click(object sender, EventArgs e)
@@ -275,6 +277,7 @@ namespace GUI
         {
             if (btnGoodsReceipt.FillColor == root.buttonChoosingContract)
             {
+                btnTick.Image = global::Manage_Store.Properties.Resources.edit2;
                 btnSideBarConfirm.Enabled = false;
                 pnGeneralInformation.Enabled = false;
                 foreach (Control c in gbImportedItemInformation.Controls)
@@ -303,13 +306,14 @@ namespace GUI
                 cbbEname.Text = contractDetail.Ename;
                 dtpTime.Value = contractDetail.Date;
                 string error = null;
-                DataTable dtProvider = bll.SearchProvider("name", pname, ref error);
-                if (error != null)
-                {
-                    MessageBox.Show(error);
-                    return;
-                }
-                contractDetail.Prov = new Provider(dtProvider.Rows[0], false);
+                foreach(DataRow dr in dt_provider.Rows) 
+                    if ((string)dr["Name"] == pname)
+                    {
+                        contractDetail.Prov = new Provider(dr, false);
+                        break;
+                    }
+                txtPid.Text = contractDetail.Prov.ID.ToString();
+                cbbPname.Text = contractDetail.Prov.Name;
                 txtPname.Text = contractDetail.Prov.Name;
                 txtPname.SelectionStart = 0;
                 txtPaddress.Text = contractDetail.Prov.Address;
@@ -355,6 +359,7 @@ namespace GUI
             }
             else if (btnProvider.FillColor == root.buttonChoosingContract)
             {
+                btnTick2.Image = global::Manage_Store.Properties.Resources.edit2;
                 int row = dgvContract.CurrentCell.RowIndex;
                 DataTable dt = (DataTable)dgvContract.DataSource;
                 txtPid2.Text = dt.Rows[row]["ID"].ToString();
@@ -548,11 +553,14 @@ namespace GUI
             {
                 txtPname.Hide();
                 cbbPname.Show();
+                cbbPname.Text = contractDetail.Prov.Name;
+                txtPaddress.SelectionStart = 0;
             }
             else
             {
                 cbbPname.Hide();
                 txtPname.Show();
+                cbbPname.SelectedIndex = -1;
             }
         }
 
@@ -576,6 +584,7 @@ namespace GUI
                 foreach (Control c in gbImportedItemInformation.Controls)
                     c.Enabled = false;
                 pnGoodsView.Enabled = true;
+                btnSideBarConfirm.PerformClick();
             }
         }
 
@@ -586,7 +595,7 @@ namespace GUI
 
         private void btnSideBarCancel_Click(object sender, EventArgs e)
         {
-            btnCollapse.PerformClick();
+            btnDetail.PerformClick();
         }
 
         private void btnSideBarConfirm_Click(object sender, EventArgs e)
@@ -653,7 +662,6 @@ namespace GUI
 
         private void btnSideBar2Confirm_Click(object sender, EventArgs e)
         {
-
             lbHeaderTitle2.Text = "Detail Provider";
             btnTick2.Image = global::Manage_Store.Properties.Resources.edit2;
             pnSideBarBody2.Enabled = false;
@@ -682,6 +690,9 @@ namespace GUI
             cbbUnit3.Enabled = true;
             txtSellingPrice3.Enabled = true;
             tlpPictureWrapper2.Enabled = true;
+            txtUrl3.Clear();
+            pbPicture3.Image = Image.FromFile(root.ProjectPath() + root.imageGoods + "addGoods.png");
+            btnAddGoods.Enabled = true;
         }
 
         private void rbGold3_CheckedChanged(object sender, EventArgs e)
@@ -701,7 +712,7 @@ namespace GUI
             if (string.IsNullOrEmpty(openFile.FileName))
                 return;
             txtUrl3.Text = openFile.FileName;
-            pbPiture3.Image = Image.FromFile(openFile.FileName);
+            pbPicture3.Image = Image.FromFile(openFile.FileName);
         }
 
         private void btnDeletePicture3_Click(object sender, EventArgs e)
@@ -713,17 +724,17 @@ namespace GUI
         {
             if (string.IsNullOrWhiteSpace(txtUrl3.Text))
             {
-                pbPiture3.Image = Image.FromFile(root.ProjectPath() + root.imageGoods + "addGoods.png");
+                pbPicture3.Image = Image.FromFile(root.ProjectPath() + root.imageGoods + "addGoods.png");
             }
             else if (!File.Exists(txtUrl3.Text))
             {
-                pbPiture3.Image = Image.FromFile(root.ProjectPath() + root.imageGoods + "notFound.png");
+                pbPicture3.Image = Image.FromFile(root.ProjectPath() + root.imageGoods + "notFound.png");
                 txtUrl3.FocusedState.BorderColor = Color.Red;
             }
             else 
             {
                 txtUrl3.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-                pbPiture3.Image = Image.FromFile(txtUrl3.Text);
+                pbPicture3.Image = Image.FromFile(txtUrl3.Text);
             }
         }
 
@@ -732,29 +743,14 @@ namespace GUI
             string name = rbGold3.Checked ? cbbGname3.Text : txtGname3.Text;
             string unit = cbbUnit3.Text;
             double sellingPrice = double.Parse(root.TurnOffMoneyFormat(txtSellingPrice3.Text));
-            bool photo = !(txtUrl3.FocusedState.BorderColor == Color.Red) && !string.IsNullOrEmpty(txtUrl3.Text);
+            bool photo = File.Exists(root.ProjectPath() + root.imageGoods + name.Replace(' ', '_') + ".png");
             int quantity = (int)nudQuantity3.Value;
             double importPrice = double.Parse(root.TurnOffMoneyFormat(txtImportPrice3.Text));
-            tlpGoodsView2.Controls.Add(new GoodsView(new Goods(-1, name, unit, sellingPrice, 0, true, photo), quantity, importPrice, false));
-        }
-
-        private void cbbGname3_SelectedValueChanged(object sender, EventArgs e)
-        {
-            string error = null;
-            DataTable dt = bll_goods.GetGoodsTable(ref error);
-            foreach (DataRow dr in dt.Rows)
-            {
-                if ((string)dr["Name"] == cbbGname3.Text)
-                {
-                    cbbUnit3.Text = (string)dr["Unit"];
-                    txtSellingPrice3.Text = root.MoneyFormat(dr["Price"].ToString());
-                    if ((bool)dr["Image"])
-                        txtUrl3.Text = root.ProjectPath() + root.imageGoods + cbbGname3.Text.Replace(' ', '_') + ".png";
-                    else
-                        txtUrl3.Text = string.Empty;
-                    break;
-                }
-            }
+            foreach (GoodsView gv in tlpGoodsView2.Controls)
+                if (gv.g.Name == name)
+                    tlpGoodsView2.Controls.Remove(gv);
+            tlpGoodsView2.Controls.Add(new GoodsView(new Goods(-1, name, unit, sellingPrice, 0, true, photo, photo ? null : txtUrl3.Text), 
+                quantity, importPrice, false));
         }
 
         private void txtImportPrice3_Enter(object sender, EventArgs e)
@@ -837,7 +833,7 @@ namespace GUI
                 string gname = gv.g.Name;
                 string unit = gv.g.Unit;
                 double gprice = gv.g.Price;
-                string gphoto = gv.g.Image ? null : root.ProjectPath() + root.imageGoods + gname.Replace(' ', '_') + ".png";
+                string gphoto = gv.g.Image ? null : root.imageGoods + gname.Replace(' ', '_') + ".png";
                 int cquantity = gv.Quantity;
                 double cprice = gv.Price;
                 message = bll.InsertContract(cid, gname, unit, gprice, gphoto, pname, paddress, pphonenumber, eid, date, cquantity, cprice);
@@ -846,6 +842,8 @@ namespace GUI
                     MessageBox.Show(message);
                     return;
                 }
+                if (!gv.g.Image && string.IsNullOrEmpty(gv.g.Url))
+                    root.UpdateImageLocation(gv.g.Url, gphoto, root.ProjectPath() + gphoto);
             }
             MessageBox.Show("Insert contract successful!", "Notification");
         }
@@ -864,6 +862,86 @@ namespace GUI
         private void txtSellingPrice3_Leave(object sender, EventArgs e)
         {
             txtSellingPrice3.Text = root.MoneyFormat(txtSellingPrice3.Text);
+        }
+
+        private void rbPnew_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPname.Clear();
+            txtPaddress.Clear();
+            txtPphoneNumber.Clear();
+        }
+
+        private void cbbPname_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (dt_provider == null)
+                return;
+            foreach (DataRow dr in dt_provider.Rows)
+                if ((string)dr["Name"] == cbbPname.Text)
+                {
+                    txtPid.Text = dr["ID"].ToString();
+                    txtPaddress.Text = (string)dr["Address"];
+                    txtPphoneNumber.Text = (string)dr["Phone Number"];
+                    break;
+                }
+        }
+
+        private void btnSideBar2Cancel_Click(object sender, EventArgs e)
+        {
+            btnDetail.PerformClick();
+        }
+
+        private void cbbPname3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (dt_provider == null)
+                return;
+            foreach (DataRow dr in dt_provider.Rows)
+                if ((string)dr["Name"] == cbbPname3.Text)
+                {
+                    txtPaddress3.Text = (string)dr["Address"];
+                    txtPphoneNumber3.Text = (string)dr["Phone Number"];
+                    break;
+                }
+        }
+
+        private void rbPnew2_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPname3.Clear();
+            txtPaddress3.Clear();
+            txtPphoneNumber3.Clear();
+        }
+
+        private void rbPold2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbPold2.Checked)
+            {
+                txtPname3.Hide();
+                cbbPname3.Show();
+                cbbPname3.SelectedIndex = 0;
+                txtPaddress3.SelectionStart = 0;
+            }
+            else
+            {
+                cbbPname3.Hide();
+                txtPname3.Show();
+                cbbPname3.SelectedIndex = -1;
+            }
+        }
+
+        private void cbbGname3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable dt = (DataTable)cbbGname3.DataSource;
+            foreach (DataRow dr in dt.Rows) 
+                if ((string)dr["Name"] == cbbGname3.Text)
+                {
+                    cbbUnit3.Text = (string)dr["unit"];
+                    txtSellingPrice3.Text = root.MoneyFormat(dr["Price"].ToString());
+                    string url = root.ProjectPath() + root.imageGoods;
+                    if ((bool)dr["Image"])
+                        url += cbbGname3.Text.Replace(' ', '_') + ".png";
+                    else
+                        url += "default.png";
+                    txtUrl3.Text = url;
+                }
         }
     }
 }

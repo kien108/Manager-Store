@@ -180,8 +180,21 @@ namespace GUI
 
         private void pnScreen_Paint(object sender, PaintEventArgs e)
         {
-            HighlightOption(4);
-            OpenChildForm(new fEmployee());
+            if (Profile.Role == "ADMIN")
+            {
+                HighlightOption(4);
+                OpenChildForm(new fEmployee());
+            }
+            else if (Profile.Role == "STAFF")
+            {
+                HighlightOption(0);
+                OpenChildForm(new fHome());
+            }
+            else
+            {
+                HighlightOption(3);
+                OpenChildForm(new fContract());
+            }
         }
 
         private void OpenHomePage(object sender, EventArgs e)

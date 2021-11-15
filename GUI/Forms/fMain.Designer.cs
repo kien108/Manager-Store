@@ -131,11 +131,11 @@ namespace GUI
             this.lbRole.AutoSize = true;
             this.lbRole.BackColor = System.Drawing.Color.Transparent;
             this.lbRole.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRole.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRole.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.lbRole.Location = new System.Drawing.Point(10, 34);
+            this.lbRole.Location = new System.Drawing.Point(10, 24);
             this.lbRole.Name = "lbRole";
-            this.lbRole.Size = new System.Drawing.Size(63, 20);
+            this.lbRole.Size = new System.Drawing.Size(67, 30);
             this.lbRole.TabIndex = 4;
             this.lbRole.Text = "ADMIN";
             // 
@@ -144,11 +144,11 @@ namespace GUI
             this.lbName.AutoSize = true;
             this.lbName.BackColor = System.Drawing.Color.Transparent;
             this.lbName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.ForeColor = System.Drawing.Color.BlanchedAlmond;
             this.lbName.Location = new System.Drawing.Point(10, 5);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(242, 25);
+            this.lbName.Size = new System.Drawing.Size(232, 36);
             this.lbName.TabIndex = 3;
             this.lbName.Text = "NGUYEN QUANG VINH";
             // 

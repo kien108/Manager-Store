@@ -30,11 +30,11 @@ namespace GUI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fContract));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tlpWrapper = new System.Windows.Forms.TableLayoutPanel();
             this.guna2Panel20 = new Guna.UI2.WinForms.Guna2Panel();
             this.pnSideBar2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -59,6 +59,7 @@ namespace GUI
             this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.pnSideBarHeader2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbHeaderTitle2 = new System.Windows.Forms.Label();
             this.btnTick2 = new Guna.UI2.WinForms.Guna2Button();
             this.btnCollapse2 = new Guna.UI2.WinForms.Guna2Button();
             this.pnSideBarFooter2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -89,6 +90,13 @@ namespace GUI
             this.pnItemNameList = new Guna.UI2.WinForms.Guna2Panel();
             this.cbbItemsName = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.guna2Panel34 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel36 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtImportPrice = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.guna2Panel37 = new Guna.UI2.WinForms.Guna2Panel();
+            this.nudQuantity = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.label20 = new System.Windows.Forms.Label();
             this.pnGoodsView = new Guna.UI2.WinForms.Guna2Panel();
             this.tlpGoodsInContract = new System.Windows.Forms.TableLayoutPanel();
             this.pnGeneralInformation = new Guna.UI2.WinForms.Guna2Panel();
@@ -141,9 +149,47 @@ namespace GUI
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2Panel70 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel18 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.tlpGoodsView2 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2Panel31 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnAddContract = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddGoods = new Guna.UI2.WinForms.Guna2Button();
+            this.gbGoodInformation = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.guna2Panel21 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel24 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtImportPrice3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.guna2Panel23 = new Guna.UI2.WinForms.Guna2Panel();
+            this.nudQuantity3 = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.label17 = new System.Windows.Forms.Label();
+            this.guna2Panel74 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel75 = new Guna.UI2.WinForms.Guna2Panel();
+            this.tlpPictureWrapper2 = new System.Windows.Forms.TableLayoutPanel();
+            this.pbPicture3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.txtUrl3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Panel76 = new Guna.UI2.WinForms.Guna2Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDeletePicture3 = new Guna.UI2.WinForms.Guna2Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnChangePicture3 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel77 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel78 = new Guna.UI2.WinForms.Guna2Panel();
+            this.cbbUnit3 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.guna2Panel79 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtSellingPrice3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.guna2Panel80 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel81 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtGname3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cbbGname3 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.guna2Panel82 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnGoodsType3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.rbGnew3 = new System.Windows.Forms.RadioButton();
+            this.rbGold3 = new System.Windows.Forms.RadioButton();
+            this.label37 = new System.Windows.Forms.Label();
             this.pnGeneralInformation2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel44 = new Guna.UI2.WinForms.Guna2Panel();
             this.gbProviderInformation = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -157,15 +203,28 @@ namespace GUI
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel38 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel39 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtPname3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbbPname3 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label25 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.guna2Panel40 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel41 = new Guna.UI2.WinForms.Guna2Panel();
             this.pnTypeProvider3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbPnew2 = new System.Windows.Forms.RadioButton();
+            this.rbPold2 = new System.Windows.Forms.RadioButton();
             this.label26 = new System.Windows.Forms.Label();
             this.guna2Panel49 = new Guna.UI2.WinForms.Guna2Panel();
+            this.gbGeneralInformation2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.guna2Panel29 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel30 = new Guna.UI2.WinForms.Guna2Panel();
+            this.dtpTime3 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label19 = new System.Windows.Forms.Label();
+            this.guna2Panel45 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel47 = new Guna.UI2.WinForms.Guna2Panel();
+            this.cbbEname3 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.guna2Panel35 = new Guna.UI2.WinForms.Guna2Panel();
+            this.cbbEid3 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.tlpType = new System.Windows.Forms.TableLayoutPanel();
             this.btnProvider = new Guna.UI2.WinForms.Guna2Button();
             this.btnImport = new Guna.UI2.WinForms.Guna2Button();
@@ -185,64 +244,6 @@ namespace GUI
             this.dgvContract = new Guna.UI2.WinForms.Guna2DataGridView();
             this.ecDgvGoods = new ElipseToolDemo.ElipseControl();
             this.ecPictureWrapper2 = new ElipseToolDemo.ElipseControl();
-            this.guna2Panel37 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.nudQuantity = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.guna2Panel36 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtImportPrice = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Panel34 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lbHeaderTitle2 = new System.Windows.Forms.Label();
-            this.guna2Panel29 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel30 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label19 = new System.Windows.Forms.Label();
-            this.dtpTime3 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.gbGeneralInformation2 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2Panel35 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label23 = new System.Windows.Forms.Label();
-            this.cbbEid3 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2Panel47 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label29 = new System.Windows.Forms.Label();
-            this.cbbEname3 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2Panel45 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.tlpGoodsView2 = new System.Windows.Forms.TableLayoutPanel();
-            this.guna2Panel18 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel80 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel82 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label37 = new System.Windows.Forms.Label();
-            this.pnGoodsType3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.rbGold3 = new System.Windows.Forms.RadioButton();
-            this.rbGnew3 = new System.Windows.Forms.RadioButton();
-            this.guna2Panel81 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label36 = new System.Windows.Forms.Label();
-            this.cbbGname3 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txtGname3 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Panel77 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel79 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label35 = new System.Windows.Forms.Label();
-            this.txtSellingPrice3 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Panel78 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label34 = new System.Windows.Forms.Label();
-            this.cbbUnit3 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2Panel74 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel75 = new Guna.UI2.WinForms.Guna2Panel();
-            this.tlpPictureWrapper2 = new System.Windows.Forms.TableLayoutPanel();
-            this.guna2Panel76 = new Guna.UI2.WinForms.Guna2Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnChangePicture3 = new Guna.UI2.WinForms.Guna2Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnDeletePicture3 = new Guna.UI2.WinForms.Guna2Button();
-            this.txtUrl3 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pbPiture3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Panel21 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel24 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label28 = new System.Windows.Forms.Label();
-            this.txtImportPrice3 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Panel23 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.nudQuantity3 = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.gbGoodInformation = new Guna.UI2.WinForms.Guna2GroupBox();
             this.tlpWrapper.SuspendLayout();
             this.guna2Panel20.SuspendLayout();
             this.pnSideBar2.SuspendLayout();
@@ -271,6 +272,10 @@ namespace GUI
             this.pnBtnPictureSideWrapper.SuspendLayout();
             this.panel4.SuspendLayout();
             this.pnItemNameList.SuspendLayout();
+            this.guna2Panel34.SuspendLayout();
+            this.guna2Panel36.SuspendLayout();
+            this.guna2Panel37.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
             this.pnGoodsView.SuspendLayout();
             this.pnGeneralInformation.SuspendLayout();
             this.gbGeneralInformation.SuspendLayout();
@@ -294,7 +299,28 @@ namespace GUI
             this.tlpMain.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.guna2Panel70.SuspendLayout();
+            this.guna2Panel18.SuspendLayout();
+            this.guna2GroupBox1.SuspendLayout();
             this.guna2Panel31.SuspendLayout();
+            this.gbGoodInformation.SuspendLayout();
+            this.guna2Panel21.SuspendLayout();
+            this.guna2Panel24.SuspendLayout();
+            this.guna2Panel23.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuantity3)).BeginInit();
+            this.guna2Panel74.SuspendLayout();
+            this.guna2Panel75.SuspendLayout();
+            this.tlpPictureWrapper2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPicture3)).BeginInit();
+            this.guna2Panel76.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.guna2Panel77.SuspendLayout();
+            this.guna2Panel78.SuspendLayout();
+            this.guna2Panel79.SuspendLayout();
+            this.guna2Panel80.SuspendLayout();
+            this.guna2Panel81.SuspendLayout();
+            this.guna2Panel82.SuspendLayout();
+            this.pnGoodsType3.SuspendLayout();
             this.pnGeneralInformation2.SuspendLayout();
             this.guna2Panel44.SuspendLayout();
             this.gbProviderInformation.SuspendLayout();
@@ -308,6 +334,12 @@ namespace GUI
             this.guna2Panel41.SuspendLayout();
             this.pnTypeProvider3.SuspendLayout();
             this.guna2Panel49.SuspendLayout();
+            this.gbGeneralInformation2.SuspendLayout();
+            this.guna2Panel29.SuspendLayout();
+            this.guna2Panel30.SuspendLayout();
+            this.guna2Panel45.SuspendLayout();
+            this.guna2Panel47.SuspendLayout();
+            this.guna2Panel35.SuspendLayout();
             this.tlpType.SuspendLayout();
             this.tlpSearch.SuspendLayout();
             this.pnSearchAndFunction.SuspendLayout();
@@ -317,37 +349,6 @@ namespace GUI
             this.pnBtnDetail.SuspendLayout();
             this.pnDelete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContract)).BeginInit();
-            this.guna2Panel37.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
-            this.guna2Panel36.SuspendLayout();
-            this.guna2Panel34.SuspendLayout();
-            this.guna2Panel29.SuspendLayout();
-            this.guna2Panel30.SuspendLayout();
-            this.gbGeneralInformation2.SuspendLayout();
-            this.guna2Panel35.SuspendLayout();
-            this.guna2Panel47.SuspendLayout();
-            this.guna2Panel45.SuspendLayout();
-            this.guna2GroupBox1.SuspendLayout();
-            this.guna2Panel18.SuspendLayout();
-            this.guna2Panel80.SuspendLayout();
-            this.guna2Panel82.SuspendLayout();
-            this.pnGoodsType3.SuspendLayout();
-            this.guna2Panel81.SuspendLayout();
-            this.guna2Panel77.SuspendLayout();
-            this.guna2Panel79.SuspendLayout();
-            this.guna2Panel78.SuspendLayout();
-            this.guna2Panel74.SuspendLayout();
-            this.guna2Panel75.SuspendLayout();
-            this.tlpPictureWrapper2.SuspendLayout();
-            this.guna2Panel76.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPiture3)).BeginInit();
-            this.guna2Panel21.SuspendLayout();
-            this.guna2Panel24.SuspendLayout();
-            this.guna2Panel23.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudQuantity3)).BeginInit();
-            this.gbGoodInformation.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpWrapper
@@ -805,6 +806,20 @@ namespace GUI
             this.pnSideBarHeader2.Size = new System.Drawing.Size(494, 50);
             this.pnSideBarHeader2.TabIndex = 1;
             // 
+            // lbHeaderTitle2
+            // 
+            this.lbHeaderTitle2.BackColor = System.Drawing.Color.Transparent;
+            this.lbHeaderTitle2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbHeaderTitle2.Font = new System.Drawing.Font("Poppins", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHeaderTitle2.ForeColor = System.Drawing.Color.Orange;
+            this.lbHeaderTitle2.Location = new System.Drawing.Point(43, 3);
+            this.lbHeaderTitle2.Name = "lbHeaderTitle2";
+            this.lbHeaderTitle2.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.lbHeaderTitle2.Size = new System.Drawing.Size(408, 44);
+            this.lbHeaderTitle2.TabIndex = 6;
+            this.lbHeaderTitle2.Text = "Detail Provider";
+            this.lbHeaderTitle2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btnTick2
             // 
             this.btnTick2.Animated = true;
@@ -917,6 +932,7 @@ namespace GUI
             this.btnSideBar2Cancel.Size = new System.Drawing.Size(222, 40);
             this.btnSideBar2Cancel.TabIndex = 3;
             this.btnSideBar2Cancel.Text = "Cancel";
+            this.btnSideBar2Cancel.Click += new System.EventHandler(this.btnSideBar2Cancel_Click);
             // 
             // btnSideBar2Confirm
             // 
@@ -1402,6 +1418,154 @@ namespace GUI
             this.label5.Text = "Item name";
             this.label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
+            // guna2Panel34
+            // 
+            this.guna2Panel34.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel34.Controls.Add(this.guna2Panel36);
+            this.guna2Panel34.Controls.Add(this.guna2Panel37);
+            this.guna2Panel34.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel34.Enabled = false;
+            this.guna2Panel34.Location = new System.Drawing.Point(5, 94);
+            this.guna2Panel34.Name = "guna2Panel34";
+            this.guna2Panel34.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.guna2Panel34.ShadowDecoration.Parent = this.guna2Panel34;
+            this.guna2Panel34.Size = new System.Drawing.Size(449, 55);
+            this.guna2Panel34.TabIndex = 36;
+            // 
+            // guna2Panel36
+            // 
+            this.guna2Panel36.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel36.Controls.Add(this.txtImportPrice);
+            this.guna2Panel36.Controls.Add(this.label14);
+            this.guna2Panel36.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel36.Location = new System.Drawing.Point(113, 0);
+            this.guna2Panel36.Name = "guna2Panel36";
+            this.guna2Panel36.ShadowDecoration.Parent = this.guna2Panel36;
+            this.guna2Panel36.Size = new System.Drawing.Size(331, 55);
+            this.guna2Panel36.TabIndex = 2;
+            // 
+            // txtImportPrice
+            // 
+            this.txtImportPrice.AutoRoundedCorners = true;
+            this.txtImportPrice.BorderColor = System.Drawing.Color.Goldenrod;
+            this.txtImportPrice.BorderRadius = 15;
+            this.txtImportPrice.BorderThickness = 2;
+            this.txtImportPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtImportPrice.DefaultText = "95000";
+            this.txtImportPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtImportPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtImportPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtImportPrice.DisabledState.Parent = this.txtImportPrice;
+            this.txtImportPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtImportPrice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtImportPrice.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
+            this.txtImportPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtImportPrice.FocusedState.Parent = this.txtImportPrice;
+            this.txtImportPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.txtImportPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtImportPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtImportPrice.HoverState.Parent = this.txtImportPrice;
+            this.txtImportPrice.Location = new System.Drawing.Point(0, 22);
+            this.txtImportPrice.Margin = new System.Windows.Forms.Padding(9, 3, 9, 5);
+            this.txtImportPrice.MaximumSize = new System.Drawing.Size(455, 45);
+            this.txtImportPrice.Name = "txtImportPrice";
+            this.txtImportPrice.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.txtImportPrice.PasswordChar = '\0';
+            this.txtImportPrice.PlaceholderText = "";
+            this.txtImportPrice.SelectedText = "";
+            this.txtImportPrice.SelectionStart = 5;
+            this.txtImportPrice.ShadowDecoration.Parent = this.txtImportPrice;
+            this.txtImportPrice.Size = new System.Drawing.Size(331, 33);
+            this.txtImportPrice.TabIndex = 34;
+            this.txtImportPrice.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtImportPrice.TextChanged += new System.EventHandler(this.txtImportPrice_TextChanged);
+            this.txtImportPrice.Enter += new System.EventHandler(this.txtImportPrice_Enter);
+            this.txtImportPrice.Leave += new System.EventHandler(this.txtImportPrice_Leave);
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label14.Font = new System.Drawing.Font("Poppins", 11F);
+            this.label14.ForeColor = System.Drawing.Color.Orange;
+            this.label14.Location = new System.Drawing.Point(0, 0);
+            this.label14.Margin = new System.Windows.Forms.Padding(0);
+            this.label14.Name = "label14";
+            this.label14.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label14.Size = new System.Drawing.Size(331, 22);
+            this.label14.TabIndex = 33;
+            this.label14.Text = "Import price";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // guna2Panel37
+            // 
+            this.guna2Panel37.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel37.Controls.Add(this.nudQuantity);
+            this.guna2Panel37.Controls.Add(this.label20);
+            this.guna2Panel37.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2Panel37.Location = new System.Drawing.Point(5, 0);
+            this.guna2Panel37.Name = "guna2Panel37";
+            this.guna2Panel37.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.guna2Panel37.ShadowDecoration.Parent = this.guna2Panel37;
+            this.guna2Panel37.Size = new System.Drawing.Size(108, 55);
+            this.guna2Panel37.TabIndex = 1;
+            // 
+            // nudQuantity
+            // 
+            this.nudQuantity.AutoRoundedCorners = true;
+            this.nudQuantity.BackColor = System.Drawing.Color.Transparent;
+            this.nudQuantity.BorderColor = System.Drawing.Color.Goldenrod;
+            this.nudQuantity.BorderRadius = 15;
+            this.nudQuantity.BorderThickness = 2;
+            this.nudQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nudQuantity.DisabledState.Parent = this.nudQuantity;
+            this.nudQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nudQuantity.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
+            this.nudQuantity.FocusedState.Parent = this.nudQuantity;
+            this.nudQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.nudQuantity.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.nudQuantity.Location = new System.Drawing.Point(0, 22);
+            this.nudQuantity.Margin = new System.Windows.Forms.Padding(10, 3, 10, 5);
+            this.nudQuantity.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.nudQuantity.MaximumSize = new System.Drawing.Size(500, 50);
+            this.nudQuantity.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudQuantity.Name = "nudQuantity";
+            this.nudQuantity.ShadowDecoration.Parent = this.nudQuantity;
+            this.nudQuantity.Size = new System.Drawing.Size(88, 33);
+            this.nudQuantity.TabIndex = 39;
+            this.nudQuantity.TextOffset = new System.Drawing.Point(10, 0);
+            this.nudQuantity.UpDownButtonBorderVisible = false;
+            this.nudQuantity.UpDownButtonFillColor = System.Drawing.Color.Orange;
+            this.nudQuantity.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudQuantity.ValueChanged += new System.EventHandler(this.nudQuantity_ValueChanged);
+            // 
+            // label20
+            // 
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label20.Font = new System.Drawing.Font("Poppins", 11F);
+            this.label20.ForeColor = System.Drawing.Color.Orange;
+            this.label20.Location = new System.Drawing.Point(0, 0);
+            this.label20.Margin = new System.Windows.Forms.Padding(0);
+            this.label20.Name = "label20";
+            this.label20.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label20.Size = new System.Drawing.Size(88, 22);
+            this.label20.TabIndex = 38;
+            this.label20.Text = "Quantity";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
             // pnGoodsView
             // 
             this.pnGoodsView.AutoScroll = true;
@@ -1720,6 +1884,7 @@ namespace GUI
             this.cbbPname.Size = new System.Drawing.Size(439, 36);
             this.cbbPname.TabIndex = 35;
             this.cbbPname.TextOffset = new System.Drawing.Point(10, 1);
+            this.cbbPname.SelectedIndexChanged += new System.EventHandler(this.cbbPname_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -1792,6 +1957,7 @@ namespace GUI
             this.rbPnew.TabIndex = 3;
             this.rbPnew.Text = "New";
             this.rbPnew.UseVisualStyleBackColor = true;
+            this.rbPnew.CheckedChanged += new System.EventHandler(this.rbPnew_CheckedChanged);
             // 
             // rbPold
             // 
@@ -2437,6 +2603,56 @@ namespace GUI
             this.guna2Panel70.Size = new System.Drawing.Size(477, 457);
             this.guna2Panel70.TabIndex = 10;
             // 
+            // guna2Panel18
+            // 
+            this.guna2Panel18.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel18.Controls.Add(this.guna2GroupBox1);
+            this.guna2Panel18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel18.Location = new System.Drawing.Point(5, 373);
+            this.guna2Panel18.Name = "guna2Panel18";
+            this.guna2Panel18.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.guna2Panel18.ShadowDecoration.Parent = this.guna2Panel18;
+            this.guna2Panel18.Size = new System.Drawing.Size(472, 84);
+            this.guna2Panel18.TabIndex = 20;
+            // 
+            // guna2GroupBox1
+            // 
+            this.guna2GroupBox1.BorderColor = System.Drawing.Color.Orange;
+            this.guna2GroupBox1.BorderRadius = 10;
+            this.guna2GroupBox1.BorderThickness = 2;
+            this.guna2GroupBox1.Controls.Add(this.tlpGoodsView2);
+            this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.Orange;
+            this.guna2GroupBox1.CustomBorderThickness = new System.Windows.Forms.Padding(2, 40, 2, 2);
+            this.guna2GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            this.guna2GroupBox1.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.guna2GroupBox1.Location = new System.Drawing.Point(0, 10);
+            this.guna2GroupBox1.Name = "guna2GroupBox1";
+            this.guna2GroupBox1.Padding = new System.Windows.Forms.Padding(5, 30, 5, 5);
+            this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
+            this.guna2GroupBox1.Size = new System.Drawing.Size(472, 74);
+            this.guna2GroupBox1.TabIndex = 1;
+            this.guna2GroupBox1.Text = "Goods View";
+            // 
+            // tlpGoodsView2
+            // 
+            this.tlpGoodsView2.ColumnCount = 6;
+            this.tlpGoodsView2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tlpGoodsView2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tlpGoodsView2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tlpGoodsView2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tlpGoodsView2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tlpGoodsView2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tlpGoodsView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpGoodsView2.Location = new System.Drawing.Point(5, 30);
+            this.tlpGoodsView2.Name = "tlpGoodsView2";
+            this.tlpGoodsView2.RowCount = 2;
+            this.tlpGoodsView2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpGoodsView2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpGoodsView2.Size = new System.Drawing.Size(462, 39);
+            this.tlpGoodsView2.TabIndex = 0;
+            // 
             // guna2Panel31
             // 
             this.guna2Panel31.Controls.Add(this.btnAddContract);
@@ -2509,6 +2725,660 @@ namespace GUI
             this.btnAddGoods.TabIndex = 2;
             this.btnAddGoods.Text = "Add item";
             this.btnAddGoods.Click += new System.EventHandler(this.btnAddGoods_Click);
+            // 
+            // gbGoodInformation
+            // 
+            this.gbGoodInformation.BorderColor = System.Drawing.Color.Orange;
+            this.gbGoodInformation.BorderRadius = 10;
+            this.gbGoodInformation.BorderThickness = 2;
+            this.gbGoodInformation.Controls.Add(this.guna2Panel21);
+            this.gbGoodInformation.Controls.Add(this.guna2Panel74);
+            this.gbGoodInformation.Controls.Add(this.guna2Panel77);
+            this.gbGoodInformation.Controls.Add(this.guna2Panel80);
+            this.gbGoodInformation.CustomBorderColor = System.Drawing.Color.Orange;
+            this.gbGoodInformation.CustomBorderThickness = new System.Windows.Forms.Padding(2, 40, 2, 2);
+            this.gbGoodInformation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gbGoodInformation.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            this.gbGoodInformation.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbGoodInformation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.gbGoodInformation.Location = new System.Drawing.Point(5, 0);
+            this.gbGoodInformation.Name = "gbGoodInformation";
+            this.gbGoodInformation.Padding = new System.Windows.Forms.Padding(2, 30, 2, 2);
+            this.gbGoodInformation.ShadowDecoration.Parent = this.gbGoodInformation;
+            this.gbGoodInformation.Size = new System.Drawing.Size(472, 337);
+            this.gbGoodInformation.TabIndex = 1;
+            this.gbGoodInformation.Text = "Goods Information ";
+            // 
+            // guna2Panel21
+            // 
+            this.guna2Panel21.Controls.Add(this.guna2Panel24);
+            this.guna2Panel21.Controls.Add(this.guna2Panel23);
+            this.guna2Panel21.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel21.Location = new System.Drawing.Point(2, 271);
+            this.guna2Panel21.Name = "guna2Panel21";
+            this.guna2Panel21.Padding = new System.Windows.Forms.Padding(20, 3, 10, 0);
+            this.guna2Panel21.ShadowDecoration.Parent = this.guna2Panel21;
+            this.guna2Panel21.Size = new System.Drawing.Size(468, 55);
+            this.guna2Panel21.TabIndex = 5;
+            // 
+            // guna2Panel24
+            // 
+            this.guna2Panel24.Controls.Add(this.txtImportPrice3);
+            this.guna2Panel24.Controls.Add(this.label28);
+            this.guna2Panel24.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2Panel24.Location = new System.Drawing.Point(180, 3);
+            this.guna2Panel24.Name = "guna2Panel24";
+            this.guna2Panel24.Padding = new System.Windows.Forms.Padding(0, 0, 20, 5);
+            this.guna2Panel24.ShadowDecoration.Parent = this.guna2Panel24;
+            this.guna2Panel24.Size = new System.Drawing.Size(140, 52);
+            this.guna2Panel24.TabIndex = 5;
+            // 
+            // txtImportPrice3
+            // 
+            this.txtImportPrice3.AutoRoundedCorners = true;
+            this.txtImportPrice3.BorderColor = System.Drawing.Color.DarkOrange;
+            this.txtImportPrice3.BorderRadius = 11;
+            this.txtImportPrice3.BorderThickness = 2;
+            this.txtImportPrice3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtImportPrice3.DefaultText = "0 đ";
+            this.txtImportPrice3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtImportPrice3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtImportPrice3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtImportPrice3.DisabledState.Parent = this.txtImportPrice3;
+            this.txtImportPrice3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtImportPrice3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtImportPrice3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtImportPrice3.FocusedState.Parent = this.txtImportPrice3;
+            this.txtImportPrice3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtImportPrice3.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.txtImportPrice3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtImportPrice3.HoverState.Parent = this.txtImportPrice3;
+            this.txtImportPrice3.Location = new System.Drawing.Point(0, 22);
+            this.txtImportPrice3.Margin = new System.Windows.Forms.Padding(4);
+            this.txtImportPrice3.Name = "txtImportPrice3";
+            this.txtImportPrice3.PasswordChar = '\0';
+            this.txtImportPrice3.PlaceholderText = "";
+            this.txtImportPrice3.SelectedText = "";
+            this.txtImportPrice3.SelectionStart = 3;
+            this.txtImportPrice3.ShadowDecoration.Parent = this.txtImportPrice3;
+            this.txtImportPrice3.Size = new System.Drawing.Size(120, 25);
+            this.txtImportPrice3.TabIndex = 2;
+            this.txtImportPrice3.TextOffset = new System.Drawing.Point(10, 1);
+            this.txtImportPrice3.Enter += new System.EventHandler(this.txtImportPrice3_Enter);
+            this.txtImportPrice3.Leave += new System.EventHandler(this.txtImportPrice3_Leave);
+            // 
+            // label28
+            // 
+            this.label28.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label28.ForeColor = System.Drawing.Color.Orange;
+            this.label28.Location = new System.Drawing.Point(0, 0);
+            this.label28.Name = "label28";
+            this.label28.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label28.Size = new System.Drawing.Size(120, 22);
+            this.label28.TabIndex = 0;
+            this.label28.Text = "Import Price";
+            // 
+            // guna2Panel23
+            // 
+            this.guna2Panel23.Controls.Add(this.nudQuantity3);
+            this.guna2Panel23.Controls.Add(this.label17);
+            this.guna2Panel23.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2Panel23.Location = new System.Drawing.Point(20, 3);
+            this.guna2Panel23.Name = "guna2Panel23";
+            this.guna2Panel23.Padding = new System.Windows.Forms.Padding(0, 0, 40, 5);
+            this.guna2Panel23.ShadowDecoration.Parent = this.guna2Panel23;
+            this.guna2Panel23.Size = new System.Drawing.Size(160, 52);
+            this.guna2Panel23.TabIndex = 4;
+            // 
+            // nudQuantity3
+            // 
+            this.nudQuantity3.AutoRoundedCorners = true;
+            this.nudQuantity3.BackColor = System.Drawing.Color.Transparent;
+            this.nudQuantity3.BorderColor = System.Drawing.Color.Goldenrod;
+            this.nudQuantity3.BorderRadius = 11;
+            this.nudQuantity3.BorderThickness = 2;
+            this.nudQuantity3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nudQuantity3.DisabledState.Parent = this.nudQuantity3;
+            this.nudQuantity3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nudQuantity3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
+            this.nudQuantity3.FocusedState.Parent = this.nudQuantity3;
+            this.nudQuantity3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudQuantity3.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.nudQuantity3.Location = new System.Drawing.Point(0, 22);
+            this.nudQuantity3.Margin = new System.Windows.Forms.Padding(10, 3, 10, 5);
+            this.nudQuantity3.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.nudQuantity3.MaximumSize = new System.Drawing.Size(500, 50);
+            this.nudQuantity3.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudQuantity3.Name = "nudQuantity3";
+            this.nudQuantity3.ShadowDecoration.Parent = this.nudQuantity3;
+            this.nudQuantity3.Size = new System.Drawing.Size(120, 25);
+            this.nudQuantity3.TabIndex = 40;
+            this.nudQuantity3.TextOffset = new System.Drawing.Point(10, 0);
+            this.nudQuantity3.UpDownButtonBorderVisible = false;
+            this.nudQuantity3.UpDownButtonFillColor = System.Drawing.Color.Orange;
+            this.nudQuantity3.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label17
+            // 
+            this.label17.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label17.ForeColor = System.Drawing.Color.Orange;
+            this.label17.Location = new System.Drawing.Point(0, 0);
+            this.label17.Name = "label17";
+            this.label17.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label17.Size = new System.Drawing.Size(120, 22);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Quantity";
+            // 
+            // guna2Panel74
+            // 
+            this.guna2Panel74.Controls.Add(this.guna2Panel75);
+            this.guna2Panel74.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel74.Location = new System.Drawing.Point(2, 140);
+            this.guna2Panel74.Name = "guna2Panel74";
+            this.guna2Panel74.Padding = new System.Windows.Forms.Padding(20, 10, 10, 0);
+            this.guna2Panel74.ShadowDecoration.Parent = this.guna2Panel74;
+            this.guna2Panel74.Size = new System.Drawing.Size(468, 131);
+            this.guna2Panel74.TabIndex = 4;
+            // 
+            // guna2Panel75
+            // 
+            this.guna2Panel75.Controls.Add(this.tlpPictureWrapper2);
+            this.guna2Panel75.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel75.Location = new System.Drawing.Point(20, 10);
+            this.guna2Panel75.Name = "guna2Panel75";
+            this.guna2Panel75.Padding = new System.Windows.Forms.Padding(0, 0, 20, 5);
+            this.guna2Panel75.ShadowDecoration.Parent = this.guna2Panel75;
+            this.guna2Panel75.Size = new System.Drawing.Size(438, 121);
+            this.guna2Panel75.TabIndex = 0;
+            // 
+            // tlpPictureWrapper2
+            // 
+            this.tlpPictureWrapper2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.tlpPictureWrapper2.ColumnCount = 3;
+            this.tlpPictureWrapper2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpPictureWrapper2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpPictureWrapper2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpPictureWrapper2.Controls.Add(this.pbPicture3, 0, 0);
+            this.tlpPictureWrapper2.Controls.Add(this.txtUrl3, 2, 0);
+            this.tlpPictureWrapper2.Controls.Add(this.guna2Panel76, 1, 0);
+            this.tlpPictureWrapper2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpPictureWrapper2.Location = new System.Drawing.Point(0, 0);
+            this.tlpPictureWrapper2.Margin = new System.Windows.Forms.Padding(5);
+            this.tlpPictureWrapper2.Name = "tlpPictureWrapper2";
+            this.tlpPictureWrapper2.RowCount = 1;
+            this.tlpPictureWrapper2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpPictureWrapper2.Size = new System.Drawing.Size(418, 116);
+            this.tlpPictureWrapper2.TabIndex = 1;
+            // 
+            // pbPicture3
+            // 
+            this.pbPicture3.BorderRadius = 10;
+            this.pbPicture3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbPicture3.FillColor = System.Drawing.Color.Silver;
+            this.pbPicture3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.pbPicture3.Image = ((System.Drawing.Image)(resources.GetObject("pbPicture3.Image")));
+            this.pbPicture3.ImageRotate = 0F;
+            this.pbPicture3.Location = new System.Drawing.Point(10, 10);
+            this.pbPicture3.Margin = new System.Windows.Forms.Padding(10, 10, 0, 10);
+            this.pbPicture3.Name = "pbPicture3";
+            this.pbPicture3.ShadowDecoration.Parent = this.pbPicture3;
+            this.pbPicture3.Size = new System.Drawing.Size(94, 96);
+            this.pbPicture3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPicture3.TabIndex = 30;
+            this.pbPicture3.TabStop = false;
+            // 
+            // txtUrl3
+            // 
+            this.txtUrl3.BorderColor = System.Drawing.Color.Goldenrod;
+            this.txtUrl3.BorderRadius = 10;
+            this.txtUrl3.BorderThickness = 2;
+            this.txtUrl3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUrl3.DefaultText = "";
+            this.txtUrl3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUrl3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUrl3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUrl3.DisabledState.Parent = this.txtUrl3;
+            this.txtUrl3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUrl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtUrl3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
+            this.txtUrl3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUrl3.FocusedState.Parent = this.txtUrl3;
+            this.txtUrl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUrl3.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.txtUrl3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUrl3.HoverState.Parent = this.txtUrl3;
+            this.txtUrl3.Location = new System.Drawing.Point(218, 10);
+            this.txtUrl3.Margin = new System.Windows.Forms.Padding(10);
+            this.txtUrl3.Multiline = true;
+            this.txtUrl3.Name = "txtUrl3";
+            this.txtUrl3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.txtUrl3.PasswordChar = '\0';
+            this.txtUrl3.PlaceholderText = "";
+            this.txtUrl3.SelectedText = "";
+            this.txtUrl3.ShadowDecoration.Parent = this.txtUrl3;
+            this.txtUrl3.Size = new System.Drawing.Size(190, 96);
+            this.txtUrl3.TabIndex = 29;
+            this.txtUrl3.TextOffset = new System.Drawing.Point(10, 1);
+            this.txtUrl3.TextChanged += new System.EventHandler(this.txtUrl3_TextChanged);
+            // 
+            // guna2Panel76
+            // 
+            this.guna2Panel76.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel76.Controls.Add(this.panel1);
+            this.guna2Panel76.Controls.Add(this.panel2);
+            this.guna2Panel76.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel76.Location = new System.Drawing.Point(109, 5);
+            this.guna2Panel76.Margin = new System.Windows.Forms.Padding(5);
+            this.guna2Panel76.Name = "guna2Panel76";
+            this.guna2Panel76.Padding = new System.Windows.Forms.Padding(10);
+            this.guna2Panel76.ShadowDecoration.Parent = this.guna2Panel76;
+            this.guna2Panel76.Size = new System.Drawing.Size(94, 106);
+            this.guna2Panel76.TabIndex = 6;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.btnDeletePicture3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(10, 50);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(5, 5, 5, 10);
+            this.panel1.Size = new System.Drawing.Size(74, 40);
+            this.panel1.TabIndex = 1;
+            // 
+            // btnDeletePicture3
+            // 
+            this.btnDeletePicture3.Animated = true;
+            this.btnDeletePicture3.AutoRoundedCorners = true;
+            this.btnDeletePicture3.BackColor = System.Drawing.Color.Transparent;
+            this.btnDeletePicture3.BorderRadius = 11;
+            this.btnDeletePicture3.CheckedState.Parent = this.btnDeletePicture3;
+            this.btnDeletePicture3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeletePicture3.CustomImages.Parent = this.btnDeletePicture3;
+            this.btnDeletePicture3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeletePicture3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeletePicture3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDeletePicture3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDeletePicture3.DisabledState.Parent = this.btnDeletePicture3;
+            this.btnDeletePicture3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDeletePicture3.FillColor = System.Drawing.Color.Orange;
+            this.btnDeletePicture3.Font = new System.Drawing.Font("Poppins Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletePicture3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.btnDeletePicture3.HoverState.Parent = this.btnDeletePicture3;
+            this.btnDeletePicture3.Image = global::Manage_Store.Properties.Resources.bin;
+            this.btnDeletePicture3.ImageOffset = new System.Drawing.Point(-2, 0);
+            this.btnDeletePicture3.ImageSize = new System.Drawing.Size(22, 22);
+            this.btnDeletePicture3.Location = new System.Drawing.Point(5, 5);
+            this.btnDeletePicture3.Name = "btnDeletePicture3";
+            this.btnDeletePicture3.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.btnDeletePicture3.ShadowDecoration.Parent = this.btnDeletePicture3;
+            this.btnDeletePicture3.Size = new System.Drawing.Size(64, 25);
+            this.btnDeletePicture3.TabIndex = 1;
+            this.btnDeletePicture3.Text = "Delete";
+            this.btnDeletePicture3.Click += new System.EventHandler(this.btnDeletePicture3_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.btnChangePicture3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(10, 10);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(5, 5, 5, 10);
+            this.panel2.Size = new System.Drawing.Size(74, 40);
+            this.panel2.TabIndex = 0;
+            // 
+            // btnChangePicture3
+            // 
+            this.btnChangePicture3.Animated = true;
+            this.btnChangePicture3.AutoRoundedCorners = true;
+            this.btnChangePicture3.BackColor = System.Drawing.Color.Transparent;
+            this.btnChangePicture3.BorderRadius = 11;
+            this.btnChangePicture3.CheckedState.Parent = this.btnChangePicture3;
+            this.btnChangePicture3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChangePicture3.CustomImages.Parent = this.btnChangePicture3;
+            this.btnChangePicture3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnChangePicture3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnChangePicture3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnChangePicture3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnChangePicture3.DisabledState.Parent = this.btnChangePicture3;
+            this.btnChangePicture3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnChangePicture3.FillColor = System.Drawing.Color.Orange;
+            this.btnChangePicture3.Font = new System.Drawing.Font("Poppins Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangePicture3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.btnChangePicture3.HoverState.Parent = this.btnChangePicture3;
+            this.btnChangePicture3.Image = global::Manage_Store.Properties.Resources.replace;
+            this.btnChangePicture3.ImageOffset = new System.Drawing.Point(-2, 0);
+            this.btnChangePicture3.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnChangePicture3.Location = new System.Drawing.Point(5, 5);
+            this.btnChangePicture3.Name = "btnChangePicture3";
+            this.btnChangePicture3.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.btnChangePicture3.ShadowDecoration.Parent = this.btnChangePicture3;
+            this.btnChangePicture3.Size = new System.Drawing.Size(64, 25);
+            this.btnChangePicture3.TabIndex = 1;
+            this.btnChangePicture3.Text = "Change";
+            this.btnChangePicture3.Click += new System.EventHandler(this.btnChangePicture3_Click);
+            // 
+            // guna2Panel77
+            // 
+            this.guna2Panel77.Controls.Add(this.guna2Panel78);
+            this.guna2Panel77.Controls.Add(this.guna2Panel79);
+            this.guna2Panel77.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel77.Location = new System.Drawing.Point(2, 85);
+            this.guna2Panel77.Name = "guna2Panel77";
+            this.guna2Panel77.Padding = new System.Windows.Forms.Padding(20, 3, 10, 0);
+            this.guna2Panel77.ShadowDecoration.Parent = this.guna2Panel77;
+            this.guna2Panel77.Size = new System.Drawing.Size(468, 55);
+            this.guna2Panel77.TabIndex = 3;
+            // 
+            // guna2Panel78
+            // 
+            this.guna2Panel78.Controls.Add(this.cbbUnit3);
+            this.guna2Panel78.Controls.Add(this.label34);
+            this.guna2Panel78.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel78.Location = new System.Drawing.Point(20, 3);
+            this.guna2Panel78.Name = "guna2Panel78";
+            this.guna2Panel78.Padding = new System.Windows.Forms.Padding(0, 0, 20, 5);
+            this.guna2Panel78.ShadowDecoration.Parent = this.guna2Panel78;
+            this.guna2Panel78.Size = new System.Drawing.Size(220, 52);
+            this.guna2Panel78.TabIndex = 4;
+            // 
+            // cbbUnit3
+            // 
+            this.cbbUnit3.AutoRoundedCorners = true;
+            this.cbbUnit3.BackColor = System.Drawing.Color.Transparent;
+            this.cbbUnit3.BorderColor = System.Drawing.Color.Orange;
+            this.cbbUnit3.BorderRadius = 17;
+            this.cbbUnit3.BorderThickness = 2;
+            this.cbbUnit3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbbUnit3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbUnit3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbUnit3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
+            this.cbbUnit3.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbUnit3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbUnit3.FocusedState.Parent = this.cbbUnit3;
+            this.cbbUnit3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.cbbUnit3.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.cbbUnit3.HoverState.Parent = this.cbbUnit3;
+            this.cbbUnit3.ItemHeight = 30;
+            this.cbbUnit3.Items.AddRange(new object[] {
+            "Chai",
+            "Lon",
+            "Gói",
+            "Ly",
+            "Hủ",
+            "Bịch",
+            "Viên",
+            "Phần",
+            "Kg",
+            "Cái",
+            "Thùng"});
+            this.cbbUnit3.ItemsAppearance.Parent = this.cbbUnit3;
+            this.cbbUnit3.Location = new System.Drawing.Point(0, 22);
+            this.cbbUnit3.Margin = new System.Windows.Forms.Padding(10, 3, 10, 5);
+            this.cbbUnit3.MaximumSize = new System.Drawing.Size(500, 0);
+            this.cbbUnit3.Name = "cbbUnit3";
+            this.cbbUnit3.ShadowDecoration.Parent = this.cbbUnit3;
+            this.cbbUnit3.Size = new System.Drawing.Size(200, 36);
+            this.cbbUnit3.TabIndex = 32;
+            this.cbbUnit3.TextOffset = new System.Drawing.Point(10, 1);
+            // 
+            // label34
+            // 
+            this.label34.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label34.ForeColor = System.Drawing.Color.Orange;
+            this.label34.Location = new System.Drawing.Point(0, 0);
+            this.label34.Name = "label34";
+            this.label34.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label34.Size = new System.Drawing.Size(200, 22);
+            this.label34.TabIndex = 0;
+            this.label34.Text = "Unit";
+            // 
+            // guna2Panel79
+            // 
+            this.guna2Panel79.Controls.Add(this.txtSellingPrice3);
+            this.guna2Panel79.Controls.Add(this.label35);
+            this.guna2Panel79.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2Panel79.Location = new System.Drawing.Point(240, 3);
+            this.guna2Panel79.Name = "guna2Panel79";
+            this.guna2Panel79.Padding = new System.Windows.Forms.Padding(0, 0, 20, 5);
+            this.guna2Panel79.ShadowDecoration.Parent = this.guna2Panel79;
+            this.guna2Panel79.Size = new System.Drawing.Size(218, 52);
+            this.guna2Panel79.TabIndex = 3;
+            // 
+            // txtSellingPrice3
+            // 
+            this.txtSellingPrice3.AutoRoundedCorners = true;
+            this.txtSellingPrice3.BorderColor = System.Drawing.Color.DarkOrange;
+            this.txtSellingPrice3.BorderRadius = 11;
+            this.txtSellingPrice3.BorderThickness = 2;
+            this.txtSellingPrice3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSellingPrice3.DefaultText = "";
+            this.txtSellingPrice3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSellingPrice3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSellingPrice3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSellingPrice3.DisabledState.Parent = this.txtSellingPrice3;
+            this.txtSellingPrice3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSellingPrice3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSellingPrice3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSellingPrice3.FocusedState.Parent = this.txtSellingPrice3;
+            this.txtSellingPrice3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSellingPrice3.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.txtSellingPrice3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSellingPrice3.HoverState.Parent = this.txtSellingPrice3;
+            this.txtSellingPrice3.Location = new System.Drawing.Point(0, 22);
+            this.txtSellingPrice3.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSellingPrice3.Name = "txtSellingPrice3";
+            this.txtSellingPrice3.PasswordChar = '\0';
+            this.txtSellingPrice3.PlaceholderText = "";
+            this.txtSellingPrice3.SelectedText = "";
+            this.txtSellingPrice3.ShadowDecoration.Parent = this.txtSellingPrice3;
+            this.txtSellingPrice3.Size = new System.Drawing.Size(198, 25);
+            this.txtSellingPrice3.TabIndex = 2;
+            this.txtSellingPrice3.TextOffset = new System.Drawing.Point(10, 1);
+            this.txtSellingPrice3.Enter += new System.EventHandler(this.txtSellingPrice3_Enter);
+            this.txtSellingPrice3.Leave += new System.EventHandler(this.txtSellingPrice3_Leave);
+            // 
+            // label35
+            // 
+            this.label35.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label35.ForeColor = System.Drawing.Color.Orange;
+            this.label35.Location = new System.Drawing.Point(0, 0);
+            this.label35.Name = "label35";
+            this.label35.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label35.Size = new System.Drawing.Size(198, 22);
+            this.label35.TabIndex = 0;
+            this.label35.Text = "Selling Price";
+            // 
+            // guna2Panel80
+            // 
+            this.guna2Panel80.Controls.Add(this.guna2Panel81);
+            this.guna2Panel80.Controls.Add(this.guna2Panel82);
+            this.guna2Panel80.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel80.Location = new System.Drawing.Point(2, 30);
+            this.guna2Panel80.Name = "guna2Panel80";
+            this.guna2Panel80.Padding = new System.Windows.Forms.Padding(20, 3, 10, 0);
+            this.guna2Panel80.ShadowDecoration.Parent = this.guna2Panel80;
+            this.guna2Panel80.Size = new System.Drawing.Size(468, 55);
+            this.guna2Panel80.TabIndex = 2;
+            // 
+            // guna2Panel81
+            // 
+            this.guna2Panel81.Controls.Add(this.txtGname3);
+            this.guna2Panel81.Controls.Add(this.cbbGname3);
+            this.guna2Panel81.Controls.Add(this.label36);
+            this.guna2Panel81.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel81.Location = new System.Drawing.Point(20, 3);
+            this.guna2Panel81.Name = "guna2Panel81";
+            this.guna2Panel81.Padding = new System.Windows.Forms.Padding(0, 0, 20, 5);
+            this.guna2Panel81.ShadowDecoration.Parent = this.guna2Panel81;
+            this.guna2Panel81.Size = new System.Drawing.Size(218, 52);
+            this.guna2Panel81.TabIndex = 4;
+            // 
+            // txtGname3
+            // 
+            this.txtGname3.AutoRoundedCorners = true;
+            this.txtGname3.BorderColor = System.Drawing.Color.DarkOrange;
+            this.txtGname3.BorderRadius = 11;
+            this.txtGname3.BorderThickness = 2;
+            this.txtGname3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtGname3.DefaultText = "";
+            this.txtGname3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtGname3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtGname3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGname3.DisabledState.Parent = this.txtGname3;
+            this.txtGname3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGname3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtGname3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGname3.FocusedState.Parent = this.txtGname3;
+            this.txtGname3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGname3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGname3.HoverState.Parent = this.txtGname3;
+            this.txtGname3.Location = new System.Drawing.Point(0, 22);
+            this.txtGname3.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGname3.Name = "txtGname3";
+            this.txtGname3.PasswordChar = '\0';
+            this.txtGname3.PlaceholderText = "";
+            this.txtGname3.SelectedText = "";
+            this.txtGname3.ShadowDecoration.Parent = this.txtGname3;
+            this.txtGname3.Size = new System.Drawing.Size(198, 25);
+            this.txtGname3.TabIndex = 33;
+            this.txtGname3.TextOffset = new System.Drawing.Point(10, 1);
+            this.txtGname3.Visible = false;
+            // 
+            // cbbGname3
+            // 
+            this.cbbGname3.AutoRoundedCorners = true;
+            this.cbbGname3.BackColor = System.Drawing.Color.Transparent;
+            this.cbbGname3.BorderColor = System.Drawing.Color.Orange;
+            this.cbbGname3.BorderRadius = 17;
+            this.cbbGname3.BorderThickness = 2;
+            this.cbbGname3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbbGname3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbGname3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbGname3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
+            this.cbbGname3.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbGname3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbGname3.FocusedState.Parent = this.cbbGname3;
+            this.cbbGname3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.cbbGname3.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.cbbGname3.HoverState.Parent = this.cbbGname3;
+            this.cbbGname3.ItemHeight = 30;
+            this.cbbGname3.Items.AddRange(new object[] {
+            "Chai",
+            "Lon",
+            "Gói",
+            "Ly",
+            "Hủ",
+            "Bịch",
+            "Viên",
+            "Phần",
+            "Kg",
+            "Cái",
+            "Thùng"});
+            this.cbbGname3.ItemsAppearance.Parent = this.cbbGname3;
+            this.cbbGname3.Location = new System.Drawing.Point(0, 22);
+            this.cbbGname3.Margin = new System.Windows.Forms.Padding(10, 3, 10, 5);
+            this.cbbGname3.MaximumSize = new System.Drawing.Size(500, 0);
+            this.cbbGname3.Name = "cbbGname3";
+            this.cbbGname3.ShadowDecoration.Parent = this.cbbGname3;
+            this.cbbGname3.Size = new System.Drawing.Size(198, 36);
+            this.cbbGname3.TabIndex = 32;
+            this.cbbGname3.TextOffset = new System.Drawing.Point(10, 1);
+            this.cbbGname3.SelectedIndexChanged += new System.EventHandler(this.cbbGname3_SelectedIndexChanged);
+            // 
+            // label36
+            // 
+            this.label36.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label36.ForeColor = System.Drawing.Color.Orange;
+            this.label36.Location = new System.Drawing.Point(0, 0);
+            this.label36.Name = "label36";
+            this.label36.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label36.Size = new System.Drawing.Size(198, 22);
+            this.label36.TabIndex = 0;
+            this.label36.Text = "Goods name";
+            // 
+            // guna2Panel82
+            // 
+            this.guna2Panel82.Controls.Add(this.pnGoodsType3);
+            this.guna2Panel82.Controls.Add(this.label37);
+            this.guna2Panel82.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2Panel82.Location = new System.Drawing.Point(238, 3);
+            this.guna2Panel82.Name = "guna2Panel82";
+            this.guna2Panel82.Padding = new System.Windows.Forms.Padding(0, 0, 20, 5);
+            this.guna2Panel82.ShadowDecoration.Parent = this.guna2Panel82;
+            this.guna2Panel82.Size = new System.Drawing.Size(220, 52);
+            this.guna2Panel82.TabIndex = 3;
+            // 
+            // pnGoodsType3
+            // 
+            this.pnGoodsType3.AutoRoundedCorners = true;
+            this.pnGoodsType3.BorderColor = System.Drawing.Color.DarkOrange;
+            this.pnGoodsType3.BorderRadius = 11;
+            this.pnGoodsType3.BorderThickness = 2;
+            this.pnGoodsType3.Controls.Add(this.rbGnew3);
+            this.pnGoodsType3.Controls.Add(this.rbGold3);
+            this.pnGoodsType3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnGoodsType3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.pnGoodsType3.Location = new System.Drawing.Point(0, 22);
+            this.pnGoodsType3.Name = "pnGoodsType3";
+            this.pnGoodsType3.Padding = new System.Windows.Forms.Padding(30, 0, 30, 0);
+            this.pnGoodsType3.ShadowDecoration.Parent = this.pnGoodsType3;
+            this.pnGoodsType3.Size = new System.Drawing.Size(200, 25);
+            this.pnGoodsType3.TabIndex = 1;
+            // 
+            // rbGnew3
+            // 
+            this.rbGnew3.BackColor = System.Drawing.Color.Transparent;
+            this.rbGnew3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.rbGnew3.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold);
+            this.rbGnew3.ForeColor = System.Drawing.Color.Orange;
+            this.rbGnew3.Location = new System.Drawing.Point(100, 0);
+            this.rbGnew3.Name = "rbGnew3";
+            this.rbGnew3.Size = new System.Drawing.Size(70, 25);
+            this.rbGnew3.TabIndex = 1;
+            this.rbGnew3.Text = "New";
+            this.rbGnew3.UseVisualStyleBackColor = false;
+            this.rbGnew3.CheckedChanged += new System.EventHandler(this.rbGnew3_CheckedChanged);
+            // 
+            // rbGold3
+            // 
+            this.rbGold3.BackColor = System.Drawing.Color.Transparent;
+            this.rbGold3.Checked = true;
+            this.rbGold3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.rbGold3.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold);
+            this.rbGold3.ForeColor = System.Drawing.Color.Orange;
+            this.rbGold3.Location = new System.Drawing.Point(30, 0);
+            this.rbGold3.Name = "rbGold3";
+            this.rbGold3.Size = new System.Drawing.Size(64, 25);
+            this.rbGold3.TabIndex = 0;
+            this.rbGold3.TabStop = true;
+            this.rbGold3.Text = "Old";
+            this.rbGold3.UseVisualStyleBackColor = false;
+            this.rbGold3.CheckedChanged += new System.EventHandler(this.rbGold3_CheckedChanged);
+            // 
+            // label37
+            // 
+            this.label37.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label37.ForeColor = System.Drawing.Color.Orange;
+            this.label37.Location = new System.Drawing.Point(0, 0);
+            this.label37.Name = "label37";
+            this.label37.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label37.Size = new System.Drawing.Size(200, 22);
+            this.label37.TabIndex = 0;
+            this.label37.Text = "Type";
             // 
             // pnGeneralInformation2
             // 
@@ -2597,6 +3467,7 @@ namespace GUI
             this.txtPphoneNumber3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPphoneNumber3.FocusedState.Parent = this.txtPphoneNumber3;
             this.txtPphoneNumber3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPphoneNumber3.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.txtPphoneNumber3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPphoneNumber3.HoverState.Parent = this.txtPphoneNumber3;
             this.txtPphoneNumber3.Location = new System.Drawing.Point(0, 22);
@@ -2662,6 +3533,7 @@ namespace GUI
             this.txtPaddress3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPaddress3.FocusedState.Parent = this.txtPaddress3;
             this.txtPaddress3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPaddress3.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.txtPaddress3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPaddress3.HoverState.Parent = this.txtPaddress3;
             this.txtPaddress3.Location = new System.Drawing.Point(0, 22);
@@ -2699,8 +3571,9 @@ namespace GUI
             // 
             // guna2Panel39
             // 
+            this.guna2Panel39.Controls.Add(this.txtPname3);
             this.guna2Panel39.Controls.Add(this.cbbPname3);
-            this.guna2Panel39.Controls.Add(this.label25);
+            this.guna2Panel39.Controls.Add(this.label13);
             this.guna2Panel39.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel39.Location = new System.Drawing.Point(20, 3);
             this.guna2Panel39.Name = "guna2Panel39";
@@ -2709,11 +3582,46 @@ namespace GUI
             this.guna2Panel39.Size = new System.Drawing.Size(260, 52);
             this.guna2Panel39.TabIndex = 0;
             // 
+            // txtPname3
+            // 
+            this.txtPname3.AutoRoundedCorners = true;
+            this.txtPname3.BorderColor = System.Drawing.Color.Goldenrod;
+            this.txtPname3.BorderRadius = 11;
+            this.txtPname3.BorderThickness = 2;
+            this.txtPname3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPname3.DefaultText = "";
+            this.txtPname3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPname3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPname3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPname3.DisabledState.Parent = this.txtPname3;
+            this.txtPname3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPname3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtPname3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
+            this.txtPname3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPname3.FocusedState.Parent = this.txtPname3;
+            this.txtPname3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
+            this.txtPname3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPname3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPname3.HoverState.Parent = this.txtPname3;
+            this.txtPname3.Location = new System.Drawing.Point(0, 22);
+            this.txtPname3.Margin = new System.Windows.Forms.Padding(10, 3, 10, 6);
+            this.txtPname3.MaximumSize = new System.Drawing.Size(525, 52);
+            this.txtPname3.Name = "txtPname3";
+            this.txtPname3.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
+            this.txtPname3.PasswordChar = '\0';
+            this.txtPname3.PlaceholderText = "";
+            this.txtPname3.SelectedText = "";
+            this.txtPname3.ShadowDecoration.Parent = this.txtPname3;
+            this.txtPname3.Size = new System.Drawing.Size(260, 25);
+            this.txtPname3.TabIndex = 42;
+            this.txtPname3.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtPname3.Visible = false;
+            // 
             // cbbPname3
             // 
             this.cbbPname3.AutoRoundedCorners = true;
             this.cbbPname3.BackColor = System.Drawing.Color.Transparent;
-            this.cbbPname3.BorderColor = System.Drawing.Color.Orange;
+            this.cbbPname3.BorderColor = System.Drawing.Color.Goldenrod;
             this.cbbPname3.BorderRadius = 17;
             this.cbbPname3.BorderThickness = 2;
             this.cbbPname3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2727,38 +3635,30 @@ namespace GUI
             this.cbbPname3.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.cbbPname3.HoverState.Parent = this.cbbPname3;
             this.cbbPname3.ItemHeight = 30;
-            this.cbbPname3.Items.AddRange(new object[] {
-            "Chai",
-            "Lon",
-            "Gói",
-            "Ly",
-            "Hủ",
-            "Bịch",
-            "Viên",
-            "Phần",
-            "Kg",
-            "Cái",
-            "Thùng"});
             this.cbbPname3.ItemsAppearance.Parent = this.cbbPname3;
             this.cbbPname3.Location = new System.Drawing.Point(0, 22);
             this.cbbPname3.Margin = new System.Windows.Forms.Padding(10, 3, 10, 5);
-            this.cbbPname3.MaximumSize = new System.Drawing.Size(500, 0);
             this.cbbPname3.Name = "cbbPname3";
             this.cbbPname3.ShadowDecoration.Parent = this.cbbPname3;
             this.cbbPname3.Size = new System.Drawing.Size(260, 36);
-            this.cbbPname3.TabIndex = 31;
+            this.cbbPname3.TabIndex = 39;
             this.cbbPname3.TextOffset = new System.Drawing.Point(10, 1);
+            this.cbbPname3.SelectedIndexChanged += new System.EventHandler(this.cbbPname3_SelectedIndexChanged);
             // 
-            // label25
+            // label13
             // 
-            this.label25.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label25.ForeColor = System.Drawing.Color.Orange;
-            this.label25.Location = new System.Drawing.Point(0, 0);
-            this.label25.Name = "label25";
-            this.label25.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label25.Size = new System.Drawing.Size(260, 22);
-            this.label25.TabIndex = 0;
-            this.label25.Text = "Provider name";
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label13.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.Color.Orange;
+            this.label13.Location = new System.Drawing.Point(0, 0);
+            this.label13.Margin = new System.Windows.Forms.Padding(0);
+            this.label13.Name = "label13";
+            this.label13.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label13.Size = new System.Drawing.Size(260, 22);
+            this.label13.TabIndex = 38;
+            this.label13.Text = "Provider name";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // guna2Panel40
             // 
@@ -2789,8 +3689,8 @@ namespace GUI
             this.pnTypeProvider3.BorderColor = System.Drawing.Color.DarkOrange;
             this.pnTypeProvider3.BorderRadius = 11;
             this.pnTypeProvider3.BorderThickness = 2;
-            this.pnTypeProvider3.Controls.Add(this.radioButton2);
-            this.pnTypeProvider3.Controls.Add(this.radioButton1);
+            this.pnTypeProvider3.Controls.Add(this.rbPnew2);
+            this.pnTypeProvider3.Controls.Add(this.rbPold2);
             this.pnTypeProvider3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnTypeProvider3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.pnTypeProvider3.Location = new System.Drawing.Point(0, 22);
@@ -2800,35 +3700,37 @@ namespace GUI
             this.pnTypeProvider3.Size = new System.Drawing.Size(194, 25);
             this.pnTypeProvider3.TabIndex = 1;
             // 
-            // radioButton2
+            // rbPnew2
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.radioButton2.ForeColor = System.Drawing.Color.Orange;
-            this.radioButton2.Location = new System.Drawing.Point(99, 0);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(75, 25);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.Text = "New";
-            this.radioButton2.UseVisualStyleBackColor = false;
+            this.rbPnew2.AutoSize = true;
+            this.rbPnew2.BackColor = System.Drawing.Color.Transparent;
+            this.rbPnew2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.rbPnew2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.rbPnew2.ForeColor = System.Drawing.Color.Orange;
+            this.rbPnew2.Location = new System.Drawing.Point(99, 0);
+            this.rbPnew2.Name = "rbPnew2";
+            this.rbPnew2.Size = new System.Drawing.Size(75, 25);
+            this.rbPnew2.TabIndex = 1;
+            this.rbPnew2.Text = "New";
+            this.rbPnew2.UseVisualStyleBackColor = false;
+            this.rbPnew2.CheckedChanged += new System.EventHandler(this.rbPnew2_CheckedChanged);
             // 
-            // radioButton1
+            // rbPold2
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.radioButton1.ForeColor = System.Drawing.Color.Orange;
-            this.radioButton1.Location = new System.Drawing.Point(20, 0);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(67, 25);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Old";
-            this.radioButton1.UseVisualStyleBackColor = false;
+            this.rbPold2.AutoSize = true;
+            this.rbPold2.BackColor = System.Drawing.Color.Transparent;
+            this.rbPold2.Checked = true;
+            this.rbPold2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.rbPold2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.rbPold2.ForeColor = System.Drawing.Color.Orange;
+            this.rbPold2.Location = new System.Drawing.Point(20, 0);
+            this.rbPold2.Name = "rbPold2";
+            this.rbPold2.Size = new System.Drawing.Size(67, 25);
+            this.rbPold2.TabIndex = 0;
+            this.rbPold2.TabStop = true;
+            this.rbPold2.Text = "Old";
+            this.rbPold2.UseVisualStyleBackColor = false;
+            this.rbPold2.CheckedChanged += new System.EventHandler(this.rbPold2_CheckedChanged);
             // 
             // label26
             // 
@@ -2852,6 +3754,227 @@ namespace GUI
             this.guna2Panel49.ShadowDecoration.Parent = this.guna2Panel49;
             this.guna2Panel49.Size = new System.Drawing.Size(304, 160);
             this.guna2Panel49.TabIndex = 7;
+            // 
+            // gbGeneralInformation2
+            // 
+            this.gbGeneralInformation2.BorderColor = System.Drawing.Color.Orange;
+            this.gbGeneralInformation2.BorderRadius = 10;
+            this.gbGeneralInformation2.BorderThickness = 2;
+            this.gbGeneralInformation2.Controls.Add(this.guna2Panel29);
+            this.gbGeneralInformation2.Controls.Add(this.guna2Panel45);
+            this.gbGeneralInformation2.CustomBorderColor = System.Drawing.Color.Orange;
+            this.gbGeneralInformation2.CustomBorderThickness = new System.Windows.Forms.Padding(2, 40, 2, 2);
+            this.gbGeneralInformation2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbGeneralInformation2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            this.gbGeneralInformation2.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbGeneralInformation2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.gbGeneralInformation2.Location = new System.Drawing.Point(0, 5);
+            this.gbGeneralInformation2.Name = "gbGeneralInformation2";
+            this.gbGeneralInformation2.Padding = new System.Windows.Forms.Padding(2, 30, 2, 2);
+            this.gbGeneralInformation2.ShadowDecoration.Parent = this.gbGeneralInformation2;
+            this.gbGeneralInformation2.Size = new System.Drawing.Size(304, 155);
+            this.gbGeneralInformation2.TabIndex = 1;
+            this.gbGeneralInformation2.Text = "General Information ";
+            // 
+            // guna2Panel29
+            // 
+            this.guna2Panel29.Controls.Add(this.guna2Panel30);
+            this.guna2Panel29.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel29.Location = new System.Drawing.Point(2, 85);
+            this.guna2Panel29.Name = "guna2Panel29";
+            this.guna2Panel29.Padding = new System.Windows.Forms.Padding(20, 3, 20, 0);
+            this.guna2Panel29.ShadowDecoration.Parent = this.guna2Panel29;
+            this.guna2Panel29.Size = new System.Drawing.Size(300, 55);
+            this.guna2Panel29.TabIndex = 3;
+            // 
+            // guna2Panel30
+            // 
+            this.guna2Panel30.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel30.Controls.Add(this.dtpTime3);
+            this.guna2Panel30.Controls.Add(this.label19);
+            this.guna2Panel30.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel30.Location = new System.Drawing.Point(20, 3);
+            this.guna2Panel30.Name = "guna2Panel30";
+            this.guna2Panel30.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.guna2Panel30.ShadowDecoration.Parent = this.guna2Panel30;
+            this.guna2Panel30.Size = new System.Drawing.Size(260, 52);
+            this.guna2Panel30.TabIndex = 0;
+            // 
+            // dtpTime3
+            // 
+            this.dtpTime3.AutoRoundedCorners = true;
+            this.dtpTime3.BorderColor = System.Drawing.Color.Goldenrod;
+            this.dtpTime3.BorderRadius = 11;
+            this.dtpTime3.BorderThickness = 2;
+            this.dtpTime3.CheckedState.Parent = this.dtpTime3;
+            this.dtpTime3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpTime3.CustomFormat = "MMMM dd yyyy hh:mm tt";
+            this.dtpTime3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtpTime3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
+            this.dtpTime3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.dtpTime3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dtpTime3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpTime3.HoverState.Parent = this.dtpTime3;
+            this.dtpTime3.Location = new System.Drawing.Point(0, 22);
+            this.dtpTime3.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpTime3.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpTime3.Name = "dtpTime3";
+            this.dtpTime3.ShadowDecoration.Parent = this.dtpTime3;
+            this.dtpTime3.Size = new System.Drawing.Size(260, 25);
+            this.dtpTime3.TabIndex = 33;
+            this.dtpTime3.TextOffset = new System.Drawing.Point(10, 0);
+            this.dtpTime3.Value = new System.DateTime(2021, 10, 29, 4, 21, 36, 805);
+            // 
+            // label19
+            // 
+            this.label19.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label19.ForeColor = System.Drawing.Color.Orange;
+            this.label19.Location = new System.Drawing.Point(0, 0);
+            this.label19.Name = "label19";
+            this.label19.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label19.Size = new System.Drawing.Size(260, 22);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Time";
+            // 
+            // guna2Panel45
+            // 
+            this.guna2Panel45.Controls.Add(this.guna2Panel47);
+            this.guna2Panel45.Controls.Add(this.guna2Panel35);
+            this.guna2Panel45.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel45.Location = new System.Drawing.Point(2, 30);
+            this.guna2Panel45.Name = "guna2Panel45";
+            this.guna2Panel45.Padding = new System.Windows.Forms.Padding(20, 3, 20, 0);
+            this.guna2Panel45.ShadowDecoration.Parent = this.guna2Panel45;
+            this.guna2Panel45.Size = new System.Drawing.Size(300, 55);
+            this.guna2Panel45.TabIndex = 0;
+            // 
+            // guna2Panel47
+            // 
+            this.guna2Panel47.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel47.Controls.Add(this.cbbEname3);
+            this.guna2Panel47.Controls.Add(this.label29);
+            this.guna2Panel47.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel47.Location = new System.Drawing.Point(101, 3);
+            this.guna2Panel47.Name = "guna2Panel47";
+            this.guna2Panel47.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.guna2Panel47.ShadowDecoration.Parent = this.guna2Panel47;
+            this.guna2Panel47.Size = new System.Drawing.Size(179, 52);
+            this.guna2Panel47.TabIndex = 4;
+            // 
+            // cbbEname3
+            // 
+            this.cbbEname3.AutoRoundedCorners = true;
+            this.cbbEname3.BackColor = System.Drawing.Color.Transparent;
+            this.cbbEname3.BorderColor = System.Drawing.Color.Orange;
+            this.cbbEname3.BorderRadius = 17;
+            this.cbbEname3.BorderThickness = 2;
+            this.cbbEname3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbbEname3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbEname3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbEname3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
+            this.cbbEname3.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbEname3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbEname3.FocusedState.Parent = this.cbbEname3;
+            this.cbbEname3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.cbbEname3.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.cbbEname3.HoverState.Parent = this.cbbEname3;
+            this.cbbEname3.ItemHeight = 30;
+            this.cbbEname3.Items.AddRange(new object[] {
+            "Chai",
+            "Lon",
+            "Gói",
+            "Ly",
+            "Hủ",
+            "Bịch",
+            "Viên",
+            "Phần",
+            "Kg",
+            "Cái",
+            "Thùng"});
+            this.cbbEname3.ItemsAppearance.Parent = this.cbbEname3;
+            this.cbbEname3.Location = new System.Drawing.Point(0, 22);
+            this.cbbEname3.Margin = new System.Windows.Forms.Padding(10, 3, 10, 5);
+            this.cbbEname3.MaximumSize = new System.Drawing.Size(500, 0);
+            this.cbbEname3.Name = "cbbEname3";
+            this.cbbEname3.ShadowDecoration.Parent = this.cbbEname3;
+            this.cbbEname3.Size = new System.Drawing.Size(179, 36);
+            this.cbbEname3.TabIndex = 31;
+            this.cbbEname3.TextOffset = new System.Drawing.Point(10, 1);
+            // 
+            // label29
+            // 
+            this.label29.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label29.ForeColor = System.Drawing.Color.Orange;
+            this.label29.Location = new System.Drawing.Point(0, 0);
+            this.label29.Name = "label29";
+            this.label29.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label29.Size = new System.Drawing.Size(179, 22);
+            this.label29.TabIndex = 0;
+            this.label29.Text = "Employee name";
+            // 
+            // guna2Panel35
+            // 
+            this.guna2Panel35.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel35.Controls.Add(this.cbbEid3);
+            this.guna2Panel35.Controls.Add(this.label23);
+            this.guna2Panel35.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2Panel35.Location = new System.Drawing.Point(20, 3);
+            this.guna2Panel35.Name = "guna2Panel35";
+            this.guna2Panel35.Padding = new System.Windows.Forms.Padding(0, 0, 20, 5);
+            this.guna2Panel35.ShadowDecoration.Parent = this.guna2Panel35;
+            this.guna2Panel35.Size = new System.Drawing.Size(81, 52);
+            this.guna2Panel35.TabIndex = 3;
+            // 
+            // cbbEid3
+            // 
+            this.cbbEid3.AutoRoundedCorners = true;
+            this.cbbEid3.BackColor = System.Drawing.Color.Transparent;
+            this.cbbEid3.BorderColor = System.Drawing.Color.Orange;
+            this.cbbEid3.BorderRadius = 17;
+            this.cbbEid3.BorderThickness = 2;
+            this.cbbEid3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbbEid3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbEid3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbEid3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
+            this.cbbEid3.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbEid3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbEid3.FocusedState.Parent = this.cbbEid3;
+            this.cbbEid3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.cbbEid3.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.cbbEid3.HoverState.Parent = this.cbbEid3;
+            this.cbbEid3.ItemHeight = 30;
+            this.cbbEid3.Items.AddRange(new object[] {
+            "Chai",
+            "Lon",
+            "Gói",
+            "Ly",
+            "Hủ",
+            "Bịch",
+            "Viên",
+            "Phần",
+            "Kg",
+            "Cái",
+            "Thùng"});
+            this.cbbEid3.ItemsAppearance.Parent = this.cbbEid3;
+            this.cbbEid3.Location = new System.Drawing.Point(0, 22);
+            this.cbbEid3.Margin = new System.Windows.Forms.Padding(10, 3, 10, 5);
+            this.cbbEid3.MaximumSize = new System.Drawing.Size(500, 0);
+            this.cbbEid3.Name = "cbbEid3";
+            this.cbbEid3.ShadowDecoration.Parent = this.cbbEid3;
+            this.cbbEid3.Size = new System.Drawing.Size(61, 36);
+            this.cbbEid3.TabIndex = 32;
+            this.cbbEid3.TextOffset = new System.Drawing.Point(10, 1);
+            // 
+            // label23
+            // 
+            this.label23.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label23.ForeColor = System.Drawing.Color.Orange;
+            this.label23.Location = new System.Drawing.Point(0, 0);
+            this.label23.Name = "label23";
+            this.label23.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label23.Size = new System.Drawing.Size(61, 22);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "EID";
             // 
             // tlpType
             // 
@@ -3024,7 +4147,7 @@ namespace GUI
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
             this.txtSearch.Location = new System.Drawing.Point(203, 7);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -3203,31 +4326,31 @@ namespace GUI
             this.dgvContract.AllowUserToAddRows = false;
             this.dgvContract.AllowUserToDeleteRows = false;
             this.dgvContract.AllowUserToResizeRows = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.dgvContract.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.dgvContract.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvContract.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvContract.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.dgvContract.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvContract.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvContract.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvContract.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvContract.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvContract.ColumnHeadersHeight = 45;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(133)))), ((int)(((byte)(147)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvContract.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(133)))), ((int)(((byte)(147)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvContract.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvContract.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvContract.EnableHeadersVisualStyles = false;
             this.dgvContract.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(199)))), ((int)(((byte)(206)))));
@@ -3237,19 +4360,19 @@ namespace GUI
             this.dgvContract.Name = "dgvContract";
             this.dgvContract.ReadOnly = true;
             this.dgvContract.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvContract.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvContract.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvContract.RowHeadersVisible = false;
             this.dgvContract.RowHeadersWidth = 51;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.Padding = new System.Windows.Forms.Padding(5);
-            this.dgvContract.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(5);
+            this.dgvContract.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvContract.RowTemplate.Height = 40;
             this.dgvContract.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvContract.Size = new System.Drawing.Size(786, 336);
@@ -3286,1092 +4409,6 @@ namespace GUI
             // 
             this.ecPictureWrapper2.CornerRadius = 11;
             this.ecPictureWrapper2.TargetControl = this.tlpPictureWrapper2;
-            // 
-            // guna2Panel37
-            // 
-            this.guna2Panel37.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel37.Controls.Add(this.nudQuantity);
-            this.guna2Panel37.Controls.Add(this.label20);
-            this.guna2Panel37.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2Panel37.Location = new System.Drawing.Point(5, 0);
-            this.guna2Panel37.Name = "guna2Panel37";
-            this.guna2Panel37.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.guna2Panel37.ShadowDecoration.Parent = this.guna2Panel37;
-            this.guna2Panel37.Size = new System.Drawing.Size(108, 55);
-            this.guna2Panel37.TabIndex = 1;
-            // 
-            // label20
-            // 
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label20.Font = new System.Drawing.Font("Poppins", 11F);
-            this.label20.ForeColor = System.Drawing.Color.Orange;
-            this.label20.Location = new System.Drawing.Point(0, 0);
-            this.label20.Margin = new System.Windows.Forms.Padding(0);
-            this.label20.Name = "label20";
-            this.label20.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label20.Size = new System.Drawing.Size(88, 22);
-            this.label20.TabIndex = 38;
-            this.label20.Text = "Quantity";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // nudQuantity
-            // 
-            this.nudQuantity.AutoRoundedCorners = true;
-            this.nudQuantity.BackColor = System.Drawing.Color.Transparent;
-            this.nudQuantity.BorderColor = System.Drawing.Color.Goldenrod;
-            this.nudQuantity.BorderRadius = 15;
-            this.nudQuantity.BorderThickness = 2;
-            this.nudQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nudQuantity.DisabledState.Parent = this.nudQuantity;
-            this.nudQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nudQuantity.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
-            this.nudQuantity.FocusedState.Parent = this.nudQuantity;
-            this.nudQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.nudQuantity.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.nudQuantity.Location = new System.Drawing.Point(0, 22);
-            this.nudQuantity.Margin = new System.Windows.Forms.Padding(10, 3, 10, 5);
-            this.nudQuantity.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.nudQuantity.MaximumSize = new System.Drawing.Size(500, 50);
-            this.nudQuantity.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudQuantity.Name = "nudQuantity";
-            this.nudQuantity.ShadowDecoration.Parent = this.nudQuantity;
-            this.nudQuantity.Size = new System.Drawing.Size(88, 33);
-            this.nudQuantity.TabIndex = 39;
-            this.nudQuantity.TextOffset = new System.Drawing.Point(10, 0);
-            this.nudQuantity.UpDownButtonBorderVisible = false;
-            this.nudQuantity.UpDownButtonFillColor = System.Drawing.Color.Orange;
-            this.nudQuantity.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudQuantity.ValueChanged += new System.EventHandler(this.nudQuantity_ValueChanged);
-            // 
-            // guna2Panel36
-            // 
-            this.guna2Panel36.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel36.Controls.Add(this.txtImportPrice);
-            this.guna2Panel36.Controls.Add(this.label14);
-            this.guna2Panel36.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel36.Location = new System.Drawing.Point(113, 0);
-            this.guna2Panel36.Name = "guna2Panel36";
-            this.guna2Panel36.ShadowDecoration.Parent = this.guna2Panel36;
-            this.guna2Panel36.Size = new System.Drawing.Size(331, 55);
-            this.guna2Panel36.TabIndex = 2;
-            // 
-            // label14
-            // 
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label14.Font = new System.Drawing.Font("Poppins", 11F);
-            this.label14.ForeColor = System.Drawing.Color.Orange;
-            this.label14.Location = new System.Drawing.Point(0, 0);
-            this.label14.Margin = new System.Windows.Forms.Padding(0);
-            this.label14.Name = "label14";
-            this.label14.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label14.Size = new System.Drawing.Size(331, 22);
-            this.label14.TabIndex = 33;
-            this.label14.Text = "Import price";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // txtImportPrice
-            // 
-            this.txtImportPrice.AutoRoundedCorners = true;
-            this.txtImportPrice.BorderColor = System.Drawing.Color.Goldenrod;
-            this.txtImportPrice.BorderRadius = 15;
-            this.txtImportPrice.BorderThickness = 2;
-            this.txtImportPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtImportPrice.DefaultText = "95000";
-            this.txtImportPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtImportPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtImportPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtImportPrice.DisabledState.Parent = this.txtImportPrice;
-            this.txtImportPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtImportPrice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtImportPrice.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
-            this.txtImportPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtImportPrice.FocusedState.Parent = this.txtImportPrice;
-            this.txtImportPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.txtImportPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtImportPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtImportPrice.HoverState.Parent = this.txtImportPrice;
-            this.txtImportPrice.Location = new System.Drawing.Point(0, 22);
-            this.txtImportPrice.Margin = new System.Windows.Forms.Padding(9, 3, 9, 5);
-            this.txtImportPrice.MaximumSize = new System.Drawing.Size(455, 45);
-            this.txtImportPrice.Name = "txtImportPrice";
-            this.txtImportPrice.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.txtImportPrice.PasswordChar = '\0';
-            this.txtImportPrice.PlaceholderText = "";
-            this.txtImportPrice.SelectedText = "";
-            this.txtImportPrice.SelectionStart = 5;
-            this.txtImportPrice.ShadowDecoration.Parent = this.txtImportPrice;
-            this.txtImportPrice.Size = new System.Drawing.Size(331, 33);
-            this.txtImportPrice.TabIndex = 34;
-            this.txtImportPrice.TextOffset = new System.Drawing.Point(10, 0);
-            this.txtImportPrice.TextChanged += new System.EventHandler(this.txtImportPrice_TextChanged);
-            this.txtImportPrice.Enter += new System.EventHandler(this.txtImportPrice_Enter);
-            this.txtImportPrice.Leave += new System.EventHandler(this.txtImportPrice_Leave);
-            // 
-            // guna2Panel34
-            // 
-            this.guna2Panel34.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel34.Controls.Add(this.guna2Panel36);
-            this.guna2Panel34.Controls.Add(this.guna2Panel37);
-            this.guna2Panel34.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel34.Enabled = false;
-            this.guna2Panel34.Location = new System.Drawing.Point(5, 94);
-            this.guna2Panel34.Name = "guna2Panel34";
-            this.guna2Panel34.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.guna2Panel34.ShadowDecoration.Parent = this.guna2Panel34;
-            this.guna2Panel34.Size = new System.Drawing.Size(449, 55);
-            this.guna2Panel34.TabIndex = 36;
-            // 
-            // lbHeaderTitle2
-            // 
-            this.lbHeaderTitle2.BackColor = System.Drawing.Color.Transparent;
-            this.lbHeaderTitle2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbHeaderTitle2.Font = new System.Drawing.Font("Poppins", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHeaderTitle2.ForeColor = System.Drawing.Color.Orange;
-            this.lbHeaderTitle2.Location = new System.Drawing.Point(43, 3);
-            this.lbHeaderTitle2.Name = "lbHeaderTitle2";
-            this.lbHeaderTitle2.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.lbHeaderTitle2.Size = new System.Drawing.Size(408, 44);
-            this.lbHeaderTitle2.TabIndex = 6;
-            this.lbHeaderTitle2.Text = "Detail Provider";
-            this.lbHeaderTitle2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // guna2Panel29
-            // 
-            this.guna2Panel29.Controls.Add(this.guna2Panel30);
-            this.guna2Panel29.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel29.Location = new System.Drawing.Point(2, 85);
-            this.guna2Panel29.Name = "guna2Panel29";
-            this.guna2Panel29.Padding = new System.Windows.Forms.Padding(20, 3, 20, 0);
-            this.guna2Panel29.ShadowDecoration.Parent = this.guna2Panel29;
-            this.guna2Panel29.Size = new System.Drawing.Size(300, 55);
-            this.guna2Panel29.TabIndex = 3;
-            // 
-            // guna2Panel30
-            // 
-            this.guna2Panel30.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel30.Controls.Add(this.dtpTime3);
-            this.guna2Panel30.Controls.Add(this.label19);
-            this.guna2Panel30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel30.Location = new System.Drawing.Point(20, 3);
-            this.guna2Panel30.Name = "guna2Panel30";
-            this.guna2Panel30.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.guna2Panel30.ShadowDecoration.Parent = this.guna2Panel30;
-            this.guna2Panel30.Size = new System.Drawing.Size(260, 52);
-            this.guna2Panel30.TabIndex = 0;
-            // 
-            // label19
-            // 
-            this.label19.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label19.ForeColor = System.Drawing.Color.Orange;
-            this.label19.Location = new System.Drawing.Point(0, 0);
-            this.label19.Name = "label19";
-            this.label19.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label19.Size = new System.Drawing.Size(260, 22);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "Time";
-            // 
-            // dtpTime3
-            // 
-            this.dtpTime3.AutoRoundedCorners = true;
-            this.dtpTime3.BorderColor = System.Drawing.Color.Goldenrod;
-            this.dtpTime3.BorderRadius = 11;
-            this.dtpTime3.BorderThickness = 2;
-            this.dtpTime3.CheckedState.Parent = this.dtpTime3;
-            this.dtpTime3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtpTime3.CustomFormat = "MMMM dd yyyy hh:mm tt";
-            this.dtpTime3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtpTime3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
-            this.dtpTime3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.dtpTime3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dtpTime3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTime3.HoverState.Parent = this.dtpTime3;
-            this.dtpTime3.Location = new System.Drawing.Point(0, 22);
-            this.dtpTime3.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpTime3.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpTime3.Name = "dtpTime3";
-            this.dtpTime3.ShadowDecoration.Parent = this.dtpTime3;
-            this.dtpTime3.Size = new System.Drawing.Size(260, 25);
-            this.dtpTime3.TabIndex = 33;
-            this.dtpTime3.TextOffset = new System.Drawing.Point(10, 0);
-            this.dtpTime3.Value = new System.DateTime(2021, 10, 29, 4, 21, 36, 805);
-            // 
-            // gbGeneralInformation2
-            // 
-            this.gbGeneralInformation2.BorderColor = System.Drawing.Color.Orange;
-            this.gbGeneralInformation2.BorderRadius = 10;
-            this.gbGeneralInformation2.BorderThickness = 2;
-            this.gbGeneralInformation2.Controls.Add(this.guna2Panel29);
-            this.gbGeneralInformation2.Controls.Add(this.guna2Panel45);
-            this.gbGeneralInformation2.CustomBorderColor = System.Drawing.Color.Orange;
-            this.gbGeneralInformation2.CustomBorderThickness = new System.Windows.Forms.Padding(2, 40, 2, 2);
-            this.gbGeneralInformation2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbGeneralInformation2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.gbGeneralInformation2.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbGeneralInformation2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.gbGeneralInformation2.Location = new System.Drawing.Point(0, 5);
-            this.gbGeneralInformation2.Name = "gbGeneralInformation2";
-            this.gbGeneralInformation2.Padding = new System.Windows.Forms.Padding(2, 30, 2, 2);
-            this.gbGeneralInformation2.ShadowDecoration.Parent = this.gbGeneralInformation2;
-            this.gbGeneralInformation2.Size = new System.Drawing.Size(304, 155);
-            this.gbGeneralInformation2.TabIndex = 1;
-            this.gbGeneralInformation2.Text = "General Information ";
-            // 
-            // guna2Panel35
-            // 
-            this.guna2Panel35.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel35.Controls.Add(this.cbbEid3);
-            this.guna2Panel35.Controls.Add(this.label23);
-            this.guna2Panel35.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2Panel35.Location = new System.Drawing.Point(20, 3);
-            this.guna2Panel35.Name = "guna2Panel35";
-            this.guna2Panel35.Padding = new System.Windows.Forms.Padding(0, 0, 20, 5);
-            this.guna2Panel35.ShadowDecoration.Parent = this.guna2Panel35;
-            this.guna2Panel35.Size = new System.Drawing.Size(81, 52);
-            this.guna2Panel35.TabIndex = 3;
-            // 
-            // label23
-            // 
-            this.label23.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label23.ForeColor = System.Drawing.Color.Orange;
-            this.label23.Location = new System.Drawing.Point(0, 0);
-            this.label23.Name = "label23";
-            this.label23.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label23.Size = new System.Drawing.Size(61, 22);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "EID";
-            // 
-            // cbbEid3
-            // 
-            this.cbbEid3.AutoRoundedCorners = true;
-            this.cbbEid3.BackColor = System.Drawing.Color.Transparent;
-            this.cbbEid3.BorderColor = System.Drawing.Color.Orange;
-            this.cbbEid3.BorderRadius = 17;
-            this.cbbEid3.BorderThickness = 2;
-            this.cbbEid3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbbEid3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbEid3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbEid3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
-            this.cbbEid3.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbEid3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbEid3.FocusedState.Parent = this.cbbEid3;
-            this.cbbEid3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.cbbEid3.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.cbbEid3.HoverState.Parent = this.cbbEid3;
-            this.cbbEid3.ItemHeight = 30;
-            this.cbbEid3.Items.AddRange(new object[] {
-            "Chai",
-            "Lon",
-            "Gói",
-            "Ly",
-            "Hủ",
-            "Bịch",
-            "Viên",
-            "Phần",
-            "Kg",
-            "Cái",
-            "Thùng"});
-            this.cbbEid3.ItemsAppearance.Parent = this.cbbEid3;
-            this.cbbEid3.Location = new System.Drawing.Point(0, 22);
-            this.cbbEid3.Margin = new System.Windows.Forms.Padding(10, 3, 10, 5);
-            this.cbbEid3.MaximumSize = new System.Drawing.Size(500, 0);
-            this.cbbEid3.Name = "cbbEid3";
-            this.cbbEid3.ShadowDecoration.Parent = this.cbbEid3;
-            this.cbbEid3.Size = new System.Drawing.Size(61, 36);
-            this.cbbEid3.TabIndex = 32;
-            this.cbbEid3.TextOffset = new System.Drawing.Point(10, 1);
-            // 
-            // guna2Panel47
-            // 
-            this.guna2Panel47.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel47.Controls.Add(this.cbbEname3);
-            this.guna2Panel47.Controls.Add(this.label29);
-            this.guna2Panel47.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel47.Location = new System.Drawing.Point(101, 3);
-            this.guna2Panel47.Name = "guna2Panel47";
-            this.guna2Panel47.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.guna2Panel47.ShadowDecoration.Parent = this.guna2Panel47;
-            this.guna2Panel47.Size = new System.Drawing.Size(179, 52);
-            this.guna2Panel47.TabIndex = 4;
-            // 
-            // label29
-            // 
-            this.label29.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label29.ForeColor = System.Drawing.Color.Orange;
-            this.label29.Location = new System.Drawing.Point(0, 0);
-            this.label29.Name = "label29";
-            this.label29.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label29.Size = new System.Drawing.Size(179, 22);
-            this.label29.TabIndex = 0;
-            this.label29.Text = "Employee name";
-            // 
-            // cbbEname3
-            // 
-            this.cbbEname3.AutoRoundedCorners = true;
-            this.cbbEname3.BackColor = System.Drawing.Color.Transparent;
-            this.cbbEname3.BorderColor = System.Drawing.Color.Orange;
-            this.cbbEname3.BorderRadius = 17;
-            this.cbbEname3.BorderThickness = 2;
-            this.cbbEname3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbbEname3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbEname3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbEname3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
-            this.cbbEname3.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbEname3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbEname3.FocusedState.Parent = this.cbbEname3;
-            this.cbbEname3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.cbbEname3.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.cbbEname3.HoverState.Parent = this.cbbEname3;
-            this.cbbEname3.ItemHeight = 30;
-            this.cbbEname3.Items.AddRange(new object[] {
-            "Chai",
-            "Lon",
-            "Gói",
-            "Ly",
-            "Hủ",
-            "Bịch",
-            "Viên",
-            "Phần",
-            "Kg",
-            "Cái",
-            "Thùng"});
-            this.cbbEname3.ItemsAppearance.Parent = this.cbbEname3;
-            this.cbbEname3.Location = new System.Drawing.Point(0, 22);
-            this.cbbEname3.Margin = new System.Windows.Forms.Padding(10, 3, 10, 5);
-            this.cbbEname3.MaximumSize = new System.Drawing.Size(500, 0);
-            this.cbbEname3.Name = "cbbEname3";
-            this.cbbEname3.ShadowDecoration.Parent = this.cbbEname3;
-            this.cbbEname3.Size = new System.Drawing.Size(179, 36);
-            this.cbbEname3.TabIndex = 31;
-            this.cbbEname3.TextOffset = new System.Drawing.Point(10, 1);
-            // 
-            // guna2Panel45
-            // 
-            this.guna2Panel45.Controls.Add(this.guna2Panel47);
-            this.guna2Panel45.Controls.Add(this.guna2Panel35);
-            this.guna2Panel45.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel45.Location = new System.Drawing.Point(2, 30);
-            this.guna2Panel45.Name = "guna2Panel45";
-            this.guna2Panel45.Padding = new System.Windows.Forms.Padding(20, 3, 20, 0);
-            this.guna2Panel45.ShadowDecoration.Parent = this.guna2Panel45;
-            this.guna2Panel45.Size = new System.Drawing.Size(300, 55);
-            this.guna2Panel45.TabIndex = 0;
-            // 
-            // guna2GroupBox1
-            // 
-            this.guna2GroupBox1.BorderColor = System.Drawing.Color.Orange;
-            this.guna2GroupBox1.BorderRadius = 10;
-            this.guna2GroupBox1.BorderThickness = 2;
-            this.guna2GroupBox1.Controls.Add(this.tlpGoodsView2);
-            this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.Orange;
-            this.guna2GroupBox1.CustomBorderThickness = new System.Windows.Forms.Padding(2, 40, 2, 2);
-            this.guna2GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.guna2GroupBox1.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.guna2GroupBox1.Location = new System.Drawing.Point(0, 10);
-            this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Padding = new System.Windows.Forms.Padding(5, 30, 5, 5);
-            this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
-            this.guna2GroupBox1.Size = new System.Drawing.Size(472, 74);
-            this.guna2GroupBox1.TabIndex = 1;
-            this.guna2GroupBox1.Text = "Goods View";
-            // 
-            // tlpGoodsView2
-            // 
-            this.tlpGoodsView2.ColumnCount = 6;
-            this.tlpGoodsView2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpGoodsView2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpGoodsView2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpGoodsView2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpGoodsView2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpGoodsView2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpGoodsView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpGoodsView2.Location = new System.Drawing.Point(5, 30);
-            this.tlpGoodsView2.Name = "tlpGoodsView2";
-            this.tlpGoodsView2.RowCount = 2;
-            this.tlpGoodsView2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpGoodsView2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpGoodsView2.Size = new System.Drawing.Size(462, 39);
-            this.tlpGoodsView2.TabIndex = 0;
-            // 
-            // guna2Panel18
-            // 
-            this.guna2Panel18.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel18.Controls.Add(this.guna2GroupBox1);
-            this.guna2Panel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel18.Location = new System.Drawing.Point(5, 373);
-            this.guna2Panel18.Name = "guna2Panel18";
-            this.guna2Panel18.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.guna2Panel18.ShadowDecoration.Parent = this.guna2Panel18;
-            this.guna2Panel18.Size = new System.Drawing.Size(472, 84);
-            this.guna2Panel18.TabIndex = 20;
-            // 
-            // guna2Panel80
-            // 
-            this.guna2Panel80.Controls.Add(this.guna2Panel81);
-            this.guna2Panel80.Controls.Add(this.guna2Panel82);
-            this.guna2Panel80.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel80.Location = new System.Drawing.Point(2, 30);
-            this.guna2Panel80.Name = "guna2Panel80";
-            this.guna2Panel80.Padding = new System.Windows.Forms.Padding(20, 3, 10, 0);
-            this.guna2Panel80.ShadowDecoration.Parent = this.guna2Panel80;
-            this.guna2Panel80.Size = new System.Drawing.Size(468, 55);
-            this.guna2Panel80.TabIndex = 2;
-            // 
-            // guna2Panel82
-            // 
-            this.guna2Panel82.Controls.Add(this.pnGoodsType3);
-            this.guna2Panel82.Controls.Add(this.label37);
-            this.guna2Panel82.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2Panel82.Location = new System.Drawing.Point(238, 3);
-            this.guna2Panel82.Name = "guna2Panel82";
-            this.guna2Panel82.Padding = new System.Windows.Forms.Padding(0, 0, 20, 5);
-            this.guna2Panel82.ShadowDecoration.Parent = this.guna2Panel82;
-            this.guna2Panel82.Size = new System.Drawing.Size(220, 52);
-            this.guna2Panel82.TabIndex = 3;
-            // 
-            // label37
-            // 
-            this.label37.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label37.ForeColor = System.Drawing.Color.Orange;
-            this.label37.Location = new System.Drawing.Point(0, 0);
-            this.label37.Name = "label37";
-            this.label37.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label37.Size = new System.Drawing.Size(200, 22);
-            this.label37.TabIndex = 0;
-            this.label37.Text = "Type";
-            // 
-            // pnGoodsType3
-            // 
-            this.pnGoodsType3.AutoRoundedCorners = true;
-            this.pnGoodsType3.BorderColor = System.Drawing.Color.DarkOrange;
-            this.pnGoodsType3.BorderRadius = 11;
-            this.pnGoodsType3.BorderThickness = 2;
-            this.pnGoodsType3.Controls.Add(this.rbGnew3);
-            this.pnGoodsType3.Controls.Add(this.rbGold3);
-            this.pnGoodsType3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnGoodsType3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.pnGoodsType3.Location = new System.Drawing.Point(0, 22);
-            this.pnGoodsType3.Name = "pnGoodsType3";
-            this.pnGoodsType3.Padding = new System.Windows.Forms.Padding(30, 0, 30, 0);
-            this.pnGoodsType3.ShadowDecoration.Parent = this.pnGoodsType3;
-            this.pnGoodsType3.Size = new System.Drawing.Size(200, 25);
-            this.pnGoodsType3.TabIndex = 1;
-            // 
-            // rbGold3
-            // 
-            this.rbGold3.BackColor = System.Drawing.Color.Transparent;
-            this.rbGold3.Checked = true;
-            this.rbGold3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.rbGold3.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold);
-            this.rbGold3.ForeColor = System.Drawing.Color.Orange;
-            this.rbGold3.Location = new System.Drawing.Point(30, 0);
-            this.rbGold3.Name = "rbGold3";
-            this.rbGold3.Size = new System.Drawing.Size(64, 25);
-            this.rbGold3.TabIndex = 0;
-            this.rbGold3.TabStop = true;
-            this.rbGold3.Text = "Old";
-            this.rbGold3.UseVisualStyleBackColor = false;
-            this.rbGold3.CheckedChanged += new System.EventHandler(this.rbGold3_CheckedChanged);
-            // 
-            // rbGnew3
-            // 
-            this.rbGnew3.BackColor = System.Drawing.Color.Transparent;
-            this.rbGnew3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.rbGnew3.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold);
-            this.rbGnew3.ForeColor = System.Drawing.Color.Orange;
-            this.rbGnew3.Location = new System.Drawing.Point(100, 0);
-            this.rbGnew3.Name = "rbGnew3";
-            this.rbGnew3.Size = new System.Drawing.Size(70, 25);
-            this.rbGnew3.TabIndex = 1;
-            this.rbGnew3.Text = "New";
-            this.rbGnew3.UseVisualStyleBackColor = false;
-            this.rbGnew3.CheckedChanged += new System.EventHandler(this.rbGnew3_CheckedChanged);
-            // 
-            // guna2Panel81
-            // 
-            this.guna2Panel81.Controls.Add(this.txtGname3);
-            this.guna2Panel81.Controls.Add(this.cbbGname3);
-            this.guna2Panel81.Controls.Add(this.label36);
-            this.guna2Panel81.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel81.Location = new System.Drawing.Point(20, 3);
-            this.guna2Panel81.Name = "guna2Panel81";
-            this.guna2Panel81.Padding = new System.Windows.Forms.Padding(0, 0, 20, 5);
-            this.guna2Panel81.ShadowDecoration.Parent = this.guna2Panel81;
-            this.guna2Panel81.Size = new System.Drawing.Size(218, 52);
-            this.guna2Panel81.TabIndex = 4;
-            // 
-            // label36
-            // 
-            this.label36.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label36.ForeColor = System.Drawing.Color.Orange;
-            this.label36.Location = new System.Drawing.Point(0, 0);
-            this.label36.Name = "label36";
-            this.label36.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label36.Size = new System.Drawing.Size(198, 22);
-            this.label36.TabIndex = 0;
-            this.label36.Text = "Goods name";
-            // 
-            // cbbGname3
-            // 
-            this.cbbGname3.AutoRoundedCorners = true;
-            this.cbbGname3.BackColor = System.Drawing.Color.Transparent;
-            this.cbbGname3.BorderColor = System.Drawing.Color.Orange;
-            this.cbbGname3.BorderRadius = 17;
-            this.cbbGname3.BorderThickness = 2;
-            this.cbbGname3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbbGname3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbGname3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbGname3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
-            this.cbbGname3.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbGname3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbGname3.FocusedState.Parent = this.cbbGname3;
-            this.cbbGname3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbGname3.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.cbbGname3.HoverState.Parent = this.cbbGname3;
-            this.cbbGname3.ItemHeight = 30;
-            this.cbbGname3.Items.AddRange(new object[] {
-            "Chai",
-            "Lon",
-            "Gói",
-            "Ly",
-            "Hủ",
-            "Bịch",
-            "Viên",
-            "Phần",
-            "Kg",
-            "Cái",
-            "Thùng"});
-            this.cbbGname3.ItemsAppearance.Parent = this.cbbGname3;
-            this.cbbGname3.Location = new System.Drawing.Point(0, 22);
-            this.cbbGname3.Margin = new System.Windows.Forms.Padding(10, 3, 10, 5);
-            this.cbbGname3.MaximumSize = new System.Drawing.Size(500, 0);
-            this.cbbGname3.Name = "cbbGname3";
-            this.cbbGname3.ShadowDecoration.Parent = this.cbbGname3;
-            this.cbbGname3.Size = new System.Drawing.Size(198, 36);
-            this.cbbGname3.TabIndex = 32;
-            this.cbbGname3.TextOffset = new System.Drawing.Point(10, 1);
-            this.cbbGname3.SelectedValueChanged += new System.EventHandler(this.cbbGname3_SelectedValueChanged);
-            // 
-            // txtGname3
-            // 
-            this.txtGname3.AutoRoundedCorners = true;
-            this.txtGname3.BorderColor = System.Drawing.Color.DarkOrange;
-            this.txtGname3.BorderRadius = 11;
-            this.txtGname3.BorderThickness = 2;
-            this.txtGname3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtGname3.DefaultText = "";
-            this.txtGname3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtGname3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtGname3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtGname3.DisabledState.Parent = this.txtGname3;
-            this.txtGname3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtGname3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtGname3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGname3.FocusedState.Parent = this.txtGname3;
-            this.txtGname3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGname3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGname3.HoverState.Parent = this.txtGname3;
-            this.txtGname3.Location = new System.Drawing.Point(0, 22);
-            this.txtGname3.Margin = new System.Windows.Forms.Padding(4);
-            this.txtGname3.Name = "txtGname3";
-            this.txtGname3.PasswordChar = '\0';
-            this.txtGname3.PlaceholderText = "";
-            this.txtGname3.SelectedText = "";
-            this.txtGname3.ShadowDecoration.Parent = this.txtGname3;
-            this.txtGname3.Size = new System.Drawing.Size(198, 25);
-            this.txtGname3.TabIndex = 33;
-            this.txtGname3.TextOffset = new System.Drawing.Point(10, 1);
-            this.txtGname3.Visible = false;
-            // 
-            // guna2Panel77
-            // 
-            this.guna2Panel77.Controls.Add(this.guna2Panel78);
-            this.guna2Panel77.Controls.Add(this.guna2Panel79);
-            this.guna2Panel77.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel77.Location = new System.Drawing.Point(2, 85);
-            this.guna2Panel77.Name = "guna2Panel77";
-            this.guna2Panel77.Padding = new System.Windows.Forms.Padding(20, 3, 10, 0);
-            this.guna2Panel77.ShadowDecoration.Parent = this.guna2Panel77;
-            this.guna2Panel77.Size = new System.Drawing.Size(468, 55);
-            this.guna2Panel77.TabIndex = 3;
-            // 
-            // guna2Panel79
-            // 
-            this.guna2Panel79.Controls.Add(this.txtSellingPrice3);
-            this.guna2Panel79.Controls.Add(this.label35);
-            this.guna2Panel79.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2Panel79.Location = new System.Drawing.Point(240, 3);
-            this.guna2Panel79.Name = "guna2Panel79";
-            this.guna2Panel79.Padding = new System.Windows.Forms.Padding(0, 0, 20, 5);
-            this.guna2Panel79.ShadowDecoration.Parent = this.guna2Panel79;
-            this.guna2Panel79.Size = new System.Drawing.Size(218, 52);
-            this.guna2Panel79.TabIndex = 3;
-            // 
-            // label35
-            // 
-            this.label35.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label35.ForeColor = System.Drawing.Color.Orange;
-            this.label35.Location = new System.Drawing.Point(0, 0);
-            this.label35.Name = "label35";
-            this.label35.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label35.Size = new System.Drawing.Size(198, 22);
-            this.label35.TabIndex = 0;
-            this.label35.Text = "Selling Price";
-            // 
-            // txtSellingPrice3
-            // 
-            this.txtSellingPrice3.AutoRoundedCorners = true;
-            this.txtSellingPrice3.BorderColor = System.Drawing.Color.DarkOrange;
-            this.txtSellingPrice3.BorderRadius = 11;
-            this.txtSellingPrice3.BorderThickness = 2;
-            this.txtSellingPrice3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSellingPrice3.DefaultText = "";
-            this.txtSellingPrice3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSellingPrice3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSellingPrice3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSellingPrice3.DisabledState.Parent = this.txtSellingPrice3;
-            this.txtSellingPrice3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSellingPrice3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtSellingPrice3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSellingPrice3.FocusedState.Parent = this.txtSellingPrice3;
-            this.txtSellingPrice3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSellingPrice3.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txtSellingPrice3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSellingPrice3.HoverState.Parent = this.txtSellingPrice3;
-            this.txtSellingPrice3.Location = new System.Drawing.Point(0, 22);
-            this.txtSellingPrice3.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSellingPrice3.Name = "txtSellingPrice3";
-            this.txtSellingPrice3.PasswordChar = '\0';
-            this.txtSellingPrice3.PlaceholderText = "";
-            this.txtSellingPrice3.SelectedText = "";
-            this.txtSellingPrice3.ShadowDecoration.Parent = this.txtSellingPrice3;
-            this.txtSellingPrice3.Size = new System.Drawing.Size(198, 25);
-            this.txtSellingPrice3.TabIndex = 2;
-            this.txtSellingPrice3.TextOffset = new System.Drawing.Point(10, 1);
-            this.txtSellingPrice3.Enter += new System.EventHandler(this.txtSellingPrice3_Enter);
-            this.txtSellingPrice3.Leave += new System.EventHandler(this.txtSellingPrice3_Leave);
-            // 
-            // guna2Panel78
-            // 
-            this.guna2Panel78.Controls.Add(this.cbbUnit3);
-            this.guna2Panel78.Controls.Add(this.label34);
-            this.guna2Panel78.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel78.Location = new System.Drawing.Point(20, 3);
-            this.guna2Panel78.Name = "guna2Panel78";
-            this.guna2Panel78.Padding = new System.Windows.Forms.Padding(0, 0, 20, 5);
-            this.guna2Panel78.ShadowDecoration.Parent = this.guna2Panel78;
-            this.guna2Panel78.Size = new System.Drawing.Size(220, 52);
-            this.guna2Panel78.TabIndex = 4;
-            // 
-            // label34
-            // 
-            this.label34.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label34.ForeColor = System.Drawing.Color.Orange;
-            this.label34.Location = new System.Drawing.Point(0, 0);
-            this.label34.Name = "label34";
-            this.label34.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label34.Size = new System.Drawing.Size(200, 22);
-            this.label34.TabIndex = 0;
-            this.label34.Text = "Unit";
-            // 
-            // cbbUnit3
-            // 
-            this.cbbUnit3.AutoRoundedCorners = true;
-            this.cbbUnit3.BackColor = System.Drawing.Color.Transparent;
-            this.cbbUnit3.BorderColor = System.Drawing.Color.Orange;
-            this.cbbUnit3.BorderRadius = 17;
-            this.cbbUnit3.BorderThickness = 2;
-            this.cbbUnit3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbbUnit3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbUnit3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbUnit3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
-            this.cbbUnit3.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbUnit3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbUnit3.FocusedState.Parent = this.cbbUnit3;
-            this.cbbUnit3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.cbbUnit3.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.cbbUnit3.HoverState.Parent = this.cbbUnit3;
-            this.cbbUnit3.ItemHeight = 30;
-            this.cbbUnit3.Items.AddRange(new object[] {
-            "Chai",
-            "Lon",
-            "Gói",
-            "Ly",
-            "Hủ",
-            "Bịch",
-            "Viên",
-            "Phần",
-            "Kg",
-            "Cái",
-            "Thùng"});
-            this.cbbUnit3.ItemsAppearance.Parent = this.cbbUnit3;
-            this.cbbUnit3.Location = new System.Drawing.Point(0, 22);
-            this.cbbUnit3.Margin = new System.Windows.Forms.Padding(10, 3, 10, 5);
-            this.cbbUnit3.MaximumSize = new System.Drawing.Size(500, 0);
-            this.cbbUnit3.Name = "cbbUnit3";
-            this.cbbUnit3.ShadowDecoration.Parent = this.cbbUnit3;
-            this.cbbUnit3.Size = new System.Drawing.Size(200, 36);
-            this.cbbUnit3.TabIndex = 32;
-            this.cbbUnit3.TextOffset = new System.Drawing.Point(10, 1);
-            // 
-            // guna2Panel74
-            // 
-            this.guna2Panel74.Controls.Add(this.guna2Panel75);
-            this.guna2Panel74.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel74.Location = new System.Drawing.Point(2, 140);
-            this.guna2Panel74.Name = "guna2Panel74";
-            this.guna2Panel74.Padding = new System.Windows.Forms.Padding(20, 10, 10, 0);
-            this.guna2Panel74.ShadowDecoration.Parent = this.guna2Panel74;
-            this.guna2Panel74.Size = new System.Drawing.Size(468, 131);
-            this.guna2Panel74.TabIndex = 4;
-            // 
-            // guna2Panel75
-            // 
-            this.guna2Panel75.Controls.Add(this.tlpPictureWrapper2);
-            this.guna2Panel75.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel75.Location = new System.Drawing.Point(20, 10);
-            this.guna2Panel75.Name = "guna2Panel75";
-            this.guna2Panel75.Padding = new System.Windows.Forms.Padding(0, 0, 20, 5);
-            this.guna2Panel75.ShadowDecoration.Parent = this.guna2Panel75;
-            this.guna2Panel75.Size = new System.Drawing.Size(438, 121);
-            this.guna2Panel75.TabIndex = 0;
-            // 
-            // tlpPictureWrapper2
-            // 
-            this.tlpPictureWrapper2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.tlpPictureWrapper2.ColumnCount = 3;
-            this.tlpPictureWrapper2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpPictureWrapper2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpPictureWrapper2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpPictureWrapper2.Controls.Add(this.pbPiture3, 0, 0);
-            this.tlpPictureWrapper2.Controls.Add(this.txtUrl3, 2, 0);
-            this.tlpPictureWrapper2.Controls.Add(this.guna2Panel76, 1, 0);
-            this.tlpPictureWrapper2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpPictureWrapper2.Location = new System.Drawing.Point(0, 0);
-            this.tlpPictureWrapper2.Margin = new System.Windows.Forms.Padding(5);
-            this.tlpPictureWrapper2.Name = "tlpPictureWrapper2";
-            this.tlpPictureWrapper2.RowCount = 1;
-            this.tlpPictureWrapper2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpPictureWrapper2.Size = new System.Drawing.Size(418, 116);
-            this.tlpPictureWrapper2.TabIndex = 1;
-            // 
-            // guna2Panel76
-            // 
-            this.guna2Panel76.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel76.Controls.Add(this.panel1);
-            this.guna2Panel76.Controls.Add(this.panel2);
-            this.guna2Panel76.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel76.Location = new System.Drawing.Point(109, 5);
-            this.guna2Panel76.Margin = new System.Windows.Forms.Padding(5);
-            this.guna2Panel76.Name = "guna2Panel76";
-            this.guna2Panel76.Padding = new System.Windows.Forms.Padding(10);
-            this.guna2Panel76.ShadowDecoration.Parent = this.guna2Panel76;
-            this.guna2Panel76.Size = new System.Drawing.Size(94, 106);
-            this.guna2Panel76.TabIndex = 6;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.btnChangePicture3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(10, 10);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(5, 5, 5, 10);
-            this.panel2.Size = new System.Drawing.Size(74, 40);
-            this.panel2.TabIndex = 0;
-            // 
-            // btnChangePicture3
-            // 
-            this.btnChangePicture3.Animated = true;
-            this.btnChangePicture3.AutoRoundedCorners = true;
-            this.btnChangePicture3.BackColor = System.Drawing.Color.Transparent;
-            this.btnChangePicture3.BorderRadius = 11;
-            this.btnChangePicture3.CheckedState.Parent = this.btnChangePicture3;
-            this.btnChangePicture3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChangePicture3.CustomImages.Parent = this.btnChangePicture3;
-            this.btnChangePicture3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnChangePicture3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnChangePicture3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnChangePicture3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnChangePicture3.DisabledState.Parent = this.btnChangePicture3;
-            this.btnChangePicture3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnChangePicture3.FillColor = System.Drawing.Color.Orange;
-            this.btnChangePicture3.Font = new System.Drawing.Font("Poppins Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChangePicture3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.btnChangePicture3.HoverState.Parent = this.btnChangePicture3;
-            this.btnChangePicture3.Image = global::Manage_Store.Properties.Resources.replace;
-            this.btnChangePicture3.ImageOffset = new System.Drawing.Point(-2, 0);
-            this.btnChangePicture3.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnChangePicture3.Location = new System.Drawing.Point(5, 5);
-            this.btnChangePicture3.Name = "btnChangePicture3";
-            this.btnChangePicture3.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.btnChangePicture3.ShadowDecoration.Parent = this.btnChangePicture3;
-            this.btnChangePicture3.Size = new System.Drawing.Size(64, 25);
-            this.btnChangePicture3.TabIndex = 1;
-            this.btnChangePicture3.Text = "Change";
-            this.btnChangePicture3.Click += new System.EventHandler(this.btnChangePicture3_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.btnDeletePicture3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(10, 50);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(5, 5, 5, 10);
-            this.panel1.Size = new System.Drawing.Size(74, 40);
-            this.panel1.TabIndex = 1;
-            // 
-            // btnDeletePicture3
-            // 
-            this.btnDeletePicture3.Animated = true;
-            this.btnDeletePicture3.AutoRoundedCorners = true;
-            this.btnDeletePicture3.BackColor = System.Drawing.Color.Transparent;
-            this.btnDeletePicture3.BorderRadius = 11;
-            this.btnDeletePicture3.CheckedState.Parent = this.btnDeletePicture3;
-            this.btnDeletePicture3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeletePicture3.CustomImages.Parent = this.btnDeletePicture3;
-            this.btnDeletePicture3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDeletePicture3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDeletePicture3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDeletePicture3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDeletePicture3.DisabledState.Parent = this.btnDeletePicture3;
-            this.btnDeletePicture3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDeletePicture3.FillColor = System.Drawing.Color.Orange;
-            this.btnDeletePicture3.Font = new System.Drawing.Font("Poppins Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePicture3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.btnDeletePicture3.HoverState.Parent = this.btnDeletePicture3;
-            this.btnDeletePicture3.Image = global::Manage_Store.Properties.Resources.bin;
-            this.btnDeletePicture3.ImageOffset = new System.Drawing.Point(-2, 0);
-            this.btnDeletePicture3.ImageSize = new System.Drawing.Size(22, 22);
-            this.btnDeletePicture3.Location = new System.Drawing.Point(5, 5);
-            this.btnDeletePicture3.Name = "btnDeletePicture3";
-            this.btnDeletePicture3.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.btnDeletePicture3.ShadowDecoration.Parent = this.btnDeletePicture3;
-            this.btnDeletePicture3.Size = new System.Drawing.Size(64, 25);
-            this.btnDeletePicture3.TabIndex = 1;
-            this.btnDeletePicture3.Text = "Delete";
-            this.btnDeletePicture3.Click += new System.EventHandler(this.btnDeletePicture3_Click);
-            // 
-            // txtUrl3
-            // 
-            this.txtUrl3.BorderColor = System.Drawing.Color.Goldenrod;
-            this.txtUrl3.BorderRadius = 10;
-            this.txtUrl3.BorderThickness = 2;
-            this.txtUrl3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUrl3.DefaultText = "";
-            this.txtUrl3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtUrl3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtUrl3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUrl3.DisabledState.Parent = this.txtUrl3;
-            this.txtUrl3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUrl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtUrl3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
-            this.txtUrl3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUrl3.FocusedState.Parent = this.txtUrl3;
-            this.txtUrl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUrl3.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txtUrl3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUrl3.HoverState.Parent = this.txtUrl3;
-            this.txtUrl3.Location = new System.Drawing.Point(218, 10);
-            this.txtUrl3.Margin = new System.Windows.Forms.Padding(10);
-            this.txtUrl3.Multiline = true;
-            this.txtUrl3.Name = "txtUrl3";
-            this.txtUrl3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.txtUrl3.PasswordChar = '\0';
-            this.txtUrl3.PlaceholderText = "";
-            this.txtUrl3.SelectedText = "";
-            this.txtUrl3.ShadowDecoration.Parent = this.txtUrl3;
-            this.txtUrl3.Size = new System.Drawing.Size(190, 96);
-            this.txtUrl3.TabIndex = 29;
-            this.txtUrl3.TextOffset = new System.Drawing.Point(10, 1);
-            this.txtUrl3.TextChanged += new System.EventHandler(this.txtUrl3_TextChanged);
-            // 
-            // pbPiture3
-            // 
-            this.pbPiture3.BorderRadius = 10;
-            this.pbPiture3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbPiture3.FillColor = System.Drawing.Color.Silver;
-            this.pbPiture3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.pbPiture3.Image = ((System.Drawing.Image)(resources.GetObject("pbPiture3.Image")));
-            this.pbPiture3.ImageRotate = 0F;
-            this.pbPiture3.Location = new System.Drawing.Point(10, 10);
-            this.pbPiture3.Margin = new System.Windows.Forms.Padding(10, 10, 0, 10);
-            this.pbPiture3.Name = "pbPiture3";
-            this.pbPiture3.ShadowDecoration.Parent = this.pbPiture3;
-            this.pbPiture3.Size = new System.Drawing.Size(94, 96);
-            this.pbPiture3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPiture3.TabIndex = 30;
-            this.pbPiture3.TabStop = false;
-            // 
-            // guna2Panel21
-            // 
-            this.guna2Panel21.Controls.Add(this.guna2Panel23);
-            this.guna2Panel21.Controls.Add(this.guna2Panel24);
-            this.guna2Panel21.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel21.Location = new System.Drawing.Point(2, 271);
-            this.guna2Panel21.Name = "guna2Panel21";
-            this.guna2Panel21.Padding = new System.Windows.Forms.Padding(20, 3, 10, 0);
-            this.guna2Panel21.ShadowDecoration.Parent = this.guna2Panel21;
-            this.guna2Panel21.Size = new System.Drawing.Size(468, 55);
-            this.guna2Panel21.TabIndex = 5;
-            // 
-            // guna2Panel24
-            // 
-            this.guna2Panel24.Controls.Add(this.txtImportPrice3);
-            this.guna2Panel24.Controls.Add(this.label28);
-            this.guna2Panel24.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2Panel24.Location = new System.Drawing.Point(240, 3);
-            this.guna2Panel24.Name = "guna2Panel24";
-            this.guna2Panel24.Padding = new System.Windows.Forms.Padding(0, 0, 20, 5);
-            this.guna2Panel24.ShadowDecoration.Parent = this.guna2Panel24;
-            this.guna2Panel24.Size = new System.Drawing.Size(218, 52);
-            this.guna2Panel24.TabIndex = 3;
-            // 
-            // label28
-            // 
-            this.label28.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label28.ForeColor = System.Drawing.Color.Orange;
-            this.label28.Location = new System.Drawing.Point(0, 0);
-            this.label28.Name = "label28";
-            this.label28.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label28.Size = new System.Drawing.Size(198, 22);
-            this.label28.TabIndex = 0;
-            this.label28.Text = "Import Price";
-            // 
-            // txtImportPrice3
-            // 
-            this.txtImportPrice3.AutoRoundedCorners = true;
-            this.txtImportPrice3.BorderColor = System.Drawing.Color.DarkOrange;
-            this.txtImportPrice3.BorderRadius = 11;
-            this.txtImportPrice3.BorderThickness = 2;
-            this.txtImportPrice3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtImportPrice3.DefaultText = "0 đ";
-            this.txtImportPrice3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtImportPrice3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtImportPrice3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtImportPrice3.DisabledState.Parent = this.txtImportPrice3;
-            this.txtImportPrice3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtImportPrice3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtImportPrice3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtImportPrice3.FocusedState.Parent = this.txtImportPrice3;
-            this.txtImportPrice3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtImportPrice3.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txtImportPrice3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtImportPrice3.HoverState.Parent = this.txtImportPrice3;
-            this.txtImportPrice3.Location = new System.Drawing.Point(0, 22);
-            this.txtImportPrice3.Margin = new System.Windows.Forms.Padding(4);
-            this.txtImportPrice3.Name = "txtImportPrice3";
-            this.txtImportPrice3.PasswordChar = '\0';
-            this.txtImportPrice3.PlaceholderText = "";
-            this.txtImportPrice3.SelectedText = "";
-            this.txtImportPrice3.ShadowDecoration.Parent = this.txtImportPrice3;
-            this.txtImportPrice3.Size = new System.Drawing.Size(198, 25);
-            this.txtImportPrice3.TabIndex = 2;
-            this.txtImportPrice3.TextOffset = new System.Drawing.Point(10, 1);
-            this.txtImportPrice3.Enter += new System.EventHandler(this.txtImportPrice3_Enter);
-            this.txtImportPrice3.Leave += new System.EventHandler(this.txtImportPrice3_Leave);
-            // 
-            // guna2Panel23
-            // 
-            this.guna2Panel23.Controls.Add(this.nudQuantity3);
-            this.guna2Panel23.Controls.Add(this.label17);
-            this.guna2Panel23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel23.Location = new System.Drawing.Point(20, 3);
-            this.guna2Panel23.Name = "guna2Panel23";
-            this.guna2Panel23.Padding = new System.Windows.Forms.Padding(0, 0, 40, 5);
-            this.guna2Panel23.ShadowDecoration.Parent = this.guna2Panel23;
-            this.guna2Panel23.Size = new System.Drawing.Size(220, 52);
-            this.guna2Panel23.TabIndex = 4;
-            // 
-            // label17
-            // 
-            this.label17.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label17.ForeColor = System.Drawing.Color.Orange;
-            this.label17.Location = new System.Drawing.Point(0, 0);
-            this.label17.Name = "label17";
-            this.label17.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label17.Size = new System.Drawing.Size(180, 22);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "Quantity";
-            // 
-            // nudQuantity3
-            // 
-            this.nudQuantity3.AutoRoundedCorners = true;
-            this.nudQuantity3.BackColor = System.Drawing.Color.Transparent;
-            this.nudQuantity3.BorderColor = System.Drawing.Color.Goldenrod;
-            this.nudQuantity3.BorderRadius = 11;
-            this.nudQuantity3.BorderThickness = 2;
-            this.nudQuantity3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nudQuantity3.DisabledState.Parent = this.nudQuantity3;
-            this.nudQuantity3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nudQuantity3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
-            this.nudQuantity3.FocusedState.Parent = this.nudQuantity3;
-            this.nudQuantity3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudQuantity3.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.nudQuantity3.Location = new System.Drawing.Point(0, 22);
-            this.nudQuantity3.Margin = new System.Windows.Forms.Padding(10, 3, 10, 5);
-            this.nudQuantity3.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.nudQuantity3.MaximumSize = new System.Drawing.Size(500, 50);
-            this.nudQuantity3.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudQuantity3.Name = "nudQuantity3";
-            this.nudQuantity3.ShadowDecoration.Parent = this.nudQuantity3;
-            this.nudQuantity3.Size = new System.Drawing.Size(180, 25);
-            this.nudQuantity3.TabIndex = 40;
-            this.nudQuantity3.TextOffset = new System.Drawing.Point(10, 0);
-            this.nudQuantity3.UpDownButtonBorderVisible = false;
-            this.nudQuantity3.UpDownButtonFillColor = System.Drawing.Color.Orange;
-            this.nudQuantity3.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // gbGoodInformation
-            // 
-            this.gbGoodInformation.BorderColor = System.Drawing.Color.Orange;
-            this.gbGoodInformation.BorderRadius = 10;
-            this.gbGoodInformation.BorderThickness = 2;
-            this.gbGoodInformation.Controls.Add(this.guna2Panel21);
-            this.gbGoodInformation.Controls.Add(this.guna2Panel74);
-            this.gbGoodInformation.Controls.Add(this.guna2Panel77);
-            this.gbGoodInformation.Controls.Add(this.guna2Panel80);
-            this.gbGoodInformation.CustomBorderColor = System.Drawing.Color.Orange;
-            this.gbGoodInformation.CustomBorderThickness = new System.Windows.Forms.Padding(2, 40, 2, 2);
-            this.gbGoodInformation.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gbGoodInformation.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.gbGoodInformation.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbGoodInformation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.gbGoodInformation.Location = new System.Drawing.Point(5, 0);
-            this.gbGoodInformation.Name = "gbGoodInformation";
-            this.gbGoodInformation.Padding = new System.Windows.Forms.Padding(2, 30, 2, 2);
-            this.gbGoodInformation.ShadowDecoration.Parent = this.gbGoodInformation;
-            this.gbGoodInformation.Size = new System.Drawing.Size(472, 337);
-            this.gbGoodInformation.TabIndex = 1;
-            this.gbGoodInformation.Text = "Goods Information ";
             // 
             // fContract
             // 
@@ -4413,6 +4450,10 @@ namespace GUI
             this.pnBtnPictureSideWrapper.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.pnItemNameList.ResumeLayout(false);
+            this.guna2Panel34.ResumeLayout(false);
+            this.guna2Panel36.ResumeLayout(false);
+            this.guna2Panel37.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).EndInit();
             this.pnGoodsView.ResumeLayout(false);
             this.pnGeneralInformation.ResumeLayout(false);
             this.gbGeneralInformation.ResumeLayout(false);
@@ -4437,7 +4478,28 @@ namespace GUI
             this.tlpMain.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.guna2Panel70.ResumeLayout(false);
+            this.guna2Panel18.ResumeLayout(false);
+            this.guna2GroupBox1.ResumeLayout(false);
             this.guna2Panel31.ResumeLayout(false);
+            this.gbGoodInformation.ResumeLayout(false);
+            this.guna2Panel21.ResumeLayout(false);
+            this.guna2Panel24.ResumeLayout(false);
+            this.guna2Panel23.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuantity3)).EndInit();
+            this.guna2Panel74.ResumeLayout(false);
+            this.guna2Panel75.ResumeLayout(false);
+            this.tlpPictureWrapper2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbPicture3)).EndInit();
+            this.guna2Panel76.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.guna2Panel77.ResumeLayout(false);
+            this.guna2Panel78.ResumeLayout(false);
+            this.guna2Panel79.ResumeLayout(false);
+            this.guna2Panel80.ResumeLayout(false);
+            this.guna2Panel81.ResumeLayout(false);
+            this.guna2Panel82.ResumeLayout(false);
+            this.pnGoodsType3.ResumeLayout(false);
             this.pnGeneralInformation2.ResumeLayout(false);
             this.guna2Panel44.ResumeLayout(false);
             this.gbProviderInformation.ResumeLayout(false);
@@ -4452,6 +4514,12 @@ namespace GUI
             this.pnTypeProvider3.ResumeLayout(false);
             this.pnTypeProvider3.PerformLayout();
             this.guna2Panel49.ResumeLayout(false);
+            this.gbGeneralInformation2.ResumeLayout(false);
+            this.guna2Panel29.ResumeLayout(false);
+            this.guna2Panel30.ResumeLayout(false);
+            this.guna2Panel45.ResumeLayout(false);
+            this.guna2Panel47.ResumeLayout(false);
+            this.guna2Panel35.ResumeLayout(false);
             this.tlpType.ResumeLayout(false);
             this.tlpSearch.ResumeLayout(false);
             this.pnSearchAndFunction.ResumeLayout(false);
@@ -4461,37 +4529,6 @@ namespace GUI
             this.pnBtnDetail.ResumeLayout(false);
             this.pnDelete.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvContract)).EndInit();
-            this.guna2Panel37.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).EndInit();
-            this.guna2Panel36.ResumeLayout(false);
-            this.guna2Panel34.ResumeLayout(false);
-            this.guna2Panel29.ResumeLayout(false);
-            this.guna2Panel30.ResumeLayout(false);
-            this.gbGeneralInformation2.ResumeLayout(false);
-            this.guna2Panel35.ResumeLayout(false);
-            this.guna2Panel47.ResumeLayout(false);
-            this.guna2Panel45.ResumeLayout(false);
-            this.guna2GroupBox1.ResumeLayout(false);
-            this.guna2Panel18.ResumeLayout(false);
-            this.guna2Panel80.ResumeLayout(false);
-            this.guna2Panel82.ResumeLayout(false);
-            this.pnGoodsType3.ResumeLayout(false);
-            this.guna2Panel81.ResumeLayout(false);
-            this.guna2Panel77.ResumeLayout(false);
-            this.guna2Panel79.ResumeLayout(false);
-            this.guna2Panel78.ResumeLayout(false);
-            this.guna2Panel74.ResumeLayout(false);
-            this.guna2Panel75.ResumeLayout(false);
-            this.tlpPictureWrapper2.ResumeLayout(false);
-            this.guna2Panel76.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbPiture3)).EndInit();
-            this.guna2Panel21.ResumeLayout(false);
-            this.guna2Panel24.ResumeLayout(false);
-            this.guna2Panel23.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nudQuantity3)).EndInit();
-            this.gbGoodInformation.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -4538,8 +4575,6 @@ namespace GUI
         private Guna.UI2.WinForms.Guna2TextBox txtPaddress;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel32;
-        private Guna.UI2.WinForms.Guna2TextBox txtPname;
-        private Guna.UI2.WinForms.Guna2ComboBox cbbPname;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel12;
@@ -4600,13 +4635,11 @@ namespace GUI
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel38;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel39;
-        private Guna.UI2.WinForms.Guna2ComboBox cbbPname3;
-        private System.Windows.Forms.Label label25;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel40;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel41;
         private Guna.UI2.WinForms.Guna2Panel pnTypeProvider3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbPnew2;
+        private System.Windows.Forms.RadioButton rbPold2;
         private System.Windows.Forms.Label label26;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel49;
         private System.Windows.Forms.TableLayoutPanel tlpType;
@@ -4675,13 +4708,10 @@ namespace GUI
         private Guna.UI2.WinForms.Guna2Panel guna2Panel23;
         private Guna.UI2.WinForms.Guna2NumericUpDown nudQuantity3;
         private System.Windows.Forms.Label label17;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel24;
-        private Guna.UI2.WinForms.Guna2TextBox txtImportPrice3;
-        private System.Windows.Forms.Label label28;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel74;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel75;
         private System.Windows.Forms.TableLayoutPanel tlpPictureWrapper2;
-        private Guna.UI2.WinForms.Guna2PictureBox pbPiture3;
+        private Guna.UI2.WinForms.Guna2PictureBox pbPicture3;
         private Guna.UI2.WinForms.Guna2TextBox txtUrl3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel76;
         private System.Windows.Forms.Panel panel1;
@@ -4705,5 +4735,13 @@ namespace GUI
         private System.Windows.Forms.RadioButton rbGnew3;
         private System.Windows.Forms.RadioButton rbGold3;
         private System.Windows.Forms.Label label37;
+        private Guna.UI2.WinForms.Guna2TextBox txtPname;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbPname;
+        private Guna.UI2.WinForms.Guna2TextBox txtPname3;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbPname3;
+        private System.Windows.Forms.Label label13;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel24;
+        private Guna.UI2.WinForms.Guna2TextBox txtImportPrice3;
+        private System.Windows.Forms.Label label28;
     }
 }

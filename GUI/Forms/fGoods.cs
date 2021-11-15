@@ -122,7 +122,7 @@ namespace GUI
                 Color.Transparent, 0, ButtonBorderStyle.Solid);
         }
 
-        private void btnAll_Click(object sender, EventArgs e)
+        private void btnAllGoods_Click(object sender, EventArgs e)
         {
             string error = null;
             DataTable dt = bll.GetGoodsTable(ref error);
@@ -367,6 +367,7 @@ namespace GUI
             }
             if (!message.ToLower().Contains("failed"))
             {
+                pbPicture.Image.Dispose();
                 string ex = root.UpdateImageLocation(txtUrlImage.Text, relativeUrl, newPath);
                 if (ex != null)
                     MessageBox.Show(ex);

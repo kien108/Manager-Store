@@ -129,9 +129,9 @@ namespace BLL
             if (error != null)
                 return "Insert failed!\n" + error;
             if (!string.IsNullOrEmpty(message.Trim()))
-                return "v failed!\n" + message;
+                return "Insert failed!\n" + message;
             if (!inserted)
-                return "No data is insert!";
+                return "No data is inserted!";
             return "Insert successful!";
         }
 

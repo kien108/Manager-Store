@@ -122,7 +122,10 @@ namespace GUI
             string error = null;
             DataTable dt = bll.GetAllEmployee(ref error);
             if (dt == null)
+            {
+                MessageBox.Show(error);
                 return;
+            }
             if (error != null)
             {
                 MessageBox.Show(error);
@@ -272,7 +275,8 @@ namespace GUI
         private void btnDetail_Click(object sender, EventArgs e)
         {
             lbSideBarTitle.Text = "Detail Information";
-            tlpPictureSide.Enabled = false;
+            btnChangePicture.Enabled = false;
+            btnDeletePicture.Enabled = false;
             gbPersonalInformation.Enabled = false;
             gbWorkInformation.Enabled = false;
             btnTick.Image = global::Manage_Store.Properties.Resources.edit2;
@@ -304,22 +308,22 @@ namespace GUI
                 rbWorking.Checked = true;
             else
                 rbQuitWork.Checked = true;
-            if (dr["Role"].ToString().ToLower() == "admin")
-            {
-                cbbRole.SelectedIndex = 2;
-                btnTick.Enabled = false;
-            }
-            else if (dr["Role"].ToString().ToLower() == "staff")
-            {
-                cbbRole.SelectedIndex = 0;
-                btnTick.Enabled = true;
-            }
-            else
-            {
-                cbbRole.SelectedIndex = 1;
-                btnTick.Enabled = true;
-            }
-            if (cbbRole.SelectedIndex == 2)
+            //if (dr["Role"].ToString().ToLower() == "admin")
+            //{
+            //    cbbRole.SelectedIndex = 2;
+            //    btnTick.Enabled = false;
+            //}
+            //else if (dr["Role"].ToString().ToLower() == "staff")
+            //{
+            //    cbbRole.SelectedIndex = 0;
+            //    btnTick.Enabled = true;
+            //}
+            //else
+            //{
+            //    cbbRole.SelectedIndex = 1;
+            //    btnTick.Enabled = true;
+            //}
+            if ((string)dr["Role"] == "ADMIN")
             {
                 nudWorkingDays.Value = 0;
                 nudDayWage.Value = 0;
@@ -353,7 +357,8 @@ namespace GUI
             {
                 lbSideBarTitle.Text = "Edit Information";
                 btnTick.Image = global::Manage_Store.Properties.Resources.tick;
-                tlpPictureSide.Enabled = true;
+                btnChangePicture.Enabled = true;
+                btnDeletePicture.Enabled = true;
                 gbPersonalInformation.Enabled = true;
                 gbWorkInformation.Enabled = true;
                 btnSideBarConfirm.Enabled = true;
@@ -365,7 +370,8 @@ namespace GUI
             {
                 lbSideBarTitle.Text = "Detail Information";
                 btnTick.Image = global::Manage_Store.Properties.Resources.edit2;
-                tlpPictureSide.Enabled = false;
+                btnChangePicture.Enabled = false;
+                btnDeletePicture.Enabled = false;
                 gbPersonalInformation.Enabled = false;
                 gbWorkInformation.Enabled = false;
                 btnSideBarConfirm.Enabled = false;
@@ -385,7 +391,8 @@ namespace GUI
         private void btnAdd_Click(object sender, EventArgs e)
         {
             lbSideBarTitle.Text = "Add employee";
-            tlpPictureSide.Enabled = true;
+            btnChangePicture.Enabled = true;
+            btnDeletePicture.Enabled = true;
             gbPersonalInformation.Enabled = true;
             gbWorkInformation.Enabled = true;
             pnStateOption.Enabled = false;
@@ -487,6 +494,7 @@ namespace GUI
                 btnSideBarConfirm.Enabled = false;
                 if (!message.ToLower().Contains("failed"))
                 {
+                    pbPiture.Image.Dispose();
                     string ex = root.UpdateImageLocation(txtUrl.Text, url, root.ProjectPath() + root.imageEmployees + phoneNumber + ".png");
                     if (ex != null)
                         MessageBox.Show(ex);
@@ -500,6 +508,7 @@ namespace GUI
                 btnSideBarConfirm.Enabled = false;
                 if (!message.ToLower().Contains("failed"))
                 {
+                    pbPiture.Image.Dispose();
                     string ex = root.UpdateImageLocation(txtUrl.Text, relativeUrl, absoluteUrl);
                     if (ex != null)
                         MessageBox.Show(ex);

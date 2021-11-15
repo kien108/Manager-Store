@@ -59,7 +59,6 @@ D:\Document\~project\Manager-Store\GUI\bin\Debug\MstGrid.dll
 D:\Document\~project\Manager-Store\GUI\obj\Debug\GUI.DefinedFramework.GoodsCell.resources
 D:\Document\~project\Manager-Store\GUI\obj\Debug\GUI.DefinedFramework.PanelGoodsInCart.resources
 D:\Document\~project\Manager-Store\GUI\obj\Debug\GUI.DefinedFramework.GoodsView.resources
-D:\Document\~project\Manager-Store\GUI\obj\Debug\Manage_Store.Forms.temp.resources
 D:\~project\Manager-Store\GUI\bin\Debug\Manage Store.exe.config
 D:\~project\Manager-Store\GUI\bin\Debug\Manage Store.exe
 D:\~project\Manager-Store\GUI\bin\Debug\Manage Store.pdb

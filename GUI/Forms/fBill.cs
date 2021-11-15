@@ -61,6 +61,7 @@ namespace GUI
             dgvBills.DataSource = bll.GetAllBills(ref error);
             if (dgvBills.DataSource == null)
             {
+                MessageBox.Show(error);
                 Enabled = false;
                 return;
             }

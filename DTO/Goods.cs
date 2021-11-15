@@ -15,8 +15,9 @@ namespace DTO
         public int Quantity { get; set; }
         public bool Selling { get; set; }
         public bool Image { get; set; }
+        public string Url { get; set; }
 
-        public Goods(int id, string name, string unit, double price, int quantity, bool selling, bool image)
+        public Goods(int id, string name, string unit, double price, int quantity, bool selling, bool image, string url = null)
         {
             Id = id;
             Name = name;
@@ -25,6 +26,7 @@ namespace DTO
             Quantity = quantity;
             Selling = selling;
             Image = image;
+            Url = url;
         }
     }
 }

@@ -57,6 +57,7 @@ namespace GUI
                 }
                 return;
             }
+            bll.InsertLoginTime(id);
             LoginAccount(id);
         }
 

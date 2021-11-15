@@ -43,7 +43,10 @@ namespace GUI
 
         private void fHome_Load(object sender, EventArgs e)
         {
-            
+            bool isStockmanager = ((fMain)Parent.Parent.Parent).Profile.Role != "STOCK MANAGER";
+            tlpGoods.Enabled = isStockmanager;
+            pnButtons.Enabled = isStockmanager;
+
         }
 
         private void LoadGoods()

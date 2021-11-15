@@ -32,6 +32,7 @@ namespace GUI.DefinedFramework
             this.pnHover = new Guna.UI2.WinForms.Guna2Panel();
             this.lbQuantity = new System.Windows.Forms.Label();
             this.ecCell = new ElipseToolDemo.ElipseControl();
+            this.ttName = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.pnHover.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +66,16 @@ namespace GUI.DefinedFramework
             this.ecCell.CornerRadius = 11;
             this.ecCell.TargetControl = this;
             // 
+            // ttName
+            // 
+            this.ttName.AllowLinksHandling = true;
+            this.ttName.AutoPopDelay = 5000;
+            this.ttName.ForeColor = System.Drawing.Color.Black;
+            this.ttName.InitialDelay = 0;
+            this.ttName.MaximumSize = new System.Drawing.Size(0, 0);
+            this.ttName.ReshowDelay = 100;
+            this.ttName.TitleFont = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            // 
             // GoodsView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -85,5 +96,6 @@ namespace GUI.DefinedFramework
         private ElipseToolDemo.ElipseControl ecCell;
         private System.Windows.Forms.Label lbQuantity;
         public Guna.UI2.WinForms.Guna2Panel pnHover;
+        private Guna.UI2.WinForms.Guna2HtmlToolTip ttName;
     }
 }

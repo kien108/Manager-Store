@@ -28,7 +28,12 @@ namespace GUI.DefinedFramework
             lbQuantity.BackColor = Color.FromArgb(100, Color.Black);
             lbQuantity.ForeColor = Color.White;
             BackColor = Color.White;
-            BackgroundImage = Image.FromFile(root.ProjectPath() + root.imageGoods + g.Name.Replace(' ', '_') + ".png");
+            if (g.Image)
+                BackgroundImage = Image.FromFile(root.ProjectPath() + root.imageGoods + g.Name.Replace(' ', '_') + ".png");
+            else if (string.IsNullOrEmpty(g.Url))
+                BackgroundImage = Image.FromFile(root.ProjectPath() + root.imageGoods + "default.png");
+            else
+                BackgroundImage = Image.FromFile(g.Url);
             BackgroundImageLayout = ImageLayout.Zoom;
             Name = g.Name;
             ContextMenu cm = new ContextMenu();
@@ -39,6 +44,8 @@ namespace GUI.DefinedFramework
             lbQuantity.MouseLeave += new EventHandler(pnHover_MouseLeave);
             lbQuantity.Click += new EventHandler(pnHover_Click);
             pnHover.BackColor = Color.FromArgb(80, Color.Black);
+            ttName.SetToolTip(pnHover, g.Name);
+            ttName.SetToolTip(lbQuantity, g.Name);
         }
 
         public void UpdateQuantity(int quantity)

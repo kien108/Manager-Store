@@ -25,6 +25,20 @@ namespace BLL
                 new SqlParameter("password", password)).ToString();
         }
 
+        public string InsertLoginTime(int eid)
+        {
+            string error = null, message = null;
+            string day = DateTime.Now.ToString("yyyy-MM-dd");
+            bool inserted = BLL.dal.ExecuteNonQuery("sp_InsertLogin", CommandType.StoredProcedure, ref error, ref message,
+                new SqlParameter("day", day),
+                new SqlParameter("eid", eid));
+            if (error != null)
+                return "Insert failed!\n" + error;
+            if (!inserted)
+                return "Data is not inserted!";
+            return "Insert successful!";
+        }
+
         public Employee GetEmployeeProfile(int id, ref string error)
         {
             string sql = "sp_LoadProfile";
