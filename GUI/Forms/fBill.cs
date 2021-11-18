@@ -62,13 +62,23 @@ namespace GUI
             if (dgvBills.DataSource == null)
             {
                 MessageBox.Show(error);
-                Enabled = false;
+                fMain main = (fMain)Parent.Parent.Parent;
+                switch (fMain.beforeForm)
+                {
+                    case 0: main.OpenHomePage(null, null); break;
+                    case 1: main.OpenBillForm(null, null); break;
+                    case 2: main.OpenGoodsForm(null, null); break;
+                    case 3: main.OpenContractForm(null, null); break;
+                    case 4: main.OpenEmployeeForm(null, null); break;
+                    case 5: main.OpenCashFlowForm(null, null); break;
+                }
                 return;
             }
             if (error != null)
                 MessageBox.Show(error);
             else
                 CustomDgvBill();
+            fMain.beforeForm = 1;
         }
 
         private void CustomDgvBill()
@@ -81,7 +91,10 @@ namespace GUI
             else
                 pnSearch.BorderColor = root.billPrimaryColor;
             dgvBills.CellBorderStyle = DataGridViewCellBorderStyle.Single;
-            
+
+
+            foreach (DataGridViewColumn dc in dgvBills.Columns)
+                dc.SortMode = DataGridViewColumnSortMode.NotSortable;
             dgvBills.DefaultCellStyle.Font = new Font(new FontFamily("Roboto"), 12, FontStyle.Bold);
             dgvBills.Columns["BID"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
             dgvBills.Columns["BID"].MinimumWidth = 60;

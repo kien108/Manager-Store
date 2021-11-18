@@ -18,6 +18,18 @@ namespace BLL
             return dt;
         }
 
+        public DataTable GetAllGoods(ref string error)
+        {
+            DataTable temp = BLL.dal.ExecuteQueryData("sp_GetAllGoods", CommandType.StoredProcedure, ref error);
+            if (temp == null)
+                return null;
+            DataTable dt = temp.Clone();
+            dt.Columns["Image"].DataType = typeof(bool);
+            foreach (DataRow row in temp.Rows)
+                dt.ImportRow(row);
+            return dt;
+        }
+
         public DataTable GetStokingGoodTable(ref string error)
         {
             DataTable temp = BLL.dal.ExecuteQueryData("sp_GetStockingGoods", CommandType.StoredProcedure, ref error);
@@ -45,6 +57,18 @@ namespace BLL
         public DataTable GetStopSellingGoodTable(ref string error)
         {
             DataTable temp = BLL.dal.ExecuteQueryData("sp_GetStopSellingGoods", CommandType.StoredProcedure, ref error);
+            if (temp == null)
+                return null;
+            DataTable dt = temp.Clone();
+            dt.Columns["Image"].DataType = typeof(bool);
+            foreach (DataRow row in temp.Rows)
+                dt.ImportRow(row);
+            return dt;
+        }
+
+        public DataTable GetComingSoonGoodTable(ref string error)
+        {
+            DataTable temp = BLL.dal.ExecuteQueryData("sp_GetComingSoonGoods", CommandType.StoredProcedure, ref error);
             if (temp == null)
                 return null;
             DataTable dt = temp.Clone();

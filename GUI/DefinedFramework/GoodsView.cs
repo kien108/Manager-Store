@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,8 +29,9 @@ namespace GUI.DefinedFramework
             lbQuantity.BackColor = Color.FromArgb(100, Color.Black);
             lbQuantity.ForeColor = Color.White;
             BackColor = Color.White;
-            if (g.Image)
-                BackgroundImage = Image.FromFile(root.ProjectPath() + root.imageGoods + g.Name.Replace(' ', '_') + ".png");
+            string url = root.ProjectPath() + root.imageGoods + g.Name.Replace(' ', '_') + ".png";
+            if (File.Exists(url))
+                BackgroundImage = Image.FromFile(url);
             else if (string.IsNullOrEmpty(g.Url))
                 BackgroundImage = Image.FromFile(root.ProjectPath() + root.imageGoods + "default.png");
             else

@@ -46,10 +46,22 @@ namespace GUI
             if (dgvGoods.DataSource == null)
             {
                 Enabled = false;
+                fMain main = (fMain)Parent.Parent.Parent;
+                switch (fMain.beforeForm)
+                {
+                    case 0: main.OpenHomePage(null, null); break;
+                    case 1: main.OpenBillForm(null, null); break;
+                    case 2: main.OpenGoodsForm(null, null); break;
+                    case 3: main.OpenContractForm(null, null); break;
+                    case 4: main.OpenEmployeeForm(null, null); break;
+                    case 5: main.OpenCashFlowForm(null, null); break;
+                }
                 return;
             }
             btnDeleteSearch.Hide();
             lbTypeInput.Hide();
+
+            fMain.beforeForm = 2;
         }
 
         private void ReloadData()
@@ -174,6 +186,22 @@ namespace GUI
         {
             string error = null;
             DataTable dt = bll.GetStopSellingGoodTable(ref error);
+            if (error != null)
+            {
+                MessageBox.Show(error);
+                dgvGoods.DataSource = null;
+                ChangeGoodsType(btnStopSelling);
+                return;
+            }
+            dgvGoods.DataSource = dt;
+            CustomDataGridViewGoods();
+            ChangeGoodsType(btnStopSelling);
+        }
+
+        private void btnComingSoon_Click(object sender, EventArgs e)
+        {
+            string error = null;
+            DataTable dt = bll.GetComingSoonGoodTable(ref error);
             if (error != null)
             {
                 MessageBox.Show(error);
@@ -478,15 +506,6 @@ namespace GUI
         private void cbbUnit_SelectedIndexChanged(object sender, EventArgs e)
         {
             lbTypeInput.Hide();
-        }
-
-        private void fGoods_KeyDown(object sender, KeyEventArgs e)
-        {   
-            //if (e.Control && e.KeyCode == Keys.E)
-            //{
-            //    btnDetail.PerformClick();
-            //    btnTick.PerformClick();
-            //}
         }
     }
 }

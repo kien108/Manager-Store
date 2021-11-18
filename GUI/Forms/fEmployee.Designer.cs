@@ -1644,6 +1644,7 @@ namespace GUI
             this.txtPhoneNumber.Size = new System.Drawing.Size(430, 28);
             this.txtPhoneNumber.TabIndex = 34;
             this.txtPhoneNumber.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtPhoneNumber.TextChanged += new System.EventHandler(this.txtPhoneNumber_TextChanged);
             // 
             // lbPhoneNumber
             // 

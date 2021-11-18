@@ -54,8 +54,20 @@ namespace GUI
             if (dgvEmployees.DataSource == null)
             {
                 Enabled = false;
+                fMain main = (fMain)Parent.Parent.Parent;
+                switch (fMain.beforeForm)
+                {
+                    case 0: main.OpenHomePage(null, null); break;
+                    case 1: main.OpenBillForm(null, null); break;
+                    case 2: main.OpenGoodsForm(null, null); break;
+                    case 3: main.OpenContractForm(null, null); break;
+                    case 4: main.OpenEmployeeForm(null, null); break;
+                    case 5: main.OpenCashFlowForm(null, null); break;
+                }
                 return;
             }
+
+            fMain.beforeForm = 4;
         }
 
         private void CustomDataGridViewEmployee()
@@ -308,21 +320,7 @@ namespace GUI
                 rbWorking.Checked = true;
             else
                 rbQuitWork.Checked = true;
-            //if (dr["Role"].ToString().ToLower() == "admin")
-            //{
-            //    cbbRole.SelectedIndex = 2;
-            //    btnTick.Enabled = false;
-            //}
-            //else if (dr["Role"].ToString().ToLower() == "staff")
-            //{
-            //    cbbRole.SelectedIndex = 0;
-            //    btnTick.Enabled = true;
-            //}
-            //else
-            //{
-            //    cbbRole.SelectedIndex = 1;
-            //    btnTick.Enabled = true;
-            //}
+
             if ((string)dr["Role"] == "ADMIN")
             {
                 nudWorkingDays.Value = 0;
@@ -365,6 +363,7 @@ namespace GUI
                 pnStateOption.Enabled = true;
                 nudDayWage.Enabled = true;
                 nudWorkingDays.Enabled = true;
+                txtPassword.Enabled = true;
             }
             else if (lbSideBarTitle.Text.ToLower().Contains("edit"))
             {
@@ -398,6 +397,7 @@ namespace GUI
             pnStateOption.Enabled = false;
             nudDayWage.Enabled = false;
             nudWorkingDays.Enabled = false;
+            txtPassword.Enabled = false;
             btnTick.Enabled = true;
             btnTick.Image = global::Manage_Store.Properties.Resources.tick;
             btnSideBarConfirm.Enabled = true;
@@ -553,6 +553,7 @@ namespace GUI
                 string url = root.ProjectPath() + root.imageEmployees + (string)dgvEmployees.Rows[row].Cells["Phone Number"].Value;
                 if (File.Exists(url))
                 {
+                    pbPiture.Image.Dispose();
                     GC.Collect();
                     GC.WaitForPendingFinalizers();
                     File.Delete(url);
@@ -565,6 +566,14 @@ namespace GUI
             if (!message.ToLower().Contains("successful"))
                 MessageBox.Show(message, "OOPS");
             ReloadData(false);
+        }
+
+        private void txtPhoneNumber_TextChanged(object sender, EventArgs e)
+        {
+            if (lbSideBarTitle.Text.ToLower().Contains("add"))
+            {
+                txtPassword.Text = txtPhoneNumber.Text;
+            }
         }
     }
 }

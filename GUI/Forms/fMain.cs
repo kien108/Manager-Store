@@ -19,9 +19,9 @@ namespace GUI
     {
         public FunctionPanel[] PnFunctions { get; set; }
         private int expandSize = 360, collapseSize = 90;
-        public Form ChildForm { get; set; }
-        public Employee Profile { get; set; }
-        private int formIndex;
+        public static Form ChildForm { get; set; }
+        public static Employee Profile { get; set; }
+        public static int beforeForm;
 
         public fMain(Employee emp)
         {
@@ -32,23 +32,21 @@ namespace GUI
             PnFunctions[2] = new FunctionPanel(IconChar.CookieBite, "Goods", root.navGoodsOptionColor, root.goodsPrimaryColor);
             PnFunctions[3] = new FunctionPanel(IconChar.FileSignature, "Contracts", root.navContractOptionColor, root.contractPrimaryColor);
             PnFunctions[4] = new FunctionPanel(IconChar.Users, "Employees", root.navEmployeeOptionColor, root.employeePrimaryColor);
-            PnFunctions[5] = new FunctionPanel(IconChar.ChartLine, "Charts", root.navChartOptionColor, root.chartPrimaryColor);
+            PnFunctions[5] = new FunctionPanel(IconChar.ChartLine, "Revenue", root.navCashFlowOptionColor, root.cashFlowPrimaryColor);
             Profile = emp;
             if (emp != null)
             {
                 lbName.Text = root.RemoveSignOfVietnameseString(Profile.Name).ToUpper();
                 lbRole.Text = Profile.Role;
-                pbAvatar.Image = Image.FromFile(root.ProjectPath() + emp.UrlImage);
+                if (emp.UrlImage == null || string.IsNullOrEmpty(emp.UrlImage))
+                    pbAvatar.Image = Image.FromFile(root.ProjectPath() + root.imageEmployees + "tempAvatar.png");
+                else
+                    pbAvatar.Image = Image.FromFile(root.ProjectPath() + emp.UrlImage);
             }
             pnHeader.FillColor = root.titleBarColor;
             pnNav.FillColor = root.navBarColor;
             pnScreen.FillColor = root.screenColor;
 
-            //ContextMenu cm = new ContextMenu();
-            //cm.MenuItems.Add("My profile");
-            //cm.MenuItems.Add("Log out");
-
-            //pnAccount.ContextMenu = cm;
         }
 
         private void fMain_Load(object sender, EventArgs e)
@@ -69,7 +67,8 @@ namespace GUI
                 foreach (Control c in PnFunctions[i].Controls)
                     c.DoubleClick += new EventHandler(CollapseAndExpand);
             }
-            CollapseAndExpand(pnNav, new EventArgs());
+            lbName.Click += new EventHandler(OpenContextMenuStripAccount);
+            lbRole.Click += new EventHandler(OpenContextMenuStripAccount);
 
             // Open home form
             PnFunctions[0].Click += new EventHandler(OpenHomePage);
@@ -96,7 +95,12 @@ namespace GUI
             foreach (Control c in PnFunctions[4].Controls)
                 c.Click += new EventHandler(OpenEmployeeForm);
 
-            // Open meny strip
+            // Open employees form
+            PnFunctions[5].Click += new EventHandler(OpenCashFlowForm);
+            foreach (Control c in PnFunctions[5].Controls)
+                c.Click += new EventHandler(OpenCashFlowForm);
+
+            // Open menu strip
             pnAccount.Tag = false;
             pnAccount.Click += new EventHandler(OpenContextMenuStripAccount);
             foreach (Control c in pnAccount.Controls)
@@ -119,16 +123,16 @@ namespace GUI
         private void OpenChildForm(Form childForm) // function to open child_form
         {
 
-            if (this.ChildForm != null && childForm.GetType().ToString() == this.ChildForm.GetType().ToString())
+            if (fMain.ChildForm != null && childForm.GetType().ToString() == fMain.ChildForm.GetType().ToString())
                 return;
-            this.ChildForm = childForm;
-            this.ChildForm.TopLevel = false;
-            this.ChildForm.FormBorderStyle = FormBorderStyle.None;
-            this.ChildForm.Dock = DockStyle.Fill;
+            fMain.ChildForm = childForm;
+            fMain.ChildForm.TopLevel = false;
+            fMain.ChildForm.FormBorderStyle = FormBorderStyle.None;
+            fMain.ChildForm.Dock = DockStyle.Fill;
             pnScreen.Controls.Add(childForm);
-            this.ChildForm.BringToFront();
-            this.ChildForm.Show();
-            lbHeader.Text = this.ChildForm.Text.ToUpper();
+            fMain.ChildForm.BringToFront();
+            fMain.ChildForm.Show();
+            lbHeader.Text = fMain.ChildForm.Text.ToUpper();
         }
 
         private void fMain_SizeChanged(object sender, EventArgs e)
@@ -136,6 +140,7 @@ namespace GUI
             pnNav.Width = expandSize;
             pnContainer.Width = Width - pnNav.Width;
             pnHeader.Height = (int)(0.06 * Height);
+            CollapseAndExpand(null, null);
         }
 
         private void CollapseAndExpand(object sender, EventArgs e)
@@ -151,7 +156,6 @@ namespace GUI
                 lbLogo.Hide();
                 pnNameAndRole.Hide();
                 pbLogo.Dock = DockStyle.Fill;
-                pbAvatar.Dock = DockStyle.Fill; 
                 pnContainer.Width = Width - pnNav.Width;
             }
             else
@@ -162,7 +166,6 @@ namespace GUI
                     pn.AutoSize = false;
                     pn.name.Show();
                     pbLogo.Dock = DockStyle.Left;
-                    pbAvatar.Dock = DockStyle.Left;
                     pn.Width = pnNav.Width - pn.Margin.Left * 2;
                 }
                 lbLogo.Show();
@@ -190,41 +193,47 @@ namespace GUI
                 HighlightOption(0);
                 OpenChildForm(new fHome());
             }
-            else
+            else if (Profile.Role == "STOCK MANAGER")
             {
                 HighlightOption(3);
                 OpenChildForm(new fContract());
             }
         }
 
-        private void OpenHomePage(object sender, EventArgs e)
+        public void OpenHomePage(object sender, EventArgs e)
         {
             HighlightOption(0);
             OpenChildForm(new fHome());
         }
 
-        private void OpenBillForm(object sender, EventArgs e)
+        public void OpenBillForm(object sender, EventArgs e)
         {
             HighlightOption(1);
             OpenChildForm(new fBill());
         }
 
-        private void OpenGoodsForm(object sender, EventArgs e)
+        public void OpenGoodsForm(object sender, EventArgs e)
         {
             HighlightOption(2);
             OpenChildForm(new fGoods());
         }
 
-        private void OpenContractForm(object sender, EventArgs e)
+        public void OpenContractForm(object sender, EventArgs e)
         {
             HighlightOption(3);
             OpenChildForm(new fContract());
         }
 
-        private void OpenEmployeeForm(object sender, EventArgs e)
+        public void OpenEmployeeForm(object sender, EventArgs e)
         {
             HighlightOption(4);
             OpenChildForm(new fEmployee());
+        }
+
+        public void OpenCashFlowForm(object sender, EventArgs e)
+        {
+            HighlightOption(5);
+            OpenChildForm(new fCashFlow());
         }
 
         private void OpenContextMenuStripAccount(object sender, EventArgs e)

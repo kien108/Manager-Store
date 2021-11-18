@@ -101,6 +101,12 @@
     <Compile Include="Forms\fBill.Designer.cs">
       <DependentUpon>fBill.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\fCashFlow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fCashFlow.Designer.cs">
+      <DependentUpon>fCashFlow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\fContract.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\fBill.resx">
       <DependentUpon>fBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fCashFlow.resx">
+      <DependentUpon>fCashFlow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\fContract.resx">
       <DependentUpon>fContract.cs</DependentUpon>

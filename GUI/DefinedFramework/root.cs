@@ -19,11 +19,11 @@ namespace GUI.DefinedFramework
         public static Color screenColor = Color.FromArgb(40, 42, 58);
 
         // fHome
-        public static Color navHomeOptionColor = Color.FromArgb(100, 0, 0);
+        public static Color navHomeOptionColor = Color.FromArgb(85, 0, 0);
         public static Color homePrimaryColor = Color.FromArgb(255, 72, 72);
 
         // fBill
-        public static Color navBillOptionColor = Color.FromArgb(121, 61, 0);
+        public static Color navBillOptionColor = Color.FromArgb(90, 45, 0);
         public static Color billPrimaryColor = Color.FromArgb(255, 128, 0);
         public static Color backColorComponentBill = Color.FromArgb(61, 64, 88);
         public static Color backGroundSideBarBill = Color.FromArgb(105, 37, 0);
@@ -31,7 +31,7 @@ namespace GUI.DefinedFramework
         public static Color darkerBackGroundSideBarBill = Color.FromArgb(38, 15, 0);
 
         // fGoods
-        public static Color navGoodsOptionColor = Color.FromArgb(109, 29, 69);
+        public static Color navGoodsOptionColor = Color.FromArgb(84, 22, 53);
         public static Color goodsPrimaryColor = Color.FromArgb(217, 108, 163);
         public static Color backColorComponentGoods = Color.FromArgb(61, 64, 88);
         public static Color backGroundSideBarGoods = Color.FromArgb(95, 24, 60);
@@ -39,7 +39,7 @@ namespace GUI.DefinedFramework
         public static Color buttonChoosingGoods = Color.FromArgb(126, 33, 80);
 
         // fContract
-        public static Color navContractOptionColor = Color.FromArgb(20, 88, 73);
+        public static Color navContractOptionColor = Color.FromArgb(15, 66, 54);
         public static Color contractPrimaryColor = Color.FromArgb(39, 166, 137);
         public static Color backColorComponentContract = Color.FromArgb(61, 64, 88);
         public static Color backGroundSideBarContract = Color.FromArgb(60, 100, 100);
@@ -55,9 +55,11 @@ namespace GUI.DefinedFramework
         public static Color darkerBackGroundSideBarEmployee = Color.FromArgb(27, 34, 75);
         public static Color sideBarHeaderFooterEmployee = Color.FromArgb(50, 64, 143);
 
-        // fChart
-        public static Color navChartOptionColor = Color.FromArgb(100, 0, 100);
-        public static Color chartPrimaryColor = Color.FromArgb(151, 0, 151);
+        // fCashFlow
+        public static Color navCashFlowOptionColor = Color.FromArgb(60, 0, 60);
+        public static Color cashFlowPrimaryColor = Color.FromArgb(151, 0, 151);
+        public static Color backColorComponentCashFlow = Color.FromArgb(61, 64, 88);
+        public static Color darkerBackGroundCashFlow = Color.FromArgb(42, 2, 64);
 
         public static int borderCorner = 11;
         public static Color textColor = Color.FromArgb(255, 235, 205);
@@ -117,7 +119,7 @@ namespace GUI.DefinedFramework
                         File.Delete(newAbsolutePath);
                     }
                 }
-                if (newRelativePath != null && currentPath != newAbsolutePath)
+                if (newRelativePath != null && !string.IsNullOrEmpty(newRelativePath) && currentPath != newAbsolutePath)
                 {
                     GC.Collect();
                     GC.WaitForPendingFinalizers();
@@ -130,11 +132,17 @@ namespace GUI.DefinedFramework
 
         public static string MoneyFormat(string s)
         {
+            bool negative = false;
+            if (s[0] == '-')
+            {
+                s = s.Remove(0, 1);
+                negative = true;
+            }
             if (string.IsNullOrEmpty(s.Trim()))
                 s = "0";
             for (int i = s.Length - 3; i > 0; i -= 3)
                 s = s.Insert(i, ".");
-            return s + " đ";
+            return (negative ? "-" : "") + s + " đ";
         }
 
         public static string TurnOffMoneyFormat(string s)

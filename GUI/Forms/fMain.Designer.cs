@@ -121,7 +121,7 @@ namespace GUI
             this.pnNameAndRole.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnNameAndRole.Location = new System.Drawing.Point(75, 10);
             this.pnNameAndRole.Name = "pnNameAndRole";
-            this.pnNameAndRole.Padding = new System.Windows.Forms.Padding(10, 5, 5, 5);
+            this.pnNameAndRole.Padding = new System.Windows.Forms.Padding(10, 0, 5, 0);
             this.pnNameAndRole.ShadowDecoration.Parent = this.pnNameAndRole;
             this.pnNameAndRole.Size = new System.Drawing.Size(115, 59);
             this.pnNameAndRole.TabIndex = 1;
@@ -133,7 +133,7 @@ namespace GUI
             this.lbRole.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbRole.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRole.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.lbRole.Location = new System.Drawing.Point(10, 24);
+            this.lbRole.Location = new System.Drawing.Point(10, 29);
             this.lbRole.Name = "lbRole";
             this.lbRole.Size = new System.Drawing.Size(67, 30);
             this.lbRole.TabIndex = 4;
@@ -146,7 +146,7 @@ namespace GUI
             this.lbName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbName.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.lbName.Location = new System.Drawing.Point(10, 5);
+            this.lbName.Location = new System.Drawing.Point(10, 0);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(232, 36);
             this.lbName.TabIndex = 3;

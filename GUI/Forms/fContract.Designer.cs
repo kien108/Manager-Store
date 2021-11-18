@@ -838,7 +838,7 @@ namespace GUI
             this.btnTick2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnTick2.ForeColor = System.Drawing.Color.White;
             this.btnTick2.HoverState.Parent = this.btnTick2;
-            this.btnTick2.Image = global::Manage_Store.Properties.Resources.edit2;
+            this.btnTick2.Image = ((System.Drawing.Image)(resources.GetObject("btnTick2.Image")));
             this.btnTick2.ImageSize = new System.Drawing.Size(30, 30);
             this.btnTick2.Location = new System.Drawing.Point(451, 3);
             this.btnTick2.Name = "btnTick2";
@@ -865,7 +865,7 @@ namespace GUI
             this.btnCollapse2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCollapse2.ForeColor = System.Drawing.Color.White;
             this.btnCollapse2.HoverState.Parent = this.btnCollapse2;
-            this.btnCollapse2.Image = global::Manage_Store.Properties.Resources.collapse;
+            this.btnCollapse2.Image = ((System.Drawing.Image)(resources.GetObject("btnCollapse2.Image")));
             this.btnCollapse2.ImageSize = new System.Drawing.Size(30, 30);
             this.btnCollapse2.Location = new System.Drawing.Point(3, 3);
             this.btnCollapse2.Name = "btnCollapse2";
@@ -921,7 +921,7 @@ namespace GUI
             this.btnSideBar2Cancel.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSideBar2Cancel.ForeColor = System.Drawing.Color.White;
             this.btnSideBar2Cancel.HoverState.Parent = this.btnSideBar2Cancel;
-            this.btnSideBar2Cancel.Image = global::Manage_Store.Properties.Resources.cancel;
+            this.btnSideBar2Cancel.Image = ((System.Drawing.Image)(resources.GetObject("btnSideBar2Cancel.Image")));
             this.btnSideBar2Cancel.ImageOffset = new System.Drawing.Point(1, -1);
             this.btnSideBar2Cancel.ImageSize = new System.Drawing.Size(22, 22);
             this.btnSideBar2Cancel.Location = new System.Drawing.Point(252, 0);
@@ -953,7 +953,7 @@ namespace GUI
             this.btnSideBar2Confirm.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSideBar2Confirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.btnSideBar2Confirm.HoverState.Parent = this.btnSideBar2Confirm;
-            this.btnSideBar2Confirm.Image = global::Manage_Store.Properties.Resources.confirm;
+            this.btnSideBar2Confirm.Image = ((System.Drawing.Image)(resources.GetObject("btnSideBar2Confirm.Image")));
             this.btnSideBar2Confirm.ImageSize = new System.Drawing.Size(23, 23);
             this.btnSideBar2Confirm.Location = new System.Drawing.Point(10, 0);
             this.btnSideBar2Confirm.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
@@ -1401,7 +1401,7 @@ namespace GUI
             this.cbbItemsName.Size = new System.Drawing.Size(439, 36);
             this.cbbItemsName.TabIndex = 32;
             this.cbbItemsName.TextOffset = new System.Drawing.Point(10, 1);
-            this.cbbItemsName.TextChanged += new System.EventHandler(this.cbbItemsName_TextChanged);
+            this.cbbItemsName.SelectedIndexChanged += new System.EventHandler(this.cbbItemsName_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -2418,7 +2418,7 @@ namespace GUI
             this.btnSideBarCancel.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSideBarCancel.ForeColor = System.Drawing.Color.White;
             this.btnSideBarCancel.HoverState.Parent = this.btnSideBarCancel;
-            this.btnSideBarCancel.Image = global::Manage_Store.Properties.Resources.cancel;
+            this.btnSideBarCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnSideBarCancel.Image")));
             this.btnSideBarCancel.ImageOffset = new System.Drawing.Point(1, -1);
             this.btnSideBarCancel.ImageSize = new System.Drawing.Size(22, 22);
             this.btnSideBarCancel.Location = new System.Drawing.Point(255, 5);
@@ -2451,7 +2451,7 @@ namespace GUI
             this.btnSideBarConfirm.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSideBarConfirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.btnSideBarConfirm.HoverState.Parent = this.btnSideBarConfirm;
-            this.btnSideBarConfirm.Image = global::Manage_Store.Properties.Resources.confirm;
+            this.btnSideBarConfirm.Image = ((System.Drawing.Image)(resources.GetObject("btnSideBarConfirm.Image")));
             this.btnSideBarConfirm.ImageSize = new System.Drawing.Size(23, 23);
             this.btnSideBarConfirm.Location = new System.Drawing.Point(10, 5);
             this.btnSideBarConfirm.Margin = new System.Windows.Forms.Padding(10, 5, 10, 5);
@@ -2514,7 +2514,7 @@ namespace GUI
             this.btnTick.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnTick.ForeColor = System.Drawing.Color.White;
             this.btnTick.HoverState.Parent = this.btnTick;
-            this.btnTick.Image = global::Manage_Store.Properties.Resources.edit2;
+            this.btnTick.Image = ((System.Drawing.Image)(resources.GetObject("btnTick.Image")));
             this.btnTick.ImageSize = new System.Drawing.Size(30, 30);
             this.btnTick.Location = new System.Drawing.Point(457, 3);
             this.btnTick.Name = "btnTick";
@@ -2541,7 +2541,7 @@ namespace GUI
             this.btnCollapse.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCollapse.ForeColor = System.Drawing.Color.White;
             this.btnCollapse.HoverState.Parent = this.btnCollapse;
-            this.btnCollapse.Image = global::Manage_Store.Properties.Resources.collapse;
+            this.btnCollapse.Image = ((System.Drawing.Image)(resources.GetObject("btnCollapse.Image")));
             this.btnCollapse.ImageSize = new System.Drawing.Size(30, 30);
             this.btnCollapse.Location = new System.Drawing.Point(3, 3);
             this.btnCollapse.Name = "btnCollapse";
@@ -2684,14 +2684,14 @@ namespace GUI
             this.btnAddContract.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddContract.ForeColor = System.Drawing.Color.BlanchedAlmond;
             this.btnAddContract.HoverState.Parent = this.btnAddContract;
-            this.btnAddContract.Image = global::Manage_Store.Properties.Resources.add;
+            this.btnAddContract.Image = ((System.Drawing.Image)(resources.GetObject("btnAddContract.Image")));
             this.btnAddContract.ImageSize = new System.Drawing.Size(22, 22);
-            this.btnAddContract.Location = new System.Drawing.Point(340, 10);
+            this.btnAddContract.Location = new System.Drawing.Point(295, 10);
             this.btnAddContract.Margin = new System.Windows.Forms.Padding(0);
             this.btnAddContract.Name = "btnAddContract";
             this.btnAddContract.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.btnAddContract.ShadowDecoration.Parent = this.btnAddContract;
-            this.btnAddContract.Size = new System.Drawing.Size(132, 26);
+            this.btnAddContract.Size = new System.Drawing.Size(177, 26);
             this.btnAddContract.TabIndex = 3;
             this.btnAddContract.Text = "Add contract";
             this.btnAddContract.Click += new System.EventHandler(this.btnAddContract_Click);
@@ -2714,14 +2714,14 @@ namespace GUI
             this.btnAddGoods.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddGoods.ForeColor = System.Drawing.Color.BlanchedAlmond;
             this.btnAddGoods.HoverState.Parent = this.btnAddGoods;
-            this.btnAddGoods.Image = global::Manage_Store.Properties.Resources.add;
+            this.btnAddGoods.Image = ((System.Drawing.Image)(resources.GetObject("btnAddGoods.Image")));
             this.btnAddGoods.ImageSize = new System.Drawing.Size(22, 22);
             this.btnAddGoods.Location = new System.Drawing.Point(0, 10);
             this.btnAddGoods.Margin = new System.Windows.Forms.Padding(0);
             this.btnAddGoods.Name = "btnAddGoods";
             this.btnAddGoods.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.btnAddGoods.ShadowDecoration.Parent = this.btnAddGoods;
-            this.btnAddGoods.Size = new System.Drawing.Size(120, 26);
+            this.btnAddGoods.Size = new System.Drawing.Size(142, 26);
             this.btnAddGoods.TabIndex = 2;
             this.btnAddGoods.Text = "Add item";
             this.btnAddGoods.Click += new System.EventHandler(this.btnAddGoods_Click);
@@ -3017,7 +3017,7 @@ namespace GUI
             this.btnDeletePicture3.Font = new System.Drawing.Font("Poppins Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletePicture3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.btnDeletePicture3.HoverState.Parent = this.btnDeletePicture3;
-            this.btnDeletePicture3.Image = global::Manage_Store.Properties.Resources.bin;
+            this.btnDeletePicture3.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletePicture3.Image")));
             this.btnDeletePicture3.ImageOffset = new System.Drawing.Point(-2, 0);
             this.btnDeletePicture3.ImageSize = new System.Drawing.Size(22, 22);
             this.btnDeletePicture3.Location = new System.Drawing.Point(5, 5);
@@ -3059,7 +3059,7 @@ namespace GUI
             this.btnChangePicture3.Font = new System.Drawing.Font("Poppins Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChangePicture3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.btnChangePicture3.HoverState.Parent = this.btnChangePicture3;
-            this.btnChangePicture3.Image = global::Manage_Store.Properties.Resources.replace;
+            this.btnChangePicture3.Image = ((System.Drawing.Image)(resources.GetObject("btnChangePicture3.Image")));
             this.btnChangePicture3.ImageOffset = new System.Drawing.Point(-2, 0);
             this.btnChangePicture3.ImageSize = new System.Drawing.Size(25, 25);
             this.btnChangePicture3.Location = new System.Drawing.Point(5, 5);
@@ -4194,7 +4194,7 @@ namespace GUI
             // 
             // btnDeleteSearch
             // 
-            this.btnDeleteSearch.BackgroundImage = global::Manage_Store.Properties.Resources.cancel_96px;
+            this.btnDeleteSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDeleteSearch.BackgroundImage")));
             this.btnDeleteSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnDeleteSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteSearch.Dock = System.Windows.Forms.DockStyle.Right;
@@ -4267,7 +4267,7 @@ namespace GUI
             this.btnDetail.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetail.ForeColor = System.Drawing.Color.BlanchedAlmond;
             this.btnDetail.HoverState.Parent = this.btnDetail;
-            this.btnDetail.Image = global::Manage_Store.Properties.Resources.detail;
+            this.btnDetail.Image = ((System.Drawing.Image)(resources.GetObject("btnDetail.Image")));
             this.btnDetail.ImageSize = new System.Drawing.Size(25, 25);
             this.btnDetail.Location = new System.Drawing.Point(13, 10);
             this.btnDetail.Margin = new System.Windows.Forms.Padding(0);
@@ -4309,7 +4309,7 @@ namespace GUI
             this.btnDelete.Font = new System.Drawing.Font("Poppins", 12F);
             this.btnDelete.ForeColor = System.Drawing.Color.BlanchedAlmond;
             this.btnDelete.HoverState.Parent = this.btnDelete;
-            this.btnDelete.Image = global::Manage_Store.Properties.Resources.delete;
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageSize = new System.Drawing.Size(25, 25);
             this.btnDelete.Location = new System.Drawing.Point(5, 10);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(0);
@@ -4735,7 +4735,6 @@ namespace GUI
         private System.Windows.Forms.RadioButton rbGnew3;
         private System.Windows.Forms.RadioButton rbGold3;
         private System.Windows.Forms.Label label37;
-        private Guna.UI2.WinForms.Guna2TextBox txtPname;
         private Guna.UI2.WinForms.Guna2ComboBox cbbPname;
         private Guna.UI2.WinForms.Guna2TextBox txtPname3;
         private Guna.UI2.WinForms.Guna2ComboBox cbbPname3;
@@ -4743,5 +4742,6 @@ namespace GUI
         private Guna.UI2.WinForms.Guna2Panel guna2Panel24;
         private Guna.UI2.WinForms.Guna2TextBox txtImportPrice3;
         private System.Windows.Forms.Label label28;
+        private Guna.UI2.WinForms.Guna2TextBox txtPname;
     }
 }

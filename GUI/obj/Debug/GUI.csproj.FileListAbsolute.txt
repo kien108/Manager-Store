@@ -89,3 +89,5 @@ D:\~project\Manager-Store\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 D:\~project\Manager-Store\GUI\obj\Debug\GUI.csproj.CopyComplete
 D:\~project\Manager-Store\GUI\obj\Debug\Manage Store.exe
 D:\~project\Manager-Store\GUI\obj\Debug\Manage Store.pdb
+D:\Document\~project\Manager-Store\GUI\obj\Debug\GUI.fCashFlow.resources
+D:\Document\~project\Manager-Store\GUI\obj\Debug\GUI.csproj.CopyComplete

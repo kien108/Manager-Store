@@ -103,6 +103,7 @@ namespace GUI
             this.dgvGoods = new Guna.UI2.WinForms.Guna2DataGridView();
             this.ecDgvGoods = new ElipseToolDemo.ElipseControl();
             this.ecTlpPictureSide = new ElipseToolDemo.ElipseControl();
+            this.btnComingSoon = new Guna.UI2.WinForms.Guna2Button();
             this.tlpWrapper.SuspendLayout();
             this.pnSideBar.SuspendLayout();
             this.pnSideBarBody.SuspendLayout();
@@ -1024,20 +1025,23 @@ namespace GUI
             this.tlpMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpMain.Location = new System.Drawing.Point(3, 3);
             this.tlpMain.Name = "tlpMain";
-            this.tlpMain.RowCount = 3;
+            this.tlpMain.RowCount = 4;
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11F));
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89F));
+            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpMain.Size = new System.Drawing.Size(1077, 843);
             this.tlpMain.TabIndex = 1;
             // 
             // tlpGoodsType
             // 
-            this.tlpGoodsType.ColumnCount = 4;
-            this.tlpGoodsType.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpGoodsType.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpGoodsType.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpGoodsType.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpGoodsType.ColumnCount = 5;
+            this.tlpGoodsType.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpGoodsType.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpGoodsType.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpGoodsType.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpGoodsType.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpGoodsType.Controls.Add(this.btnComingSoon, 4, 0);
             this.tlpGoodsType.Controls.Add(this.btnStopSelling, 3, 0);
             this.tlpGoodsType.Controls.Add(this.btnSoldOut, 2, 0);
             this.tlpGoodsType.Controls.Add(this.btnStocking, 1, 0);
@@ -1047,7 +1051,7 @@ namespace GUI
             this.tlpGoodsType.Name = "tlpGoodsType";
             this.tlpGoodsType.RowCount = 1;
             this.tlpGoodsType.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpGoodsType.Size = new System.Drawing.Size(1071, 79);
+            this.tlpGoodsType.Size = new System.Drawing.Size(1071, 76);
             this.tlpGoodsType.TabIndex = 0;
             // 
             // btnStopSelling
@@ -1068,12 +1072,12 @@ namespace GUI
             this.btnStopSelling.Font = new System.Drawing.Font("Poppins SemiBold", 14F, System.Drawing.FontStyle.Bold);
             this.btnStopSelling.ForeColor = System.Drawing.Color.BlanchedAlmond;
             this.btnStopSelling.HoverState.Parent = this.btnStopSelling;
-            this.btnStopSelling.Location = new System.Drawing.Point(811, 10);
+            this.btnStopSelling.Location = new System.Drawing.Point(652, 10);
             this.btnStopSelling.Margin = new System.Windows.Forms.Padding(10, 10, 10, 8);
             this.btnStopSelling.Name = "btnStopSelling";
             this.btnStopSelling.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.btnStopSelling.ShadowDecoration.Parent = this.btnStopSelling;
-            this.btnStopSelling.Size = new System.Drawing.Size(250, 61);
+            this.btnStopSelling.Size = new System.Drawing.Size(194, 58);
             this.btnStopSelling.TabIndex = 3;
             this.btnStopSelling.Text = "Stop selling";
             this.btnStopSelling.Click += new System.EventHandler(this.btnStopSelling_Click);
@@ -1096,12 +1100,12 @@ namespace GUI
             this.btnSoldOut.Font = new System.Drawing.Font("Poppins SemiBold", 14F, System.Drawing.FontStyle.Bold);
             this.btnSoldOut.ForeColor = System.Drawing.Color.BlanchedAlmond;
             this.btnSoldOut.HoverState.Parent = this.btnSoldOut;
-            this.btnSoldOut.Location = new System.Drawing.Point(544, 10);
+            this.btnSoldOut.Location = new System.Drawing.Point(438, 10);
             this.btnSoldOut.Margin = new System.Windows.Forms.Padding(10, 10, 10, 8);
             this.btnSoldOut.Name = "btnSoldOut";
             this.btnSoldOut.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.btnSoldOut.ShadowDecoration.Parent = this.btnSoldOut;
-            this.btnSoldOut.Size = new System.Drawing.Size(247, 61);
+            this.btnSoldOut.Size = new System.Drawing.Size(194, 58);
             this.btnSoldOut.TabIndex = 2;
             this.btnSoldOut.Text = "Sold out";
             this.btnSoldOut.Click += new System.EventHandler(this.btnSoldOut_Click);
@@ -1124,12 +1128,12 @@ namespace GUI
             this.btnStocking.Font = new System.Drawing.Font("Poppins SemiBold", 14F, System.Drawing.FontStyle.Bold);
             this.btnStocking.ForeColor = System.Drawing.Color.BlanchedAlmond;
             this.btnStocking.HoverState.Parent = this.btnStocking;
-            this.btnStocking.Location = new System.Drawing.Point(277, 10);
+            this.btnStocking.Location = new System.Drawing.Point(224, 10);
             this.btnStocking.Margin = new System.Windows.Forms.Padding(10, 10, 10, 8);
             this.btnStocking.Name = "btnStocking";
             this.btnStocking.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.btnStocking.ShadowDecoration.Parent = this.btnStocking;
-            this.btnStocking.Size = new System.Drawing.Size(247, 61);
+            this.btnStocking.Size = new System.Drawing.Size(194, 58);
             this.btnStocking.TabIndex = 1;
             this.btnStocking.Text = "Stocking";
             this.btnStocking.Click += new System.EventHandler(this.btnStocking_Click);
@@ -1157,7 +1161,7 @@ namespace GUI
             this.btnAllGoods.Name = "btnAllGoods";
             this.btnAllGoods.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.btnAllGoods.ShadowDecoration.Parent = this.btnAllGoods;
-            this.btnAllGoods.Size = new System.Drawing.Size(247, 61);
+            this.btnAllGoods.Size = new System.Drawing.Size(194, 58);
             this.btnAllGoods.TabIndex = 0;
             this.btnAllGoods.Text = "All goods";
             this.btnAllGoods.Click += new System.EventHandler(this.btnAllGoods_Click);
@@ -1170,7 +1174,7 @@ namespace GUI
             this.tlpSearch.Controls.Add(this.pnSearchAndFunction, 0, 0);
             this.tlpSearch.Controls.Add(this.pnFunctions, 1, 0);
             this.tlpSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpSearch.Location = new System.Drawing.Point(3, 88);
+            this.tlpSearch.Location = new System.Drawing.Point(3, 85);
             this.tlpSearch.Name = "tlpSearch";
             this.tlpSearch.RowCount = 1;
             this.tlpSearch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1462,7 +1466,7 @@ namespace GUI
             this.dgvGoods.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvGoods.EnableHeadersVisualStyles = false;
             this.dgvGoods.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(199)))), ((int)(((byte)(206)))));
-            this.dgvGoods.Location = new System.Drawing.Point(13, 155);
+            this.dgvGoods.Location = new System.Drawing.Point(13, 152);
             this.dgvGoods.Margin = new System.Windows.Forms.Padding(13, 0, 0, 10);
             this.dgvGoods.MultiSelect = false;
             this.dgvGoods.Name = "dgvGoods";
@@ -1483,7 +1487,7 @@ namespace GUI
             this.dgvGoods.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvGoods.RowTemplate.Height = 40;
             this.dgvGoods.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvGoods.Size = new System.Drawing.Size(1064, 678);
+            this.dgvGoods.Size = new System.Drawing.Size(1064, 660);
             this.dgvGoods.TabIndex = 2;
             this.dgvGoods.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.WetAsphalt;
             this.dgvGoods.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
@@ -1519,6 +1523,34 @@ namespace GUI
             this.ecTlpPictureSide.CornerRadius = 11;
             this.ecTlpPictureSide.TargetControl = this.tlpPictureSide;
             // 
+            // btnComingSoon
+            // 
+            this.btnComingSoon.Animated = true;
+            this.btnComingSoon.BackColor = System.Drawing.Color.Transparent;
+            this.btnComingSoon.BorderRadius = 10;
+            this.btnComingSoon.CheckedState.Parent = this.btnComingSoon;
+            this.btnComingSoon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnComingSoon.CustomImages.Parent = this.btnComingSoon;
+            this.btnComingSoon.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnComingSoon.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnComingSoon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnComingSoon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnComingSoon.DisabledState.Parent = this.btnComingSoon;
+            this.btnComingSoon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnComingSoon.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(166)))), ((int)(((byte)(137)))));
+            this.btnComingSoon.Font = new System.Drawing.Font("Poppins SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.btnComingSoon.ForeColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnComingSoon.HoverState.Parent = this.btnComingSoon;
+            this.btnComingSoon.Location = new System.Drawing.Point(866, 10);
+            this.btnComingSoon.Margin = new System.Windows.Forms.Padding(10, 10, 10, 8);
+            this.btnComingSoon.Name = "btnComingSoon";
+            this.btnComingSoon.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.btnComingSoon.ShadowDecoration.Parent = this.btnComingSoon;
+            this.btnComingSoon.Size = new System.Drawing.Size(195, 58);
+            this.btnComingSoon.TabIndex = 4;
+            this.btnComingSoon.Text = "Coming soon";
+            this.btnComingSoon.Click += new System.EventHandler(this.btnComingSoon_Click);
+            // 
             // fGoods
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1528,7 +1560,6 @@ namespace GUI
             this.Name = "fGoods";
             this.Text = "GOODS";
             this.Load += new System.EventHandler(this.fGoods_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.fGoods_KeyDown);
             this.tlpWrapper.ResumeLayout(false);
             this.tlpWrapper.PerformLayout();
             this.pnSideBar.ResumeLayout(false);
@@ -1645,5 +1676,6 @@ namespace GUI
         private Guna.UI2.WinForms.Guna2Button btnSoldOut;
         private Guna.UI2.WinForms.Guna2Button btnStocking;
         private Guna.UI2.WinForms.Guna2Button btnAllGoods;
+        private Guna.UI2.WinForms.Guna2Button btnComingSoon;
     }
 }

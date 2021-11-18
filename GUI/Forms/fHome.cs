@@ -43,10 +43,9 @@ namespace GUI
 
         private void fHome_Load(object sender, EventArgs e)
         {
-            bool isStockmanager = ((fMain)Parent.Parent.Parent).Profile.Role != "STOCK MANAGER";
+            bool isStockmanager = fMain.Profile.Role != "STOCK MANAGER";
             tlpGoods.Enabled = isStockmanager;
             pnButtons.Enabled = isStockmanager;
-
         }
 
         private void LoadGoods()
@@ -58,6 +57,7 @@ namespace GUI
                 MessageBox.Show(error, "Can not load goods");
                 return;
             }
+            fMain.beforeForm = 0;
         }
 
         private void CreateGoodsGrid()
@@ -181,7 +181,7 @@ namespace GUI
         private void btnCheckout_Click(object sender, EventArgs e)
         {
             int bid = bll_bill.GetNewBillID();
-            int eid = ((fMain)Parent.Parent.Parent).Profile.Id;
+            int eid = fMain.Profile.Id;
             string message = null;
             foreach (PanelGoodsInCart pn in pnCartBody.Controls)
             {
