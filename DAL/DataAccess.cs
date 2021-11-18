@@ -10,7 +10,7 @@ namespace DAL
         private SqlConnection conn = null;
         private SqlCommand cmd = null;
         private SqlDataAdapter da = null;
-        private string computerName = Environment.MachineName.ToString();
+        private string computerName = "LAPTOP-80ENF80D\\KIENSQL";
         private string databaseName = "GroceryStore";
         private string connectionString = "Server={0};Database={1};User Id={2};Password={3};";
         private string message = "";

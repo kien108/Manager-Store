@@ -19,3 +19,14 @@ D:\~project\Manager-Store\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 D:\~project\Manager-Store\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\~project\Manager-Store\BLL\obj\Debug\BLL.dll
 D:\~project\Manager-Store\BLL\obj\Debug\BLL.pdb
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\BLL\bin\Debug\BLL.dll
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\BLL\bin\Debug\BLL.pdb
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\BLL\bin\Debug\DAL.dll
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\BLL\bin\Debug\DTO.dll
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\BLL\bin\Debug\DAL.pdb
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\BLL\bin\Debug\DTO.pdb
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\BLL\obj\Debug\BLL.dll
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\BLL\obj\Debug\BLL.pdb

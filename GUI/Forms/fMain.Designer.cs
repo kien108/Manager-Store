@@ -106,11 +106,11 @@ namespace GUI
             this.pnAccount.Controls.Add(this.pbAvatar);
             this.pnAccount.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnAccount.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnAccount.Location = new System.Drawing.Point(0, 519);
+            this.pnAccount.Location = new System.Drawing.Point(0, 508);
             this.pnAccount.Name = "pnAccount";
-            this.pnAccount.Padding = new System.Windows.Forms.Padding(15, 10, 10, 10);
+            this.pnAccount.Padding = new System.Windows.Forms.Padding(25, 10, 10, 10);
             this.pnAccount.ShadowDecoration.Parent = this.pnAccount;
-            this.pnAccount.Size = new System.Drawing.Size(200, 79);
+            this.pnAccount.Size = new System.Drawing.Size(200, 90);
             this.pnAccount.TabIndex = 1;
             this.pnAccount.UseTransparentBackground = true;
             // 
@@ -119,51 +119,49 @@ namespace GUI
             this.pnNameAndRole.Controls.Add(this.lbRole);
             this.pnNameAndRole.Controls.Add(this.lbName);
             this.pnNameAndRole.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnNameAndRole.Location = new System.Drawing.Point(75, 10);
+            this.pnNameAndRole.Location = new System.Drawing.Point(95, 10);
             this.pnNameAndRole.Name = "pnNameAndRole";
             this.pnNameAndRole.Padding = new System.Windows.Forms.Padding(10, 0, 5, 0);
             this.pnNameAndRole.ShadowDecoration.Parent = this.pnNameAndRole;
-            this.pnNameAndRole.Size = new System.Drawing.Size(115, 59);
+            this.pnNameAndRole.Size = new System.Drawing.Size(95, 70);
             this.pnNameAndRole.TabIndex = 1;
             // 
             // lbRole
             // 
-            this.lbRole.AutoSize = true;
             this.lbRole.BackColor = System.Drawing.Color.Transparent;
             this.lbRole.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbRole.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRole.Font = new System.Drawing.Font("Poppins", 10F);
             this.lbRole.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.lbRole.Location = new System.Drawing.Point(10, 29);
+            this.lbRole.Location = new System.Drawing.Point(10, 40);
             this.lbRole.Name = "lbRole";
-            this.lbRole.Size = new System.Drawing.Size(67, 30);
+            this.lbRole.Size = new System.Drawing.Size(80, 30);
             this.lbRole.TabIndex = 4;
             this.lbRole.Text = "ADMIN";
             // 
             // lbName
             // 
-            this.lbName.AutoSize = true;
             this.lbName.BackColor = System.Drawing.Color.Transparent;
             this.lbName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbName.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold);
             this.lbName.ForeColor = System.Drawing.Color.BlanchedAlmond;
             this.lbName.Location = new System.Drawing.Point(10, 0);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(232, 36);
+            this.lbName.Size = new System.Drawing.Size(80, 70);
             this.lbName.TabIndex = 3;
             this.lbName.Text = "NGUYEN QUANG VINH";
             // 
             // pbAvatar
             // 
             this.pbAvatar.AutoRoundedCorners = true;
-            this.pbAvatar.BorderRadius = 28;
+            this.pbAvatar.BorderRadius = 34;
             this.pbAvatar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pbAvatar.FillColor = System.Drawing.Color.Transparent;
             this.pbAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pbAvatar.Image")));
             this.pbAvatar.ImageRotate = 0F;
-            this.pbAvatar.Location = new System.Drawing.Point(15, 10);
+            this.pbAvatar.Location = new System.Drawing.Point(25, 10);
             this.pbAvatar.Name = "pbAvatar";
             this.pbAvatar.ShadowDecoration.Parent = this.pbAvatar;
-            this.pbAvatar.Size = new System.Drawing.Size(60, 59);
+            this.pbAvatar.Size = new System.Drawing.Size(70, 70);
             this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAvatar.TabIndex = 0;
             this.pbAvatar.TabStop = false;
@@ -342,7 +340,6 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.pnAccount.ResumeLayout(false);
             this.pnNameAndRole.ResumeLayout(false);
-            this.pnNameAndRole.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.pnNav.ResumeLayout(false);
             this.pnHeader.ResumeLayout(false);

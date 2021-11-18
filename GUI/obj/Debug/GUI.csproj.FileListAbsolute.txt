@@ -91,3 +91,33 @@ D:\~project\Manager-Store\GUI\obj\Debug\Manage Store.exe
 D:\~project\Manager-Store\GUI\obj\Debug\Manage Store.pdb
 D:\Document\~project\Manager-Store\GUI\obj\Debug\GUI.fCashFlow.resources
 D:\Document\~project\Manager-Store\GUI\obj\Debug\GUI.csproj.CopyComplete
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\bin\Debug\Manage Store.exe.config
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\bin\Debug\Manage Store.exe
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\bin\Debug\Manage Store.pdb
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\bin\Debug\BLL.dll
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\bin\Debug\DTO.dll
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\bin\Debug\FontAwesome.Sharp.dll
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\bin\Debug\Guna.UI2.dll
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\bin\Debug\MstGrid.dll
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\bin\Debug\DAL.dll
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\bin\Debug\BLL.pdb
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\bin\Debug\DTO.pdb
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\bin\Debug\DAL.pdb
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\obj\Debug\GUI.DefinedFramework.GoodsCell.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\obj\Debug\GUI.DefinedFramework.GoodsView.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\obj\Debug\GUI.DefinedFramework.PanelGoodsInCart.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\obj\Debug\GUI.fBill.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\obj\Debug\GUI.fCashFlow.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\obj\Debug\GUI.fContract.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\obj\Debug\GUI.fEmployee.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\obj\Debug\GUI.fGoods.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\obj\Debug\GUI.fHome.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\obj\Debug\GUI.fMain.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\obj\Debug\GUI.fLogin.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\obj\Debug\Manage_Store.Properties.Resources.resources
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\obj\Debug\GUI.csproj.CopyComplete
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\obj\Debug\Manage Store.exe
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\GUI\obj\Debug\Manage Store.pdb

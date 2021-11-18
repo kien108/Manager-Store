@@ -61,14 +61,14 @@ namespace GUI
             // pnTlpMoney
             // 
             this.pnTlpMoney.AutoRoundedCorners = true;
-            this.pnTlpMoney.BorderRadius = 34;
+            this.pnTlpMoney.BorderRadius = 39;
             this.pnTlpMoney.Controls.Add(this.tlpMoneyValue);
             this.pnTlpMoney.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTlpMoney.Location = new System.Drawing.Point(10, 10);
             this.pnTlpMoney.Name = "pnTlpMoney";
             this.pnTlpMoney.Padding = new System.Windows.Forms.Padding(10);
             this.pnTlpMoney.ShadowDecoration.Parent = this.pnTlpMoney;
-            this.pnTlpMoney.Size = new System.Drawing.Size(1351, 70);
+            this.pnTlpMoney.Size = new System.Drawing.Size(1351, 80);
             this.pnTlpMoney.TabIndex = 0;
             // 
             // tlpMoneyValue
@@ -86,14 +86,14 @@ namespace GUI
             this.tlpMoneyValue.Name = "tlpMoneyValue";
             this.tlpMoneyValue.RowCount = 1;
             this.tlpMoneyValue.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpMoneyValue.Size = new System.Drawing.Size(1331, 50);
+            this.tlpMoneyValue.Size = new System.Drawing.Size(1331, 60);
             this.tlpMoneyValue.TabIndex = 0;
             // 
             // pnProfit
             // 
             this.pnProfit.AutoRoundedCorners = true;
             this.pnProfit.BackColor = System.Drawing.Color.Transparent;
-            this.pnProfit.BorderRadius = 19;
+            this.pnProfit.BorderRadius = 24;
             this.pnProfit.Controls.Add(this.lbProfitValue);
             this.pnProfit.Controls.Add(this.lbProfit);
             this.pnProfit.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -102,7 +102,7 @@ namespace GUI
             this.pnProfit.Name = "pnProfit";
             this.pnProfit.Padding = new System.Windows.Forms.Padding(30, 10, 30, 10);
             this.pnProfit.ShadowDecoration.Parent = this.pnProfit;
-            this.pnProfit.Size = new System.Drawing.Size(425, 40);
+            this.pnProfit.Size = new System.Drawing.Size(425, 50);
             this.pnProfit.TabIndex = 2;
             // 
             // lbProfitValue
@@ -110,9 +110,10 @@ namespace GUI
             this.lbProfitValue.BackColor = System.Drawing.Color.Transparent;
             this.lbProfitValue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbProfitValue.Font = new System.Drawing.Font("Poppins Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbProfitValue.Location = new System.Drawing.Point(115, 10);
+            this.lbProfitValue.Location = new System.Drawing.Point(130, 10);
             this.lbProfitValue.Name = "lbProfitValue";
-            this.lbProfitValue.Size = new System.Drawing.Size(280, 20);
+            this.lbProfitValue.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
+            this.lbProfitValue.Size = new System.Drawing.Size(265, 30);
             this.lbProfitValue.TabIndex = 1;
             this.lbProfitValue.Text = "label5";
             this.lbProfitValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -124,7 +125,8 @@ namespace GUI
             this.lbProfit.Font = new System.Drawing.Font("Poppins Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbProfit.Location = new System.Drawing.Point(30, 10);
             this.lbProfit.Name = "lbProfit";
-            this.lbProfit.Size = new System.Drawing.Size(85, 20);
+            this.lbProfit.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
+            this.lbProfit.Size = new System.Drawing.Size(100, 30);
             this.lbProfit.TabIndex = 0;
             this.lbProfit.Text = "Profit:";
             this.lbProfit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -133,7 +135,7 @@ namespace GUI
             // 
             this.pnSpend.AutoRoundedCorners = true;
             this.pnSpend.BackColor = System.Drawing.Color.Transparent;
-            this.pnSpend.BorderRadius = 19;
+            this.pnSpend.BorderRadius = 24;
             this.pnSpend.Controls.Add(this.lbSpendValue);
             this.pnSpend.Controls.Add(this.lbSpend);
             this.pnSpend.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -142,7 +144,7 @@ namespace GUI
             this.pnSpend.Name = "pnSpend";
             this.pnSpend.Padding = new System.Windows.Forms.Padding(30, 10, 30, 10);
             this.pnSpend.ShadowDecoration.Parent = this.pnSpend;
-            this.pnSpend.Size = new System.Drawing.Size(423, 40);
+            this.pnSpend.Size = new System.Drawing.Size(423, 50);
             this.pnSpend.TabIndex = 1;
             // 
             // lbSpendValue
@@ -150,9 +152,10 @@ namespace GUI
             this.lbSpendValue.BackColor = System.Drawing.Color.Transparent;
             this.lbSpendValue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbSpendValue.Font = new System.Drawing.Font("Poppins Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSpendValue.Location = new System.Drawing.Point(115, 10);
+            this.lbSpendValue.Location = new System.Drawing.Point(130, 10);
             this.lbSpendValue.Name = "lbSpendValue";
-            this.lbSpendValue.Size = new System.Drawing.Size(278, 20);
+            this.lbSpendValue.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
+            this.lbSpendValue.Size = new System.Drawing.Size(263, 30);
             this.lbSpendValue.TabIndex = 1;
             this.lbSpendValue.Text = "label3";
             this.lbSpendValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -164,7 +167,8 @@ namespace GUI
             this.lbSpend.Font = new System.Drawing.Font("Poppins Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSpend.Location = new System.Drawing.Point(30, 10);
             this.lbSpend.Name = "lbSpend";
-            this.lbSpend.Size = new System.Drawing.Size(85, 20);
+            this.lbSpend.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
+            this.lbSpend.Size = new System.Drawing.Size(100, 30);
             this.lbSpend.TabIndex = 0;
             this.lbSpend.Text = "Spend:";
             this.lbSpend.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -173,7 +177,7 @@ namespace GUI
             // 
             this.pnRevenue.AutoRoundedCorners = true;
             this.pnRevenue.BackColor = System.Drawing.Color.Transparent;
-            this.pnRevenue.BorderRadius = 19;
+            this.pnRevenue.BorderRadius = 24;
             this.pnRevenue.Controls.Add(this.lbRevenueValue);
             this.pnRevenue.Controls.Add(this.lbRevenue);
             this.pnRevenue.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -182,7 +186,7 @@ namespace GUI
             this.pnRevenue.Name = "pnRevenue";
             this.pnRevenue.Padding = new System.Windows.Forms.Padding(30, 10, 30, 10);
             this.pnRevenue.ShadowDecoration.Parent = this.pnRevenue;
-            this.pnRevenue.Size = new System.Drawing.Size(423, 40);
+            this.pnRevenue.Size = new System.Drawing.Size(423, 50);
             this.pnRevenue.TabIndex = 0;
             // 
             // lbRevenueValue
@@ -190,9 +194,10 @@ namespace GUI
             this.lbRevenueValue.BackColor = System.Drawing.Color.Transparent;
             this.lbRevenueValue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbRevenueValue.Font = new System.Drawing.Font("Poppins Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRevenueValue.Location = new System.Drawing.Point(115, 10);
+            this.lbRevenueValue.Location = new System.Drawing.Point(167, 10);
             this.lbRevenueValue.Name = "lbRevenueValue";
-            this.lbRevenueValue.Size = new System.Drawing.Size(278, 20);
+            this.lbRevenueValue.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
+            this.lbRevenueValue.Size = new System.Drawing.Size(226, 30);
             this.lbRevenueValue.TabIndex = 1;
             this.lbRevenueValue.Text = "label2";
             this.lbRevenueValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -204,7 +209,8 @@ namespace GUI
             this.lbRevenue.Font = new System.Drawing.Font("Poppins Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRevenue.Location = new System.Drawing.Point(30, 10);
             this.lbRevenue.Name = "lbRevenue";
-            this.lbRevenue.Size = new System.Drawing.Size(85, 20);
+            this.lbRevenue.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
+            this.lbRevenue.Size = new System.Drawing.Size(137, 30);
             this.lbRevenue.TabIndex = 0;
             this.lbRevenue.Text = "Revenue:";
             this.lbRevenue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -297,11 +303,11 @@ namespace GUI
             // 
             this.pnDgv.Controls.Add(this.dgvCashFlow);
             this.pnDgv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnDgv.Location = new System.Drawing.Point(10, 80);
+            this.pnDgv.Location = new System.Drawing.Point(10, 90);
             this.pnDgv.Name = "pnDgv";
             this.pnDgv.Padding = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.pnDgv.ShadowDecoration.Parent = this.pnDgv;
-            this.pnDgv.Size = new System.Drawing.Size(1351, 598);
+            this.pnDgv.Size = new System.Drawing.Size(1351, 588);
             this.pnDgv.TabIndex = 2;
             // 
             // fCashFlow

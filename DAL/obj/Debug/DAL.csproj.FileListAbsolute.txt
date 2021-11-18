@@ -10,3 +10,9 @@ D:\~project\Manager-Store\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
 D:\~project\Manager-Store\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\~project\Manager-Store\DAL\obj\Debug\DAL.dll
 D:\~project\Manager-Store\DAL\obj\Debug\DAL.pdb
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\DAL\bin\Debug\DAL.dll
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\DAL\bin\Debug\DAL.pdb
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\DAL\obj\Debug\DAL.dll
+D:\HK1-Năm 3\Hệ QT CSDL\Manager-Store\DAL\obj\Debug\DAL.pdb
